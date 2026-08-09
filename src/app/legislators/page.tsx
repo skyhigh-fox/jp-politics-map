@@ -1,37 +1,54 @@
 import { getLegislators, getParties } from "@/lib/data";
-import { legislatorPrefectures } from "@/lib/prefectures";
-import Link from "next/link";
+import { legislatorPrefectures, PREFECTURE_CODES } from "@/lib/prefectures";
+import { FilterBar } from "@/components/FilterBar";
+import type { Legislator, Party } from "@/types";
+
+const CHAMBER_OPTIONS = ["衆議院", "参議院"] as const;
+const PREFECTURE_OPTIONS = Object.keys(PREFECTURE_CODES);
+
+function matchesFilters(
+  legislator: Legislator,
+  filters: { chamber?: string; party?: string; prefecture?: string; q?: string }
+): boolean {
+  if (filters.chamber && legislator.chamber !== filters.chamber) return false;
+  if (filters.party && legislator.currentPartyId !== filters.party)
+    return false;
+  if (
+    filters.prefecture &&
+    !legislatorPrefectures(legislator).includes(filters.prefecture)
+  )
+    return false;
+  if (filters.q && !legislator.name.includes(filters.q)) return false;
+  return true;
+}
 
 export default async function LegislatorsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ prefecture?: string }>;
+  searchParams: Promise<{
+    chamber?: string;
+    party?: string;
+    prefecture?: string;
+    q?: string;
+  }>;
 }) {
-  const { prefecture } = await searchParams;
+  const filters = await searchParams;
   const [allLegislators, parties] = await Promise.all([
     getLegislators(),
     getParties(),
   ]);
-  const legislators = prefecture
-    ? allLegislators.filter((l) =>
-        legislatorPrefectures(l).includes(prefecture)
-      )
-    : allLegislators;
+  const legislators = allLegislators.filter((l) => matchesFilters(l, filters));
   const partyName = (id: string) =>
     parties.find((p) => p.id === id)?.name ?? "不明";
+  const sortedParties = [...parties].sort((a, b) =>
+    a.name.localeCompare(b.name, "ja")
+  );
 
   return (
     <div>
       <h1 className="text-xl font-bold">
-        議員一覧{prefecture ? `（${prefecture}）` : ""}
+        議員一覧{filters.prefecture ? `（${filters.prefecture}）` : ""}
       </h1>
-      {prefecture && (
-        <p className="mt-1 text-sm">
-          <Link href="/legislators" className="underline">
-            絞り込みを解除
-          </Link>
-        </p>
-      )}
       <p className="mt-2 text-sm text-neutral-600">
         {allLegislators.length === 0 ? (
           <>
@@ -42,9 +59,38 @@ export default async function LegislatorsPage({
             で取得してください。
           </>
         ) : (
-          `${legislators.length} 名（検索・フィルタ機能は今後追加予定）`
+          `全${allLegislators.length}名中${legislators.length}名が条件に一致`
         )}
       </p>
+
+      {allLegislators.length > 0 && (
+        <FilterBar
+          selects={[
+            {
+              key: "chamber",
+              label: "院",
+              options: CHAMBER_OPTIONS.map((v) => ({ value: v, label: v })),
+            },
+            {
+              key: "party",
+              label: "政党・会派",
+              options: sortedParties.map((p: Party) => ({
+                value: p.id,
+                label: p.name,
+              })),
+            },
+            {
+              key: "prefecture",
+              label: "都道府県",
+              options: PREFECTURE_OPTIONS.map((v) => ({ value: v, label: v })),
+            },
+          ]}
+          searchKey="q"
+          searchLabel="氏名で検索"
+          searchPlaceholder="例: 山田"
+        />
+      )}
+
       <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
         {legislators.map((legislator) => (
           <li
