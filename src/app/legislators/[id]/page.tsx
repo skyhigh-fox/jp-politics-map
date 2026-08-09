@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getLegislators, getParties, getElectionResults } from "@/lib/data";
+import { PartyColorDot } from "@/components/PartyColorDot";
 
 export default async function LegislatorDetailPage({
   params,
@@ -56,8 +57,9 @@ export default async function LegislatorDetailPage({
           {legislator.chamber}
         </dd>
         <dt className="text-neutral-500 dark:text-neutral-500">政党・会派</dt>
-        <dd className="text-neutral-800 dark:text-neutral-200">
-          {party?.name ?? "不明"}
+        <dd className="flex items-center gap-1.5 text-neutral-800 dark:text-neutral-200">
+          <PartyColorDot color={party?.color} />
+          <span>{party?.name ?? "不明"}</span>
         </dd>
         <dt className="text-neutral-500 dark:text-neutral-500">選挙区</dt>
         <dd className="text-neutral-800 dark:text-neutral-200">
