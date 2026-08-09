@@ -6,6 +6,7 @@ import {
   ComposableMap,
   Geographies,
   Geography,
+  ZoomableGroup,
   type GeographyProps,
 } from "react-simple-maps";
 import { geoMercator, geoCentroid } from "d3-geo";
@@ -15,6 +16,9 @@ import type { FeatureCollection, Geometry } from "geojson";
 
 const WIDTH = 600;
 const HEIGHT = 600;
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 8;
+const ZOOM_STEP = 1.5;
 
 // dataviz skill: sequential(単一色相・低→高)の青ランプ100〜700から抜粋
 const SEQUENTIAL_STEPS = [
@@ -53,6 +57,12 @@ function colorForCount(
  * そのため、計算はここだけで完結させ、react-simple-mapsには
  * projection="geoMercator" ＋ 数値だけのprojectionConfigとして渡す
  * （PrefectureMapと同じ、動作実績のある渡し方）。
+ *
+ * ズーム/パン（ZoomableGroup）を導入した後も、渡しているのは
+ * 引き続き文字列("geoMercator")＋数値のprojectionConfigのみであり、
+ * ZoomableGroup自体もReact-simple-maps標準のズーム実装（内部でd3-zoomの
+ * transformを適用するだけ）なので、projectionインスタンスを直接扱う
+ * ことはなく、上記のエラーは再発しないことを確認済み。
  */
 function useFittedProjectionConfig(geoUrl: string) {
   const [config, setConfig] = useState<{
@@ -119,6 +129,8 @@ function useFittedProjectionConfig(geoUrl: string) {
   return { config, error };
 }
 
+type MapPosition = { coordinates: [number, number]; zoom: number };
+
 export function MunicipalityMap({
   geoUrl,
   /** 市区町村名 → 件数。未指定の場合は色分けせず全て中立色で表示する */
@@ -144,6 +156,15 @@ export function MunicipalityMap({
     x: number;
     y: number;
   } | null>(null);
+  const [position, setPosition] = useState<MapPosition | null>(null);
+
+  // 都道府県（geoUrl）が切り替わったら、前の都道府県のズーム/パン状態を
+  // 引きずらないよう、新しく計算されたfit configでリセットする
+  useEffect(() => {
+    if (config) {
+      setPosition({ coordinates: config.center, zoom: 1 });
+    }
+  }, [geoUrl, config]);
 
   const values = counts ? Object.values(counts) : [];
   const min = values.length ? Math.min(...values) : 0;
@@ -156,8 +177,27 @@ export function MunicipalityMap({
       </p>
     );
   }
-  if (!config) {
+  if (!config || !position) {
     return <p className="text-sm text-neutral-400">地図を読み込み中…</p>;
+  }
+
+  function handleMoveEnd(pos: MapPosition) {
+    setPosition(pos);
+  }
+
+  function zoomBy(factor: number) {
+    setPosition((prev) =>
+      prev
+        ? {
+            ...prev,
+            zoom: Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, prev.zoom * factor)),
+          }
+        : prev
+    );
+  }
+
+  function resetView() {
+    if (config) setPosition({ coordinates: config.center, zoom: 1 });
   }
 
   return (
@@ -169,52 +209,107 @@ export function MunicipalityMap({
         projectionConfig={{ center: config.center, scale: config.scale }}
         className="w-full h-auto"
       >
-        <Geographies geography={geoUrl}>
-          {({ geographies }: { geographies: GeographyProps["geography"][] }) =>
-            geographies.map((geo) => {
-              const props = (
-                geo as unknown as { properties: { N03_004?: string } }
-              ).properties;
-              const name = props.N03_004 ?? "";
-              const count = counts ? counts[name] : undefined;
-              const href =
-                linkBase && name
-                  ? `${linkBase}/${encodeURIComponent(name)}`
-                  : null;
-              return (
-                <Geography
-                  key={(geo as unknown as { rsmKey: string }).rsmKey}
-                  geography={geo}
-                  fill={counts ? colorForCount(count, min, max) : NO_DATA_COLOR}
-                  stroke="#fcfcfb"
-                  strokeWidth={0.5}
-                  onMouseEnter={(evt: React.MouseEvent) => {
-                    setHovered({ name, count, x: evt.clientX, y: evt.clientY });
-                  }}
-                  onMouseMove={(evt: React.MouseEvent) => {
-                    setHovered((prev) =>
-                      prev ? { ...prev, x: evt.clientX, y: evt.clientY } : prev
-                    );
-                  }}
-                  onMouseLeave={() => setHovered(null)}
-                  onClick={() => {
-                    if (href) router.push(href);
-                  }}
-                  style={{
-                    default: { outline: "none" },
-                    hover: {
-                      outline: "none",
-                      opacity: href ? 0.8 : 1,
-                      cursor: href ? "pointer" : "default",
-                    },
-                    pressed: { outline: "none" },
-                  }}
-                />
-              );
-            })
-          }
-        </Geographies>
+        <ZoomableGroup
+          center={position.coordinates}
+          zoom={position.zoom}
+          minZoom={MIN_ZOOM}
+          maxZoom={MAX_ZOOM}
+          translateExtent={[
+            [-WIDTH, -HEIGHT],
+            [WIDTH * 2, HEIGHT * 2],
+          ]}
+          onMoveEnd={handleMoveEnd}
+        >
+          <Geographies geography={geoUrl}>
+            {({
+              geographies,
+            }: {
+              geographies: GeographyProps["geography"][];
+            }) =>
+              geographies.map((geo) => {
+                const props = (
+                  geo as unknown as { properties: { N03_004?: string } }
+                ).properties;
+                const name = props.N03_004 ?? "";
+                const count = counts ? counts[name] : undefined;
+                const href =
+                  linkBase && name
+                    ? `${linkBase}/${encodeURIComponent(name)}`
+                    : null;
+                return (
+                  <Geography
+                    key={(geo as unknown as { rsmKey: string }).rsmKey}
+                    geography={geo}
+                    fill={
+                      counts ? colorForCount(count, min, max) : NO_DATA_COLOR
+                    }
+                    stroke="#fcfcfb"
+                    strokeWidth={0.5}
+                    onMouseEnter={(evt: React.MouseEvent) => {
+                      setHovered({
+                        name,
+                        count,
+                        x: evt.clientX,
+                        y: evt.clientY,
+                      });
+                    }}
+                    onMouseMove={(evt: React.MouseEvent) => {
+                      setHovered((prev) =>
+                        prev
+                          ? { ...prev, x: evt.clientX, y: evt.clientY }
+                          : prev
+                      );
+                    }}
+                    onMouseLeave={() => setHovered(null)}
+                    onClick={() => {
+                      if (href) router.push(href);
+                    }}
+                    style={{
+                      default: { outline: "none" },
+                      hover: {
+                        outline: "none",
+                        opacity: href ? 0.8 : 1,
+                        cursor: href ? "pointer" : "default",
+                      },
+                      pressed: { outline: "none" },
+                    }}
+                  />
+                );
+              })
+            }
+          </Geographies>
+        </ZoomableGroup>
       </ComposableMap>
+
+      <div className="absolute right-2 top-2 flex flex-col gap-1">
+        <button
+          type="button"
+          onClick={() => zoomBy(ZOOM_STEP)}
+          aria-label="ズームイン"
+          title="ズームイン"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+        >
+          ＋
+        </button>
+        <button
+          type="button"
+          onClick={() => zoomBy(1 / ZOOM_STEP)}
+          aria-label="ズームアウト"
+          title="ズームアウト"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+        >
+          －
+        </button>
+        <button
+          type="button"
+          onClick={resetView}
+          aria-label="表示をリセット"
+          title="表示をリセット"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-xs font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+        >
+          ⟲
+        </button>
+      </div>
 
       {hovered && (
         <div

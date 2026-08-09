@@ -6,10 +6,18 @@ import {
   ComposableMap,
   Geographies,
   Geography,
+  ZoomableGroup,
   type GeographyProps,
 } from "react-simple-maps";
 
 const GEO_URL = "/data/prefectures-topo.json";
+const WIDTH = 600;
+const HEIGHT = 600;
+const DEFAULT_CENTER: [number, number] = [137, 38];
+const DEFAULT_SCALE = 1500;
+const MIN_ZOOM = 1;
+const MAX_ZOOM = 8;
+const ZOOM_STEP = 1.5;
 
 // dataviz skill: sequential(単一色相・低→高)の青ランプ100〜700から抜粋
 const SEQUENTIAL_STEPS = [
@@ -34,6 +42,10 @@ function colorForCount(count: number | undefined, min: number, max: number) {
   return SEQUENTIAL_STEPS[idx];
 }
 
+type MapPosition = { coordinates: [number, number]; zoom: number };
+
+const DEFAULT_POSITION: MapPosition = { coordinates: DEFAULT_CENTER, zoom: 1 };
+
 export function PrefectureMap({
   counts,
 }: {
@@ -46,62 +58,130 @@ export function PrefectureMap({
     x: number;
     y: number;
   } | null>(null);
+  const [position, setPosition] = useState<MapPosition>(DEFAULT_POSITION);
 
   const values = Object.values(counts);
   const min = Math.min(...values);
   const max = Math.max(...values);
 
+  function handleMoveEnd(pos: MapPosition) {
+    setPosition(pos);
+  }
+
+  function zoomBy(factor: number) {
+    setPosition((prev) => ({
+      ...prev,
+      zoom: Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, prev.zoom * factor)),
+    }));
+  }
+
+  function resetView() {
+    setPosition(DEFAULT_POSITION);
+  }
+
   return (
     <div className="relative">
       <ComposableMap
         projection="geoMercator"
-        projectionConfig={{ center: [137, 38], scale: 1500 }}
-        width={600}
-        height={600}
+        projectionConfig={{ center: DEFAULT_CENTER, scale: DEFAULT_SCALE }}
+        width={WIDTH}
+        height={HEIGHT}
         className="w-full h-auto"
       >
-        <Geographies geography={GEO_URL}>
-          {({ geographies }: { geographies: GeographyProps["geography"][] }) =>
-            geographies.map((geo) => {
-              const name = (
-                geo as unknown as { properties: { N03_001: string } }
-              ).properties.N03_001;
-              const count = counts[name];
-              return (
-                <Geography
-                  key={(geo as unknown as { rsmKey: string }).rsmKey}
-                  geography={geo}
-                  fill={colorForCount(count, min, max)}
-                  stroke="#fcfcfb"
-                  strokeWidth={0.5}
-                  onMouseEnter={(evt: React.MouseEvent) => {
-                    setHovered({
-                      name,
-                      count: count ?? 0,
-                      x: evt.clientX,
-                      y: evt.clientY,
-                    });
-                  }}
-                  onMouseMove={(evt: React.MouseEvent) => {
-                    setHovered((prev) =>
-                      prev ? { ...prev, x: evt.clientX, y: evt.clientY } : prev
-                    );
-                  }}
-                  onMouseLeave={() => setHovered(null)}
-                  onClick={() =>
-                    router.push(`/map/${encodeURIComponent(name)}`)
-                  }
-                  style={{
-                    default: { outline: "none", cursor: "pointer" },
-                    hover: { outline: "none", opacity: 0.8, cursor: "pointer" },
-                    pressed: { outline: "none" },
-                  }}
-                />
-              );
-            })
-          }
-        </Geographies>
+        <ZoomableGroup
+          center={position.coordinates}
+          zoom={position.zoom}
+          minZoom={MIN_ZOOM}
+          maxZoom={MAX_ZOOM}
+          translateExtent={[
+            [-WIDTH, -HEIGHT],
+            [WIDTH * 2, HEIGHT * 2],
+          ]}
+          onMoveEnd={handleMoveEnd}
+        >
+          <Geographies geography={GEO_URL}>
+            {({
+              geographies,
+            }: {
+              geographies: GeographyProps["geography"][];
+            }) =>
+              geographies.map((geo) => {
+                const name = (
+                  geo as unknown as { properties: { N03_001: string } }
+                ).properties.N03_001;
+                const count = counts[name];
+                return (
+                  <Geography
+                    key={(geo as unknown as { rsmKey: string }).rsmKey}
+                    geography={geo}
+                    fill={colorForCount(count, min, max)}
+                    stroke="#fcfcfb"
+                    strokeWidth={0.5}
+                    onMouseEnter={(evt: React.MouseEvent) => {
+                      setHovered({
+                        name,
+                        count: count ?? 0,
+                        x: evt.clientX,
+                        y: evt.clientY,
+                      });
+                    }}
+                    onMouseMove={(evt: React.MouseEvent) => {
+                      setHovered((prev) =>
+                        prev
+                          ? { ...prev, x: evt.clientX, y: evt.clientY }
+                          : prev
+                      );
+                    }}
+                    onMouseLeave={() => setHovered(null)}
+                    onClick={() =>
+                      router.push(`/map/${encodeURIComponent(name)}`)
+                    }
+                    style={{
+                      default: { outline: "none", cursor: "pointer" },
+                      hover: {
+                        outline: "none",
+                        opacity: 0.8,
+                        cursor: "pointer",
+                      },
+                      pressed: { outline: "none" },
+                    }}
+                  />
+                );
+              })
+            }
+          </Geographies>
+        </ZoomableGroup>
       </ComposableMap>
+
+      <div className="absolute right-2 top-2 flex flex-col gap-1">
+        <button
+          type="button"
+          onClick={() => zoomBy(ZOOM_STEP)}
+          aria-label="ズームイン"
+          title="ズームイン"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+        >
+          ＋
+        </button>
+        <button
+          type="button"
+          onClick={() => zoomBy(1 / ZOOM_STEP)}
+          aria-label="ズームアウト"
+          title="ズームアウト"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+        >
+          －
+        </button>
+        <button
+          type="button"
+          onClick={resetView}
+          aria-label="表示をリセット"
+          title="表示をリセット"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-xs font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+        >
+          ⟲
+        </button>
+      </div>
 
       {hovered && (
         <div
@@ -124,7 +204,7 @@ export function PrefectureMap({
         ))}
         <span>多い</span>
         <span className="ml-2 text-neutral-400">
-          （{min}〜{max}名。クリックでその都道府県の詳細へ）
+          （{min}〜{max}名。クリックでその都道府県の詳細へ／ホイールでズーム・ドラッグでパン）
         </span>
       </div>
     </div>
