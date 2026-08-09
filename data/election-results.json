@@ -1,1 +1,682 @@
-[]
+[
+  {
+    "legislatorId": "sangiin-134",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "北海道",
+    "votes": 546118,
+    "rank": 1,
+    "totalCandidates": 12,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-69",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "北海道",
+    "votes": 501081,
+    "rank": 2,
+    "totalCandidates": 12,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-37",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "北海道",
+    "votes": 333558,
+    "rank": 3,
+    "totalCandidates": 12,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-149",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "秋田県",
+    "votes": 219717,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-169",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "山形県",
+    "votes": 248864,
+    "rank": 1,
+    "totalCandidates": 6,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-133",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "栃木県",
+    "votes": 301373,
+    "rank": 1,
+    "totalCandidates": 6,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-196",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "群馬県",
+    "votes": 573114,
+    "rank": 1,
+    "totalCandidates": 9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-52",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "群馬県",
+    "votes": 465278,
+    "rank": 2,
+    "totalCandidates": 9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-117",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "群馬県",
+    "votes": 288284,
+    "rank": 3,
+    "totalCandidates": 9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-126",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 772272,
+    "rank": 1,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-202",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 731605,
+    "rank": 2,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-63",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 731342,
+    "rank": 3,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-246",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 722917,
+    "rank": 4,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-112",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 668568,
+    "rank": 5,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-57",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 585948,
+    "rank": 7,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-170",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 577085,
+    "rank": 8,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-16",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 431330,
+    "rank": 10,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-219",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "千葉県",
+    "votes": 209586,
+    "rank": 19,
+    "totalCandidates": 41,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-137",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "福井県",
+    "votes": 146420,
+    "rank": 1,
+    "totalCandidates": 7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-244",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "山梨県",
+    "votes": 333611,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-121",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "静岡県",
+    "votes": 752187,
+    "rank": 1,
+    "totalCandidates": 7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-201",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "静岡県",
+    "votes": 426237,
+    "rank": 2,
+    "totalCandidates": 7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-94",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "愛知県",
+    "votes": 339940,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-218",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "滋賀県",
+    "votes": 202850,
+    "rank": 1,
+    "totalCandidates": 7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-53",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "京都府",
+    "votes": 549024,
+    "rank": 1,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-217",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "京都府",
+    "votes": 510518,
+    "rank": 2,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-161",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "京都府",
+    "votes": 332523,
+    "rank": 5,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-198",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "奈良県",
+    "votes": 175450,
+    "rank": 1,
+    "totalCandidates": 7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-163",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "和歌山県",
+    "votes": 399640,
+    "rank": 1,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-224",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "和歌山県",
+    "votes": 303928,
+    "rank": 2,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-221",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "和歌山県",
+    "votes": 141604,
+    "rank": 4,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-78",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "山口県",
+    "votes": 225617,
+    "rank": 1,
+    "totalCandidates": 3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-155",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "愛媛県",
+    "votes": 287853,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-158",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "福岡県",
+    "votes": 380592,
+    "rank": 1,
+    "totalCandidates": 11,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-118",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "福岡県",
+    "votes": 320391,
+    "rank": 2,
+    "totalCandidates": 11,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-175",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "熊本県",
+    "votes": 328373,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-187",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "大分県",
+    "votes": 214613,
+    "rank": 2,
+    "totalCandidates": 12,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-20",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "宮城県",
+    "votes": 367794,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-222",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "福島県",
+    "votes": 327951,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-89",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "茨城県",
+    "votes": 417601,
+    "rank": 1,
+    "totalCandidates": 9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-106",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "茨城県",
+    "votes": 308772,
+    "rank": 2,
+    "totalCandidates": 9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-49",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "埼玉県",
+    "votes": 535706,
+    "rank": 1,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-101",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "埼玉県",
+    "votes": 531580,
+    "rank": 2,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-160",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "埼玉県",
+    "votes": 500096,
+    "rank": 3,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-86",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "埼玉県",
+    "votes": 480330,
+    "rank": 4,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-76",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "東京都",
+    "votes": 606181,
+    "rank": 1,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-83",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "東京都",
+    "votes": 562443,
+    "rank": 2,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-113",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "東京都",
+    "votes": 517885,
+    "rank": 3,
+    "totalCandidates": 18,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-166",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "富山県",
+    "votes": 198300,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-97",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "石川県",
+    "votes": 156986,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-174",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "長野県",
+    "votes": 430334,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-213",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "岐阜県",
+    "votes": 596180,
+    "rank": 1,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-141",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "岐阜県",
+    "votes": 536260,
+    "rank": 2,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-125",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "岐阜県",
+    "votes": 531387,
+    "rank": 3,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-105",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "岐阜県",
+    "votes": 521223,
+    "rank": 4,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-162",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "三重県",
+    "votes": 190104,
+    "rank": 1,
+    "totalCandidates": 8,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-109",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "大阪府",
+    "votes": 653666,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-123",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "大阪府",
+    "votes": 504163,
+    "rank": 2,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-24",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "兵庫県",
+    "votes": 822407,
+    "rank": 1,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-65",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "兵庫県",
+    "votes": 285451,
+    "rank": 3,
+    "totalCandidates": 15,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-148",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "鳥取県・島根県",
+    "votes": 289250,
+    "rank": 1,
+    "totalCandidates": 5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-100",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "岡山県",
+    "votes": 307556,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-185",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "徳島県・高知県",
+    "votes": 264891,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-209",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "香川県",
+    "votes": 419082,
+    "rank": 1,
+    "totalCandidates": 12,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-227",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "佐賀県",
+    "votes": 165688,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-92",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "長崎県",
+    "votes": 246585,
+    "rank": 1,
+    "totalCandidates": 3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-241",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "長崎県",
+    "votes": 207250,
+    "rank": 2,
+    "totalCandidates": 3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  },
+  {
+    "legislatorId": "sangiin-225",
+    "electionYear": 2025,
+    "electionType": "選挙区",
+    "district": "宮崎県",
+    "votes": 193909,
+    "rank": 1,
+    "totalCandidates": 4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027842.xlsx"
+  }
+]
