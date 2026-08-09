@@ -41,6 +41,21 @@ export function resolvePartyId(name: string): string {
 }
 
 /**
+ * 衆議院側の会派略称のうち、統合せず単独維持するもの（party-中道など）について、
+ * 略称のままだと情報量が少ないため、正式名称に置き換えるためのマップ。
+ * 統合対象（PARTY_ALIASESにあるもの）はここに含める必要はない
+ * （統合先の政党レコードが既に正式名称を持っているため）。
+ */
+export const PARTY_NAME_OVERRIDES: Record<string, string> = {
+  中道: "中道改革連合・無所属",
+};
+
+/** 会派略称から表示用の政党名を解決する。該当がなければ略称をそのまま返す。 */
+export function resolvePartyName(name: string): string {
+  return PARTY_NAME_OVERRIDES[name] ?? name;
+}
+
+/**
  * 政党id → 公式カラー(hex)。
  *
  * 採用方針（中立性配慮。CLAUDE.md記載の原則に従い、意図的な明暗・彩度調整はしない）:

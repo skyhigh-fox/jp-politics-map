@@ -18,7 +18,7 @@
 import * as cheerio from "cheerio";
 import type { Legislator, Party } from "../src/types";
 import { insertIfMissingById, writeDataJson } from "./lib/writeJson";
-import { applyPartyColors, resolvePartyId } from "./lib/partyColors";
+import { applyPartyColors, resolvePartyId, resolvePartyName } from "./lib/partyColors";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -99,7 +99,7 @@ async function main() {
 
   const parties: Party[] = Array.from(partyNames)
     .filter(Boolean)
-    .map((name) => ({ id: partyIdFromName(name), name }));
+    .map((name) => ({ id: partyIdFromName(name), name: resolvePartyName(name) }));
 
   const dataDir = path.join(process.cwd(), "data");
   const existingLegislators = JSON.parse(
