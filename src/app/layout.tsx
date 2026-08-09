@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { NewsMenu } from "@/components/NewsMenu";
+import { getNews } from "@/lib/news";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,11 +11,13 @@ export const metadata: Metadata = {
     "日本地図をベースに、都道府県・市区町村ごとの政治情報（法案審議進捗、議員リスト、選挙結果）を閲覧できるサイト",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const news = await getNews();
+
   return (
     <html lang="ja">
       <body className="min-h-screen bg-white text-neutral-900 antialiased">
@@ -34,6 +38,7 @@ export default function RootLayout({
             <Link href="/map" className="text-neutral-600 hover:text-neutral-900">
               地図
             </Link>
+            <NewsMenu items={news} />
           </nav>
         </header>
         <main className="px-6 py-8">{children}</main>
