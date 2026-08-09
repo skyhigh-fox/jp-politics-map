@@ -34,18 +34,23 @@ export default async function PrefectureDetailPage({
   );
 
   return (
-    <div>
+    <div className="animate-fade-in">
       <p className="text-sm">
-        <Link href="/map" className="underline">
+        <Link
+          href="/map"
+          className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+        >
           ← 都道府県マップに戻る
         </Link>
       </p>
-      <h1 className="mt-2 text-xl font-bold">{prefecture}</h1>
-      <p className="mt-2 text-sm text-neutral-600">
+      <h1 className="mt-2 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
+        {prefecture}
+      </h1>
+      <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
         国会議員（関連） {relatedCount} 名 —{" "}
         <Link
           href={`/legislators?prefecture=${encodeURIComponent(prefecture)}`}
-          className="underline"
+          className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
         >
           一覧を見る
         </Link>
@@ -62,11 +67,11 @@ export default async function PrefectureDetailPage({
       </div>
 
       {localCounts ? (
-        <p className="mt-4 text-xs text-neutral-500">
+        <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
           市区町村をクリックすると、その地域選出の地方議会議員一覧に移動します。
         </p>
       ) : (
-        <p className="mt-4 text-xs text-neutral-500">
+        <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
           地方議会議員データは現在フェーズ3のパイロット対象自治体のみ整備中です。
         </p>
       )}

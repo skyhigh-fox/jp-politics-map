@@ -46,15 +46,15 @@ export default async function LegislatorsPage({
   );
 
   return (
-    <div>
-      <h1 className="text-xl font-bold">
+    <div className="animate-fade-in">
+      <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
         議員一覧{filters.prefecture ? `（${filters.prefecture}）` : ""}
       </h1>
-      <p className="mt-2 text-sm text-neutral-600">
+      <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
         {allLegislators.length === 0 ? (
           <>
             データ未取得です。
-            <code className="mx-1 rounded bg-neutral-100 px-1">
+            <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
               npm run fetch:sangiin-members / fetch:shugiin-members
             </code>
             で取得してください。
@@ -97,13 +97,17 @@ export default async function LegislatorsPage({
           <li key={legislator.id}>
             <Link
               href={`/legislators/${legislator.id}`}
-              className="block rounded border border-neutral-200 p-3 text-sm hover:border-neutral-400"
+              className="group block rounded-xl border border-neutral-200 bg-white p-4 text-sm shadow-card transition-all hover:-translate-y-0.5 hover:border-accent-300 hover:shadow-card-hover dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-accent-700"
             >
-              <div className="font-semibold">{legislator.name}</div>
-              <div className="text-neutral-600">
+              <div className="font-semibold text-neutral-900 group-hover:text-accent-600 dark:text-neutral-100 dark:group-hover:text-accent-400">
+                {legislator.name}
+              </div>
+              <div className="mt-1 text-neutral-600 dark:text-neutral-400">
                 {legislator.chamber} / {partyName(legislator.currentPartyId)}
               </div>
-              <div className="text-neutral-600">{legislator.district}</div>
+              <div className="text-neutral-600 dark:text-neutral-400">
+                {legislator.district}
+              </div>
             </Link>
           </li>
         ))}

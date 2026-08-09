@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Bill } from "@/types";
+import { StatusBadge } from "@/components/StatusBadge";
 
 const PAGE_SIZE = 50;
 
@@ -40,32 +41,58 @@ export function InfiniteBillsTable({ bills }: { bills: Bill[] }) {
 
   return (
     <>
-      <table className="mt-6 w-full border-collapse text-sm">
-        <thead>
-          <tr className="border-b border-neutral-300 text-left">
-            <th className="py-2 pr-4">国会回次</th>
-            <th className="py-2 pr-4">件名</th>
-            <th className="py-2 pr-4">提出</th>
-            <th className="py-2 pr-4">院</th>
-            <th className="py-2 pr-4">状況</th>
-          </tr>
-        </thead>
-        <tbody>
-          {shown.map((bill) => (
-            <tr key={bill.id} className="border-b border-neutral-100">
-              <td className="py-2 pr-4">{bill.dietSession}</td>
-              <td className="py-2 pr-4">
-                <Link href={`/bills/${bill.id}`} className="underline">
-                  {bill.title}
-                </Link>
-              </td>
-              <td className="py-2 pr-4">{bill.submitterType}</td>
-              <td className="py-2 pr-4">{bill.house}</td>
-              <td className="py-2 pr-4">{bill.status}</td>
+      <div className="mt-6 overflow-hidden overflow-x-auto rounded-xl border border-neutral-200 shadow-card dark:border-neutral-800">
+        <table className="w-full min-w-[640px] border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-neutral-200 bg-neutral-50 text-left dark:border-neutral-800 dark:bg-neutral-900">
+              <th className="px-4 py-2.5 pr-4 font-medium text-neutral-600 dark:text-neutral-400">
+                国会回次
+              </th>
+              <th className="px-4 py-2.5 pr-4 font-medium text-neutral-600 dark:text-neutral-400">
+                件名
+              </th>
+              <th className="px-4 py-2.5 pr-4 font-medium text-neutral-600 dark:text-neutral-400">
+                提出
+              </th>
+              <th className="px-4 py-2.5 pr-4 font-medium text-neutral-600 dark:text-neutral-400">
+                院
+              </th>
+              <th className="px-4 py-2.5 pr-4 font-medium text-neutral-600 dark:text-neutral-400">
+                状況
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="bg-white dark:bg-neutral-900">
+            {shown.map((bill) => (
+              <tr
+                key={bill.id}
+                className="border-b border-neutral-100 last:border-0 hover:bg-neutral-50 dark:border-neutral-800 dark:hover:bg-neutral-800/50"
+              >
+                <td className="px-4 py-2.5 pr-4 text-neutral-700 dark:text-neutral-300">
+                  {bill.dietSession}
+                </td>
+                <td className="px-4 py-2.5 pr-4">
+                  <Link
+                    href={`/bills/${bill.id}`}
+                    className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+                  >
+                    {bill.title}
+                  </Link>
+                </td>
+                <td className="px-4 py-2.5 pr-4 text-neutral-700 dark:text-neutral-300">
+                  {bill.submitterType}
+                </td>
+                <td className="px-4 py-2.5 pr-4 text-neutral-700 dark:text-neutral-300">
+                  {bill.house}
+                </td>
+                <td className="px-4 py-2.5 pr-4">
+                  <StatusBadge status={bill.status} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* 読み込みトリガー用の目印。見た目には何も表示しない（進捗表示は下の固定バー側） */}
       <div ref={sentinelRef} className="h-px" aria-hidden />
@@ -74,7 +101,7 @@ export function InfiniteBillsTable({ bills }: { bills: Bill[] }) {
       {/* スクロールに合わせて自動読み込みされると、進捗を示すだけの要素が
           常に画面外に流れてしまい読めないため、画面下部に固定して常に見えるようにする */}
       {bills.length > PAGE_SIZE && (
-        <div className="fixed inset-x-0 bottom-0 z-10 border-t border-neutral-200 bg-white/95 px-6 py-2 text-center text-xs text-neutral-600 backdrop-blur">
+        <div className="fixed inset-x-0 bottom-0 z-10 border-t border-neutral-200 bg-white/95 px-6 py-2 text-center text-xs text-neutral-600 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95 dark:text-neutral-400">
           {visibleCount < bills.length
             ? `${visibleCount} / ${bills.length} 件を表示中…スクロールで続きを読み込みます`
             : `全${bills.length}件を表示しました`}

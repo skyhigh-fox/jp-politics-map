@@ -26,7 +26,7 @@ export function ScrollToTopButton() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="ページの先頭へ戻る"
-      className="fixed bottom-20 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-700 shadow-md hover:bg-neutral-50"
+      className="fixed bottom-20 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-700 shadow-md transition-colors hover:border-accent-300 hover:bg-accent-50 hover:text-accent-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-accent-700 dark:hover:bg-neutral-800 dark:hover:text-accent-400"
     >
       ↑
     </button>
