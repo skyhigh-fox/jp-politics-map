@@ -1,28 +1,26 @@
 /**
- * 政治ニュースの見出し・リンクを取得するスクリプト。
+ * 政治関連ニュースの見出し・リンクを取得するスクリプト。
  *
- * データソース: NHK NEWS WEB「政治」カテゴリ RSS
- *   https://www3.nhk.or.jp/rss/news/cat4.xml
+ * データソース選定（2026-08-10調査、詳細はObsidian データソース調査.md／決定事項ログ.md参照）:
+ *   1. NHK NEWS WEB「政治」カテゴリ RSS（cat4.xml）
+ *      規約上「個人利用限定・プログラムでの再配信不可」と明記されているが、
+ *      公共放送で党派性が低く、政治専用フィードが安定運用されている点から
+ *      他候補（Yahoo!ニュース、47NEWS、Googleニュース、首相官邸）より
+ *      相対的にリスクが低いと判断し採用
+ *   2. 総務省「ホームページ新着情報」RSS（news.rdf）
+ *      利用規約ページに禁止文言が一切なく（内閣府・首相官邸にある
+ *      「営利・非営利問わず再配布禁止」のような記載が無い）、技術的注意書き
+ *      （URL変更の可能性等）のみだったため追加。ただし内容は総務省全般の
+ *      お知らせであり、NHKほど政治ニュースに特化していない点に留意
  *
- * 選定理由（2026-08-10調査、詳細はObsidian データソース調査.md／決定事項ログ.md参照）:
- *   - 日本の政治ニュースRSSとしてNHK・Yahoo!ニュース・47NEWS・Googleニュース・
- *     首相官邸を調査したが、いずれも配信ページの利用規約で「個人利用限定・
- *     プログラム/ウェブサイト等での再配信は禁止」と明記されている（Yahoo!ニュース、
- *     47NEWS、Googleニュースはこの制約が特に明示的）。
- *   - NHKも同様の制約（「個人の方の利用のためのみ」「ブログやプログラム等による
- *     再配信・再提供は不可」、出典: https://www.nhk.or.jp/toppage/rss/index.html ）
- *     があるが、(1) 公共放送であり特定政党寄りの論調になりにくく本プロジェクトの
- *     政治的中立性の方針と相性が良い、(2) 政治カテゴリ専用フィード(cat4.xml)が
- *     長期間安定運用されている、という点から、他候補より相対的にリスクが低いと
- *     判断し採用した。
- *   - リスク低減のため、本文・画像は一切取得・転載せず、見出しテキストと元記事への
- *     直リンクのみを保存する（実装はrss-parserでtitle/link/pubDateのみ抽出）。
- *     本プロジェクトが非個人利用の規模で公開される場合は、この判断を再検討すること。
+ * リスク低減のため、両ソースとも本文・画像は一切取得・転載せず、見出しテキストと
+ * 元記事への直リンクのみを保存する。本プロジェクトが非個人利用の規模で公開される
+ * 場合は、NHK分の採否を再検討すること。
  *
- * サムネイル画像について: cat4.xmlのレスポンスに<enclosure>や<media:thumbnail>等の
- *   画像情報は含まれておらず、そもそも取得できない。仮に取得できたとしても
- *   著作権上の扱いが不明瞭なため、本プロジェクトの「ライセンス不明な画像は掲載しない」
- *   方針（議員写真と同様）に沿って、サムネイルは表示しない。
+ * 実装メモ: 総務省のnews.rdfはRSS1.0(RDF)形式・Shift_JISエンコーディング。
+ * rss-parserの`parseURL()`はエンコーディングを認識せず文字化けするため、
+ * 自前でarrayBufferを取得してShift_JISデコードしてから`parseString()`に渡す
+ * 必要がある（実データで確認済み）。NHK側はUTF-8のRSS2.0なのでparseURL()で問題ない。
  *
  * 実行: npm run fetch:news
  */
@@ -30,26 +28,76 @@ import Parser from "rss-parser";
 import type { NewsItem } from "../src/lib/news";
 import { writeDataJson } from "./lib/writeJson";
 
-const FEED_URL = "https://www3.nhk.or.jp/rss/news/cat4.xml";
-const SOURCE_NAME = "NHKニュース";
-const MAX_ITEMS = 30;
+interface FeedSource {
+  url: string;
+  sourceName: string;
+  encoding?: "shift_jis"; // 未指定ならUTF-8としてparseURL()を使う
+  maxItems: number;
+}
 
-async function main() {
-  const parser = new Parser();
-  const feed = await parser.parseURL(FEED_URL);
+const SOURCES: FeedSource[] = [
+  {
+    url: "https://www3.nhk.or.jp/rss/news/cat4.xml",
+    sourceName: "NHKニュース",
+    maxItems: 30,
+  },
+  {
+    url: "https://www.soumu.go.jp/news.rdf",
+    sourceName: "総務省",
+    encoding: "shift_jis",
+    maxItems: 20,
+  },
+];
 
-  const items: NewsItem[] = (feed.items ?? [])
+function toNewsItems(
+  items: Parser.Item[],
+  sourceName: string,
+  maxItems: number
+): NewsItem[] {
+  return items
     .filter((item) => item.title && item.link)
     .map((item) => ({
       id: item.guid || item.link!,
       title: item.title!.trim(),
       link: item.link!,
-      sourceName: SOURCE_NAME,
+      sourceName,
       publishedAt: item.isoDate ?? item.pubDate ?? new Date().toISOString(),
     }))
-    .slice(0, MAX_ITEMS);
+    .slice(0, maxItems);
+}
 
-  console.log(`取得件数: ${items.length}件`);
+async function fetchSource(source: FeedSource): Promise<NewsItem[]> {
+  const parser = new Parser();
+  if (source.encoding === "shift_jis") {
+    const res = await fetch(source.url);
+    if (!res.ok) throw new Error(`fetch failed (${source.sourceName}): ${res.status}`);
+    const buf = await res.arrayBuffer();
+    const text = new TextDecoder(source.encoding).decode(buf);
+    const feed = await parser.parseString(text);
+    return toNewsItems(feed.items ?? [], source.sourceName, source.maxItems);
+  }
+  const feed = await parser.parseURL(source.url);
+  return toNewsItems(feed.items ?? [], source.sourceName, source.maxItems);
+}
+
+async function main() {
+  const results = await Promise.allSettled(SOURCES.map(fetchSource));
+
+  const items: NewsItem[] = [];
+  results.forEach((result, i) => {
+    const source = SOURCES[i]!;
+    if (result.status === "fulfilled") {
+      console.log(`${source.sourceName}: ${result.value.length}件`);
+      items.push(...result.value);
+    } else {
+      // 1ソースの失敗で全体を止めない（他ソースは引き続き取得する）
+      console.error(`${source.sourceName}の取得に失敗:`, result.reason);
+    }
+  });
+
+  items.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+
+  console.log(`合計取得件数: ${items.length}件`);
   if (items.length === 0) {
     throw new Error(
       "ニュースを1件も取得できませんでした。フィードURL・スキーマを確認してください。"

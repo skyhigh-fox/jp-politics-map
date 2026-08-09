@@ -21,7 +21,7 @@ export default async function NewsPage() {
             で取得してください。
           </>
         ) : (
-          `NHK NEWS WEB「政治」カテゴリの見出し ${news.length}件（新しい順）`
+          `NHK NEWS WEB「政治」カテゴリ・総務省お知らせの見出し ${news.length}件（新しい順）`
         )}
       </p>
 
@@ -46,9 +46,7 @@ export default async function NewsPage() {
       )}
 
       <p className="mt-8 max-w-2xl text-xs text-neutral-400 dark:text-neutral-600">
-        見出し・リンクのみをNHK NEWS
-        WEB「政治」カテゴリRSSより取得して表示しています。本文・画像は転載していません。記事の全文は各リンク先（NHK
-        NEWS WEB）でご覧ください。
+        見出し・リンクのみをNHK NEWS WEB「政治」カテゴリRSS・総務省「ホームページ新着情報」RSSより取得して表示しています。本文・画像は転載していません。記事の全文は各リンク先でご覧ください。
       </p>
     </div>
   );

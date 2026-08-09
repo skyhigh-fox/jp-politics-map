@@ -21,6 +21,20 @@
     "publishedAt": "2026-08-07T20:34:47.000Z"
   },
   {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000721.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第38報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000721.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-07T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001172.html",
+    "title": "令和8年8月8日付　総務省人事",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001172.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-07T20:00:00.000Z"
+  },
+  {
     "id": "http://www3.nhk.or.jp/news/html/20260808/k10015199831000.html",
     "title": "韓国調査船が竹島周辺EEZ内で海洋調査か 日本政府が抗議",
     "link": "http://www3.nhk.or.jp/news/html/20260808/k10015199831000.html",
@@ -140,6 +154,111 @@
     "publishedAt": "2026-08-07T01:21:56.000Z"
   },
   {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyokan06_02000088.html",
+    "title": "「令和8年熊本地震による災害についての特定非常災害及びこれに対し適用すべき措置の指定に関する政令」の公布・施行",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyokan06_02000088.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000720.html",
+    "title": "令和8年熊本地震による被災者に対する森林環境税の職権免除について（事務連絡）（令和8年8月7日）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000720.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000719.html",
+    "title": "令和8年熊本地震により被害を受けた土地及び家屋に係る令和9基準年度向け評価について（通知）（令和8年8月7日）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000719.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000662.html",
+    "title": "令和8年熊本地震による災害「特定非常災害」指定について（各種の許認可等（運転免許等）の有効期間の延長などが行われます。）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000662.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu02_02000486.html",
+    "title": "SNS等におけるなりすまし詐欺広告に関する対策強化のための7府省庁合同要請の実施",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu02_02000486.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000267.html",
+    "title": "政治資金規正法に基づく政治団体の届出事項の異動の届出",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000267.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin04_02000183.html",
+    "title": "令和8年度 情報通信分野の国際標準化会議への参加者募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin04_02000183.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000718.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第37報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000718.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000417.html",
+    "title": "令和8年度　給与改定所要額概算",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000417.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kougai01_20260807.html",
+    "title": "令和8年8月7日付 公害等調整委員会事務局人事",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kougai01_20260807.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02kanbo02_04000130.html",
+    "title": "大臣官房総務課 非常勤職員採用情報",
+    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02kanbo02_04000130.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/senkyoku/02gyosei14_04000267.html",
+    "title": "第10回衆議院議員選挙区画定審議会",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/senkyoku/02gyosei14_04000267.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000717.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第36報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000717.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei07_01000289.html",
+    "title": "家計調査報告（家計収支編）2026年（令和8年）6月分及び4～6月期平均",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei07_01000289.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001171.html",
+    "title": "令和8年8月7日付　総務省人事",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001171.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-06T20:00:00.000Z"
+  },
+  {
     "id": "http://www3.nhk.or.jp/news/html/20260806/k10015198471000.html",
     "title": "広島原爆の日 被爆地の思いは NW9広内キャスター 現地から報告",
     "link": "http://www3.nhk.or.jp/news/html/20260806/k10015198471000.html",
@@ -208,5 +327,26 @@
     "link": "http://www3.nhk.or.jp/news/html/20260806/k10015198101000.html",
     "sourceName": "NHKニュース",
     "publishedAt": "2026-08-06T05:30:56.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000716.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第35報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000716.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-05T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000665.html",
+    "title": "震災により本人確認が困難な場合の携帯電話契約の本人確認方法の特例",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000665.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-05T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000290.html",
+    "title": "令和8年熊本地震により本人確認が困難な場合の携帯電話契約の本人確認方法の特例",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000290.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-05T20:00:00.000Z"
   }
 ]
