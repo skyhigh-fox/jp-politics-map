@@ -30,6 +30,9 @@ export default function RootLayout({
             >
               議員一覧
             </Link>
+            <Link href="/map" className="text-neutral-600 hover:text-neutral-900">
+              地図
+            </Link>
           </nav>
         </header>
         <main className="px-6 py-8">{children}</main>

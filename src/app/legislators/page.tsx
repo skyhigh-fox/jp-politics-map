@@ -1,18 +1,39 @@
 import { getLegislators, getParties } from "@/lib/data";
+import { legislatorPrefectures } from "@/lib/prefectures";
+import Link from "next/link";
 
-export default async function LegislatorsPage() {
-  const [legislators, parties] = await Promise.all([
+export default async function LegislatorsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ prefecture?: string }>;
+}) {
+  const { prefecture } = await searchParams;
+  const [allLegislators, parties] = await Promise.all([
     getLegislators(),
     getParties(),
   ]);
+  const legislators = prefecture
+    ? allLegislators.filter((l) =>
+        legislatorPrefectures(l).includes(prefecture)
+      )
+    : allLegislators;
   const partyName = (id: string) =>
     parties.find((p) => p.id === id)?.name ?? "不明";
 
   return (
     <div>
-      <h1 className="text-xl font-bold">議員一覧</h1>
+      <h1 className="text-xl font-bold">
+        議員一覧{prefecture ? `（${prefecture}）` : ""}
+      </h1>
+      {prefecture && (
+        <p className="mt-1 text-sm">
+          <Link href="/legislators" className="underline">
+            絞り込みを解除
+          </Link>
+        </p>
+      )}
       <p className="mt-2 text-sm text-neutral-600">
-        {legislators.length === 0 ? (
+        {allLegislators.length === 0 ? (
           <>
             データ未取得です。
             <code className="mx-1 rounded bg-neutral-100 px-1">
@@ -21,7 +42,7 @@ export default async function LegislatorsPage() {
             で取得してください。
           </>
         ) : (
-          `現在 ${legislators.length} 名（検索・フィルタ機能は今後追加予定）`
+          `${legislators.length} 名（検索・フィルタ機能は今後追加予定）`
         )}
       </p>
       <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
