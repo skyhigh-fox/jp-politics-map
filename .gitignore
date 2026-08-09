@@ -28,5 +28,8 @@ next-env.d.ts
 .vscode/*
 !.vscode/extensions.json
 
+# Claude Code agent worktrees
+.claude/
+
 # 削除予定ファイルの退避先（CLAUDE.mdの運用ルールにより削除の代わりにここへ移動する）
 _delete/
