@@ -71,13 +71,19 @@ export function InfiniteBillsTable({ bills }: { bills: Bill[] }) {
         </tbody>
       </table>
 
-      <div ref={sentinelRef} className="py-6 text-center text-xs text-neutral-400">
-        {visibleCount < bills.length
-          ? `${visibleCount} / ${bills.length} 件を表示中…スクロールで続きを読み込みます`
-          : bills.length > PAGE_SIZE
-            ? `全${bills.length}件を表示しました`
-            : null}
-      </div>
+      {/* 読み込みトリガー用の目印。見た目には何も表示しない（進捗表示は下の固定バー側） */}
+      <div ref={sentinelRef} className="h-px" aria-hidden />
+      <div className="h-16" />
+
+      {/* スクロールに合わせて自動読み込みされると、進捗を示すだけの要素が
+          常に画面外に流れてしまい読めないため、画面下部に固定して常に見えるようにする */}
+      {bills.length > PAGE_SIZE && (
+        <div className="fixed inset-x-0 bottom-0 z-10 border-t border-neutral-200 bg-white/95 px-6 py-2 text-center text-xs text-neutral-600 backdrop-blur">
+          {visibleCount < bills.length
+            ? `${visibleCount} / ${bills.length} 件を表示中…スクロールで続きを読み込みます`
+            : `全${bills.length}件を表示しました`}
+        </div>
+      )}
     </>
   );
 }
