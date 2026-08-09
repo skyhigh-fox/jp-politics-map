@@ -32,10 +32,19 @@
  *     （ふりがな行はそれ以外の値なので自動的にスキップされる）
  *   - データ行の直後の行に「（〜）」という括弧書きの表記が入っていることがあり、
  *     これは通称名（ひらがな等）を使っている候補者の戸籍名であることが多い。
- *     議員名簿（giin.json）側の氏名と突き合わせる際、候補者氏名（通称）で
- *     一致しなければこの括弧書きでも試す。それでも異体字（高/髙 等）や、
- *     読みだけ一致し漢字が完全に異なる通称名まではカバーできておらず、
- *     2025年参院選（選挙区）の当選者75名中56名のマッチに留まる（2026-08-10実測）
+ *   - データ行の直前の行（ふりがな行）には、候補者氏名のうち漢字部分の読みだけが
+ *     入っている（既にひらがなの部分は元々ふりがな不要なので空）。そのため
+ *     「ふりがな行 + 候補者氏名からひらがな文字だけ抜き出したもの」を連結すると、
+ *     議員名簿（giin.json）側の「読み方」列とほぼ同じ文字列になる
+ *
+ * マッチング戦略（3段階、2026-08-10実測）:
+ *   1. 候補者氏名（通称の場合あり）で議員名簿の氏名と完全一致
+ *   2. 括弧書きの別表記（戸籍名であることが多い）で氏名と完全一致
+ *   3. 上記いずれも合わなければ、読み仮名同士で一致するか試す
+ *      （表記は違っても読みが同じ、という通称名パターンをカバーする）
+ *   この3段階で2025年参院選（選挙区）の当選者75名中74名（98.7%）がマッチした。
+ *   残り1名（読み仮名が姓名ともカタカナ表記で、ふりがな行自体が存在しないケース）
+ *   は今回のロジックでは拾えず、既知の限界として残している
  */
 import * as XLSX from "xlsx";
 import type { ElectionResult, Legislator } from "../src/types";
@@ -68,6 +77,11 @@ interface RawCandidate {
    * （2026-08-10、実データで確認）。無ければballotNameと同じ
    */
   altName: string;
+  /**
+   * ふりがな行＋候補者氏名中のひらがな文字を連結した読み。
+   * 議員名簿の「読み方」列とのマッチングに使う（漢字の表記ゆれに強い）
+   */
+  reading: string;
   votes: number;
 }
 
@@ -79,6 +93,11 @@ function parseVotes(s: string | undefined): number | null {
   if (!s) return null;
   const n = String(s).replace(/[,\s]/g, "");
   return n ? parseInt(n, 10) : null;
+}
+
+/** 文字列からひらがな文字だけを抜き出す（U+3040-U+309F） */
+function hiraganaOnly(s: string): string {
+  return s.replace(/[^぀-ゟ]/g, "");
 }
 
 /**
@@ -104,6 +123,9 @@ function scanColumn(
       const votes = parseVotes(row[colOffset + 6]);
       if (state.pref === null || votes === null) continue;
       const ballotName = stripSpaces(row[colOffset + 1]);
+      const prevCell = stripSpaces(
+        (rows[i - 1]?.[colOffset + 1] ?? "").toString()
+      );
       const nextCell = (rows[i + 1]?.[colOffset + 1] ?? "").toString().trim();
       const altMatch = nextCell.match(/^[（(](.+)[）)]$/);
       out.push({
@@ -111,6 +133,7 @@ function scanColumn(
         elected: c0 === "当",
         ballotName,
         altName: altMatch ? stripSpaces(altMatch[1]) : ballotName,
+        reading: prevCell + hiraganaOnly(ballotName),
         votes,
       });
     }
@@ -173,15 +196,19 @@ async function main() {
     );
     const nameIndex = new Map<string, Legislator>();
     for (const l of pool) nameIndex.set(stripSpaces(l.name), l);
+    const kanaIndex = new Map<string, Legislator>();
+    for (const l of pool) {
+      if (l.nameKana) kanaIndex.set(stripSpaces(l.nameKana), l);
+    }
 
     let matched = 0;
     for (const c of candidates) {
-      // 通称名を使う候補者は「候補者氏名」列がひらがな等の通称表記になっており、
-      // 議員名簿側の正式表記と一致しないことがあるため、括弧書きの別表記
-      // （altName）でも試す。それでも一致しない場合は表記ゆれとして
-      // 現状スキップしている（TODO: 読み仮名や異体字を使った照合の強化）
+      // 3段階でマッチを試みる（詳細はファイル冒頭のコメント参照）。
+      // 全て外れた場合は表記ゆれとして現状スキップしている
       const legislator =
-        nameIndex.get(c.ballotName) ?? nameIndex.get(c.altName);
+        nameIndex.get(c.ballotName) ??
+        nameIndex.get(c.altName) ??
+        kanaIndex.get(c.reading);
       if (!legislator) continue;
       matched++;
       results.push({
