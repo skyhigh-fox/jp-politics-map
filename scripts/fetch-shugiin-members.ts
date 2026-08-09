@@ -18,6 +18,7 @@
 import * as cheerio from "cheerio";
 import type { Legislator, Party } from "../src/types";
 import { insertIfMissingById, writeDataJson } from "./lib/writeJson";
+import { applyPartyColors, resolvePartyId, resolvePartyName } from "./lib/partyColors";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -27,8 +28,10 @@ const LIST_URL = (page: number) =>
 const BASE_URL = "https://www.shugiin.go.jp/internet/itdb_giinprof.nsf/html/profile/";
 const SOURCE_REF = "shugiin.go.jp scraping (議員一覧 50音順)";
 
+// 衆議院の会派略称は参議院側と表記がずれるため、必ず lib/partyColors.ts の
+// PARTY_ALIASES を経由して正規idに解決する（party-国民/みらい/無 の重複防止）
 function partyIdFromName(name: string): string {
-  return `party-${name}`;
+  return resolvePartyId(name);
 }
 
 async function fetchPage(page: number): Promise<string> {
@@ -96,7 +99,7 @@ async function main() {
 
   const parties: Party[] = Array.from(partyNames)
     .filter(Boolean)
-    .map((name) => ({ id: partyIdFromName(name), name }));
+    .map((name) => ({ id: partyIdFromName(name), name: resolvePartyName(name) }));
 
   const dataDir = path.join(process.cwd(), "data");
   const existingLegislators = JSON.parse(
@@ -113,7 +116,9 @@ async function main() {
   // 衆議院ページの「会派」列は略称のみ（正式名称なし）。参議院側
   // （fetch-sangiin-members.ts）が持つ正式名称付きのpartyレコードを
   // 上書きしないよう、まだ存在しないidだけを追加する。
-  const mergedParties = insertIfMissingById(existingParties, parties);
+  const mergedParties = applyPartyColors(
+    insertIfMissingById(existingParties, parties)
+  );
 
   await writeDataJson("legislators.json", mergedLegislators);
   await writeDataJson("parties.json", mergedParties);

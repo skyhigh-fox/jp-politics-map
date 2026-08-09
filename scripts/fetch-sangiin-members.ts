@@ -14,6 +14,7 @@
  */
 import type { Legislator, Party } from "../src/types";
 import { upsertById, writeDataJson } from "./lib/writeJson";
+import { applyPartyColors } from "./lib/partyColors";
 import { rowsToObjects } from "./lib/csvJson";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -104,7 +105,7 @@ async function main() {
     ...existingLegislators.filter((l) => l.chamber !== "参議院"),
     ...legislators,
   ];
-  const mergedParties = upsertById(existingParties, parties);
+  const mergedParties = applyPartyColors(upsertById(existingParties, parties));
 
   await writeDataJson("legislators.json", mergedLegislators);
   await writeDataJson("parties.json", mergedParties);

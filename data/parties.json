@@ -2,82 +2,85 @@
   {
     "id": "party-自民",
     "name": "自由民主党・無所属の会",
-    "abbreviation": "自民"
+    "abbreviation": "自民",
+    "color": "#E50012"
   },
   {
     "id": "party-立憲",
     "name": "立憲民主・無所属",
-    "abbreviation": "立憲"
+    "abbreviation": "立憲",
+    "color": "#004098"
   },
   {
     "id": "party-民主",
     "name": "国民民主党・新緑風会",
-    "abbreviation": "民主"
+    "abbreviation": "民主",
+    "color": "#FABE00"
   },
   {
     "id": "party-公明",
     "name": "公明党",
-    "abbreviation": "公明"
+    "abbreviation": "公明",
+    "color": "#F55881"
   },
   {
     "id": "party-維新",
     "name": "日本維新の会",
-    "abbreviation": "維新"
+    "abbreviation": "維新",
+    "color": "#179345"
   },
   {
     "id": "party-参政",
     "name": "参政党",
-    "abbreviation": "参政"
+    "abbreviation": "参政",
+    "color": "#FF7B00"
   },
   {
     "id": "party-共産",
     "name": "日本共産党",
-    "abbreviation": "共産"
+    "abbreviation": "共産",
+    "color": "#DB001C"
   },
   {
     "id": "party-れ新",
     "name": "れいわ新選組",
-    "abbreviation": "れ新"
+    "abbreviation": "れ新",
+    "color": "#E4027E"
   },
   {
     "id": "party-保守",
     "name": "日本保守党",
-    "abbreviation": "保守"
+    "abbreviation": "保守",
+    "color": "#0A82DC"
   },
   {
     "id": "party-沖縄",
     "name": "沖縄の風",
-    "abbreviation": "沖縄"
+    "abbreviation": "沖縄",
+    "color": "#8A97A8"
   },
   {
     "id": "party-みら",
     "name": "チームみらい・無所属の会",
-    "abbreviation": "みら"
+    "abbreviation": "みら",
+    "color": "#0F8472"
   },
   {
     "id": "party-社民",
     "name": "社会民主党",
-    "abbreviation": "社民"
+    "abbreviation": "社民",
+    "color": "#01A8EC"
   },
   {
     "id": "party-無所属",
     "name": "各派に属しない議員",
-    "abbreviation": "無所属"
+    "abbreviation": "無所属",
+    "color": "#9E9E9E"
   },
   {
     "id": "party-中道",
-    "name": "中道"
-  },
-  {
-    "id": "party-国民",
-    "name": "国民"
-  },
-  {
-    "id": "party-無",
-    "name": "無"
-  },
-  {
-    "id": "party-みらい",
-    "name": "みらい"
+    "name": "中道改革連合・無所属",
+    "abbreviation": "中道",
+    "color": "#0073BD"
   }
 ]
