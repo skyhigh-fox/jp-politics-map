@@ -18,7 +18,9 @@
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "react-simple-maps": "^3.0.0",
-    "server-only": "^0.0.1"
+    "server-only": "^0.0.1",
+    "d3-geo": "^2.0.2",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "typescript": "^5.6.0",
@@ -26,6 +28,10 @@
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "@types/react-simple-maps": "^3.0.0",
+    "@types/d3-geo": "^3.1.0",
+    "@types/topojson-client": "^3.1.0",
+    "@types/topojson-specification": "^1.0.5",
+    "@types/geojson": "^7946.0.16",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.0",
     "@eslint/eslintrc": "^3.2.0",

@@ -89,9 +89,7 @@ export function PrefectureMap({
                   }}
                   onMouseLeave={() => setHovered(null)}
                   onClick={() =>
-                    router.push(
-                      `/legislators?prefecture=${encodeURIComponent(name)}`
-                    )
+                    router.push(`/map/${encodeURIComponent(name)}`)
                   }
                   style={{
                     default: { outline: "none", cursor: "pointer" },
@@ -126,7 +124,7 @@ export function PrefectureMap({
         ))}
         <span>多い</span>
         <span className="ml-2 text-neutral-400">
-          （{min}〜{max}名。クリックでその都道府県の関連議員一覧へ）
+          （{min}〜{max}名。クリックでその都道府県の詳細へ）
         </span>
       </div>
     </div>

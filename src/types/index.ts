@@ -127,3 +127,24 @@ export interface DistrictPrefectureMap {
   electionType: ElectionType;
   prefectureCodes: string[];
 }
+
+/**
+ * フェーズ3（地方議会パイロット）の地方議会議員。
+ * 全国35,000人超を対象にした共通モデルではなく、パイロット自治体（当面は
+ * 東京都議会）に限定した簡易モデル。対象拡大時に見直す前提。
+ */
+export interface LocalAssemblyMember {
+  id: string;
+  /** 例:"東京都議会" */
+  assembly: string;
+  /** 都道府県の正式名称（src/lib/prefectures.tsのPREFECTURE_CODESキーと一致） */
+  prefecture: string;
+  /** 選挙区の市区町村名（複数区にまたがる場合は代表の1つ。地図の色分けに使う） */
+  municipality: string;
+  name: string;
+  nameKana?: string;
+  partyName: string;
+  termStatus: "現職" | "引退" | "落選" | "死去";
+  officialUrl?: string;
+  sourceRef: string;
+}
