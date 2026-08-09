@@ -287,7 +287,7 @@ export function MunicipalityMap({
           onClick={() => zoomBy(ZOOM_STEP)}
           aria-label="ズームイン"
           title="ズームイン"
-          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
           ＋
         </button>
@@ -296,7 +296,7 @@ export function MunicipalityMap({
           onClick={() => zoomBy(1 / ZOOM_STEP)}
           aria-label="ズームアウト"
           title="ズームアウト"
-          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-sm font-semibold text-neutral-700 shadow hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
           －
         </button>
@@ -305,7 +305,7 @@ export function MunicipalityMap({
           onClick={resetView}
           aria-label="表示をリセット"
           title="表示をリセット"
-          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-xs font-semibold text-neutral-700 shadow hover:bg-neutral-100"
+          className="flex h-7 w-7 items-center justify-center rounded border border-neutral-300 bg-white text-xs font-semibold text-neutral-700 shadow hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
           ⟲
         </button>
@@ -313,7 +313,7 @@ export function MunicipalityMap({
 
       {hovered && (
         <div
-          className="pointer-events-none fixed z-10 rounded border border-neutral-300 bg-white px-2 py-1 text-xs shadow"
+          className="pointer-events-none fixed z-10 rounded border border-neutral-300 bg-white px-2 py-1 text-xs shadow dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200"
           style={{ left: hovered.x + 12, top: hovered.y + 12 }}
         >
           <div className="font-semibold">{hovered.name}</div>
