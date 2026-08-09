@@ -11,6 +11,7 @@
     "fetch:shugiin-members": "tsx scripts/fetch-shugiin-members.ts",
     "fetch:bills": "tsx scripts/fetch-bills.ts",
     "fetch:election-results": "tsx scripts/fetch-election-results.ts",
+    "fetch:tokyo-assembly-members": "tsx scripts/fetch-tokyo-assembly-members.ts",
     "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills"
   },
   "dependencies": {

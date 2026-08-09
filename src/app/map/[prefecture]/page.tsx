@@ -55,11 +55,8 @@ export default async function PrefectureDetailPage({
         <MunicipalityMap
           geoUrl={geoUrl}
           counts={localCounts ?? undefined}
-          hrefFor={
-            localCounts
-              ? (name) =>
-                  `/local/${encodeURIComponent(prefecture)}/${encodeURIComponent(name)}`
-              : undefined
+          linkBase={
+            localCounts ? `/local/${encodeURIComponent(prefecture)}` : undefined
           }
         />
       </div>

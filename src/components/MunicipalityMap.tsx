@@ -123,12 +123,18 @@ export function MunicipalityMap({
   geoUrl,
   /** 市区町村名 → 件数。未指定の場合は色分けせず全て中立色で表示する */
   counts,
-  /** クリック時の遷移先を返す。未指定 or nullを返した場合はクリック無効 */
-  hrefFor,
+  /**
+   * クリック時の遷移先のベースパス（例:"/local/東京都"）。
+   * 指定時は `${linkBase}/${encodeURIComponent(市区町村名)}` へ遷移する。
+   * 未指定ならクリック無効。
+   * （Server ComponentからClient Componentには関数を渡せないため、
+   *   関数ではなく文字列で受け取ってこちら側でURLを組み立てる）
+   */
+  linkBase,
 }: {
   geoUrl: string;
   counts?: Record<string, number>;
-  hrefFor?: (municipalityName: string) => string | null;
+  linkBase?: string;
 }) {
   const router = useRouter();
   const { config, error } = useFittedProjectionConfig(geoUrl);
@@ -171,7 +177,10 @@ export function MunicipalityMap({
               ).properties;
               const name = props.N03_004 ?? "";
               const count = counts ? counts[name] : undefined;
-              const href = hrefFor ? hrefFor(name) : null;
+              const href =
+                linkBase && name
+                  ? `${linkBase}/${encodeURIComponent(name)}`
+                  : null;
               return (
                 <Geography
                   key={(geo as unknown as { rsmKey: string }).rsmKey}

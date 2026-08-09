@@ -139,8 +139,12 @@ export interface LocalAssemblyMember {
   assembly: string;
   /** 都道府県の正式名称（src/lib/prefectures.tsのPREFECTURE_CODESキーと一致） */
   prefecture: string;
-  /** 選挙区の市区町村名（複数区にまたがる場合は代表の1つ。地図の色分けに使う） */
-  municipality: string;
+  /**
+   * 選挙区名（例:"港区"、複数市区町村にまたがる合区は"北多摩第一"等の
+   * 選挙区名そのまま）。地図上での市区町村への展開はsrc/lib/localAssembly.ts
+   * の対応表で行う（1選挙区が複数市区町村にまたがることがあるため）
+   */
+  district: string;
   name: string;
   nameKana?: string;
   partyName: string;
