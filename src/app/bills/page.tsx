@@ -1,8 +1,7 @@
 import { getBills } from "@/lib/data";
 import { FilterBar } from "@/components/FilterBar";
+import { InfiniteBillsTable } from "@/components/InfiniteBillsTable";
 import type { Bill } from "@/types";
-
-const DISPLAY_LIMIT = 50;
 
 const HOUSE_OPTIONS = ["衆議院", "参議院", "両院"] as const;
 const STATUS_OPTIONS = [
@@ -43,7 +42,6 @@ export default async function BillsPage({
   const sorted = [...filtered].sort((a, b) =>
     b.lastUpdated.localeCompare(a.lastUpdated)
   );
-  const shown = sorted.slice(0, DISPLAY_LIMIT);
 
   return (
     <div>
@@ -56,7 +54,7 @@ export default async function BillsPage({
             で取得してください。
           </>
         ) : (
-          `全${bills.length}件中${filtered.length}件が条件に一致（直近更新の${shown.length}件を表示）`
+          `全${bills.length}件中${filtered.length}件が条件に一致（更新日の新しい順）`
         )}
       </p>
 
@@ -85,32 +83,7 @@ export default async function BillsPage({
         />
       )}
 
-      <table className="mt-6 w-full border-collapse text-sm">
-        <thead>
-          <tr className="border-b border-neutral-300 text-left">
-            <th className="py-2 pr-4">国会回次</th>
-            <th className="py-2 pr-4">件名</th>
-            <th className="py-2 pr-4">提出</th>
-            <th className="py-2 pr-4">院</th>
-            <th className="py-2 pr-4">状況</th>
-          </tr>
-        </thead>
-        <tbody>
-          {shown.map((bill) => (
-            <tr key={bill.id} className="border-b border-neutral-100">
-              <td className="py-2 pr-4">{bill.dietSession}</td>
-              <td className="py-2 pr-4">
-                <a href={bill.sourceUrl} className="underline" target="_blank" rel="noreferrer">
-                  {bill.title}
-                </a>
-              </td>
-              <td className="py-2 pr-4">{bill.submitterType}</td>
-              <td className="py-2 pr-4">{bill.house}</td>
-              <td className="py-2 pr-4">{bill.status}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <InfiniteBillsTable bills={sorted} />
     </div>
   );
 }
