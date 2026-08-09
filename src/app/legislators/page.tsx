@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getLegislators, getParties } from "@/lib/data";
 import { legislatorPrefectures, PREFECTURE_CODES } from "@/lib/prefectures";
 import { FilterBar } from "@/components/FilterBar";
@@ -93,15 +94,17 @@ export default async function LegislatorsPage({
 
       <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
         {legislators.map((legislator) => (
-          <li
-            key={legislator.id}
-            className="rounded border border-neutral-200 p-3 text-sm"
-          >
-            <div className="font-semibold">{legislator.name}</div>
-            <div className="text-neutral-600">
-              {legislator.chamber} / {partyName(legislator.currentPartyId)}
-            </div>
-            <div className="text-neutral-600">{legislator.district}</div>
+          <li key={legislator.id}>
+            <Link
+              href={`/legislators/${legislator.id}`}
+              className="block rounded border border-neutral-200 p-3 text-sm hover:border-neutral-400"
+            >
+              <div className="font-semibold">{legislator.name}</div>
+              <div className="text-neutral-600">
+                {legislator.chamber} / {partyName(legislator.currentPartyId)}
+              </div>
+              <div className="text-neutral-600">{legislator.district}</div>
+            </Link>
           </li>
         ))}
       </ul>

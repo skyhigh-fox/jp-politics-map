@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import type { Bill } from "@/types";
 
 const PAGE_SIZE = 50;
@@ -54,14 +55,9 @@ export function InfiniteBillsTable({ bills }: { bills: Bill[] }) {
             <tr key={bill.id} className="border-b border-neutral-100">
               <td className="py-2 pr-4">{bill.dietSession}</td>
               <td className="py-2 pr-4">
-                <a
-                  href={bill.sourceUrl}
-                  className="underline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <Link href={`/bills/${bill.id}`} className="underline">
                   {bill.title}
-                </a>
+                </Link>
               </td>
               <td className="py-2 pr-4">{bill.submitterType}</td>
               <td className="py-2 pr-4">{bill.house}</td>
