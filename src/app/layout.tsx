@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="px-6 py-8">{children}</main>
+        <ScrollToTopButton />
       </body>
     </html>
   );
