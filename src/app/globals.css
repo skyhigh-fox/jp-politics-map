@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-accent-200 text-accent-900;
+  }
+
+  :is(.dark) ::selection {
+    @apply bg-accent-800 text-accent-50;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.neutral.300") transparent;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    * {
+      scrollbar-color: theme("colors.neutral.700") transparent;
+    }
+  }
+
+  /* WebKit系ブラウザ用のスクロールバー装飾 */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-neutral-300 dark:bg-neutral-700;
+  }
+}
+
+@layer utilities {
+  /* カード要素・リンクなどで共通利用する軽いフェードインアニメーション */
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+}

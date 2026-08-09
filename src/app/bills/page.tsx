@@ -44,13 +44,17 @@ export default async function BillsPage({
   );
 
   return (
-    <div>
-      <h1 className="text-xl font-bold">法案一覧</h1>
-      <p className="mt-2 text-sm text-neutral-600">
+    <div className="animate-fade-in">
+      <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
+        法案一覧
+      </h1>
+      <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
         {bills.length === 0 ? (
           <>
             データ未取得です。
-            <code className="mx-1 rounded bg-neutral-100 px-1">npm run fetch:bills</code>
+            <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+              npm run fetch:bills
+            </code>
             で取得してください。
           </>
         ) : (
