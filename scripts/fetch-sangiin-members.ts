@@ -14,6 +14,7 @@
  */
 import type { Legislator, Party } from "../src/types";
 import { upsertById, writeDataJson } from "./lib/writeJson";
+import { rowsToObjects } from "./lib/csvJson";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -23,24 +24,26 @@ const KAIHA_URL =
   "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json";
 const SOURCE_REF = "smartnews-smri/house-of-councillors data/giin.json";
 
-// 実データのキー名は現地調査時点の推定に基づく。実行時にキーが見つからない場合は
-// エラーを出すので、smartnews-smri側のスキーマ変更があればここを合わせて直す。
+// 実データは「先頭行=ヘッダー、以降=データ行」の配列の配列(rowsToObjectsで変換)。
+// キー名は2026-08-10時点で実データにて確認済み。
 interface RawGiin {
   議員氏名: string;
   読み方?: string;
-  会派?: string;
-  選挙区?: string;
+  会派?: string; // kaiha.json の「略称」と一致する表記（例: "自民"）
+  選挙区?: string; // 比例代表の場合は "比例" という値になる
   議員個人の紹介ページ?: string;
   任期満了?: string;
 }
 
 interface RawKaiha {
   会派名: string;
-  会派略称?: string;
+  略称?: string;
 }
 
-function partyIdFromName(name: string): string {
-  return `party-${name}`;
+// giin.json の「会派」列はkaiha.jsonの「略称」と同じ表記のため、
+// 党のidは略称ベースで揃える（略称が無い場合のみ正式名称にフォールバック）
+function partyIdFromKey(key: string): string {
+  return `party-${key}`;
 }
 
 async function main() {
@@ -51,23 +54,23 @@ async function main() {
   if (!giinRes.ok) throw new Error(`giin.json fetch failed: ${giinRes.status}`);
   if (!kaihaRes.ok) throw new Error(`kaiha.json fetch failed: ${kaihaRes.status}`);
 
-  const giinList = (await giinRes.json()) as RawGiin[];
-  const kaihaList = (await kaihaRes.json()) as RawKaiha[];
+  const giinList = rowsToObjects<RawGiin>(await giinRes.json());
+  const kaihaList = rowsToObjects<RawKaiha>(await kaihaRes.json());
 
   const parties: Party[] = kaihaList.map((k) => ({
-    id: partyIdFromName(k.会派名),
+    id: partyIdFromKey(k.略称 || k.会派名),
     name: k.会派名,
-    abbreviation: k.会派略称,
+    abbreviation: k.略称 || undefined,
   }));
 
   const legislators: Legislator[] = giinList.map((g, index) => {
-    const isProportional = g.選挙区 === "比例代表";
+    const isProportional = g.選挙区 === "比例";
     const legislator: Legislator = {
       id: `sangiin-${index + 1}`,
       chamber: "参議院",
       name: g.議員氏名,
       nameKana: g.読み方,
-      currentPartyId: g.会派 ? partyIdFromName(g.会派) : "party-unknown",
+      currentPartyId: g.会派 ? partyIdFromKey(g.会派) : "party-unknown",
       electionType: isProportional ? "比例代表(参院)" : "選挙区",
       district: g.選挙区 ?? "不明",
       termStatus: "現職",

@@ -1,30 +1,49 @@
 import type { BillStatus } from "../../src/types";
 
 /**
- * smartnews-smri の議案データベースは「審議状況」を単一の列で持たず、
- * 衆参それぞれの委員会・本会議の議決結果列（例:
- * 「衆議院本会議経過情報 - 議決」="可決"）から読み取る必要がある。
- * ここでは簡易的なヒューリスティックでフェーズ1のBillStatus enumに正規化する。
+ * smartnews-smri/house-of-representatives の gian.json は「審議状況」列に
+ * 詳細ステータス文字列を直接持っている（data/gian_status.json に凡例あり、全28種類、
+ * 2026-08-10確認）。フェーズ1のシンプルな6値enumへの対応表。
  *
- * 参考: data/gian_status.json（house-of-representatives）に定義されている
- * 実際の詳細ステータス値は28種類あり、将来的にはこの一覧を全て汲み取った
- * より精密なマッピングに拡張する必要がある（TODO）。
+ * 判断に迷うものは基本「審議中」寄りに倒さず実態に近い側へ倒している。
+ * 特に「未了」「撤回」は国会用語としては「廃案」に相当するのでそちらに寄せた。
+ * TODO: 実際の分布を見ながら随時見直す。
  */
-export function normalizeBillStatus(raw: {
-  shugiinPlenaryResult?: string; // 衆議院本会議経過情報 - 議決
-  sangiinPlenaryResult?: string; // 参議院本会議経過情報 - 議決
-  law?: string; // 成立法律
-}): BillStatus {
-  if (raw.law) return "成立";
-  if (raw.shugiinPlenaryResult?.includes("否決")) return "否決";
-  if (raw.sangiinPlenaryResult?.includes("否決")) return "否決";
-  if (raw.shugiinPlenaryResult?.includes("廃案")) return "廃案";
-  if (raw.sangiinPlenaryResult?.includes("廃案")) return "廃案";
-  if (raw.shugiinPlenaryResult?.includes("可決") && raw.sangiinPlenaryResult?.includes("可決")) {
-    return "可決";
-  }
-  if (raw.shugiinPlenaryResult?.includes("継続") || raw.sangiinPlenaryResult?.includes("継続")) {
-    return "継続審議";
-  }
-  return "審議中";
+const STATUS_MAP: Record<string, BillStatus> = {
+  成立: "成立",
+
+  衆議院で審議中: "審議中",
+  参議院で審議中: "審議中",
+  閉会中審査: "審議中",
+  衆議院で閉会中審査: "審議中",
+  参議院で閉会中審査: "審議中",
+  中間報告: "審議中",
+
+  未了: "廃案",
+  撤回: "廃案",
+  撤回承諾: "廃案",
+
+  本院可決: "可決",
+  両院議決: "可決",
+  両院承認: "可決",
+  本院修正議決: "可決",
+  修正承諾: "可決",
+  "参議院回付案（同意）": "可決",
+  "衆議院回付案(同意)": "可決",
+  "衆議院回付案（同意）": "可決",
+  承認: "可決",
+  両院承諾: "可決",
+  本院議了: "可決",
+  参議院議了: "可決",
+  "衆議院議決案（可決）": "可決",
+  衆議院で併合修正: "可決",
+  議決不要: "可決",
+
+  "参議院回付案（不同意）": "否決",
+  承諾なし: "否決",
+  両院の意見が一致しない旨報告: "否決",
+};
+
+export function normalizeBillStatus(rawStatus: string): BillStatus {
+  return STATUS_MAP[rawStatus] ?? "審議中";
 }

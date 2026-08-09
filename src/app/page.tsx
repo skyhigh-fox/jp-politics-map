@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <div className="max-w-2xl">
@@ -8,14 +10,14 @@ export default function HomePage() {
       </p>
       <ul className="mt-6 list-disc pl-5 text-neutral-700">
         <li>
-          <a href="/bills" className="underline">
+          <Link href="/bills" className="underline">
             法案一覧
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/legislators" className="underline">
+          <Link href="/legislators" className="underline">
             議員一覧
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

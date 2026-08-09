@@ -12,11 +12,17 @@ export default async function LegislatorsPage() {
     <div>
       <h1 className="text-xl font-bold">議員一覧</h1>
       <p className="mt-2 text-sm text-neutral-600">
-        現在 {legislators.length} 名（データ未取得のため0件表示中。
-        <code className="mx-1 rounded bg-neutral-100 px-1">
-          npm run fetch:sangiin-members / fetch:shugiin-members
-        </code>
-        で取得）
+        {legislators.length === 0 ? (
+          <>
+            データ未取得です。
+            <code className="mx-1 rounded bg-neutral-100 px-1">
+              npm run fetch:sangiin-members / fetch:shugiin-members
+            </code>
+            で取得してください。
+          </>
+        ) : (
+          `現在 ${legislators.length} 名（検索・フィルタ機能は今後追加予定）`
+        )}
       </p>
       <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
         {legislators.map((legislator) => (

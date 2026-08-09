@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,18 +18,18 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-neutral-900 antialiased">
         <header className="border-b border-neutral-200 px-6 py-4">
           <nav className="flex items-center gap-6 text-sm">
-            <a href="/" className="font-semibold">
+            <Link href="/" className="font-semibold">
               日本政治マップ
-            </a>
-            <a href="/bills" className="text-neutral-600 hover:text-neutral-900">
+            </Link>
+            <Link href="/bills" className="text-neutral-600 hover:text-neutral-900">
               法案一覧
-            </a>
-            <a
+            </Link>
+            <Link
               href="/legislators"
               className="text-neutral-600 hover:text-neutral-900"
             >
               議員一覧
-            </a>
+            </Link>
           </nav>
         </header>
         <main className="px-6 py-8">{children}</main>

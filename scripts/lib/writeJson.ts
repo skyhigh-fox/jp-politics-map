@@ -21,3 +21,19 @@ export function upsertById<T extends { id: string }>(
   }
   return Array.from(map.values());
 }
+
+/**
+ * 既存レコードを優先し、まだ存在しないidだけを追加する。
+ * 政党マスタのように「参議院の会派名一覧（正式名称・略称あり）の方が
+ * 衆議院側の略称だけの情報より詳しい」といった、情報源によって
+ * データの充実度が異なるケースで、詳しい方が別ソースの実行順序に
+ * よって薄いデータに上書きされてしまうのを防ぐために使う。
+ */
+export function insertIfMissingById<T extends { id: string }>(
+  existing: T[],
+  incoming: T[]
+): T[] {
+  const existingIds = new Set(existing.map((item) => item.id));
+  const additions = incoming.filter((item) => !existingIds.has(item.id));
+  return [...existing, ...additions];
+}
