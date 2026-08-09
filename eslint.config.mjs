@@ -12,7 +12,15 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
-    ignores: ["data/**", ".next/**", "node_modules/**", "next-env.d.ts"],
+    ignores: [
+      "data/**",
+      ".next/**",
+      "node_modules/**",
+      "next-env.d.ts",
+      // サブエージェント用のネストしたgit worktree（.gitignore済みだが、
+      // ESLintのファイル探索はgitignoreを見ないネスト先までは辿らないため明示的に除外）
+      ".claude/**",
+    ],
   },
 ];
 
