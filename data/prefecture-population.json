@@ -1,0 +1,284 @@
+[
+  {
+    "prefecture": "北海道",
+    "year": 2024,
+    "population": 5043000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "青森県",
+    "year": 2024,
+    "population": 1165000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "岩手県",
+    "year": 2024,
+    "population": 1145000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "宮城県",
+    "year": 2024,
+    "population": 2248000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "秋田県",
+    "year": 2024,
+    "population": 897000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "山形県",
+    "year": 2024,
+    "population": 1011000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "福島県",
+    "year": 2024,
+    "population": 1743000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "茨城県",
+    "year": 2024,
+    "population": 2806000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "栃木県",
+    "year": 2024,
+    "population": 1885000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "群馬県",
+    "year": 2024,
+    "population": 1890000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "埼玉県",
+    "year": 2024,
+    "population": 7332000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "千葉県",
+    "year": 2024,
+    "population": 6251000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "東京都",
+    "year": 2024,
+    "population": 14178000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "神奈川県",
+    "year": 2024,
+    "population": 9225000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "新潟県",
+    "year": 2024,
+    "population": 2099000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "富山県",
+    "year": 2024,
+    "population": 997000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "石川県",
+    "year": 2024,
+    "population": 1098000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "福井県",
+    "year": 2024,
+    "population": 739000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "山梨県",
+    "year": 2024,
+    "population": 791000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "長野県",
+    "year": 2024,
+    "population": 1987000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "岐阜県",
+    "year": 2024,
+    "population": 1916000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "静岡県",
+    "year": 2024,
+    "population": 3527000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "愛知県",
+    "year": 2024,
+    "population": 7460000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "三重県",
+    "year": 2024,
+    "population": 1711000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "滋賀県",
+    "year": 2024,
+    "population": 1402000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "京都府",
+    "year": 2024,
+    "population": 2520000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "大阪府",
+    "year": 2024,
+    "population": 8757000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "兵庫県",
+    "year": 2024,
+    "population": 5337000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "奈良県",
+    "year": 2024,
+    "population": 1285000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "和歌山県",
+    "year": 2024,
+    "population": 880000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "鳥取県",
+    "year": 2024,
+    "population": 531000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "島根県",
+    "year": 2024,
+    "population": 642000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "岡山県",
+    "year": 2024,
+    "population": 1831000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "広島県",
+    "year": 2024,
+    "population": 2714000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "山口県",
+    "year": 2024,
+    "population": 1281000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "徳島県",
+    "year": 2024,
+    "population": 685000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "香川県",
+    "year": 2024,
+    "population": 917000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "愛媛県",
+    "year": 2024,
+    "population": 1276000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "高知県",
+    "year": 2024,
+    "population": 656000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "福岡県",
+    "year": 2024,
+    "population": 5092000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "佐賀県",
+    "year": 2024,
+    "population": 788000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "長崎県",
+    "year": 2024,
+    "population": 1252000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "熊本県",
+    "year": 2024,
+    "population": 1697000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "大分県",
+    "year": 2024,
+    "population": 1085000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "宮崎県",
+    "year": 2024,
+    "population": 1033000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "鹿児島県",
+    "year": 2024,
+    "population": 1532000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  },
+  {
+    "prefecture": "沖縄県",
+    "year": 2024,
+    "population": 1466000,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040268859&fileKind=0"
+  }
+]

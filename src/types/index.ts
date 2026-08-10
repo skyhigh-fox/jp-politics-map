@@ -292,3 +292,52 @@ export interface PrefectureFinance {
   /** データ取得元CSVのURL（出典明記のため保持） */
   sourceUrl: string;
 }
+
+/**
+ * 都道府県別・総人口データ（予算の見える化 Phase A-2の前提データ）。
+ * 総務省統計局「人口推計」（e-Stat経由、各年10月1日現在・総人口・男女計）を
+ * 情報源とする。`prefecture`はsrc/lib/prefectures.tsの`PREFECTURE_CODES`の
+ * キー（都道府県の正式名称）と一致する。
+ *
+ * 【注意】原表が千人単位で丸められているため、`population`も1000人単位の
+ * 概算値（末尾3桁は常に000）。1人当たり歳出等の概算用途では十分だが、
+ * 厳密な人口統計としては住民基本台帳人口等の方が精度が高い点に留意する。
+ */
+export interface PrefecturePopulation {
+  /** 都道府県の正式名称（例:"東京都"） */
+  prefecture: string;
+  /** 人口の基準年（西暦、各年10月1日現在） */
+  year: number;
+  /** 総人口（人）。原表の千人単位を1000倍した概算値 */
+  population: number;
+  /** データ取得元ExcelのURL（出典明記のため保持） */
+  sourceUrl: string;
+}
+
+/** 目的別歳出の1区分（例:"教育費"）とその金額 */
+export interface PrefectureExpenditureCategory {
+  /** 総務省の目的別歳出分類の名称（原表の表記のまま。独自の言い換えはしない） */
+  name: string;
+  /** 当該区分の歳出合計額（千円） */
+  amountThousandYen: number;
+}
+
+/**
+ * 都道府県別・目的別歳出データ（予算の見える化 Phase A-2）。
+ * 総務省「地方財政状況調査」（e-Stat経由、都道府県分・表07〜表12
+ * 「歳出内訳及び財源内訳（その1）〜（その6）」の「歳出合計」行）を
+ * 情報源とする決算ベースの数値。単位はすべて千円（e-Statの原表どおり）。
+ * `categories`の金額を合計すると、同一都道府県・同一fiscalYearの
+ * PrefectureFinance.totalExpenditureThousandYenとほぼ一致する
+ * （取得スクリプトの調査時点で北海道は完全一致を確認済み）。
+ */
+export interface PrefectureExpenditureByPurpose {
+  /** 都道府県の正式名称（例:"東京都"） */
+  prefecture: string;
+  /** 決算年度（西暦、例:2024 は「令和6年度」決算） */
+  fiscalYear: number;
+  /** 目的別歳出の内訳（総務費・民生費・土木費・教育費等） */
+  categories: PrefectureExpenditureCategory[];
+  /** データ取得元CSV群のURL（複数表にまたがるため配列。出典明記のため保持） */
+  sourceUrls: string[];
+}
