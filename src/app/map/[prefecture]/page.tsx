@@ -107,9 +107,33 @@ export default async function PrefectureDetailPage({
       </div>
 
       {localCounts ? (
-        <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
-          市区町村をクリックすると、その地域選出の地方議会議員一覧に移動します。
-        </p>
+        <>
+          <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
+            市区町村をクリックすると、その地域選出の地方議会議員一覧に移動します。地図上の区市町村は面積が小さく選びづらいことがあるため、下の一覧からも選べます。
+          </p>
+          <div className="mt-3 max-w-xl rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
+            <h2 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+              市区町村一覧（地方議会議員数）
+            </h2>
+            <ul className="mt-3 grid max-h-72 grid-cols-1 gap-0.5 overflow-y-auto sm:grid-cols-2">
+              {Object.entries(localCounts)
+                .sort((a, b) => b[1] - a[1])
+                .map(([name, count]) => (
+                  <li key={name}>
+                    <Link
+                      href={`/local/${encodeURIComponent(prefecture)}/${encodeURIComponent(name)}`}
+                      className="flex items-center justify-between gap-2 rounded-md px-2 py-1.5 text-xs text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-accent-600 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-accent-400"
+                    >
+                      <span className="truncate">{name}</span>
+                      <span className="shrink-0 tabular-nums text-neutral-400 dark:text-neutral-500">
+                        {count}名
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </>
       ) : (
         <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
           地方議会議員データは現在フェーズ3のパイロット対象自治体のみ整備中です。
