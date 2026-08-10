@@ -1,8 +1,7 @@
-import Link from "next/link";
 import { getLegislators, getParties } from "@/lib/data";
 import { legislatorPrefectures, PREFECTURE_CODES } from "@/lib/prefectures";
 import { FilterBar } from "@/components/FilterBar";
-import { PartyColorDot } from "@/components/PartyColorDot";
+import { InfiniteLegislatorList } from "@/components/InfiniteLegislatorList";
 import type { Legislator, Party } from "@/types";
 
 const CHAMBER_OPTIONS = ["衆議院", "参議院"] as const;
@@ -40,7 +39,6 @@ export default async function LegislatorsPage({
     getParties(),
   ]);
   const legislators = allLegislators.filter((l) => matchesFilters(l, filters));
-  const partyById = (id: string) => parties.find((p) => p.id === id);
   const sortedParties = [...parties].sort((a, b) =>
     a.name.localeCompare(b.name, "ja")
   );
@@ -92,32 +90,7 @@ export default async function LegislatorsPage({
         />
       )}
 
-      <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
-        {legislators.map((legislator) => {
-          const party = partyById(legislator.currentPartyId);
-          return (
-            <li key={legislator.id}>
-              <Link
-                href={`/legislators/${legislator.id}`}
-                className="group block rounded-xl border border-neutral-200 bg-white p-4 text-sm shadow-card transition-all hover:-translate-y-0.5 hover:border-accent-300 hover:shadow-card-hover dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-accent-700"
-              >
-                <div className="font-semibold text-neutral-900 group-hover:text-accent-600 dark:text-neutral-100 dark:group-hover:text-accent-400">
-                  {legislator.name}
-                </div>
-                <div className="mt-1 flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400">
-                  <PartyColorDot color={party?.color} />
-                  <span>
-                    {legislator.chamber} / {party?.name ?? "不明"}
-                  </span>
-                </div>
-                <div className="text-neutral-600 dark:text-neutral-400">
-                  {legislator.district}
-                </div>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <InfiniteLegislatorList legislators={legislators} parties={parties} />
     </div>
   );
 }
