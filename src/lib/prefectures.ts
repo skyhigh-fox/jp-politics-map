@@ -56,6 +56,19 @@ const PREFECTURE_OFFICIAL_NAMES: Record<string, string> = {
   沖縄: "沖縄県",
 };
 
+/**
+ * 都道府県の正式名称（例:"岡山県"）→ 議員データ側の短縮表記（例:"岡山"）。
+ * PREFECTURE_OFFICIAL_NAMES の逆引き。
+ * 「北海道」だけは接尾辞を落とすと別語になってしまう（"北海"）ため、
+ * 機械的な文字列処理ではなく対応表から引く。
+ */
+export const PREFECTURE_SHORT_NAMES: Record<string, string> = Object.fromEntries(
+  Object.entries(PREFECTURE_OFFICIAL_NAMES).map(([short, official]) => [
+    official,
+    short,
+  ])
+);
+
 /** 衆議院比例代表ブロック → 含まれる都道府県（短縮名） */
 const PROPORTIONAL_BLOCKS: Record<string, string[]> = {
   北海道: ["北海道"],

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   getLegislators,
   getParties,
@@ -72,6 +73,14 @@ export default async function MapPage() {
       <p className="mt-2 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
         都道府県ごとの関連国会議員数のほか、歳出総額・分野別の歳出内訳（人口一人当たり）・財政健全化指標を、レイヤーを切り替えて地図上で確認できます。
         都道府県をクリックすると、右側にその都道府県の政党別議席構成が表示されます。
+      </p>
+      <p className="mt-2 text-sm">
+        <Link
+          href="/map/districts"
+          className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+        >
+          選挙区マップ（衆議院289小選挙区・参議院45選挙区）を見る →
+        </Link>
       </p>
       {legislators.length === 0 ? (
         <p className="mt-6 text-sm text-neutral-600 dark:text-neutral-400">

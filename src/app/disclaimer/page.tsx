@@ -7,6 +7,7 @@ import {
   getPartySeatHistory,
   getPrefectureFinance,
   getRollCallVotes,
+  getShugiinDistricts,
   getWrittenQuestionCounts,
 } from "@/lib/data";
 import { getLocalAssemblyMembers } from "@/lib/localAssembly";
@@ -17,6 +18,7 @@ import {
   type DatasetId,
   type DatasetProvenance,
   buildBillCoverage,
+  buildDistrictBoundaryCoverage,
   buildElectionResultCoverage,
   buildLegislatorCoverage,
   buildLocalAssemblyCoverage,
@@ -91,6 +93,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
     partySeatHistory,
     localAssemblyMembers,
     prefectureFinance,
+    shugiinDistricts,
     news,
   ] = await Promise.all([
     getLegislators(),
@@ -102,6 +105,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
     getPartySeatHistory(),
     getLocalAssemblyMembers(),
     getPrefectureFinance(),
+    getShugiinDistricts(),
     getNews(),
   ]);
 
@@ -121,6 +125,10 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
     "party-seat-history": buildPartySeatHistoryCoverage(partySeatHistory),
     "local-assembly-members": buildLocalAssemblyCoverage(localAssemblyMembers),
     "prefecture-finance": buildPrefectureFinanceCoverage(prefectureFinance),
+    "district-boundaries": buildDistrictBoundaryCoverage(
+      shugiinDistricts.map((d) => d.kuname),
+      legislators
+    ),
     news: buildNewsCoverage(news),
   };
 
