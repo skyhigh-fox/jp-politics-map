@@ -12,7 +12,12 @@ const ERA_START_YEAR: Record<string, number> = {
 
 export function eraToIsoDate(input: string | undefined | null): string | null {
   if (!input) return null;
-  const match = input.match(/(明治|大正|昭和|平成|令和)(\d+|元)年\s*(\d+)月\s*(\d+)日/);
+  // 元号名と年の間、月・日の間に空白（全角スペース含む）が入ることがある
+  // （例:"令和 8年 3月12日"。1桁年を右詰めするための空白パディングと見られる。
+  // 2026-08-11、令和2年以降の日付が軒並みパースに失敗していたバグを修正）
+  const match = input.match(
+    /(明治|大正|昭和|平成|令和)\s*(\d+|元)年\s*(\d+)月\s*(\d+)日/
+  );
   if (!match) return null;
   const [, era, yearStr, month, day] = match;
   if (!era || !yearStr || !month || !day) return null;
