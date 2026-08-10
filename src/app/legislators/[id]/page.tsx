@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getLegislators, getParties, getElectionResults } from "@/lib/data";
+import {
+  getLegislators,
+  getParties,
+  getElectionResults,
+  getNdlSpeechCounts,
+  getWrittenQuestionCounts,
+} from "@/lib/data";
 import { PartyColorDot } from "@/components/PartyColorDot";
 
 export default async function LegislatorDetailPage({
@@ -10,11 +16,14 @@ export default async function LegislatorDetailPage({
 }) {
   const { id: rawId } = await params;
   const id = decodeURIComponent(rawId);
-  const [legislators, parties, electionResults] = await Promise.all([
-    getLegislators(),
-    getParties(),
-    getElectionResults(),
-  ]);
+  const [legislators, parties, electionResults, ndlSpeechCounts, writtenQuestions] =
+    await Promise.all([
+      getLegislators(),
+      getParties(),
+      getElectionResults(),
+      getNdlSpeechCounts(),
+      getWrittenQuestionCounts(),
+    ]);
 
   const legislator = legislators.find((l) => l.id === id);
   if (!legislator) notFound();
@@ -23,6 +32,8 @@ export default async function LegislatorDetailPage({
   const results = electionResults
     .filter((r) => r.legislatorId === id)
     .sort((a, b) => b.electionYear - a.electionYear);
+  const speechStat = ndlSpeechCounts.find((s) => s.legislatorId === id);
+  const questionStat = writtenQuestions.find((q) => q.legislatorId === id);
 
   return (
     <div className="max-w-2xl animate-fade-in">
@@ -87,6 +98,57 @@ export default async function LegislatorDetailPage({
           </>
         )}
       </dl>
+
+      {(speechStat || questionStat) && (
+        <>
+          <h2 className="mt-8 text-lg font-bold text-neutral-900 dark:text-neutral-50">
+            国会活動
+          </h2>
+          <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-500">
+            解釈を要さない客観的な活動量の指標です。多寡による評価・ランキングを意図したものではありません。
+          </p>
+          <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {speechStat && (
+              <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
+                <div className="text-xs text-neutral-500 dark:text-neutral-500">
+                  国会での発言回数
+                </div>
+                <div className="mt-1 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
+                  {speechStat.speechCount.toLocaleString()}
+                  <span className="ml-1 text-sm font-normal text-neutral-500 dark:text-neutral-500">
+                    回
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
+                  国立国会図書館「国会会議録検索システム」より、氏名の部分一致で集計した参考値です。同姓同名の別人の発言が混ざっている可能性があります。
+                </p>
+              </div>
+            )}
+            {questionStat && (
+              <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
+                <div className="text-xs text-neutral-500 dark:text-neutral-500">
+                  質問主意書の提出数
+                </div>
+                <div className="mt-1 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
+                  {questionStat.questionCount.toLocaleString()}
+                  <span className="ml-1 text-sm font-normal text-neutral-500 dark:text-neutral-500">
+                    件
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
+                  {questionStat.sessionsCovered.length > 0 && (
+                    <>
+                      第{Math.min(...questionStat.sessionsCovered)}回〜第
+                      {Math.max(...questionStat.sessionsCovered)}回国会で提出。
+                    </>
+                  )}
+                  直近の国会回次のみを対象に衆参公式サイトから集計しています（全期間の集計ではありません）。
+                </p>
+              </div>
+            )}
+          </div>
+        </>
+      )}
 
       <h2 className="mt-8 text-lg font-bold text-neutral-900 dark:text-neutral-50">
         選挙結果
