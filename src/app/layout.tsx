@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { NewsMenu } from "@/components/NewsMenu";
 import { MobileNav } from "@/components/MobileNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { getNews } from "@/lib/news";
 import "./globals.css";
 
@@ -27,7 +28,7 @@ export default async function RootLayout({
 
   return (
     <html lang="ja">
-      <body className="min-h-screen bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+      <body className="flex min-h-screen flex-col bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
         <header className="sticky top-0 z-30 border-b border-neutral-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-neutral-800 dark:bg-neutral-950/80 dark:supports-[backdrop-filter]:bg-neutral-950/70">
           <nav className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 text-sm sm:justify-start sm:px-6">
             <Link
@@ -51,7 +52,8 @@ export default async function RootLayout({
             <MobileNav navLinks={NAV_LINKS} news={news} />
           </nav>
         </header>
-        <main className="mx-auto w-full max-w-6xl px-6 py-8">{children}</main>
+        <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-8">{children}</main>
+        <SiteFooter />
         <ScrollToTopButton />
       </body>
     </html>
