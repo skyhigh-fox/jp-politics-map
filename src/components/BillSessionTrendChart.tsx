@@ -353,13 +353,14 @@ export function BillSessionTrendChart({ data }: BillSessionTrendChartProps) {
             </text>
           ))}
 
-          {/* X軸ラベル（間引き済み） */}
+          {/* X軸ラベル（間引き済み）。両端はグラフ枠外にはみ出してクリップされない
+              よう、textAnchorを端で"start"/"end"に切り替える */}
           {[...tickIndices].map((i) => (
             <text
               key={i}
               x={xPositions[i]!}
               y={MARGIN.top + PLOT_H + 18}
-              textAnchor="middle"
+              textAnchor={i === 0 ? "start" : i === n - 1 ? "end" : "middle"}
               fontSize={11}
               fill="var(--chart-ink-secondary)"
             >
