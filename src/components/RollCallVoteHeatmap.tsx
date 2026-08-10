@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { RollCallVote, Party, RollCallVoteChoice } from "@/types";
 import {
@@ -5,6 +6,7 @@ import {
   buildPartyVoteBreakdown,
   buildRollCallVoteFacts,
 } from "@/lib/rollCallVoteStats";
+import { VOTE_CHOICE_COLORS } from "@/lib/rollCallVoteColors";
 import { PartyColorDot } from "@/components/PartyColorDot";
 import { DataInsight } from "@/components/DataInsight";
 import { DataCoverageNote } from "@/components/DataCoverageNote";
@@ -27,37 +29,12 @@ import { DataCoverageNote } from "@/components/DataCoverageNote";
  * グレーの2階調（濃淡のみで序列を表現、ordinal）とした。
  * セルの背景色は「会派内でその選択が占める比率」に応じた不透明度で強度表現する
  * （比率が高いほど濃く塗る＝ヒートマップとしての強度表現）。
+ *
+ * 配色の定義そのものは、議員詳細ページの投票履歴・/votes 側でも同じ色を使えるよう
+ * `src/lib/rollCallVoteColors.ts` に切り出してある。
  */
 
-const CHOICE_META: Record<
-  RollCallVoteChoice,
-  { rgbLight: string; rgbDark: string; textLight: string; textDark: string }
-> = {
-  賛成: {
-    rgbLight: "37, 99, 235", // blue-600
-    rgbDark: "96, 165, 250", // blue-400
-    textLight: "#1e3a8a",
-    textDark: "#dbeafe",
-  },
-  反対: {
-    rgbLight: "217, 119, 6", // amber-600
-    rgbDark: "251, 146, 60", // orange-400
-    textLight: "#7c2d12",
-    textDark: "#ffedd5",
-  },
-  欠席: {
-    rgbLight: "115, 115, 115", // neutral-500
-    rgbDark: "163, 163, 163", // neutral-400
-    textLight: "#404040",
-    textDark: "#e5e5e5",
-  },
-  棄権: {
-    rgbLight: "82, 82, 82", // neutral-600
-    rgbDark: "212, 212, 212", // neutral-300
-    textLight: "#262626",
-    textDark: "#f5f5f5",
-  },
-};
+const CHOICE_META = VOTE_CHOICE_COLORS;
 
 function cellStyle(ratio: number, choice: RollCallVoteChoice) {
   const alpha = ratio <= 0 ? 0 : 0.14 + ratio * 0.72;
@@ -72,6 +49,7 @@ export function RollCallVoteHeatmap({
   vote,
   parties,
   coverageFacts = [],
+  detailHref,
 }: {
   vote: RollCallVote;
   parties: Party[];
@@ -81,6 +59,11 @@ export function RollCallVoteHeatmap({
    * 呼び出し側（法案詳細ページ）が buildRollCallVoteNoteFacts で算出する。
    */
   coverageFacts?: string[];
+  /**
+   * 議員個人の賛否まで見られる個別投票ページ（/votes/[voteId]）への導線。
+   * その個別投票ページ自身で使うときは自己参照になるため渡さない。
+   */
+  detailHref?: string;
 }) {
   const rows = buildPartyVoteBreakdown(vote, parties);
   const totalVoted = vote.totalFor + vote.totalAgainst;
@@ -179,6 +162,17 @@ export function RollCallVoteHeatmap({
           </tbody>
         </table>
       </div>
+
+      {detailHref && (
+        <p className="mt-3 text-sm">
+          <Link
+            href={detailHref}
+            className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            この投票の議員別の賛否を見る →
+          </Link>
+        </p>
+      )}
 
       <DataCoverageNote
         datasetId="roll-call-votes"

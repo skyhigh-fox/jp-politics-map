@@ -207,6 +207,8 @@ export default async function BillDetailPage({
           parties={parties}
           // 紐付け率・収録範囲はハードコードせず、表示に使っているデータから算出する
           coverageFacts={buildRollCallVoteNoteFacts(rollCallVote, rollCallVotes)}
+          // 議員個人の賛否は個別の記名投票ページ（Tier1 #5）で見られる
+          detailHref={`/votes/${encodeURIComponent(rollCallVote.voteId)}`}
         />
       )}
 
@@ -220,6 +222,14 @@ export default async function BillDetailPage({
           </h2>
           <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
             この法案に対応する参議院の記名投票（押しボタン式投票）は、収録している範囲では見つかりませんでした。
+          </p>
+          <p className="mt-2 text-sm">
+            <Link
+              href="/votes"
+              className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+            >
+              収録している記名投票の一覧を見る →
+            </Link>
           </p>
           <DataCoverageNote
             datasetId="roll-call-votes"

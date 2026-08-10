@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 const NAV_LINKS = [
   { href: "/bills", label: "法案一覧" },
   { href: "/legislators", label: "議員一覧" },
+  { href: "/votes", label: "記名投票" },
   { href: "/map", label: "都道府県マップ" },
   { href: "/map/districts", label: "選挙区マップ" },
   { href: "/budget", label: "国の予算・決算" },

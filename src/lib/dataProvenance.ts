@@ -412,7 +412,7 @@ export function buildRollCallVoteScopeFacts(votes: RollCallVote[]): string[] {
     range
       ? `記名投票データは${range}の${n(votes.length)}件を収録しています（参議院のみ）。`
       : `記名投票データは${n(votes.length)}件を収録しています（参議院のみ）。`,
-    `このうち法案データと案件名を突合できたのは${n(linkedBills)}件です。突合できなかった投票（会期の件・決算・人事案件など）は、法案ページからは辿れません。`,
+    `このうち法案データと案件名を突合できたのは${n(linkedBills)}件です。突合できなかった投票（会期の件・決算・人事案件など）は法案ページからは辿れませんが、記名投票一覧ページには全件を収録しています。`,
   ];
 }
 

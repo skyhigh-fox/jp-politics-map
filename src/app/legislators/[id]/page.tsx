@@ -7,18 +7,22 @@ import {
   getParties,
   getElectionResults,
   getNdlSpeechCounts,
+  getRollCallVotes,
   getWrittenQuestionCounts,
 } from "@/lib/data";
 import { PartyColorDot } from "@/components/PartyColorDot";
 import { DataCoverageNote } from "@/components/DataCoverageNote";
 import { LegislatorBillSponsorshipSection } from "@/components/LegislatorBillSponsorshipSection";
+import { LegislatorRollCallVoteSection } from "@/components/LegislatorRollCallVoteSection";
 import { partyDisplayName } from "@/lib/party";
 import {
   buildBillSponsorshipScopeFacts,
   buildElectionResultCoverage,
   buildNdlSpeechCoverage,
+  buildRollCallVoteScopeFacts,
   buildWrittenQuestionCoverage,
 } from "@/lib/dataProvenance";
+import { buildLegislatorVoteRecords } from "@/lib/rollCallVoteStats";
 import type { Bill } from "@/types";
 
 export default async function LegislatorDetailPage({
@@ -36,6 +40,7 @@ export default async function LegislatorDetailPage({
     writtenQuestions,
     bills,
     billSponsorships,
+    rollCallVotes,
   ] = await Promise.all([
     getLegislators(),
     getParties(),
@@ -44,6 +49,7 @@ export default async function LegislatorDetailPage({
     getWrittenQuestionCounts(),
     getBills(),
     getBillSponsorships(),
+    getRollCallVotes(),
   ]);
 
   const legislator = legislators.find((l) => l.id === id);
@@ -70,6 +76,11 @@ export default async function LegislatorDetailPage({
   sponsoredBills.sort(bySessionDesc);
   supportedBills.sort(bySessionDesc);
   const sponsorshipScopeFacts = buildBillSponsorshipScopeFacts(billSponsorships);
+
+  // 参議院本会議の記名投票における、この議員個人の賛否の記録（Tier1 #5）。
+  // 「いつ・何に・どう投票したか」の転記のみで、賛成率等の指標化はしない。
+  const voteRecords = buildLegislatorVoteRecords(rollCallVotes, id);
+  const rollCallScopeFacts = buildRollCallVoteScopeFacts(rollCallVotes);
 
   const party = parties.find((p) => p.id === legislator.currentPartyId);
   const results = electionResults
@@ -248,6 +259,18 @@ export default async function LegislatorDetailPage({
           sponsoredBills={sponsoredBills}
           supportedBills={supportedBills}
           coverageFacts={sponsorshipScopeFacts}
+        />
+      )}
+
+      {/* データ未取得（fetch:roll-call-votes 未実行）のときはセクションごと出さない。
+          衆議院議員のページでは、記録が無い理由（起立採決が中心で個人の賛否が
+          原則公開されない）をセクション内で明示する */}
+      {rollCallVotes.length > 0 && (
+        <LegislatorRollCallVoteSection
+          records={voteRecords}
+          chamber={legislator.chamber}
+          totalVoteCount={rollCallVotes.length}
+          coverageFacts={rollCallScopeFacts}
         />
       )}
 
