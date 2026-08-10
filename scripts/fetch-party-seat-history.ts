@@ -26,9 +26,17 @@
  *   - 各選挙の政党別獲得議席数の合計が、当該選挙で選出された議席の総数（衆議院は
  *     総定数、参議院は改選議席数）と一致することを確認済み（本スクリプト内でも
  *     assertValidElection() で検証し、不一致なら例外を投げる）
+ *   - 追記（2026-08-11）: 第51回衆議院議員総選挙（2026-02-08執行）については、総務省
+ *     「令和8年2月8日執行 衆議院議員総選挙・最高裁判所裁判官国民審査 速報結果」
+ *     3.開票結果 (1)「届出政党等別男女別新前元別当選人数（小選挙区、比例代表）」
+ *     （https://www.soumu.go.jp/main_content/001061475.xlsx）という一次情報の
+ *     Excelが提供されていたため、この回だけは総務省の数値をそのまま採用している
+ *     （Wikipediaの同記事の表は無所属当選者の追加公認1名分を自由民主党に含めて
+ *     自民316・無所属4としているが、それは選挙結果そのものではなく事後の追加公認を
+ *     反映した数値であり、他の回（例: 第50回の自民191）と数え方が揃わないため）
  *
  * 対象範囲:
- *   衆議院: 第46回(2012)〜第50回(2024) の直近5回
+ *   衆議院: 第46回(2012)〜第51回(2026) の直近6回
  *   参議院: 第23回(2013)〜第27回(2025) の直近5回（通常選挙）
  *
  * データの性質について（重要）:
@@ -60,6 +68,7 @@ const PARTY_FULL_NAME_TO_ABBR: Record<string, string> = {
   公明党: "公明",
   日本維新の会: "維新",
   おおさか維新の会: "維新", // 2016年に「日本維新の会」へ改称した同一政党
+  中道改革連合: "中道", // PARTY_ALIASESの対象外。resolvePartyIdで party-中道 に解決される
   日本共産党: "共産",
   社会民主党: "社民",
   立憲民主党: "立憲",
@@ -191,6 +200,33 @@ const ELECTIONS: RawElection[] = [
     ],
   },
   {
+    chamber: "衆議院",
+    electionYear: 2026,
+    electionDate: "2026-02-08",
+    electionName: "第51回衆議院議員総選挙",
+    totalSeats: 465,
+    note:
+      "この回のみ、Wikipediaではなく総務省の速報結果（3.開票結果 (1)「届出政党等別" +
+      "男女別新前元別当選人数（小選挙区、比例代表）」001061475.xlsx）を一次情報として" +
+      "転記した。したがって自由民主党315・無所属5は、無所属当選者1名の事後の追加公認を" +
+      "含まない選挙結果そのものの数値（Wikipediaの表は追加公認を反映して自民316・" +
+      "無所属4としているが、第46〜50回と数え方を揃えるため採用していない）。" +
+      "立憲民主党・公明党は本選挙に党として臨まず、中道改革連合として立候補している。",
+    sourceUrl: "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin51/index.html",
+    results: [
+      { partyName: "自由民主党", seats: 315 },
+      { partyName: "中道改革連合", seats: 49 },
+      { partyName: "日本維新の会", seats: 36 },
+      { partyName: "国民民主党", seats: 28 },
+      { partyName: "参政党", seats: 15 },
+      { partyName: "チームみらい", seats: 11 },
+      { partyName: "日本共産党", seats: 4 },
+      { partyName: "れいわ新選組", seats: 1 },
+      { partyName: "減税日本・ゆうこく連合", seats: 1 },
+      { partyName: "無所属", seats: 5 },
+    ],
+  },
+  {
     chamber: "参議院",
     electionYear: 2013,
     electionDate: "2013-07-21",
@@ -308,6 +344,46 @@ function assertValidElection(election: RawElection): void {
   }
 }
 
+/**
+ * 陳腐化検知（重要）。
+ *
+ * 本スクリプトのELECTIONSは手動転記の固定データなので、新しい国政選挙が行われても
+ * 誰かが気づいて追記しない限り永久に古いままになる（実際に第51回衆院選が
+ * 半年間反映されないままだった）。そこで「制度上その時点までには必ず次の選挙が
+ * 行われているはずの期限」を過ぎていたら警告を出す。
+ *   - 衆議院: 任期4年（解散があるためこれより短くなることはあっても長くはならない）
+ *   - 参議院: 3年ごとの通常選挙
+ * 猶予として3か月を足している（選挙直後にデータ追記が間に合わない期間を許容するため）。
+ *
+ * 日次のGitHub Actions（fetch:all）を止めたくないので例外ではなく警告に留めるが、
+ * ログに出たら ELECTIONS に最新の選挙結果を追記すること。
+ */
+function warnIfStale(elections: RawElection[], now: Date): void {
+  const MAX_TERM_MONTHS: Record<RawElection["chamber"], number> = {
+    衆議院: 4 * 12,
+    参議院: 3 * 12,
+  };
+  const GRACE_MONTHS = 3;
+
+  for (const chamber of ["衆議院", "参議院"] as const) {
+    const latest = elections
+      .filter((e) => e.chamber === chamber)
+      .sort((a, b) => a.electionDate.localeCompare(b.electionDate))
+      .at(-1);
+    if (!latest) continue;
+
+    const deadline = new Date(latest.electionDate);
+    deadline.setMonth(deadline.getMonth() + MAX_TERM_MONTHS[chamber] + GRACE_MONTHS);
+    if (now > deadline) {
+      console.warn(
+        `[陳腐化の疑い] ${chamber}の最新データが${latest.electionName}（${latest.electionDate}）のままです。` +
+          `${chamber}の任期は${MAX_TERM_MONTHS[chamber] / 12}年なので、既に次の選挙が行われている可能性が高い。` +
+          `scripts/fetch-party-seat-history.ts の ELECTIONS に最新の選挙結果を追記してください。`
+      );
+    }
+  }
+}
+
 async function loadCurrentPartyIds(): Promise<Set<string>> {
   const filePath = path.join(process.cwd(), "data", "parties.json");
   const raw = await readFile(filePath, "utf-8");
@@ -335,6 +411,7 @@ async function main() {
   for (const election of ELECTIONS) {
     assertValidElection(election);
   }
+  warnIfStale(ELECTIONS, new Date());
 
   const history: PartySeatHistory[] = ELECTIONS.map((election) => {
     const results: PartySeatResult[] = election.results.map((r) => ({

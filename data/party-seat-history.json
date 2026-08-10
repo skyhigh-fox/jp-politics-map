@@ -290,6 +290,67 @@
     "sourceUrl": "https://ja.wikipedia.org/wiki/第50回衆議院議員総選挙"
   },
   {
+    "chamber": "衆議院",
+    "electionYear": 2026,
+    "electionDate": "2026-02-08",
+    "electionName": "第51回衆議院議員総選挙",
+    "totalSeats": 465,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 315
+      },
+      {
+        "partyName": "中道改革連合",
+        "partyId": "party-中道",
+        "seats": 49
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 36
+      },
+      {
+        "partyName": "国民民主党",
+        "partyId": "party-民主",
+        "seats": 28
+      },
+      {
+        "partyName": "参政党",
+        "partyId": "party-参政",
+        "seats": 15
+      },
+      {
+        "partyName": "チームみらい",
+        "partyId": "party-みら",
+        "seats": 11
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 4
+      },
+      {
+        "partyName": "れいわ新選組",
+        "partyId": "party-れ新",
+        "seats": 1
+      },
+      {
+        "partyName": "減税日本・ゆうこく連合",
+        "partyId": null,
+        "seats": 1
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 5
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin51/index.html",
+    "note": "この回のみ、Wikipediaではなく総務省の速報結果（3.開票結果 (1)「届出政党等別男女別新前元別当選人数（小選挙区、比例代表）」001061475.xlsx）を一次情報として転記した。したがって自由民主党315・無所属5は、無所属当選者1名の事後の追加公認を含まない選挙結果そのものの数値（Wikipediaの表は追加公認を反映して自民316・無所属4としているが、第46〜50回と数え方を揃えるため採用していない）。立憲民主党・公明党は本選挙に党として臨まず、中道改革連合として立候補している。"
+  },
+  {
     "chamber": "参議院",
     "electionYear": 2013,
     "electionDate": "2013-07-21",
