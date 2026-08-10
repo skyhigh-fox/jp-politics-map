@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { getLegislators, getParties } from "@/lib/data";
+import { getLegislators, getParties, getPartySeatHistory } from "@/lib/data";
 import { legislatorPrefectures, PREFECTURE_CODES } from "@/lib/prefectures";
 import { FilterBar } from "@/components/FilterBar";
 import { InfiniteLegislatorList } from "@/components/InfiniteLegislatorList";
+import { SemicircleSeatChart } from "@/components/SemicircleSeatChart";
+import { PartySeatTrendChart } from "@/components/PartySeatTrendChart";
+import { buildChamberSeatTrend } from "@/lib/partySeatTrendStats";
 import type { Legislator, Party } from "@/types";
 
 const CHAMBER_OPTIONS = ["衆議院", "参議院"] as const;
@@ -35,14 +38,18 @@ export default async function LegislatorsPage({
   }>;
 }) {
   const filters = await searchParams;
-  const [allLegislators, parties] = await Promise.all([
+  const [allLegislators, parties, partySeatHistory] = await Promise.all([
     getLegislators(),
     getParties(),
+    getPartySeatHistory(),
   ]);
   const legislators = allLegislators.filter((l) => matchesFilters(l, filters));
   const sortedParties = [...parties].sort((a, b) =>
     a.name.localeCompare(b.name, "ja")
   );
+
+  const shugiinSeatTrend = buildChamberSeatTrend(partySeatHistory, parties, "衆議院");
+  const sangiinSeatTrend = buildChamberSeatTrend(partySeatHistory, parties, "参議院");
 
   return (
     <div className="animate-fade-in">
@@ -100,6 +107,29 @@ export default async function LegislatorsPage({
           searchLabel="氏名で検索"
           searchPlaceholder="例: 山田"
         />
+      )}
+
+      {allLegislators.length > 0 && (
+        <details className="mt-6 rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900 sm:p-5">
+          <summary className="cursor-pointer select-none text-sm font-semibold text-neutral-900 hover:text-accent-600 dark:text-neutral-100 dark:hover:text-accent-400">
+            政党別議席構成・推移を見る
+          </summary>
+          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+            検索・絞り込みとは別に、衆参両院の現在の議席配置と、過去の選挙ごとの推移を確認できます（議席数降順のみで表示、評価的な並び順ではありません）。
+          </p>
+
+          <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <SemicircleSeatChart chamber="衆議院" legislators={allLegislators} parties={parties} />
+            <SemicircleSeatChart chamber="参議院" legislators={allLegislators} parties={parties} />
+          </div>
+
+          {(shugiinSeatTrend || sangiinSeatTrend) && (
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
+              {shugiinSeatTrend && <PartySeatTrendChart trend={shugiinSeatTrend} />}
+              {sangiinSeatTrend && <PartySeatTrendChart trend={sangiinSeatTrend} />}
+            </div>
+          )}
+        </details>
       )}
 
       <InfiniteLegislatorList legislators={legislators} parties={parties} />

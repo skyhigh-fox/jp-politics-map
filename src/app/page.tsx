@@ -1,56 +1,84 @@
 import Link from "next/link";
-import {
-  getBills,
-  getLegislators,
-  getParties,
-  getPartySeatHistory,
-} from "@/lib/data";
+import { getBills, getLegislators } from "@/lib/data";
 import { getNews } from "@/lib/news";
-import { BillStatusSummary } from "@/components/BillStatusSummary";
-import { PartyCompositionSummary } from "@/components/PartyCompositionSummary";
-import { SemicircleSeatChart } from "@/components/SemicircleSeatChart";
-import { PartySeatTrendChart } from "@/components/PartySeatTrendChart";
-import { NewsPreview } from "@/components/NewsPreview";
-import { buildChamberSeatTrend } from "@/lib/partySeatTrendStats";
 
-const LINKS = [
-  {
+/**
+ * トップページ。2026-08-11、ユーザーフィードバック（「TOPページが何を出したいのか
+ * 分かりにくい」）を受けて全面再設計した。3サブエージェント2ラウンド議論の結論
+ * （詳細はObsidian決定事項ログ・Claude永続メモリ`homepage-redesign-plan`参照）に
+ * 従い、以下の方針で構成する:
+ *
+ * - トップページの役割を「①何のサイトか一目で伝える」「②主要な入口を示す」の
+ *   2点に絞る。ダッシュボード的な詳細データ（議席配置図・議席推移・法案審議状況・
+ *   政党別構成・ニュース一覧）は置かない（それぞれの詳細ページ、または
+ *   /legislatorsの折りたたみセクションへ移設・統合済み）
+ * - h2見出しは使わない（見出しが並列されて優先順位が見えなくなる問題を避けるため）
+ * - 「実データで公開しています」という手段の説明から、「格付けをしない」という
+ *   差別化ポイントを含む価値提案へタグラインを変更した
+ */
+
+const LINKS_META = {
+  bills: {
     href: "/bills",
     title: "法案一覧",
-    description: "国会に提出された法案の審議状況・進捗タイムラインを確認",
   },
-  {
+  legislators: {
     href: "/legislators",
     title: "議員一覧",
-    description: "衆参両院の議員プロフィールと選挙結果を検索",
+    description: "衆参両院議員のプロフィール・選挙結果・政党別議席構成を検索",
   },
-  {
+  map: {
     href: "/map",
     title: "都道府県マップ",
-    description: "都道府県・市区町村単位で関連議員数を地図から辿る（ズーム・パン対応）",
+    description: "都道府県・市区町村の関連議員数と地方財政データを地図から辿る",
   },
-] as const;
+} as const;
 
 export default async function HomePage() {
-  const [bills, legislators, parties, news, partySeatHistory] =
-    await Promise.all([
-      getBills(),
-      getLegislators(),
-      getParties(),
-      getNews(),
-      getPartySeatHistory(),
-    ]);
+  const [bills, legislators, news] = await Promise.all([
+    getBills(),
+    getLegislators(),
+    getNews(),
+  ]);
 
-  const shugiinSeatTrend = buildChamberSeatTrend(
-    partySeatHistory,
-    parties,
-    "衆議院"
-  );
-  const sangiinSeatTrend = buildChamberSeatTrend(
-    partySeatHistory,
-    parties,
-    "参議院"
-  );
+  const currentLegislatorCount = legislators.filter(
+    (l) => l.termStatus === "現職"
+  ).length;
+
+  const latestNews = [...news].sort((a, b) =>
+    b.publishedAt.localeCompare(a.publishedAt)
+  )[0];
+
+  const lastUpdated = bills
+    .map((b) => b.lastUpdated)
+    .filter(Boolean)
+    .sort()
+    .at(-1);
+
+  const cards = [
+    {
+      ...LINKS_META.bills,
+      description:
+        bills.length > 0
+          ? `全${bills.length.toLocaleString()}件の法案の審議状況・進捗を検索`
+          : "国会に提出された法案の審議状況・進捗を検索",
+    },
+    {
+      ...LINKS_META.legislators,
+      description:
+        currentLegislatorCount > 0
+          ? `現職${currentLegislatorCount.toLocaleString()}名の議員プロフィール・選挙結果・政党別議席構成を検索`
+          : LINKS_META.legislators.description,
+    },
+    LINKS_META.map,
+    {
+      href: "/news",
+      title: "最新ニュース",
+      description: latestNews
+        ? `最新: ${latestNews.title}（${latestNews.publishedAt.slice(5, 10).replace("-", "/")}）`
+        : "総務省の新着情報から政治関連の見出しをチェック",
+    },
+  ];
 
   return (
     <div className="animate-fade-in">
@@ -60,45 +88,15 @@ export default async function HomePage() {
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl">
         日本政治マップ
       </h1>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-        国会議員・法案の審議状況を実データで公開しています。都道府県ドリルダウン地図（ズーム・パン対応）、法案検索、議員検索、最新のお知らせも合わせて確認できます。
+      <p className="mt-4 max-w-2xl text-lg font-semibold leading-relaxed text-neutral-900 dark:text-neutral-50">
+        国会の“いま”を、格付けなしの一次データで。
+      </p>
+      <p className="mt-2 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
+        法案の審議状況・議員の活動・都道府県の地方財政データを、気になる切り口から確かめられます。議員や政党の評価・ランキングは行いません。
       </p>
 
-      <h2 className="mt-10 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-        サマリー
-      </h2>
-      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-2">
-          <SemicircleSeatChart chamber="衆議院" legislators={legislators} parties={parties} />
-          <SemicircleSeatChart chamber="参議院" legislators={legislators} parties={parties} />
-        </div>
-        <BillStatusSummary bills={bills} />
-        <PartyCompositionSummary legislators={legislators} parties={parties} />
-        <div className="lg:col-span-2">
-          <NewsPreview items={news} />
-        </div>
-      </div>
-
-      {(shugiinSeatTrend || sangiinSeatTrend) && (
-        <>
-          <h2 className="mt-10 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-            政党別議席数の推移
-          </h2>
-          <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-            過去の選挙ごとに各政党が獲得した議席数の推移です（直近5回、原資料の表記に基づく客観的な集計です）。
-          </p>
-          <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
-            {shugiinSeatTrend && <PartySeatTrendChart trend={shugiinSeatTrend} />}
-            {sangiinSeatTrend && <PartySeatTrendChart trend={sangiinSeatTrend} />}
-          </div>
-        </>
-      )}
-
-      <h2 className="mt-10 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-        詳細ページ
-      </h2>
-      <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-        {LINKS.map((link) => (
+      <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {cards.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
@@ -123,6 +121,13 @@ export default async function HomePage() {
           </li>
         ))}
       </ul>
+
+      {(bills.length > 0 || currentLegislatorCount > 0) && (
+        <p className="mt-6 text-xs text-neutral-400 dark:text-neutral-600">
+          法案{bills.length.toLocaleString()}件・議員{currentLegislatorCount.toLocaleString()}名のデータを日次自動更新
+          {lastUpdated && `（最終更新: ${lastUpdated}）`}
+        </p>
+      )}
     </div>
   );
 }
