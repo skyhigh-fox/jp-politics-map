@@ -17,15 +17,44 @@ const STATUS_OPTIONS = [
   "成立",
 ] as const;
 const SUBMITTER_OPTIONS = ["内閣提出", "議員立法"] as const;
+// 議案種類（category）は元データ（SmartNews メディア研究所の議案データベース）の
+// 表記そのまま。予算・決算・国の収支に関する区分をまとめて先頭に置き、
+// 一般的な法律案・条約等をその後に続ける順（中立的な既定順、金額や件数での
+// 並び替えはしない）
+const CATEGORY_OPTIONS = [
+  "予算",
+  "決算",
+  "承諾",
+  "国有財産",
+  "ＮＨＫ決算",
+  "国庫債務",
+  "衆法",
+  "参法",
+  "閣法",
+  "条約",
+  "承認",
+  "決議",
+  "規則",
+  "規程",
+  "議決",
+  "憲法八条議決案",
+] as const;
 
 function matchesFilters(
   bill: Bill,
-  filters: { house?: string; status?: string; submitterType?: string; q?: string }
+  filters: {
+    house?: string;
+    status?: string;
+    submitterType?: string;
+    category?: string;
+    q?: string;
+  }
 ): boolean {
   if (filters.house && bill.house !== filters.house) return false;
   if (filters.status && bill.status !== filters.status) return false;
   if (filters.submitterType && bill.submitterType !== filters.submitterType)
     return false;
+  if (filters.category && bill.category !== filters.category) return false;
   if (filters.q && !bill.title.includes(filters.q)) return false;
   return true;
 }
@@ -37,6 +66,7 @@ export default async function BillsPage({
     house?: string;
     status?: string;
     submitterType?: string;
+    category?: string;
     q?: string;
   }>;
 }) {
@@ -97,6 +127,13 @@ export default async function BillsPage({
               key: "submitterType",
               label: "提出区分",
               options: SUBMITTER_OPTIONS.map((v) => ({ value: v, label: v })),
+            },
+            {
+              key: "category",
+              label: "議案種類",
+              options: CATEGORY_OPTIONS.filter((c) =>
+                bills.some((b) => b.category === c)
+              ).map((v) => ({ value: v, label: v })),
             },
           ]}
           searchKey="q"
