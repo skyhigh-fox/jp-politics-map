@@ -1,5 +1,6 @@
 import type { Chamber, Legislator, Party } from "@/types";
 import { PartyColorDot } from "@/components/PartyColorDot";
+import { DataInsight } from "@/components/DataInsight";
 
 /**
  * トップページ用「半円形議席配置図」（衆院・参院それぞれ）。
@@ -190,6 +191,24 @@ export function SemicircleSeatChart({
 
   const { points, dotRadius } = layoutSeats(total);
 
+  // データからわかること: 最大会派と過半数ラインの関係を機械的に言い換える
+  // （「単独過半数を握っている」という事実の言い換えのみ。政策的な評価はしない）
+  const facts: string[] = [];
+  const top1 = sorted[0];
+  if (total > 0 && top1) {
+    const [topPartyId, topCount] = top1;
+    const topParty = partyById.get(topPartyId);
+    const topName = topParty?.name ?? topPartyId;
+    const majority = Math.floor(total / 2) + 1;
+    const diff = topCount - majority;
+    const pct = ((topCount / total) * 100).toFixed(0);
+    facts.push(
+      `最も議席が多いのは${topName}（${topCount.toLocaleString()}議席、全体の${pct}%）です。過半数（${majority}議席）を${
+        diff >= 0 ? `${diff}議席上回っています` : `${-diff}議席下回っています`
+      }。`
+    );
+  }
+
   // 政党ブロックごとに点列を先頭から詰めていく
   let cursor = 0;
   const groups = segments.map((s) => {
@@ -278,6 +297,8 @@ export function SemicircleSeatChart({
               </li>
             ))}
           </ul>
+
+          <DataInsight facts={facts} />
 
           <details className="mt-3 text-xs text-neutral-600 dark:text-neutral-400">
             <summary className="cursor-pointer select-none font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100">

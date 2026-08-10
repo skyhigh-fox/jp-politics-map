@@ -3,8 +3,10 @@ import type { RollCallVote, Party, RollCallVoteChoice } from "@/types";
 import {
   VOTE_CHOICE_ORDER,
   buildPartyVoteBreakdown,
+  buildRollCallVoteFacts,
 } from "@/lib/rollCallVoteStats";
 import { PartyColorDot } from "@/components/PartyColorDot";
+import { DataInsight } from "@/components/DataInsight";
 
 /**
  * 【参議院・記名投票の会派別賛否ヒートマップ】
@@ -74,6 +76,7 @@ export function RollCallVoteHeatmap({
 }) {
   const rows = buildPartyVoteBreakdown(vote, parties);
   const totalVoted = vote.totalFor + vote.totalAgainst;
+  const facts = buildRollCallVoteFacts(vote, rows);
 
   return (
     <section className="roll-call-heatmap mt-8">
@@ -111,6 +114,8 @@ export function RollCallVoteHeatmap({
           </li>
         ))}
       </ul>
+
+      <DataInsight facts={facts} />
 
       <div className="mt-3 overflow-x-auto rounded-xl border border-neutral-200 shadow-card dark:border-neutral-800">
         <table className="w-full min-w-[440px] border-collapse text-sm">

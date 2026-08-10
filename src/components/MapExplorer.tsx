@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PrefectureMap } from "@/components/PrefectureMap";
 import { PrefecturePartyComposition } from "@/components/PrefecturePartyComposition";
+import { DataInsight } from "@/components/DataInsight";
 import { formatYenCompact, formatYenPerCapita } from "@/lib/formatFinance";
 import {
   FINANCIAL_HEALTH_INDICATORS,
@@ -119,6 +120,24 @@ export function MapExplorer({
     [activeLayer, activeIndicatorMeta]
   );
   const ranking = Object.entries(activeCounts).sort((a, b) => b[1] - a[1]);
+
+  // データからわかること: 表示中レイヤーの最高/最低を機械的に言い換える
+  // （評価語は使わず「高い/低い」「多い/少ない」という事実の言い換えのみ）
+  const rankWord = activeLayer === "legislators" ? "多い" : "高い";
+  const rankWordLow = activeLayer === "legislators" ? "少ない" : "低い";
+  const mapFacts: string[] = [];
+  if (ranking.length > 0) {
+    const [topName, topValue] = ranking[0]!;
+    const [bottomName, bottomValue] = ranking[ranking.length - 1]!;
+    mapFacts.push(
+      `${metricLabel}が最も${rankWord}のは${topName}（${formatValue(topValue)}）です。`
+    );
+    if (bottomName !== topName) {
+      mapFacts.push(
+        `最も${rankWordLow}のは${bottomName}（${formatValue(bottomValue)}）です。`
+      );
+    }
+  }
 
   return (
     <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
@@ -242,6 +261,7 @@ export function MapExplorer({
               `法定の基準値: ${activeIndicatorMeta.standardNote}（地方公共団体の財政の健全化に関する法律）。`}
           </p>
         )}
+        <DataInsight facts={mapFacts} />
         <PrefectureMap
           counts={activeCounts}
           selected={selected}

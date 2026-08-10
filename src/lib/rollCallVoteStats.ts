@@ -58,3 +58,36 @@ export function buildPartyVoteBreakdown(
     return b.total - a.total;
   });
 }
+
+/**
+ * 表示中の投票結果から機械的に言い換えられる事実の一覧を作る
+ * （DataInsight コンポーネント用）。可決/否決は賛成・反対の数の比較という
+ * 客観的な事実として提示し、賛否そのものへの評価は加えない。
+ */
+export function buildRollCallVoteFacts(
+  vote: RollCallVote,
+  rows: PartyVoteRow[]
+): string[] {
+  const facts: string[] = [];
+  const result =
+    vote.totalFor > vote.totalAgainst
+      ? "可決"
+      : vote.totalFor < vote.totalAgainst
+        ? "否決"
+        : "同数";
+  facts.push(
+    `賛成${vote.totalFor}、反対${vote.totalAgainst}で${result}されました。`
+  );
+
+  const split = rows.filter(
+    (r) => r.key !== OTHER_KEY && r.counts.賛成 > 0 && r.counts.反対 > 0
+  );
+  if (split.length > 0) {
+    const names = split
+      .map((r) => `${r.label}（賛成${r.counts.賛成}・反対${r.counts.反対}）`)
+      .join("、");
+    facts.push(`会派内で賛否が分かれたのは${names}です。`);
+  }
+
+  return facts;
+}
