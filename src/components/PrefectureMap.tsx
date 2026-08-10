@@ -35,6 +35,8 @@ export function PrefectureMap({
   counts,
   selected = null,
   onSelectPrefecture,
+  metricLabel = "関連議員",
+  formatValue = (v: number) => `${v}名`,
 }: {
   counts: Record<string, number>;
   /** 現在選択中の都道府県名（サイドバー連動でハイライト表示する） */
@@ -46,6 +48,10 @@ export function PrefectureMap({
    * 未指定の場合は従来通り議員一覧ページへ直接遷移する（後方互換用）。
    */
   onSelectPrefecture?: (name: string) => void;
+  /** ツールチップ・凡例に表示する指標名（レイヤー切替対応、既定は議員数） */
+  metricLabel?: string;
+  /** 数値の表示形式（既定は「◯名」。財政データ等、単位が異なるレイヤー用） */
+  formatValue?: (value: number) => string;
 }) {
   const router = useRouter();
   const mode = useColorScheme();
@@ -196,7 +202,7 @@ export function PrefectureMap({
         >
           <div className="font-semibold">{hovered.name}</div>
           <div className="text-neutral-600 dark:text-neutral-400">
-            関連議員 {hovered.count}名
+            {metricLabel} {formatValue(hovered.count)}
           </div>
         </div>
       )}
@@ -212,7 +218,7 @@ export function PrefectureMap({
         ))}
         <span>多い</span>
         <span className="ml-2 text-neutral-400 dark:text-neutral-500">
-          （{min}〜{max}名。クリックでその都道府県の政党別内訳を表示／ホイールでズーム・ドラッグでパン）
+          （{formatValue(min)}〜{formatValue(max)}。クリックでその都道府県の政党別内訳を表示／ホイールでズーム・ドラッグでパン）
         </span>
       </div>
     </div>

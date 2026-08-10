@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PrefectureMap } from "@/components/PrefectureMap";
 import { PrefecturePartyComposition } from "@/components/PrefecturePartyComposition";
+import { formatYenCompact } from "@/lib/formatFinance";
 import type { Party } from "@/types";
+
+type Layer = "legislators" | "finance";
 
 /**
  * `/map` ページ本体。左に都道府県地図、右にサイドバー
@@ -20,27 +23,88 @@ import type { Party } from "@/types";
  *   まずサイドバーにその都道府県の政党別議席構成を表示する2段階導線
  *   （PrefectureMapのonSelectPrefectureコールバックで受け取る）。
  *   一覧ページへはPrefecturePartyComposition内のリンクから遷移する。
+ * - 地図の指標レイヤーは「関連議員数」「歳出総額（都道府県財政、Phase 4）」の
+ *   2種類を切り替えられる（financeCountsが取得できている場合のみ表示）。
+ *   どちらのレイヤーでも配色ロジック（colorForCount）・サイドバーのランキング表は
+ *   共通のまま、指標値と表示形式だけが切り替わる。
  */
 export function MapExplorer({
   counts,
   partyCountsByPrefecture,
   parties,
+  financeCounts,
+  financeFiscalYear,
 }: {
   counts: Record<string, number>;
   partyCountsByPrefecture: Record<string, Record<string, number>>;
   parties: Party[];
+  /** 都道府県別 歳出総額（千円単位）。未取得時はundefinedまたは空オブジェクト */
+  financeCounts?: Record<string, number>;
+  financeFiscalYear?: number;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
+  const [layer, setLayer] = useState<Layer>("legislators");
 
-  const ranking = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const hasFinanceLayer = !!financeCounts && Object.keys(financeCounts).length > 0;
+  const activeLayer: Layer = hasFinanceLayer ? layer : "legislators";
+
+  const activeCounts = activeLayer === "finance" ? financeCounts! : counts;
+  const metricLabel = activeLayer === "finance" ? "歳出総額" : "関連議員";
+  const formatValue = useMemo(
+    () =>
+      activeLayer === "finance"
+        ? formatYenCompact
+        : (v: number) => `${v}名`,
+    [activeLayer]
+  );
+  const ranking = Object.entries(activeCounts).sort((a, b) => b[1] - a[1]);
 
   return (
     <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
       <div>
+        {hasFinanceLayer && (
+          <div
+            role="group"
+            aria-label="地図に表示する指標の切り替え"
+            className="mb-3 inline-flex rounded-lg border border-neutral-200 bg-white p-0.5 text-xs dark:border-neutral-800 dark:bg-neutral-900"
+          >
+            <button
+              type="button"
+              onClick={() => setLayer("legislators")}
+              aria-pressed={activeLayer === "legislators"}
+              className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                activeLayer === "legislators"
+                  ? "bg-accent-600 text-white"
+                  : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+              }`}
+            >
+              関連議員数
+            </button>
+            <button
+              type="button"
+              onClick={() => setLayer("finance")}
+              aria-pressed={activeLayer === "finance"}
+              className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                activeLayer === "finance"
+                  ? "bg-accent-600 text-white"
+                  : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+              }`}
+            >
+              歳出総額{financeFiscalYear ? `（${financeFiscalYear}年度）` : ""}
+            </button>
+          </div>
+        )}
+        {activeLayer === "finance" && (
+          <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-500">
+            都道府県普通会計の決算額（総務省「地方財政状況調査」）。人口規模の違いをそのまま反映するため、都市部ほど大きくなる傾向がある点に留意してください。
+          </p>
+        )}
         <PrefectureMap
-          counts={counts}
+          counts={activeCounts}
           selected={selected}
           onSelectPrefecture={setSelected}
+          metricLabel={metricLabel}
+          formatValue={formatValue}
         />
       </div>
 
@@ -60,7 +124,7 @@ export function MapExplorer({
 
         <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
           <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-            都道府県別 関連議員数ランキング
+            都道府県別 {metricLabel}ランキング
           </h3>
           <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-500">
             多い順・全{ranking.length}都道府県。地図と同じ情報をテキストで確認できます。
@@ -85,7 +149,7 @@ export function MapExplorer({
                     </span>
                     <span className="flex-1 truncate">{name}</span>
                     <span className="shrink-0 tabular-nums font-medium text-neutral-900 dark:text-neutral-100">
-                      {count}名
+                      {formatValue(count)}
                     </span>
                   </button>
                 </li>
