@@ -7,6 +7,7 @@ import type {
   BillStatusHistory,
   ElectionResult,
   Legislator,
+  LocalAssemblyPartyComposition,
   NdlSpeechCount,
   Party,
   PartySeatHistory,
@@ -184,6 +185,25 @@ export const getPrefectureExpenditureByNature = async (): Promise<
   try {
     const data = await readJson<PrefectureExpenditureByNature[]>(
       "prefecture-expenditure-by-nature.json"
+    );
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・地方議会及び長の党派別構成（機能拡充ロードマップ Tier1 #6）を取得する。
+ * data/local-assembly-party-composition.json は取得スクリプト
+ * （fetch:local-assembly-party-composition）を実行するまで存在しないため、
+ * ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getLocalAssemblyPartyComposition = async (): Promise<
+  LocalAssemblyPartyComposition[]
+> => {
+  try {
+    const data = await readJson<LocalAssemblyPartyComposition[]>(
+      "local-assembly-party-composition.json"
     );
     return Array.isArray(data) ? data : [];
   } catch {

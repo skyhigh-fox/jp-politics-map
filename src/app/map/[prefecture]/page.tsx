@@ -2,6 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getLegislators,
+  getLocalAssemblyPartyComposition,
+  getParties,
   getPrefectureExpenditureByPurpose,
   getPrefectureExpenditureByNature,
   getPrefecturePopulation,
@@ -12,10 +14,17 @@ import {
   isValidPrefectureName,
   legislatorPrefectures,
 } from "@/lib/prefectures";
+import { DataCoverageNote } from "@/components/DataCoverageNote";
+import { LocalAssemblyPartyComposition } from "@/components/LocalAssemblyPartyComposition";
 import { MunicipalityMap } from "@/components/MunicipalityMap";
 import { PrefectureExpenditureBreakdown } from "@/components/PrefectureExpenditureBreakdown";
 import { PrefectureFinancialHealthCards } from "@/components/PrefectureFinancialHealthCards";
+import { buildLocalPartyCompositionScopeFacts } from "@/lib/dataProvenance";
 import { getLocalAssemblyMemberCountsByMunicipality } from "@/lib/localAssembly";
+import {
+  buildLocalPartyCompositionViews,
+  formatAsOfDate,
+} from "@/lib/localPartyCompositionStats";
 import {
   buildExpenditureBreakdown,
   buildExpenditureByNatureBreakdown,
@@ -43,12 +52,16 @@ export default async function PrefectureDetailPage({
     expenditureByNature,
     population,
     financialHealth,
+    parties,
+    localPartyComposition,
   ] = await Promise.all([
     getLegislators(),
     getPrefectureExpenditureByPurpose(),
     getPrefectureExpenditureByNature(),
     getPrefecturePopulation(),
     getPrefectureFinancialHealth(),
+    getParties(),
+    getLocalAssemblyPartyComposition(),
   ]);
   const relatedCount = legislators.filter((l) =>
     legislatorPrefectures(l).includes(prefecture)
@@ -72,6 +85,15 @@ export default async function PrefectureDetailPage({
   const financialHealthRow = financialHealth.find(
     (f) => f.prefecture === prefecture
   );
+
+  // 地方議会・長の党派別構成（Tier1 #6）。個人名簿（東京都パイロット）とは別に、
+  // 47都道府県すべてを党派別人員数の集計としてカバーするレイヤー
+  const compositionRow = localPartyComposition.find(
+    (c) => c.prefecture === prefecture
+  );
+  const compositionViews = compositionRow
+    ? buildLocalPartyCompositionViews(compositionRow, parties)
+    : null;
 
   return (
     <div className="animate-fade-in">
@@ -136,8 +158,25 @@ export default async function PrefectureDetailPage({
         </>
       ) : (
         <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
-          地方議会議員データは現在フェーズ3のパイロット対象自治体のみ整備中です。
+          議員個人の名簿を収録している地方議会は、現在フェーズ3のパイロット対象自治体のみです。
+          {compositionRow &&
+            "党派ごとの人員数（個人名を含まない集計）は、下の「地方議会・長の党派別構成」で全都道府県分をご覧いただけます。"}
         </p>
+      )}
+
+      {compositionRow && compositionViews && (
+        <div className="mt-6 max-w-xl space-y-3">
+          <LocalAssemblyPartyComposition
+            views={compositionViews}
+            asOfLabel={formatAsOfDate(compositionRow.asOfDate)}
+            sourceUrl={compositionRow.sourceUrl}
+            sourcePageUrl={compositionRow.sourcePageUrl}
+          />
+          <DataCoverageNote
+            datasetId="local-assembly-party-composition"
+            facts={buildLocalPartyCompositionScopeFacts(compositionRow)}
+          />
+        </div>
       )}
 
       {financialHealthRow && (
