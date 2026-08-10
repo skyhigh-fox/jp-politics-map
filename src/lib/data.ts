@@ -10,6 +10,7 @@ import type {
   Party,
   PartySeatHistory,
   PrefectureFinance,
+  RollCallVote,
   WrittenQuestionCount,
 } from "@/types";
 
@@ -79,6 +80,20 @@ export const getWrittenQuestionCounts = async (): Promise<WrittenQuestionCount[]
 export const getPrefectureFinance = async (): Promise<PrefectureFinance[]> => {
   try {
     const data = await readJson<PrefectureFinance[]>("prefecture-finance.json");
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 参議院の記名投票（押しボタン式投票）結果一覧を取得する（フェーズ4）。
+ * data/roll-call-votes.json は取得スクリプト（fetch:roll-call-votes）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getRollCallVotes = async (): Promise<RollCallVote[]> => {
+  try {
+    const data = await readJson<RollCallVote[]>("roll-call-votes.json");
     return Array.isArray(data) ? data : [];
   } catch {
     return [];
