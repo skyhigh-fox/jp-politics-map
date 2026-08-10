@@ -93,7 +93,7 @@ export function PrefecturePartyComposition({
         href={`/map/${encodeURIComponent(prefecture)}`}
         className="mt-4 inline-flex items-center text-xs font-medium text-accent-600 transition-colors hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
       >
-        {prefecture}の議員一覧を見る
+        {prefecture}の詳細（市区町村マップ・議員一覧）を見る
         <span aria-hidden className="ml-1">
           →
         </span>

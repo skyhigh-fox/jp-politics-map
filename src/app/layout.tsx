@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const NAV_LINKS = [
   { href: "/bills", label: "法案一覧" },
   { href: "/legislators", label: "議員一覧" },
-  { href: "/map", label: "地図" },
+  { href: "/map", label: "都道府県マップ" },
 ] as const;
 
 export default async function RootLayout({
