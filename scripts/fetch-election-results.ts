@@ -50,6 +50,7 @@ import * as XLSX from "xlsx";
 import type { ElectionResult, Legislator } from "../src/types";
 import { getLegislators } from "./lib/getLegislators";
 import { writeDataJson } from "./lib/writeJson";
+import { normalizeKanaKey, normalizeNameKey } from "../src/lib/nameMatch";
 
 interface ElectionSource {
   year: number;
@@ -194,11 +195,13 @@ async function main() {
     const pool = legislators.filter(
       (l) => l.chamber === "参議院" && l.electionType === "選挙区"
     );
+    // 照合キーの作り方は共通の名寄せモジュール（src/lib/nameMatch.ts）に合わせる。
+    // 3段階のマッチ順序（氏名 → 別表記 → 読み仮名）は従来どおり維持する。
     const nameIndex = new Map<string, Legislator>();
-    for (const l of pool) nameIndex.set(stripSpaces(l.name), l);
+    for (const l of pool) nameIndex.set(normalizeNameKey(l.name), l);
     const kanaIndex = new Map<string, Legislator>();
     for (const l of pool) {
-      if (l.nameKana) kanaIndex.set(stripSpaces(l.nameKana), l);
+      if (l.nameKana) kanaIndex.set(normalizeKanaKey(l.nameKana), l);
     }
 
     let matched = 0;
@@ -206,9 +209,9 @@ async function main() {
       // 3段階でマッチを試みる（詳細はファイル冒頭のコメント参照）。
       // 全て外れた場合は表記ゆれとして現状スキップしている
       const legislator =
-        nameIndex.get(c.ballotName) ??
-        nameIndex.get(c.altName) ??
-        kanaIndex.get(c.reading);
+        nameIndex.get(normalizeNameKey(c.ballotName)) ??
+        nameIndex.get(normalizeNameKey(c.altName)) ??
+        kanaIndex.get(normalizeKanaKey(c.reading));
       if (!legislator) continue;
       matched++;
       results.push({

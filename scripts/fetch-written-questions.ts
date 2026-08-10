@@ -31,12 +31,20 @@
  *     テーブルは `<td headers="SHITSUMON.TEISHUTSUSHA">` に提出者氏名が入る
  *     （例:「緒方林太郎君」。参議院と異なりスペースなし・末尾に「君」）
  *   - 提出者名の表記はlegislators.jsonの`name`（姓名間に全角スペース、敬称なし）と
- *     异なるため、空白文字（全角スペース含む。JSの\sはU+3000を含む）と末尾の「君」を
- *     除去してから照合する
+ *     異なるため、共通の名寄せモジュール（src/lib/nameMatch.ts）で正規化キー
+ *     （NFKC・空白除去・敬称「君」除去）を作ってから照合する
+ *
+ * 【院をまたぐ照合について】
+ *   直近18回次には、提出当時と現在で所属する院が変わっている議員
+ *   （参議院→衆議院の鞍替え等）が含まれる。そのため名寄せは
+ *   「同じ院で一意 → 院を問わず一意」の順にフォールバックする。
+ *   それでも解決できない提出者名は現職議員マスタに存在しない元議員と
+ *   考えられるため、件数上位を末尾にログ出力して次の作業者が追えるようにする。
  */
 import * as cheerio from "cheerio";
 import type { Legislator, WrittenQuestionCount } from "../src/types";
 import { writeDataJson } from "./lib/writeJson";
+import { buildNameIndex, resolveName, type NameIndex } from "../src/lib/nameMatch";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -57,11 +65,6 @@ const SHUGIIN_LIST_URL = (session: number) =>
 
 const WAIT_MS = 300;
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-/** 氏名の表記ゆれ（空白の数・敬称）を吸収して照合キーを作る */
-function normalizeName(raw: string): string {
-  return raw.replace(/\s+/g, "").replace(/君$/, "").trim();
-}
 
 /**
  * 参議院の「質問主意書・答弁書一覧」ページから提出者名の一覧（1問=1エントリ）を抽出する。
@@ -116,38 +119,6 @@ async function detectLatestSession(): Promise<number> {
   }
 }
 
-/**
- * legislators.json の氏名（姓名間に全角スペース、敬称なし）を正規化キーにして
- * legislatorIdを引けるMapを、院ごとに作る。
- * 同姓同名で正規化キーが衝突する場合は、誤集計を避けるためどちらにも紐付けない。
- */
-function buildNameLookup(
-  legislators: Legislator[],
-  chamber: Legislator["chamber"]
-): Map<string, string> {
-  const idsByKey = new Map<string, string[]>();
-  for (const l of legislators) {
-    if (l.chamber !== chamber) continue;
-    const key = normalizeName(l.name);
-    const ids = idsByKey.get(key) ?? [];
-    ids.push(l.id);
-    idsByKey.set(key, ids);
-  }
-
-  const lookup = new Map<string, string>();
-  for (const [key, ids] of idsByKey) {
-    const [onlyId] = ids;
-    if (ids.length === 1 && onlyId) {
-      lookup.set(key, onlyId);
-    } else {
-      console.warn(
-        `同姓同名（正規化後: "${key}"）の議員が複数いるため名寄せをスキップします: ${ids.join(", ")}`
-      );
-    }
-  }
-  return lookup;
-}
-
 interface Accumulator {
   legislatorId: string;
   questionCount: number;
@@ -158,13 +129,21 @@ interface Accumulator {
 function accumulate(
   acc: Map<string, Accumulator>,
   rawNames: string[],
-  lookup: Map<string, string>,
-  session: number
+  nameIndex: NameIndex,
+  chamber: Legislator["chamber"],
+  session: number,
+  unresolvedNames: Map<string, number>
 ) {
   for (const raw of rawNames) {
-    const key = normalizeName(raw);
-    const legislatorId = lookup.get(key);
-    if (!legislatorId) continue; // legislators.jsonに見つからない（引退議員等）は無視
+    // 同じ院で一意 → 院を問わず一意（鞍替え等）の順に解決する。
+    // 同姓同名で一意に定まらない場合は誤集計を避けるため紐付けない。
+    const legislatorId = resolveName(nameIndex, raw, { chamber }).id;
+    if (!legislatorId) {
+      // legislators.jsonに見つからない（引退議員等）。件数だけ記録して無視する
+      const key = raw.trim();
+      unresolvedNames.set(key, (unresolvedNames.get(key) ?? 0) + 1);
+      continue;
+    }
 
     const entry = acc.get(legislatorId) ?? {
       legislatorId,
@@ -184,8 +163,11 @@ async function main() {
   ) as Legislator[];
   const legislatorById = new Map(legislators.map((l) => [l.id, l]));
 
-  const sangiinLookup = buildNameLookup(legislators, "参議院");
-  const shugiinLookup = buildNameLookup(legislators, "衆議院");
+  // 名寄せ用インデックス（src/lib/nameMatch.ts）。院で絞らず全議員で作り、
+  // 照合時に「提出時点の院を優先、見つからなければ他院」の順で解決する。
+  const nameIndex = buildNameIndex(legislators);
+  const unresolvedNames = new Map<string, number>();
+  let totalSubmissions = 0;
 
   const latestSession = await detectLatestSession();
   const sessions: number[] = [];
@@ -204,7 +186,8 @@ async function main() {
       const html = await fetchText(SANGIIN_LIST_URL(session), "utf-8");
       const names = parseSangiinSubmitters(html);
       console.log(`参議院 第${session}回: ${names.length}件`);
-      accumulate(acc, names, sangiinLookup, session);
+      totalSubmissions += names.length;
+      accumulate(acc, names, nameIndex, "参議院", session, unresolvedNames);
     } catch (err) {
       console.warn(`参議院 第${session}回の取得に失敗しました。スキップします:`, err);
     }
@@ -215,7 +198,8 @@ async function main() {
       const html = await fetchText(SHUGIIN_LIST_URL(session), "shift_jis");
       const names = parseShugiinSubmitters(html);
       console.log(`衆議院 第${session}回: ${names.length}件`);
-      accumulate(acc, names, shugiinLookup, session);
+      totalSubmissions += names.length;
+      accumulate(acc, names, nameIndex, "衆議院", session, unresolvedNames);
     } catch (err) {
       console.warn(`衆議院 第${session}回の取得に失敗しました。スキップします:`, err);
     }
@@ -238,7 +222,33 @@ async function main() {
     // 件数の多寡による並び替え（ランキング的な見せ方）を避け、id順の機械的な並びにする
     .sort((a, b) => a.legislatorId.localeCompare(b.legislatorId));
 
-  console.log(`集計件数: ${result.length}名分`);
+  const unresolvedTotal = Array.from(unresolvedNames.values()).reduce(
+    (sum, n) => sum + n,
+    0
+  );
+  console.log(
+    `集計件数: ${result.length}名分（提出件数 計${totalSubmissions}件のうち、現職議員に紐付いたのは${
+      totalSubmissions - unresolvedTotal
+    }件 / 未紐付け${unresolvedTotal}件 = ${
+      totalSubmissions === 0
+        ? "0.0"
+        : ((unresolvedTotal / totalSubmissions) * 100).toFixed(1)
+    }%）`
+  );
+
+  if (unresolvedNames.size > 0) {
+    // 正規化しても現職議員マスタ（legislators.json）に見つからない提出者名。
+    // 大半は引退・落選した元議員と考えられる。件数の多い順に上位30名を出す。
+    const sorted = Array.from(unresolvedNames)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 30);
+    console.log(
+      `議員IDに紐付けできなかった提出者名: ${unresolvedNames.size}名（上位${sorted.length}名を表示）。現職議員マスタに存在しない元議員（引退・落選）と推定されます:`
+    );
+    for (const [name, count] of sorted) {
+      console.log(`  - ${name}（${count}件）`);
+    }
+  }
 
   await writeDataJson("written-questions.json", result);
 }
