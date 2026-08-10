@@ -1,0 +1,425 @@
+[
+  {
+    "prefecture": "北海道",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.46275,
+    "currentBalanceRatio": 99.8,
+    "realDebtServiceRatio": 20,
+    "futureBurdenRatio": 307,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "青森県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.36141,
+    "currentBalanceRatio": 93,
+    "realDebtServiceRatio": 13.4,
+    "futureBurdenRatio": 58,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "岩手県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.36343,
+    "currentBalanceRatio": 93.2,
+    "realDebtServiceRatio": 12.3,
+    "futureBurdenRatio": 196.8,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "宮城県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.60728,
+    "currentBalanceRatio": 95.4,
+    "realDebtServiceRatio": 10,
+    "futureBurdenRatio": 130.8,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "秋田県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.32741,
+    "currentBalanceRatio": 89.5,
+    "realDebtServiceRatio": 14.3,
+    "futureBurdenRatio": 232.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "山形県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.37417,
+    "currentBalanceRatio": 95.8,
+    "realDebtServiceRatio": 13.4,
+    "futureBurdenRatio": 212.2,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "福島県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.51927,
+    "currentBalanceRatio": 95.8,
+    "realDebtServiceRatio": 6,
+    "futureBurdenRatio": 115.3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "茨城県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.63608,
+    "currentBalanceRatio": 95.1,
+    "realDebtServiceRatio": 9.6,
+    "futureBurdenRatio": 157.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "栃木県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.61911,
+    "currentBalanceRatio": 92.8,
+    "realDebtServiceRatio": 9.4,
+    "futureBurdenRatio": 102.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "群馬県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.61,
+    "currentBalanceRatio": 91.9,
+    "realDebtServiceRatio": 9.2,
+    "futureBurdenRatio": 130,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "埼玉県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.74307,
+    "currentBalanceRatio": 94.7,
+    "realDebtServiceRatio": 11,
+    "futureBurdenRatio": 146.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "千葉県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.75137,
+    "currentBalanceRatio": 94.5,
+    "realDebtServiceRatio": 7.6,
+    "futureBurdenRatio": 101.3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "東京都",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 1.21132,
+    "currentBalanceRatio": 80.3,
+    "realDebtServiceRatio": 1.2,
+    "futureBurdenRatio": 13.6,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "神奈川県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.86325,
+    "currentBalanceRatio": 96.3,
+    "realDebtServiceRatio": 8.6,
+    "futureBurdenRatio": 54.5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "新潟県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.46842,
+    "currentBalanceRatio": 93.8,
+    "realDebtServiceRatio": 18.6,
+    "futureBurdenRatio": 287,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "富山県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.46593,
+    "currentBalanceRatio": 93.5,
+    "realDebtServiceRatio": 13.9,
+    "futureBurdenRatio": 203,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "石川県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.49769,
+    "currentBalanceRatio": 92.2,
+    "realDebtServiceRatio": 12.3,
+    "futureBurdenRatio": 182,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "福井県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.42101,
+    "currentBalanceRatio": 96,
+    "realDebtServiceRatio": 11.6,
+    "futureBurdenRatio": 146.6,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "山梨県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.40292,
+    "currentBalanceRatio": 89.7,
+    "realDebtServiceRatio": 10.7,
+    "futureBurdenRatio": 164.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "長野県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.52667,
+    "currentBalanceRatio": 92.6,
+    "realDebtServiceRatio": 9.2,
+    "futureBurdenRatio": 147.1,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "岐阜県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.53775,
+    "currentBalanceRatio": 93.8,
+    "realDebtServiceRatio": 9.2,
+    "futureBurdenRatio": 224.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "静岡県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.68341,
+    "currentBalanceRatio": 94.4,
+    "realDebtServiceRatio": 14.3,
+    "futureBurdenRatio": 234.1,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "愛知県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.87787,
+    "currentBalanceRatio": 91.7,
+    "realDebtServiceRatio": 13.4,
+    "futureBurdenRatio": 152,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "三重県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.57393,
+    "currentBalanceRatio": 93.8,
+    "realDebtServiceRatio": 11.3,
+    "futureBurdenRatio": 164.4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "滋賀県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.54888,
+    "currentBalanceRatio": 91.9,
+    "realDebtServiceRatio": 11.2,
+    "futureBurdenRatio": 178.5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "京都府",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.58058,
+    "currentBalanceRatio": 93.5,
+    "realDebtServiceRatio": 17.1,
+    "futureBurdenRatio": 257.2,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "大阪府",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.75388,
+    "currentBalanceRatio": 96.4,
+    "realDebtServiceRatio": 10.2,
+    "futureBurdenRatio": 110.1,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "兵庫県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.62169,
+    "currentBalanceRatio": 99.4,
+    "realDebtServiceRatio": 17.1,
+    "futureBurdenRatio": 311.3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "奈良県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.41554,
+    "currentBalanceRatio": 89.1,
+    "realDebtServiceRatio": 8.8,
+    "futureBurdenRatio": 102,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "和歌山県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.32913,
+    "currentBalanceRatio": 94.4,
+    "realDebtServiceRatio": 10.8,
+    "futureBurdenRatio": 200.3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "鳥取県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.28178,
+    "currentBalanceRatio": 88.1,
+    "realDebtServiceRatio": 9.5,
+    "futureBurdenRatio": 132.8,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "島根県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.27455,
+    "currentBalanceRatio": 89.2,
+    "realDebtServiceRatio": 7,
+    "futureBurdenRatio": 157.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "岡山県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.52853,
+    "currentBalanceRatio": 94.1,
+    "realDebtServiceRatio": 10.9,
+    "futureBurdenRatio": 157.5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "広島県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.60229,
+    "currentBalanceRatio": 94,
+    "realDebtServiceRatio": 14.8,
+    "futureBurdenRatio": 188.7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "山口県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.45134,
+    "currentBalanceRatio": 89.3,
+    "realDebtServiceRatio": 9.2,
+    "futureBurdenRatio": 160.8,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "徳島県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.33554,
+    "currentBalanceRatio": 92.2,
+    "realDebtServiceRatio": 12.7,
+    "futureBurdenRatio": 146.6,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "香川県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.4589,
+    "currentBalanceRatio": 93.2,
+    "realDebtServiceRatio": 10.9,
+    "futureBurdenRatio": 159.7,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "愛媛県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.44758,
+    "currentBalanceRatio": 89.9,
+    "realDebtServiceRatio": 11,
+    "futureBurdenRatio": 111.5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "高知県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.27477,
+    "currentBalanceRatio": 98.9,
+    "realDebtServiceRatio": 12.3,
+    "futureBurdenRatio": 178.4,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "福岡県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.63618,
+    "currentBalanceRatio": 95.6,
+    "realDebtServiceRatio": 11.9,
+    "futureBurdenRatio": 245.3,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "佐賀県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.36078,
+    "currentBalanceRatio": 96,
+    "realDebtServiceRatio": 10.6,
+    "futureBurdenRatio": 137.2,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "長崎県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.34583,
+    "currentBalanceRatio": 96.7,
+    "realDebtServiceRatio": 11.3,
+    "futureBurdenRatio": 172.5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "熊本県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.42277,
+    "currentBalanceRatio": 91.5,
+    "realDebtServiceRatio": 8.9,
+    "futureBurdenRatio": 212.5,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "大分県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.39115,
+    "currentBalanceRatio": 92.3,
+    "realDebtServiceRatio": 10.5,
+    "futureBurdenRatio": 161.9,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "宮崎県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.36028,
+    "currentBalanceRatio": 91.5,
+    "realDebtServiceRatio": 11.6,
+    "futureBurdenRatio": 107.6,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "鹿児島県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.35726,
+    "currentBalanceRatio": 98.2,
+    "realDebtServiceRatio": 11.1,
+    "futureBurdenRatio": 190.1,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  },
+  {
+    "prefecture": "沖縄県",
+    "fiscalYear": 2024,
+    "financialStrengthIndex": 0.38002,
+    "currentBalanceRatio": 96.1,
+    "realDebtServiceRatio": 7.5,
+    "futureBurdenRatio": 24.2,
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001044528.xlsx"
+  }
+]

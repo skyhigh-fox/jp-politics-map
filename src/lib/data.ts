@@ -9,8 +9,10 @@ import type {
   NdlSpeechCount,
   Party,
   PartySeatHistory,
+  PrefectureExpenditureByNature,
   PrefectureExpenditureByPurpose,
   PrefectureFinance,
+  PrefectureFinancialHealth,
   PrefecturePopulation,
   RollCallVote,
   WrittenQuestionCount,
@@ -128,6 +130,44 @@ export const getPrefectureExpenditureByPurpose = async (): Promise<
   try {
     const data = await readJson<PrefectureExpenditureByPurpose[]>(
       "prefecture-expenditure-by-purpose.json"
+    );
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・財政健全化指標データ（予算の見える化 Phase B）を取得する。
+ * data/prefecture-financial-health.json は取得スクリプト
+ * （fetch:prefecture-financial-health）を実行するまで存在しないため、
+ * ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPrefectureFinancialHealth = async (): Promise<
+  PrefectureFinancialHealth[]
+> => {
+  try {
+    const data = await readJson<PrefectureFinancialHealth[]>(
+      "prefecture-financial-health.json"
+    );
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・性質別歳出データ（予算の見える化 Phase B）を取得する。
+ * data/prefecture-expenditure-by-nature.json は取得スクリプト
+ * （fetch:prefecture-expenditure-by-nature）を実行するまで存在しないため、
+ * ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPrefectureExpenditureByNature = async (): Promise<
+  PrefectureExpenditureByNature[]
+> => {
+  try {
+    const data = await readJson<PrefectureExpenditureByNature[]>(
+      "prefecture-expenditure-by-nature.json"
     );
     return Array.isArray(data) ? data : [];
   } catch {
