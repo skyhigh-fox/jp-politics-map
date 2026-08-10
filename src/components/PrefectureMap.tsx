@@ -9,6 +9,12 @@ import {
   ZoomableGroup,
   type GeographyProps,
 } from "react-simple-maps";
+import { useColorScheme } from "@/hooks/useColorScheme";
+import {
+  colorForCount,
+  MAP_SEQUENTIAL_STEPS,
+  MAP_STROKE_COLOR,
+} from "@/lib/mapColors";
 
 const GEO_URL = "/data/prefectures-topo.json";
 const WIDTH = 600;
@@ -19,28 +25,7 @@ const MIN_ZOOM = 1;
 const MAX_ZOOM = 8;
 const ZOOM_STEP = 1.5;
 
-// dataviz skill: sequential(単一色相・低→高)の青ランプ100〜700から抜粋
-const SEQUENTIAL_STEPS = [
-  "#cde2fb",
-  "#9ec5f4",
-  "#6da7ec",
-  "#3987e5",
-  "#256abf",
-  "#184f95",
-  "#0d366b",
-];
-const NO_DATA_COLOR = "#e5e5e5"; // neutral gray（該当データなし用）
-
-function colorForCount(count: number | undefined, min: number, max: number) {
-  if (count === undefined) return NO_DATA_COLOR;
-  if (max === min) return SEQUENTIAL_STEPS[3];
-  const t = (count - min) / (max - min);
-  const idx = Math.min(
-    SEQUENTIAL_STEPS.length - 1,
-    Math.floor(t * SEQUENTIAL_STEPS.length)
-  );
-  return SEQUENTIAL_STEPS[idx];
-}
+const SELECTED_STROKE = "#4f46e5"; // accent-600（選択中の都道府県の枠線）
 
 type MapPosition = { coordinates: [number, number]; zoom: number };
 
@@ -48,10 +33,22 @@ const DEFAULT_POSITION: MapPosition = { coordinates: DEFAULT_CENTER, zoom: 1 };
 
 export function PrefectureMap({
   counts,
+  selected = null,
+  onSelectPrefecture,
 }: {
   counts: Record<string, number>;
+  /** 現在選択中の都道府県名（サイドバー連動でハイライト表示する） */
+  selected?: string | null;
+  /**
+   * 都道府県クリック時のコールバック。指定時はこちらを呼ぶだけで、
+   * 議員一覧ページへの遷移は行わない（クリック→サイドバーに政党別内訳表示
+   * →サイドバー内のリンクから議員一覧へ、という2段階導線にするため）。
+   * 未指定の場合は従来通り議員一覧ページへ直接遷移する（後方互換用）。
+   */
+  onSelectPrefecture?: (name: string) => void;
 }) {
   const router = useRouter();
+  const mode = useColorScheme();
   const [hovered, setHovered] = useState<{
     name: string;
     count: number;
@@ -63,6 +60,8 @@ export function PrefectureMap({
   const values = Object.values(counts);
   const min = Math.min(...values);
   const max = Math.max(...values);
+  const sequentialSteps = MAP_SEQUENTIAL_STEPS[mode];
+  const stroke = MAP_STROKE_COLOR[mode];
 
   function handleMoveEnd(pos: MapPosition) {
     setPosition(pos);
@@ -77,6 +76,14 @@ export function PrefectureMap({
 
   function resetView() {
     setPosition(DEFAULT_POSITION);
+  }
+
+  function handleSelect(name: string) {
+    if (onSelectPrefecture) {
+      onSelectPrefecture(name);
+    } else {
+      router.push(`/map/${encodeURIComponent(name)}`);
+    }
   }
 
   return (
@@ -110,13 +117,14 @@ export function PrefectureMap({
                   geo as unknown as { properties: { N03_001: string } }
                 ).properties.N03_001;
                 const count = counts[name];
+                const isSelected = name === selected;
                 return (
                   <Geography
                     key={(geo as unknown as { rsmKey: string }).rsmKey}
                     geography={geo}
-                    fill={colorForCount(count, min, max)}
-                    stroke="#fcfcfb"
-                    strokeWidth={0.5}
+                    fill={colorForCount(count, min, max, mode)}
+                    stroke={isSelected ? SELECTED_STROKE : stroke}
+                    strokeWidth={isSelected ? 2 : 0.5}
                     onMouseEnter={(evt: React.MouseEvent) => {
                       setHovered({
                         name,
@@ -133,9 +141,7 @@ export function PrefectureMap({
                       );
                     }}
                     onMouseLeave={() => setHovered(null)}
-                    onClick={() =>
-                      router.push(`/map/${encodeURIComponent(name)}`)
-                    }
+                    onClick={() => handleSelect(name)}
                     style={{
                       default: { outline: "none", cursor: "pointer" },
                       hover: {
@@ -189,13 +195,15 @@ export function PrefectureMap({
           style={{ left: hovered.x + 12, top: hovered.y + 12 }}
         >
           <div className="font-semibold">{hovered.name}</div>
-          <div className="text-neutral-600">関連議員 {hovered.count}名</div>
+          <div className="text-neutral-600 dark:text-neutral-400">
+            関連議員 {hovered.count}名
+          </div>
         </div>
       )}
 
-      <div className="mt-4 flex items-center gap-2 text-xs text-neutral-600">
+      <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400">
         <span>少ない</span>
-        {SEQUENTIAL_STEPS.map((c) => (
+        {sequentialSteps.map((c) => (
           <span
             key={c}
             className="inline-block h-3 w-6"
@@ -203,8 +211,8 @@ export function PrefectureMap({
           />
         ))}
         <span>多い</span>
-        <span className="ml-2 text-neutral-400">
-          （{min}〜{max}名。クリックでその都道府県の詳細へ／ホイールでズーム・ドラッグでパン）
+        <span className="ml-2 text-neutral-400 dark:text-neutral-500">
+          （{min}〜{max}名。クリックでその都道府県の政党別内訳を表示／ホイールでズーム・ドラッグでパン）
         </span>
       </div>
     </div>

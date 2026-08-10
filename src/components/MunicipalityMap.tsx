@@ -13,6 +13,12 @@ import { geoMercator, geoCentroid } from "d3-geo";
 import { feature } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import type { FeatureCollection, Geometry } from "geojson";
+import { useColorScheme } from "@/hooks/useColorScheme";
+import {
+  colorForCount,
+  MAP_NO_DATA_COLOR,
+  MAP_STROKE_COLOR,
+} from "@/lib/mapColors";
 
 const WIDTH = 600;
 const HEIGHT = 600;
@@ -20,32 +26,8 @@ const MIN_ZOOM = 1;
 const MAX_ZOOM = 8;
 const ZOOM_STEP = 1.5;
 
-// dataviz skill: sequential(単一色相・低→高)の青ランプ100〜700から抜粋
-const SEQUENTIAL_STEPS = [
-  "#cde2fb",
-  "#9ec5f4",
-  "#6da7ec",
-  "#3987e5",
-  "#256abf",
-  "#184f95",
-  "#0d366b",
-];
-const NO_DATA_COLOR = "#e5e5e5";
-
-function colorForCount(
-  count: number | undefined,
-  min: number,
-  max: number
-): string {
-  if (count === undefined) return NO_DATA_COLOR;
-  if (max === min) return SEQUENTIAL_STEPS[3] as string;
-  const t = (count - min) / (max - min);
-  const idx = Math.min(
-    SEQUENTIAL_STEPS.length - 1,
-    Math.floor(t * SEQUENTIAL_STEPS.length)
-  );
-  return SEQUENTIAL_STEPS[idx] as string;
-}
+// 配色（sequential・NO_DATA・境界線色）は src/lib/mapColors.ts に集約
+// （PrefectureMap.tsx と共通。ライト/ダークの検証結果もそちらのコメント参照）。
 
 /**
  * 都道府県ごとに手動でcenter/scaleを用意する代わりに、TopoJSONを一度
@@ -149,6 +131,7 @@ export function MunicipalityMap({
   linkBase?: string;
 }) {
   const router = useRouter();
+  const mode = useColorScheme();
   const { config, error } = useFittedProjectionConfig(geoUrl);
   const [hovered, setHovered] = useState<{
     name: string;
@@ -172,13 +155,17 @@ export function MunicipalityMap({
 
   if (error) {
     return (
-      <p className="text-sm text-neutral-600">
+      <p className="text-sm text-neutral-600 dark:text-neutral-400">
         地図データの読み込みに失敗しました。
       </p>
     );
   }
   if (!config || !position) {
-    return <p className="text-sm text-neutral-400">地図を読み込み中…</p>;
+    return (
+      <p className="text-sm text-neutral-400 dark:text-neutral-500">
+        地図を読み込み中…
+      </p>
+    );
   }
 
   function handleMoveEnd(pos: MapPosition) {
@@ -241,9 +228,11 @@ export function MunicipalityMap({
                     key={(geo as unknown as { rsmKey: string }).rsmKey}
                     geography={geo}
                     fill={
-                      counts ? colorForCount(count, min, max) : NO_DATA_COLOR
+                      counts
+                        ? colorForCount(count, min, max, mode)
+                        : MAP_NO_DATA_COLOR[mode]
                     }
-                    stroke="#fcfcfb"
+                    stroke={MAP_STROKE_COLOR[mode]}
                     strokeWidth={0.5}
                     onMouseEnter={(evt: React.MouseEvent) => {
                       setHovered({
@@ -318,7 +307,9 @@ export function MunicipalityMap({
         >
           <div className="font-semibold">{hovered.name}</div>
           {hovered.count !== undefined && (
-            <div className="text-neutral-600">{hovered.count}名</div>
+            <div className="text-neutral-600 dark:text-neutral-400">
+              {hovered.count}名
+            </div>
           )}
         </div>
       )}
