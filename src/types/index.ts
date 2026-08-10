@@ -146,11 +146,88 @@ export interface BillStatusHistory {
   sourceUrl: string;
 }
 
-/** 法案と議員の関連（提出者・賛成会派など） */
+/**
+ * 法案の提出者・賛成者として名を連ねた個人1名（機能拡充ロードマップ Tier1 #3）。
+ *
+ * 氏名は衆議院の議案経過情報の表記のまま（敬称「君」を含む）保持する。
+ * legislatorIdは氏名の名寄せ（src/lib/nameMatch.ts）で現職議員マスタ
+ * （data/legislators.json）に一意に解決できた場合のみ設定し、解決できない場合は
+ * 誤結合を避けてnullのまま氏名だけを残す。収録している議案は第139回国会以降の
+ * 全期間にわたるため、提出者の多くは既に引退・落選した元議員であり、
+ * nullになるのが通常の状態である（データの欠落ではない）。
+ */
+export interface BillSponsorPerson {
+  /** 原資料（衆議院の議案経過情報）の表記のままの氏名。敬称「君」を含む */
+  name: string;
+  /** data/legislators.json の議員に一意に照合できた場合のみ設定。それ以外はnull */
+  legislatorId: string | null;
+}
+
+/**
+ * 法案に関係する会派1つ（提出会派・衆議院審議時の賛成/反対会派）。
+ *
+ * 会派名は提出・審議「当時」の名称であり、解散・改称・合流した会派が多数を占める。
+ * partyIdは現在の政党マスタ（data/parties.json）に無理なく照合できた場合のみ設定し、
+ * 後継関係が曖昧な会派（合同会派・分裂した政党など）はnullのまま当時の名称を保持する
+ * （PartySeatResult.partyId と同じ方針）。
+ */
+export interface BillSponsorParty {
+  /** 原資料の表記のままの会派名（提出・審議当時の名称） */
+  name: string;
+  /** data/parties.json の政党に照合できた場合のみ設定。それ以外はnull */
+  partyId: string | null;
+}
+
+/**
+ * 法案の提出者・提出会派・衆議院審議時の賛成/反対会派（機能拡充ロードマップ Tier1 #3）。
+ *
+ * 情報源は衆議院の議案経過情報（SmartNews メディア研究所「国会議案データベース：
+ * 衆議院」の gian.json 経由）。取得スクリプトは scripts/fetch-bill-sponsorships.ts。
+ *
+ * 【型を作り直した経緯】
+ * 当初は `{ billId, legislatorId, role: "提出者" | "賛成会派" | "反対会派" }` という
+ * 1関連=1レコードの形で宣言していた（データ・取得スクリプトは未実装のまま）。
+ * しかし原資料の「賛成会派」「反対会派」は議員個人ではなく会派単位の情報であり、
+ * legislatorIdでは表現できない。また提出者の大半は現職議員マスタに存在しない
+ * 元議員で、legislatorIdを必須にすると大半のレコードを捨てることになる。
+ * そのため「法案1件＝1レコード」で、人と会派を別フィールドに持つ形に変更した。
+ *
+ * 【政治的中立性についての注記（重要）】
+ * ここに持つのは「その法案を誰が提出し、どの会派が賛成・反対したか」という
+ * 原資料の事実の転記のみ。議員間の共同提案ネットワーク図や、会派態度から
+ * イデオロギー・スコアのような合成指標を作ることはしない（提出者に名を
+ * 連ねる理由は多様であり、政治的立場の指標として扱うと誤導になるため）。
+ */
 export interface BillSponsorship {
+  /** data/bills.json の Bill.id */
   billId: string;
-  legislatorId: string;
-  role: "提出者" | "賛成会派" | "反対会派";
+  /**
+   * 議案経過情報の「議案提出者」欄の原文。
+   * 例:「熊代　昭彦君外四名」「内閣」。内閣提出法案・予算等では「内閣」になる。
+   */
+  submitterLabel: string | null;
+  /** 「議案提出者一覧」欄の議員（＝発議者）。衆法・決議案等でのみ記載がある */
+  sponsors: BillSponsorPerson[];
+  /**
+   * 「議案提出の賛成者」欄の議員。
+   * 議員立法の発議に必要な賛成者（国会法第56条）として名を連ねた議員であり、
+   * 本会議での賛否とは別のもの。
+   */
+  supporters: BillSponsorPerson[];
+  /** 「議案提出会派」欄の会派 */
+  submitterParties: BillSponsorParty[];
+  /**
+   * 「衆議院審議時会派態度」欄。実データで確認できた値は
+   * 「全会一致」「多数」「少数」の3種類だが、原資料の表記をそのまま保持するため
+   * 文字列型にしている（記載がない場合はnull）。
+   */
+  houseVoteStance: string | null;
+  /** 「衆議院審議時賛成会派」欄の会派（参議院審議時の会派態度は原資料に無い） */
+  approvingParties: BillSponsorParty[];
+  /** 「衆議院審議時反対会派」欄の会派 */
+  opposingParties: BillSponsorParty[];
+  /** 転記元とした議案経過情報ページのURL（出典明記・再検証のため） */
+  sourceUrl: string;
 }
 
 /** 選挙結果（フェーズ1は簡易版） */

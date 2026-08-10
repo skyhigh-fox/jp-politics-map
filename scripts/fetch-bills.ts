@@ -22,6 +22,7 @@ import { writeDataJson } from "./lib/writeJson";
 import { rowsToObjects } from "./lib/csvJson";
 import { normalizeBillStatus } from "./lib/billStatus";
 import { eraToIsoDate, splitDateAndNote } from "./lib/eraDate";
+import { billIdFromKey, billKey } from "./lib/gianBillKey";
 
 const GIAN_URL =
   "https://raw.githubusercontent.com/smartnews-smri/house-of-representatives/main/data/gian.json";
@@ -35,7 +36,9 @@ interface RawGian {
   本文情報URL?: string;
   議案種類?: string; // 衆法/参法/閣法/条約 など
   番号?: string;
-  議案提出者?: string;
+  // 提出者・提出会派・審議時の賛成/反対会派の列（議案提出者／議案提出者一覧／
+  // 議案提出の賛成者／議案提出会派／衆議院審議時会派態度／衆議院審議時賛成会派／
+  // 衆議院審議時反対会派）は scripts/fetch-bill-sponsorships.ts が担当する。
   衆議院予備審査議案受理年月日?: string;
   衆議院議案受理年月日?: string;
   "衆議院付託年月日／衆議院付託委員会"?: string;
@@ -67,13 +70,8 @@ function plenaryStage(note: string): "本会議可決" | "本会議否決" {
   return note.includes("否決") ? "本会議否決" : "本会議可決";
 }
 
-/** 提出回次＋議案種類＋番号 で法案を一意に識別する（実データで一意性を確認済み） */
-function billKey(g: RawGian): string {
-  return `${g.提出回次 ?? "unknown"}|${g.議案種類 ?? "unknown"}|${g.番号 ?? "unknown"}`;
-}
-function billIdFromKey(key: string): string {
-  return `gian-${key.replace(/\|/g, "-")}`;
-}
+// billKey / billIdFromKey（提出回次＋議案種類＋番号 による安定ID）は
+// fetch-bill-sponsorships.ts と共通のため scripts/lib/gianBillKey.ts に置いている。
 
 function extractHistoryFromRow(
   billId: string,

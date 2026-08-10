@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type {
   Bill,
+  BillSponsorship,
   BillStatusHistory,
   ElectionResult,
   Legislator,
@@ -34,6 +35,20 @@ export const getBillStatusHistory = () =>
   readJson<BillStatusHistory[]>("bill-status-history.json");
 export const getElectionResults = () =>
   readJson<ElectionResult[]>("election-results.json");
+
+/**
+ * 法案の提出者・提出会派・衆議院審議時の賛成/反対会派（機能拡充ロードマップ Tier1 #3）。
+ * data/bill-sponsorships.json は取得スクリプト（fetch:bill-sponsorships）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getBillSponsorships = async (): Promise<BillSponsorship[]> => {
+  try {
+    const data = await readJson<BillSponsorship[]>("bill-sponsorships.json");
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
 
 /**
  * NDL国会会議録検索システムAPIによる議員発言件数（フェーズ4、参考値）。

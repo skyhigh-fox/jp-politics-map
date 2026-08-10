@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
+  getBillSponsorships,
+  getBills,
   getLegislators,
   getParties,
   getElectionResults,
@@ -9,12 +11,15 @@ import {
 } from "@/lib/data";
 import { PartyColorDot } from "@/components/PartyColorDot";
 import { DataCoverageNote } from "@/components/DataCoverageNote";
+import { LegislatorBillSponsorshipSection } from "@/components/LegislatorBillSponsorshipSection";
 import { partyDisplayName } from "@/lib/party";
 import {
+  buildBillSponsorshipScopeFacts,
   buildElectionResultCoverage,
   buildNdlSpeechCoverage,
   buildWrittenQuestionCoverage,
 } from "@/lib/dataProvenance";
+import type { Bill } from "@/types";
 
 export default async function LegislatorDetailPage({
   params,
@@ -23,17 +28,48 @@ export default async function LegislatorDetailPage({
 }) {
   const { id: rawId } = await params;
   const id = decodeURIComponent(rawId);
-  const [legislators, parties, electionResults, ndlSpeechCounts, writtenQuestions] =
-    await Promise.all([
-      getLegislators(),
-      getParties(),
-      getElectionResults(),
-      getNdlSpeechCounts(),
-      getWrittenQuestionCounts(),
-    ]);
+  const [
+    legislators,
+    parties,
+    electionResults,
+    ndlSpeechCounts,
+    writtenQuestions,
+    bills,
+    billSponsorships,
+  ] = await Promise.all([
+    getLegislators(),
+    getParties(),
+    getElectionResults(),
+    getNdlSpeechCounts(),
+    getWrittenQuestionCounts(),
+    getBills(),
+    getBillSponsorships(),
+  ]);
 
   const legislator = legislators.find((l) => l.id === id);
   if (!legislator) notFound();
+
+  // 「この議員が提出者・提出の賛成者として記載されている議案」を集める。
+  // 事実の一覧であり、件数の多寡による評価は行わない（コンポーネント側の注記参照）。
+  const billById = new Map(bills.map((b) => [b.id, b]));
+  const sponsoredBills: Bill[] = [];
+  const supportedBills: Bill[] = [];
+  for (const sponsorship of billSponsorships) {
+    const bill = billById.get(sponsorship.billId);
+    if (!bill) continue;
+    if (sponsorship.sponsors.some((p) => p.legislatorId === id)) {
+      sponsoredBills.push(bill);
+    } else if (sponsorship.supporters.some((p) => p.legislatorId === id)) {
+      // 提出者として既に挙げた議案は賛成者側に重複表示しない
+      supportedBills.push(bill);
+    }
+  }
+  // 新しい国会回次から順に並べる（同回次内は議案件名で安定ソート）
+  const bySessionDesc = (a: Bill, b: Bill) =>
+    b.dietSession - a.dietSession || a.title.localeCompare(b.title, "ja");
+  sponsoredBills.sort(bySessionDesc);
+  supportedBills.sort(bySessionDesc);
+  const sponsorshipScopeFacts = buildBillSponsorshipScopeFacts(billSponsorships);
 
   const party = parties.find((p) => p.id === legislator.currentPartyId);
   const results = electionResults
@@ -204,6 +240,15 @@ export default async function LegislatorDetailPage({
             )}
           </div>
         </>
+      )}
+
+      {/* データ未取得（fetch:bill-sponsorships 未実行）のときはセクションごと出さない */}
+      {billSponsorships.length > 0 && (
+        <LegislatorBillSponsorshipSection
+          sponsoredBills={sponsoredBills}
+          supportedBills={supportedBills}
+          coverageFacts={sponsorshipScopeFacts}
+        />
       )}
 
       <h2 className="mt-8 text-lg font-bold text-neutral-900 dark:text-neutral-50">

@@ -1,5 +1,6 @@
 import type {
   Bill,
+  BillSponsorship,
   ElectionResult,
   Legislator,
   LocalAssemblyMember,
@@ -32,6 +33,7 @@ import type { NewsItem } from "@/lib/news";
 export type DatasetId =
   | "legislators"
   | "bills"
+  | "bill-sponsorships"
   | "roll-call-votes"
   | "ndl-speech-counts"
   | "written-questions"
@@ -99,6 +101,22 @@ export const DATASET_META: Record<DatasetId, DatasetMeta> = {
     ],
     scope:
       "衆議院に提出された議案の経過情報を収録しています。参議院先議の議案・条約承認案件等、衆議院の議案一覧に掲載されないものは含まれません。",
+  },
+  "bill-sponsorships": {
+    id: "bill-sponsorships",
+    label: "法案の提出者・提出会派・審議時の賛否会派",
+    sources: [
+      {
+        name: "スマートニュース メディア研究所「国会議案データベース」",
+        url: "https://github.com/smartnews-smri",
+      },
+      {
+        name: "衆議院「議案」（議案経過情報）",
+        url: "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/menu.htm",
+      },
+    ],
+    scope:
+      "衆議院の議案経過情報に記載されている「議案提出者」「議案提出者一覧」「議案提出の賛成者」「議案提出会派」「衆議院審議時会派態度」「衆議院審議時賛成会派」「衆議院審議時反対会派」の各欄をそのまま転記しています。提出者・提出の賛成者の氏名は、衆議院に発議された議案（衆法・決議案等）にのみ記載があり、参議院に発議された議案（参法）の発議者は原資料に含まれません。賛成会派・反対会派は衆議院での審議時のものであり、参議院での会派態度は原資料に含まれません。会派名・氏名は当時の表記のまま保持し、独自の言い換えや推測による補完はしていません。",
   },
   "roll-call-votes": {
     id: "roll-call-votes",
@@ -202,6 +220,7 @@ export const DATASET_META: Record<DatasetId, DatasetMeta> = {
 export const DATASET_ORDER: DatasetId[] = [
   "legislators",
   "bills",
+  "bill-sponsorships",
   "roll-call-votes",
   "ndl-speech-counts",
   "written-questions",
@@ -301,6 +320,64 @@ export function buildBillCoverage(bills: Bill[]): DatasetCoverage {
         : `議案${n(bills.length)}件を収録しています。`,
     ],
   };
+}
+
+/**
+ * 提出者・会派データの「収録範囲」だけを示す軽量版の事実。
+ *
+ * 提出者・賛成者の氏名は延べ12万件規模になるため、法案詳細ページのように
+ * 毎回レンダリングされる画面では、レコード件数だけで算出できる事実に絞る。
+ */
+export function buildBillSponsorshipScopeFacts(
+  sponsorships: BillSponsorship[]
+): string[] {
+  const withSponsors = sponsorships.filter((s) => s.sponsors.length > 0).length;
+  const withApproving = sponsorships.filter(
+    (s) => s.approvingParties.length > 0
+  ).length;
+  return [
+    `衆議院の議案経過情報のうち、提出者・会派の記載がある${n(sponsorships.length)}件分を収録しています。`,
+    `このうち提出者の氏名一覧があるのは${n(withSponsors)}件です。氏名一覧は衆議院に発議された議案（衆法・決議案等）にのみ記載があり、参議院に発議された議案・内閣提出の議案には原資料に記載がありません。`,
+    `衆議院審議時の賛成会派の記載があるのは${n(withApproving)}件です。衆議院本会議で採決に至っていない議案と、参議院での会派態度は原資料に含まれません。`,
+  ];
+}
+
+export function buildBillSponsorshipCoverage(
+  sponsorships: BillSponsorship[]
+): DatasetCoverage {
+  let personTotal = 0;
+  let personLinked = 0;
+  let partyTotal = 0;
+  let partyLinked = 0;
+  for (const s of sponsorships) {
+    for (const person of [...s.sponsors, ...s.supporters]) {
+      personTotal += 1;
+      if (person.legislatorId !== null) personLinked += 1;
+    }
+    for (const party of [
+      ...s.submitterParties,
+      ...s.approvingParties,
+      ...s.opposingParties,
+    ]) {
+      partyTotal += 1;
+      if (party.partyId !== null) partyLinked += 1;
+    }
+  }
+
+  const facts: string[] = [];
+  if (personTotal > 0) {
+    facts.push(
+      `提出者・提出の賛成者として記載されている氏名は延べ${n(personTotal)}件で、そのうち${n(personLinked)}件（${percent(personLinked, personTotal)}）を現在の議員データと照合できています。残りは在職当時の元議員など現在の議員データに氏名が見つからない方で、氏名はそのまま表示し、議員ページへの紐付けのみを行っていません。`
+    );
+  }
+  if (partyTotal > 0) {
+    facts.push(
+      `会派名は延べ${n(partyTotal)}件で、そのうち${n(partyLinked)}件（${percent(partyLinked, partyTotal)}）を現在の政党データと照合できています。既に解散・改称した会派、複数政党による合同会派は、後継関係を推測せず当時の名称のまま表示しています。`
+    );
+  }
+  facts.push(...buildBillSponsorshipScopeFacts(sponsorships));
+
+  return { asOf: null, facts };
 }
 
 /**

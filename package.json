@@ -10,6 +10,7 @@
     "fetch:sangiin-members": "tsx scripts/fetch-sangiin-members.ts",
     "fetch:shugiin-members": "tsx scripts/fetch-shugiin-members.ts",
     "fetch:bills": "tsx scripts/fetch-bills.ts",
+    "fetch:bill-sponsorships": "tsx scripts/fetch-bill-sponsorships.ts",
     "fetch:election-results": "tsx scripts/fetch-election-results.ts",
     "fetch:tokyo-assembly-members": "tsx scripts/fetch-tokyo-assembly-members.ts",
     "fetch:news": "tsx scripts/fetch-news.ts",
@@ -23,7 +24,7 @@
     "fetch:prefecture-financial-health": "tsx scripts/fetch-prefecture-financial-health.ts",
     "fetch:prefecture-expenditure-by-nature": "tsx scripts/fetch-prefecture-expenditure-by-nature.ts",
     "fetch:national-budget": "tsx scripts/fetch-national-budget.ts",
-    "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions && npm run fetch:party-seat-history && npm run fetch:prefecture-finance && npm run fetch:roll-call-votes && npm run fetch:prefecture-population && npm run fetch:prefecture-expenditure-by-purpose && npm run fetch:prefecture-financial-health && npm run fetch:prefecture-expenditure-by-nature && npm run fetch:national-budget"
+    "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:bill-sponsorships && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions && npm run fetch:party-seat-history && npm run fetch:prefecture-finance && npm run fetch:roll-call-votes && npm run fetch:prefecture-population && npm run fetch:prefecture-expenditure-by-purpose && npm run fetch:prefecture-financial-health && npm run fetch:prefecture-expenditure-by-nature && npm run fetch:national-budget"
   },
   "dependencies": {
     "d3-geo": "^2.0.2",

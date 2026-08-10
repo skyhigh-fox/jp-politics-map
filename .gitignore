@@ -37,4 +37,6 @@ _delete/
 # 実機確認（CLAUDE.md「実機確認の徹底」）で作る一時スクリプト・スクリーンショット。
 # 検証ごとの作り捨てなのでコミットしない（ファイル自体は手元に残す）
 scripts/tmp-*.mjs
+tmp-*.mjs
+tmp-*.ts
 .playwright-verify/

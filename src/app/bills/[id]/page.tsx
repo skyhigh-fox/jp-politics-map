@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBills, getBillStatusHistory, getParties, getRollCallVotes } from "@/lib/data";
+import {
+  getBillSponsorships,
+  getBills,
+  getBillStatusHistory,
+  getParties,
+  getRollCallVotes,
+} from "@/lib/data";
 import { StatusBadge } from "@/components/StatusBadge";
+import { BillSponsorshipSection } from "@/components/BillSponsorshipSection";
 import { RollCallVoteHeatmap } from "@/components/RollCallVoteHeatmap";
 import {
   BILL_STAGE_COLORS,
@@ -10,6 +17,7 @@ import {
 } from "@/lib/billStageColors";
 import { DataCoverageNote } from "@/components/DataCoverageNote";
 import {
+  buildBillSponsorshipScopeFacts,
   buildRollCallVoteNoteFacts,
   buildRollCallVoteScopeFacts,
 } from "@/lib/dataProvenance";
@@ -21,18 +29,23 @@ export default async function BillDetailPage({
 }) {
   const { id: rawId } = await params;
   const id = decodeURIComponent(rawId);
-  const [bills, history, rollCallVotes, parties] = await Promise.all([
-    getBills(),
-    getBillStatusHistory(),
-    getRollCallVotes(),
-    getParties(),
-  ]);
+  const [bills, history, rollCallVotes, parties, billSponsorships] =
+    await Promise.all([
+      getBills(),
+      getBillStatusHistory(),
+      getRollCallVotes(),
+      getParties(),
+      getBillSponsorships(),
+    ]);
 
   const bill = bills.find((b) => b.id === id);
   if (!bill) notFound();
 
   const rollCallVote = rollCallVotes.find((v) => v.billId === id);
   const rollCallScopeFacts = buildRollCallVoteScopeFacts(rollCallVotes);
+
+  const sponsorship = billSponsorships.find((s) => s.billId === id);
+  const sponsorshipScopeFacts = buildBillSponsorshipScopeFacts(billSponsorships);
 
   const timeline = history
     .filter((h) => h.billId === id)
@@ -102,6 +115,17 @@ export default async function BillDetailPage({
           </a>
         </dd>
       </dl>
+
+      {/* データ未取得（fetch:bill-sponsorships 未実行）のときはセクションごと出さない。
+          個別の議案に記載が無いだけの場合は、セクション内でその旨を明示する */}
+      {billSponsorships.length > 0 && (
+        <BillSponsorshipSection
+          sponsorship={sponsorship}
+          parties={parties}
+          // 収録範囲の文言はハードコードせず、表示に使っているデータから算出する
+          coverageFacts={sponsorshipScopeFacts}
+        />
+      )}
 
       <h2 className="mt-8 text-lg font-bold text-neutral-900 dark:text-neutral-50">
         審議進捗

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  getBillSponsorships,
   getBills,
   getElectionResults,
   getLegislators,
@@ -17,6 +18,7 @@ import {
   type DatasetId,
   type DatasetProvenance,
   buildBillCoverage,
+  buildBillSponsorshipCoverage,
   buildElectionResultCoverage,
   buildLegislatorCoverage,
   buildLocalAssemblyCoverage,
@@ -84,6 +86,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
   const [
     legislators,
     bills,
+    billSponsorships,
     rollCallVotes,
     ndlSpeechCounts,
     writtenQuestions,
@@ -95,6 +98,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
   ] = await Promise.all([
     getLegislators(),
     getBills(),
+    getBillSponsorships(),
     getRollCallVotes(),
     getNdlSpeechCounts(),
     getWrittenQuestionCounts(),
@@ -108,6 +112,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
   const coverages: Record<DatasetId, ReturnType<typeof buildLegislatorCoverage>> = {
     legislators: buildLegislatorCoverage(legislators),
     bills: buildBillCoverage(bills),
+    "bill-sponsorships": buildBillSponsorshipCoverage(billSponsorships),
     "roll-call-votes": buildRollCallVoteCoverage(rollCallVotes),
     "ndl-speech-counts": buildNdlSpeechCoverage(ndlSpeechCounts, legislators.length),
     "written-questions": buildWrittenQuestionCoverage(
