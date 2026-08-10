@@ -6,6 +6,7 @@ import {
   getPrefectureExpenditureByPurpose,
   getPrefecturePopulation,
   getPrefectureFinancialHealth,
+  getPrefectureTurnout,
 } from "@/lib/data";
 import {
   countLegislatorsByPrefecture,
@@ -20,6 +21,7 @@ import {
   FINANCIAL_HEALTH_INDICATORS,
   buildFinancialHealthLayer,
 } from "@/lib/financialHealthStats";
+import { buildPrefectureTurnoutCoverage } from "@/lib/dataProvenance";
 import { MapExplorer } from "@/components/MapExplorer";
 
 export default async function MapPage() {
@@ -30,6 +32,7 @@ export default async function MapPage() {
     expenditure,
     population,
     financialHealth,
+    turnoutElections,
   ] = await Promise.all([
     getLegislators(),
     getParties(),
@@ -37,6 +40,7 @@ export default async function MapPage() {
     getPrefectureExpenditureByPurpose(),
     getPrefecturePopulation(),
     getPrefectureFinancialHealth(),
+    getPrefectureTurnout(),
   ]);
   const counts = countLegislatorsByPrefecture(legislators);
   const partyCountsByPrefecture = countLegislatorsByPrefectureAndParty(legislators);
@@ -65,13 +69,18 @@ export default async function MapPage() {
   );
   const financialHealthFiscalYear = financialHealth[0]?.fiscalYear;
 
+  // 投票率データの収録範囲は、免責事項ページと同じ純関数で実データから算出する
+  // （件数・回数をハードコードしない）
+  const turnoutCoverageFacts =
+    buildPrefectureTurnoutCoverage(turnoutElections).facts;
+
   return (
     <div className="animate-fade-in">
       <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
         都道府県マップ
       </h1>
       <p className="mt-2 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-        都道府県ごとの関連国会議員数のほか、歳出総額・分野別の歳出内訳（人口一人当たり）・財政健全化指標を、レイヤーを切り替えて地図上で確認できます。
+        都道府県ごとの関連国会議員数のほか、歳出総額・分野別の歳出内訳（人口一人当たり）・財政健全化指標・国政選挙の投票率（男女別・時系列）を、レイヤーを切り替えて地図上で確認できます。
         都道府県をクリックすると、右側にその都道府県の政党別議席構成が表示されます。
       </p>
       <p className="mt-2 text-sm">
@@ -102,6 +111,8 @@ export default async function MapPage() {
           expenditureFiscalYear={expenditureFiscalYear}
           financialHealthLayers={financialHealthLayers}
           financialHealthFiscalYear={financialHealthFiscalYear}
+          turnoutElections={turnoutElections}
+          turnoutCoverageFacts={turnoutCoverageFacts}
         />
       )}
     </div>

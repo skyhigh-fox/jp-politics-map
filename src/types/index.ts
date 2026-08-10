@@ -766,3 +766,64 @@ export interface NationalBudget {
   /** 一般会計歳出決算 目的別（国家機関費・地方財政費・社会保障関係費等） */
   expenditureByPurpose: NationalBudgetSeries;
 }
+
+/**
+ * 投票率（%）の男女別内訳。原資料（総務省の選挙結果調）が
+ * 「男・女・計」の3区分で公表しているため、その3区分をそのまま保持する。
+ *
+ * 【注記】原資料の区分は選挙人名簿上の性別によるもので、本サイトが独自に
+ * 分類したものではない。原資料の値が欠けている場合はnull。
+ */
+export interface TurnoutRates {
+  /** 男（%） */
+  male: number | null;
+  /** 女（%） */
+  female: number | null;
+  /** 計（%）。男女を合算した全体の投票率 */
+  total: number | null;
+}
+
+/** 都道府県1件分の投票率（男女別・計） */
+export interface PrefectureTurnoutEntry extends TurnoutRates {
+  /** 都道府県の正式名称（例:"東京都"）。PREFECTURE_CODESのキーと一致する */
+  prefecture: string;
+}
+
+/**
+ * 1回の国政選挙分の都道府県別投票率（機能拡充ロードマップ Tier1 #7）。
+ *
+ * データソース: 総務省「選挙関連資料」の各回選挙結果調に含まれる
+ * 「都道府県別投票率（小選挙区）」（衆議院）/
+ * 「都道府県別有権者数、投票者数、投票率（選挙区）（比較）」（参議院）のExcel。
+ *
+ * 【政治的中立性についての注記】
+ * 投票率は「高いほど良い」「低いほど関心が低い」といった評価を含まない
+ * 客観的な実測値である。UI側では順位付けをせず、全国計との比較と
+ * 時系列の推移という中立的な提示に留めること。
+ */
+export interface PrefectureTurnoutElection {
+  /** 一意キー（例:"shugiin-51"・"sangiin-27"） */
+  id: string;
+  /** 院（"衆議院" / "参議院"） */
+  chamber: "衆議院" | "参議院";
+  /** 回次（例:51） */
+  round: number;
+  /** 表示名（例:"第51回衆議院議員総選挙"） */
+  electionName: string;
+  /** 投票日（YYYY-MM-DD） */
+  electionDate: string;
+  /**
+   * 投票率の対象となる投票の種類（衆議院は"小選挙区"、参議院は"選挙区"）。
+   * 同じ選挙でも比例代表の投票率はごくわずかに異なるため、どちらの数値かを明示する。
+   */
+  votingCategory: "小選挙区" | "選挙区";
+  /** 全国計の投票率（原資料の「計」行） */
+  national: TurnoutRates;
+  /** 都道府県別（47件、都道府県コード順） */
+  prefectures: PrefectureTurnoutEntry[];
+  /** データ取得元Excelファイルの URL（出典明記のため保持） */
+  sourceUrl: string;
+  /** 上記Excelが掲載されている総務省のページ */
+  sourcePageUrl: string;
+}
+
