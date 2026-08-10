@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBills, getBillStatusHistory } from "@/lib/data";
+import { getBills, getBillStatusHistory, getParties, getRollCallVotes } from "@/lib/data";
 import { StatusBadge } from "@/components/StatusBadge";
+import { RollCallVoteHeatmap } from "@/components/RollCallVoteHeatmap";
 import {
   BILL_STAGE_COLORS,
   BILL_STAGE_DISPLAY_ORDER,
@@ -15,13 +16,17 @@ export default async function BillDetailPage({
 }) {
   const { id: rawId } = await params;
   const id = decodeURIComponent(rawId);
-  const [bills, history] = await Promise.all([
+  const [bills, history, rollCallVotes, parties] = await Promise.all([
     getBills(),
     getBillStatusHistory(),
+    getRollCallVotes(),
+    getParties(),
   ]);
 
   const bill = bills.find((b) => b.id === id);
   if (!bill) notFound();
+
+  const rollCallVote = rollCallVotes.find((v) => v.billId === id);
 
   const timeline = history
     .filter((h) => h.billId === id)
@@ -164,6 +169,10 @@ export default async function BillDetailPage({
             ))}
           </ol>
         </>
+      )}
+
+      {rollCallVote && (
+        <RollCallVoteHeatmap vote={rollCallVote} parties={parties} />
       )}
     </div>
   );
