@@ -4,9 +4,11 @@ import { useId, useMemo, useState } from "react";
 import type { BillStage } from "@/types";
 import {
   FUNNEL_MAIN_PATH_ORDER,
+  buildFunnelFacts,
   type BillFunnelStats,
 } from "@/lib/billFunnelStats";
 import { BILL_STAGE_COLORS, BILL_STAGE_SLUGS } from "@/lib/billStageColors";
+import { DataInsight } from "@/components/DataInsight";
 
 /**
  * 【法案審議ファネル図（一覧レベル）】
@@ -133,6 +135,8 @@ export function BillStageFunnelChart({ stats }: BillStageFunnelChartProps) {
       <p id={descId} className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
         提出から成立までの各段階に到達した法案の件数です（ユニーク法案数）。委員会・本会議の各段階は「可決して次へ進む」側と「その段階で審議が終了する」側に分かれるため、後者は主経路の下に小さく添えています。バーにポインタを合わせる、またはTabキーでfocusすると件数の内訳を確認できます。
       </p>
+
+      <DataInsight facts={buildFunnelFacts(stats)} />
 
       {/* 凡例（色だけに依存しないようラベルを併記） */}
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5" aria-hidden="true">

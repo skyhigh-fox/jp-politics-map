@@ -83,3 +83,28 @@ export function aggregateBillFunnel(
     })),
   };
 }
+
+/**
+ * ファネル図の集計値から、直接読み取りにくい割合を文で言い換える
+ * （DataInsight コンポーネント用）。「多い/少ない」等の評価語は使わず、
+ * 表示中の集計値をそのまま言い換えるだけに留める。
+ */
+export function buildFunnelFacts(stats: BillFunnelStats): string[] {
+  if (stats.totalBills === 0) return [];
+  const facts: string[] = [];
+
+  const enacted = stats.mainPath.find((s) => s.stage === "成立")?.billCount ?? 0;
+  const enactedPct = ((enacted / stats.totalBills) * 100).toFixed(0);
+  facts.push(
+    `審議履歴のある${stats.totalBills.toLocaleString("ja-JP")}件のうち、${enacted.toLocaleString("ja-JP")}件（${enactedPct}%）が成立まで進んでいます。`
+  );
+
+  const rejectedTotal = stats.branches.reduce((sum, b) => sum + b.billCount, 0);
+  if (rejectedTotal > 0) {
+    facts.push(
+      `審議の途中（委員会または本会議）で否決された法案は${rejectedTotal.toLocaleString("ja-JP")}件です。`
+    );
+  }
+
+  return facts;
+}

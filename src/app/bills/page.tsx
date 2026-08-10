@@ -5,6 +5,7 @@ import { BillSessionTrendChart } from "@/components/BillSessionTrendChart";
 import { BillStageFunnelChart } from "@/components/BillStageFunnelChart";
 import { aggregateBillsBySession } from "@/lib/billSessionStats";
 import { aggregateBillFunnel } from "@/lib/billFunnelStats";
+import { BILL_TOPIC_ORDER, classifyBillTopics } from "@/lib/billTopics";
 import type { Bill } from "@/types";
 
 const HOUSE_OPTIONS = ["衆議院", "参議院", "両院"] as const;
@@ -47,6 +48,7 @@ function matchesFilters(
     status?: string;
     submitterType?: string;
     category?: string;
+    topic?: string;
     q?: string;
   }
 ): boolean {
@@ -55,6 +57,13 @@ function matchesFilters(
   if (filters.submitterType && bill.submitterType !== filters.submitterType)
     return false;
   if (filters.category && bill.category !== filters.category) return false;
+  if (
+    filters.topic &&
+    !classifyBillTopics(bill.title).includes(
+      filters.topic as (typeof BILL_TOPIC_ORDER)[number]
+    )
+  )
+    return false;
   if (filters.q && !bill.title.includes(filters.q)) return false;
   return true;
 }
@@ -67,6 +76,7 @@ export default async function BillsPage({
     status?: string;
     submitterType?: string;
     category?: string;
+    topic?: string;
     q?: string;
   }>;
 }) {
@@ -135,11 +145,21 @@ export default async function BillsPage({
                 bills.some((b) => b.category === c)
               ).map((v) => ({ value: v, label: v })),
             },
+            {
+              key: "topic",
+              label: "政策分野",
+              options: BILL_TOPIC_ORDER.map((v) => ({ value: v, label: v })),
+            },
           ]}
           searchKey="q"
           searchLabel="件名で検索"
           searchPlaceholder="例: 予算"
         />
+      )}
+      {bills.length > 0 && (
+        <p className="mt-2 text-xs text-neutral-400 dark:text-neutral-600">
+          「政策分野」は件名に含まれるキーワードによる機械的な分類です。人が内容を判断して付けたものではないため、分類の誤り・漏れがあります。
+        </p>
       )}
 
       <InfiniteBillsTable bills={sorted} />

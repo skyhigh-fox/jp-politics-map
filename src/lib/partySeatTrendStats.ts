@@ -116,3 +116,59 @@ export function buildChamberSeatTrend(
 
   return { chamber, elections, legend };
 }
+
+/**
+ * グラフ表示中のデータから機械的に言い換えられる事実の一覧を作る
+ * （DataInsight コンポーネント用）。
+ * 「良い/悪い」等の評価語は使わず、直近選挙の議席1位と、前回選挙からの
+ * 増減が大きい政党（"その他"は集計対象の顔ぶれが選挙ごとに変わるため除外）
+ * だけを言い換える。原因の推測はしない。
+ */
+export function buildSeatTrendFacts(trend: ChamberSeatTrend): string[] {
+  const { elections } = trend;
+  if (elections.length === 0) return [];
+  const facts: string[] = [];
+
+  const latest = elections[elections.length - 1]!;
+  const topInLatest = latest.segments.find((s) => s.key !== OTHER_KEY);
+  if (topInLatest) {
+    const pct = ((topInLatest.seats / latest.totalSeats) * 100).toFixed(0);
+    facts.push(
+      `直近の${latest.electionName}（${latest.electionYear}年）で最も議席が多いのは${topInLatest.label}（${topInLatest.seats}議席、全体の${pct}%）です。`
+    );
+  }
+
+  if (elections.length >= 2) {
+    const prev = elections[elections.length - 2]!;
+    const prevByKey = new Map(prev.segments.map((s) => [s.key, s.seats]));
+    const diffs = latest.segments
+      .filter((s) => s.key !== OTHER_KEY && prevByKey.has(s.key))
+      .map((s) => ({
+        label: s.label,
+        diff: s.seats - (prevByKey.get(s.key) ?? 0),
+      }))
+      .filter((d) => d.diff !== 0);
+
+    const maxGain = diffs.reduce(
+      (max, d) => (d.diff > (max?.diff ?? 0) ? d : max),
+      null as { label: string; diff: number } | null
+    );
+    const maxLoss = diffs.reduce(
+      (min, d) => (d.diff < (min?.diff ?? 0) ? d : min),
+      null as { label: string; diff: number } | null
+    );
+
+    if (maxGain) {
+      facts.push(
+        `前回の${prev.electionName}（${prev.electionYear}年）と比べて、${maxGain.label}は${maxGain.diff}議席増えました。`
+      );
+    }
+    if (maxLoss && maxLoss.label !== maxGain?.label) {
+      facts.push(
+        `同じく前回と比べて、${maxLoss.label}は${Math.abs(maxLoss.diff)}議席減りました。`
+      );
+    }
+  }
+
+  return facts;
+}

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Bill } from "@/types";
 import { StatusBadge } from "@/components/StatusBadge";
+import { classifyBillTopics } from "@/lib/billTopics";
 
 const PAGE_SIZE = 50;
 
@@ -78,6 +79,18 @@ export function InfiniteBillsTable({ bills }: { bills: Bill[] }) {
                   >
                     {bill.title}
                   </Link>
+                  {classifyBillTopics(bill.title).length > 0 && (
+                    <div className="mt-1 flex flex-wrap gap-1">
+                      {classifyBillTopics(bill.title).map((topic) => (
+                        <span
+                          key={topic}
+                          className="inline-block rounded-full bg-neutral-100 px-1.5 py-0.5 text-[10px] text-neutral-500 dark:bg-neutral-800 dark:text-neutral-400"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </td>
                 <td className="px-4 py-2.5 pr-4 text-neutral-700 dark:text-neutral-300">
                   {bill.submitterType}

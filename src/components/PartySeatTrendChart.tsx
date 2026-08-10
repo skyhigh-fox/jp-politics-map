@@ -1,7 +1,8 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
-import type { ChamberSeatTrend } from "@/lib/partySeatTrendStats";
+import { buildSeatTrendFacts, type ChamberSeatTrend } from "@/lib/partySeatTrendStats";
+import { DataInsight } from "@/components/DataInsight";
 
 /**
  * 【政党別・過去選挙の議席推移グラフ】
@@ -133,6 +134,8 @@ export function PartySeatTrendChart({ trend }: PartySeatTrendChartProps) {
       <p id={descId} className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
         選挙ごとの政党別獲得議席数を積み上げ棒で表示しています。バーにポインタを合わせる、またはTabキーでfocusすると内訳を確認できます。現在の政党マスタに対応がつかない解散・改称済みの政党は「{legend[legend.length - 1]?.label}」にまとめています。
       </p>
+
+      <DataInsight facts={buildSeatTrendFacts(trend)} />
 
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5" aria-hidden="true">
         {legend.map((item) => (
