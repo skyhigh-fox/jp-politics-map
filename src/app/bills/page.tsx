@@ -1,6 +1,8 @@
 import { getBills } from "@/lib/data";
 import { FilterBar } from "@/components/FilterBar";
 import { InfiniteBillsTable } from "@/components/InfiniteBillsTable";
+import { BillSessionTrendChart } from "@/components/BillSessionTrendChart";
+import { aggregateBillsBySession } from "@/lib/billSessionStats";
 import type { Bill } from "@/types";
 
 const HOUSE_OPTIONS = ["衆議院", "参議院", "両院"] as const;
@@ -42,12 +44,18 @@ export default async function BillsPage({
   const sorted = [...filtered].sort((a, b) =>
     b.lastUpdated.localeCompare(a.lastUpdated)
   );
+  // 推移グラフは一覧側のフィルタに左右されず、常に全件ベースで集計する
+  // （ページ冒頭のサマリーとして独立させる方針）
+  const sessionStats = aggregateBillsBySession(bills);
 
   return (
     <div className="animate-fade-in">
       <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
         法案一覧
       </h1>
+
+      {bills.length > 0 && <BillSessionTrendChart data={sessionStats} />}
+
       <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
         {bills.length === 0 ? (
           <>
