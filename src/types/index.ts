@@ -111,6 +111,28 @@ export interface ElectionResult {
   sourceUrl: string;
 }
 
+/**
+ * NDL国会会議録検索システムAPIによる議員の発言件数（フェーズ4）。
+ *
+ * 【重要】この値は「本人の発言回数」を保証するものではなく、あくまで参考値。
+ * NDL APIのspeakerパラメータは発言者名の部分一致検索であり、完全な人物特定
+ * （議員IDでの一意な紐付け）ではないため、同姓同名の別人（引退した元議員・
+ * 地方議員・参考人など）の発言も件数に混入しうる。UI表示時は必ず「参考値」
+ * である旨を明記すること（isApproximateフィールドで明示）。
+ * 本文（発言テキスト）は著作権配慮のため取得・保存していない。
+ */
+export interface NdlSpeechCount {
+  legislatorId: string;
+  name: string;
+  speechCount: number;
+  /** 同姓同名混同のリスクがある参考値であることの明示フラグ（常にtrue） */
+  isApproximate: true;
+  /** 取得日時 ISO 8601 */
+  fetchedAt: string;
+  /** 集計に使ったNDL API検索URL（再現性・出典明記のため） */
+  sourceUrl: string;
+}
+
 /** 都道府県マスタ（JIS都道府県コード） */
 export interface Prefecture {
   code: string; // JIS X 0401 (2桁)

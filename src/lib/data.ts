@@ -6,6 +6,7 @@ import type {
   BillStatusHistory,
   ElectionResult,
   Legislator,
+  NdlSpeechCount,
   Party,
 } from "@/types";
 
@@ -24,3 +25,17 @@ export const getBillStatusHistory = () =>
   readJson<BillStatusHistory[]>("bill-status-history.json");
 export const getElectionResults = () =>
   readJson<ElectionResult[]>("election-results.json");
+
+/**
+ * NDL国会会議録検索システムAPIによる議員発言件数（フェーズ4、参考値）。
+ * データ未取得（scripts/fetch-ndl-speech-counts.ts 未実行）やファイルが空の
+ * 場合でも画面が壊れないよう、フェイルセーフに空配列を返す。
+ */
+export const getNdlSpeechCounts = async (): Promise<NdlSpeechCount[]> => {
+  try {
+    const data = await readJson<NdlSpeechCount[]>("ndl-speech-counts.json");
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
