@@ -65,7 +65,11 @@ export function PartyCompositionSummary({
         <p className="mt-3 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
           データ未取得です。
           <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
-            npm run fetch:legislators
+            npm run fetch:sangiin-members
+          </code>
+          ・
+          <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+            npm run fetch:shugiin-members
           </code>
           で取得してください。
         </p>
