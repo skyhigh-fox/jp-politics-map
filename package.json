@@ -20,7 +20,9 @@
     "fetch:roll-call-votes": "tsx scripts/fetch-roll-call-votes.ts",
     "fetch:prefecture-population": "tsx scripts/fetch-prefecture-population.ts",
     "fetch:prefecture-expenditure-by-purpose": "tsx scripts/fetch-prefecture-expenditure-by-purpose.ts",
-    "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions && npm run fetch:party-seat-history && npm run fetch:prefecture-finance && npm run fetch:roll-call-votes && npm run fetch:prefecture-population && npm run fetch:prefecture-expenditure-by-purpose"
+    "fetch:prefecture-financial-health": "tsx scripts/fetch-prefecture-financial-health.ts",
+    "fetch:prefecture-expenditure-by-nature": "tsx scripts/fetch-prefecture-expenditure-by-nature.ts",
+    "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions && npm run fetch:party-seat-history && npm run fetch:prefecture-finance && npm run fetch:roll-call-votes && npm run fetch:prefecture-population && npm run fetch:prefecture-expenditure-by-purpose && npm run fetch:prefecture-financial-health && npm run fetch:prefecture-expenditure-by-nature"
   },
   "dependencies": {
     "d3-geo": "^2.0.2",

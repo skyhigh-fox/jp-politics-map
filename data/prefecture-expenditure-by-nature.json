@@ -1,0 +1,2587 @@
+[
+  {
+    "prefecture": "北海道",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 559890779
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 65771899
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 44085508
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 59246995
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 536809580
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 386628883
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 86937861
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 683727
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 345684705
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 31033308
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 512648061
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "青森県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 157907037
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 31136600
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 19306630
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 19142961
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 124741227
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 99306568
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 22897521
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 27390058
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 7588806
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 144428474
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "岩手県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 173154270
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 28995726
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 16466027
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13782159
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 147080651
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 94560525
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 18182779
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 80128
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 98019575
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 7014929
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 124118323
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "宮城県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 215669875
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 43665152
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 5858229
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 18067513
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 207162673
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 113182709
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 44921241
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 146285
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 109898684
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 15842308
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 142065653
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "秋田県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 135869868
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 22238110
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 12200978
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 7391188
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 109709028
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 92554013
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 26510012
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 26162808
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 6249394
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 149105654
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "山形県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 149611469
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 23319879
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 14342697
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 8700625
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 116664600
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 87229808
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 8216218
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 3235
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 87689083
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 5964476
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 127667884
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "福島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 248698211
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 56969374
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 34160492
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 20635148
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 227889137
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 97726473
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 69385586
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 960686
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 104098690
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 10780972
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 221570020
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "茨城県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 324565770
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 50990021
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 9685559
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 28558575
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 231051581
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 153825072
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 47298623
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 2251083
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 98264105
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 24158219
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 163390529
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "栃木県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 219232996
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 30220235
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 7098252
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 19286021
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 167147809
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 96494910
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 23415284
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 123754483
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 10765656
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 138766444
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "群馬県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 217829759
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 29761949
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6001340
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 35569973
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 155672551
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 96185801
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 25515389
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 21148
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 127182015
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 11414641
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 110902937
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "埼玉県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 576555449
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 85498771
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 14626983
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 57844324
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 505937134
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 296655028
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 87221286
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 9495486
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 10480683
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 41427135
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 200110230
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "千葉県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 535730443
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 84489648
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6238730
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 46720627
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 449332122
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 229928284
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 63968735
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 245026
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 233703289
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 33123390
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 192209775
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "東京都",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 1670503132
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 507479782
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 129773305
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 271947696
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 2045555970
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 438976092
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 299653201
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 441246457
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 315705980
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 89411411
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 888212352
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "神奈川県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 526831307
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 88297487
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 15400125
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 52943149
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 609172182
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 317134538
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 132617486
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 200
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 9467890
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 48204417
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 166482606
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "新潟県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 230483592
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 35470020
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 26666560
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 9611880
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 209927377
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 163450112
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 41479889
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 5442459
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 90387357
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 11292746
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 194446469
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "富山県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 129137477
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 25929236
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 9640437
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 6363064
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 100277282
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 91582898
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 15196506
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 238592
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 59826002
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 5549332
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 111262931
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "石川県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 132601322
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 145278065
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 7338702
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 10983376
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 161983653
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 80389445
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 137172029
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 8101875
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 44096791
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 6196416
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 240103628
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "福井県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 118107707
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 28546024
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6014391
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13037836
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 80286495
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 78116537
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 6602365
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 2161587
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 26200794
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 4213954
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 120653939
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "山梨県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 116655838
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 22827400
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 4904612
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 8590117
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 79128399
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 73567345
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 11144261
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 60000
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 69109825
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 4881927
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 126668827
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "長野県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 247396884
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 34166454
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 12408836
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 18622557
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 166880827
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 123105801
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 16334409
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 137942459
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 11475549
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 193018431
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "岐阜県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 233912588
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 36017847
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 10685092
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 15171377
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 167458845
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 113475859
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 23789286
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 55666
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 43189091
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 10699101
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 161500330
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "静岡県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 303665443
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 43258342
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 8812747
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 19615112
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 289330486
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 197247314
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 39783167
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 422278
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 5891125
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 17901724
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 229113585
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "愛知県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 618098625
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 90746387
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 24971920
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 51998554
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 537613824
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 385180404
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 180371066
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 6032302
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 185281694
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 37004731
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 363731440
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "三重県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 216400500
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 27424648
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6684547
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 14334205
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 162438520
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 111111348
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 25078830
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 348277
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 7156364
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 9182207
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 133835064
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "滋賀県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 173302746
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 23885517
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 3837545
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 12159644
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 126251037
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 74203818
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 14002589
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 995337
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 27575904
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 7213708
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 112434707
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "京都府",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 217391174
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 31293519
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 4461622
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 15843763
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 251830714
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 121477990
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 31207708
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 269230
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 154355854
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 14905630
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 105429575
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "大阪府",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 697190666
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 90006127
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 24774754
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 69225288
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 823098081
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 364945650
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 103550743
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 4227273
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 519536192
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 53673872
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 202739197
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "兵庫県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 476264808
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 48015078
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 10978707
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 35486623
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 470574182
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 352345280
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 37920497
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 320098
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 498796699
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 30819900
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 257930177
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "奈良県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 145084934
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 20910025
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6306393
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 17391280
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 130995821
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 76776461
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 24398890
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 15900
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 9420075
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 8075239
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 87044179
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "和歌山県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 138169057
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 18458398
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6941840
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13313611
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 124961530
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 77614153
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 26076798
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 65964555
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 6145650
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 136813280
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "鳥取県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 93335478
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 25770575
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 5785714
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 6277481
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 76902128
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 48384785
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 9842135
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 201756
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 1894126
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 3798319
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 85930554
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "島根県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 120528609
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 22298301
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 12007973
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13045431
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 81168672
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 68475432
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 14634438
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 2618
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 35640495
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 3830350
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 117814918
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "岡山県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 193177472
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 27137058
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 13170096
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13732812
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 156679393
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 97064389
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 30015474
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 138934
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 31507989
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 10863242
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 91650775
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "広島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 245277918
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 32769630
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 11311212
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 22277431
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 248745379
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 145605232
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 40127966
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 6828281
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 62588865
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 13927470
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 145754088
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "山口県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 170433593
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 24758050
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 5863701
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 15317007
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 132024414
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 83915326
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 41311040
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 73122708
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 7602855
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 104945616
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "徳島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 113631239
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 19796643
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 11131961
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 12444913
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 73741127
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 65997922
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 24669027
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 98532
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 58787216
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 4509920
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 102638409
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "香川県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 123236582
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 19363230
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 7053635
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 10994548
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 85922397
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 60690316
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 16848410
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 500
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 37932980
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 5695769
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 71223627
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "愛媛県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 165525550
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 30673982
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 4524369
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 34493137
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 105140515
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 86028278
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 24476240
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 117421185
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 7735756
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 126690778
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "高知県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 113684946
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 25071988
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6630757
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13756777
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 87466644
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 72415842
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 5348877
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 478
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 1517146
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 5004229
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 114826345
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "福岡県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 399707837
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 52596383
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 7988471
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 61861018
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 470626170
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 249735646
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 55621688
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 1057734
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 264187176
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 31815584
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 260702121
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "佐賀県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 128527545
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 22929177
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 2549258
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 11268606
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 97078866
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 65570363
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 15046151
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 50957355
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 5354498
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 103717879
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "長崎県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 187406056
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 18606265
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 5349645
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 25098438
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 141533579
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 96998326
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 14846953
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 5044
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 32403202
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 8947449
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 156291786
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "熊本県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 178871365
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 29766771
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 6136524
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 29015165
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 172786769
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 103337025
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 32266157
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 21785
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 55068860
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 12872689
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 202709484
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "大分県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 153031272
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 23419709
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 5528170
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 13862716
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 114682098
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 79748080
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 16929675
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 60000
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 58996017
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 6669565
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 151611079
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "宮崎県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 151348117
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 21668998
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 5591358
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 15976755
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 121720813
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 71818347
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 37138044
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 42967757
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 7210931
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 159021230
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "鹿児島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 232097534
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 28984982
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 4948524
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 27956069
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 180155956
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 110668316
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 37278504
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 2361403
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 10783346
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 173237047
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  },
+  {
+    "prefecture": "沖縄県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "人件費",
+        "amountThousandYen": 214634540
+      },
+      {
+        "name": "物件費",
+        "amountThousandYen": 50936341
+      },
+      {
+        "name": "維持補修費",
+        "amountThousandYen": 3376161
+      },
+      {
+        "name": "扶助費",
+        "amountThousandYen": 33006150
+      },
+      {
+        "name": "補助費等",
+        "amountThousandYen": 189269438
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 62091165
+      },
+      {
+        "name": "積立金",
+        "amountThousandYen": 38142105
+      },
+      {
+        "name": "投資及び出資金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "貸付金",
+        "amountThousandYen": 70813625
+      },
+      {
+        "name": "繰出金",
+        "amountThousandYen": 13687847
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "投資的経費",
+        "amountThousandYen": 120461338
+      }
+    ],
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374293&fileKind=1"
+  }
+]
