@@ -2,6 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBills, getBillStatusHistory } from "@/lib/data";
 import { StatusBadge } from "@/components/StatusBadge";
+import {
+  BILL_STAGE_COLORS,
+  BILL_STAGE_DISPLAY_ORDER,
+  BILL_STAGE_SLUGS,
+} from "@/lib/billStageColors";
 
 export default async function BillDetailPage({
   params,
@@ -22,6 +27,12 @@ export default async function BillDetailPage({
     .filter((h) => h.billId === id)
     // 同日に複数院で動きがあることもあるため、日付→院の順で安定ソート
     .sort((a, b) => a.date.localeCompare(b.date) || a.house.localeCompare(b.house));
+
+  // このページに登場するステージのみ、正規の流れ順で凡例を表示する
+  const timelineStageSet = new Set(timeline.map((h) => h.stage));
+  const uniqueStages = BILL_STAGE_DISPLAY_ORDER.filter((s) =>
+    timelineStageSet.has(s)
+  );
 
   return (
     <div className="max-w-2xl animate-fade-in">
@@ -89,24 +100,70 @@ export default async function BillDetailPage({
           進捗履歴データは見つかりませんでした。
         </p>
       ) : (
-        <ol className="mt-4 border-l-2 border-neutral-200 pl-4 dark:border-neutral-800">
-          {timeline.map((h, i) => (
-            <li key={i} className="relative mb-5 pb-1 last:mb-0">
-              <span className="absolute -left-[21px] top-1 h-2.5 w-2.5 rounded-full bg-accent-500 ring-4 ring-accent-100 dark:bg-accent-400 dark:ring-accent-950" />
-              <div className="text-sm text-neutral-500 dark:text-neutral-500">
-                {h.date}
-              </div>
-              <div className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-                {h.house} / {h.stage}
-              </div>
-              {h.note && (
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">
-                  {h.note}
+        <>
+          {/* ドットの色は src/lib/billStageColors.ts に集約したステージ別配色を
+              使う（法案一覧ページのファネル図と同じステージ＝同じ色）。
+              ダークモードはこのアプリの他チャート同様 prefers-color-scheme
+              ベース（tailwind.config.ts の darkMode: "media"）。 */}
+          <style>{`
+            .bill-timeline {
+              ${uniqueStages
+                .map(
+                  (s) =>
+                    `--stage-${BILL_STAGE_SLUGS[s]}: ${BILL_STAGE_COLORS[s].light};`
+                )
+                .join("\n              ")}
+            }
+            @media (prefers-color-scheme: dark) {
+              .bill-timeline {
+                ${uniqueStages
+                  .map(
+                    (s) =>
+                      `--stage-${BILL_STAGE_SLUGS[s]}: ${BILL_STAGE_COLORS[s].dark};`
+                  )
+                  .join("\n                ")}
+              }
+            }
+          `}</style>
+
+          {/* 凡例（このページに登場するステージのみ。色だけに依存しないようラベル併記） */}
+          <ul className="bill-timeline mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
+            {uniqueStages.map((stage) => (
+              <li
+                key={stage}
+                className="flex items-center gap-1.5 text-xs text-neutral-600 dark:text-neutral-400"
+              >
+                <span
+                  className="inline-block h-2.5 w-2.5 rounded-full"
+                  style={{ backgroundColor: `var(--stage-${BILL_STAGE_SLUGS[stage]})` }}
+                />
+                {BILL_STAGE_COLORS[stage].label}
+              </li>
+            ))}
+          </ul>
+
+          <ol className="bill-timeline mt-4 border-l-2 border-neutral-200 pl-4 dark:border-neutral-800">
+            {timeline.map((h, i) => (
+              <li key={i} className="relative mb-5 pb-1 last:mb-0">
+                <span
+                  className="absolute -left-[21px] top-1 h-2.5 w-2.5 rounded-full ring-4 ring-neutral-100 dark:ring-neutral-800"
+                  style={{ backgroundColor: `var(--stage-${BILL_STAGE_SLUGS[h.stage]})` }}
+                />
+                <div className="text-sm text-neutral-500 dark:text-neutral-500">
+                  {h.date}
                 </div>
-              )}
-            </li>
-          ))}
-        </ol>
+                <div className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                  {h.house} / {h.stage}
+                </div>
+                {h.note && (
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    {h.note}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </>
       )}
     </div>
   );
