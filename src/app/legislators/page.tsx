@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getLegislators, getParties } from "@/lib/data";
 import { legislatorPrefectures, PREFECTURE_CODES } from "@/lib/prefectures";
 import { FilterBar } from "@/components/FilterBar";
@@ -60,6 +61,17 @@ export default async function LegislatorsPage({
         ) : (
           `全${allLegislators.length}名中${legislators.length}名が条件に一致`
         )}
+      </p>
+
+      <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-500">
+        この一覧は衆参の国会議員のみが対象です。都道府県議会・市区町村議会の地方議会議員（現在は東京都のみパイロット対応）は
+        <Link
+          href="/map"
+          className="ml-1 text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+        >
+          都道府県マップ
+        </Link>
+        からご覧いただけます。
       </p>
 
       {allLegislators.length > 0 && (
