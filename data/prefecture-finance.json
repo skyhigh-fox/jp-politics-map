@@ -1,0 +1,378 @@
+[
+  {
+    "prefecture": "北海道",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2825928611,
+    "totalExpenditureThousandYen": 2803025736,
+    "realBalanceThousandYen": 16432637,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "青森県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 721053199,
+    "totalExpenditureThousandYen": 691728176,
+    "realBalanceThousandYen": 5059728,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "岩手県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 804926643,
+    "totalExpenditureThousandYen": 757986980,
+    "realBalanceThousandYen": 12149525,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "宮城県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1019172895,
+    "totalExpenditureThousandYen": 997507909,
+    "realBalanceThousandYen": 1588214,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "秋田県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 633863121,
+    "totalExpenditureThousandYen": 616844972,
+    "realBalanceThousandYen": 10202777,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "山形県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 674209779,
+    "totalExpenditureThousandYen": 661550290,
+    "realBalanceThousandYen": 5324398,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "福島県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1191872923,
+    "totalExpenditureThousandYen": 1152505464,
+    "realBalanceThousandYen": 7812220,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "茨城県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1257450634,
+    "totalExpenditureThousandYen": 1228516378,
+    "realBalanceThousandYen": 15561547,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "栃木県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 921925761,
+    "totalExpenditureThousandYen": 901765533,
+    "realBalanceThousandYen": 11997123,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "群馬県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 900241340,
+    "totalExpenditureThousandYen": 881483396,
+    "realBalanceThousandYen": 7952381,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "埼玉県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2167885474,
+    "totalExpenditureThousandYen": 2116066737,
+    "realBalanceThousandYen": 47678775,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "千葉県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2127664500,
+    "totalExpenditureThousandYen": 2083355040,
+    "realBalanceThousandYen": 24527502,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "東京都",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 9533664698,
+    "totalExpenditureThousandYen": 8888808019,
+    "realBalanceThousandYen": 418198775,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "神奈川県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2342944916,
+    "totalExpenditureThousandYen": 2291196569,
+    "realBalanceThousandYen": 21589912,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "新潟県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1119989979,
+    "totalExpenditureThousandYen": 1094763378,
+    "realBalanceThousandYen": 13603810,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "富山県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 618553650,
+    "totalExpenditureThousandYen": 589846555,
+    "realBalanceThousandYen": 1551655,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "石川県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1045970686,
+    "totalExpenditureThousandYen": 1012339392,
+    "realBalanceThousandYen": 2238370,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "福井県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 522766299,
+    "totalExpenditureThousandYen": 511183883,
+    "realBalanceThousandYen": 4466646,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "山梨県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 568965159,
+    "totalExpenditureThousandYen": 545069002,
+    "realBalanceThousandYen": 5323781,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "長野県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1047872878,
+    "totalExpenditureThousandYen": 1027999156,
+    "realBalanceThousandYen": 6865992,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "岐阜県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 897648092,
+    "totalExpenditureThousandYen": 881494964,
+    "realBalanceThousandYen": 6705838,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "静岡県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1311457126,
+    "totalExpenditureThousandYen": 1295659466,
+    "realBalanceThousandYen": 5139226,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "愛知県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2865466535,
+    "totalExpenditureThousandYen": 2779462116,
+    "realBalanceThousandYen": 69105991,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "三重県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 811549999,
+    "totalExpenditureThousandYen": 774973766,
+    "realBalanceThousandYen": 9877404,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "滋賀県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 629756938,
+    "totalExpenditureThousandYen": 621956154,
+    "realBalanceThousandYen": 1101980,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "京都府",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1047275458,
+    "totalExpenditureThousandYen": 1037555668,
+    "realBalanceThousandYen": 5184936,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "大阪府",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 3316968053,
+    "totalExpenditureThousandYen": 3279987111,
+    "realBalanceThousandYen": 20271134,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "兵庫県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2426324829,
+    "totalExpenditureThousandYen": 2407333062,
+    "realBalanceThousandYen": 9395399,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "奈良県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 575287133,
+    "totalExpenditureThousandYen": 567338923,
+    "realBalanceThousandYen": 3018539,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "和歌山県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 662035723,
+    "totalExpenditureThousandYen": 644047629,
+    "realBalanceThousandYen": 9713885,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "鳥取県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 388615120,
+    "totalExpenditureThousandYen": 375323514,
+    "realBalanceThousandYen": 6480452,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "島根県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 537598706,
+    "totalExpenditureThousandYen": 509639149,
+    "realBalanceThousandYen": 14014403,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "岡山県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 742640366,
+    "totalExpenditureThousandYen": 733805981,
+    "realBalanceThousandYen": 1775346,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "広島県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 1094294344,
+    "totalExpenditureThousandYen": 1074265129,
+    "realBalanceThousandYen": 4718491,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "山口県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 726907529,
+    "totalExpenditureThousandYen": 702970202,
+    "realBalanceThousandYen": 12838866,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "徳島県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 536935883,
+    "totalExpenditureThousandYen": 510835261,
+    "realBalanceThousandYen": 11537177,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "香川県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 491138881,
+    "totalExpenditureThousandYen": 471173633,
+    "realBalanceThousandYen": 8065555,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "愛媛県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 770750165,
+    "totalExpenditureThousandYen": 746872509,
+    "realBalanceThousandYen": 4980159,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "高知県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 477698137,
+    "totalExpenditureThousandYen": 467385536,
+    "realBalanceThousandYen": 3608369,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "福岡県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 2093699535,
+    "totalExpenditureThousandYen": 2032626014,
+    "realBalanceThousandYen": 12879279,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "佐賀県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 540929298,
+    "totalExpenditureThousandYen": 528311388,
+    "realBalanceThousandYen": 6107795,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "長崎県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 742790874,
+    "totalExpenditureThousandYen": 725525376,
+    "realBalanceThousandYen": 1137101,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "熊本県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 922220421,
+    "totalExpenditureThousandYen": 880334474,
+    "realBalanceThousandYen": 21662793,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "大分県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 695462878,
+    "totalExpenditureThousandYen": 659810364,
+    "realBalanceThousandYen": 9139652,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "宮崎県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 691666354,
+    "totalExpenditureThousandYen": 666648696,
+    "realBalanceThousandYen": 8905240,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "鹿児島県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 895408514,
+    "totalExpenditureThousandYen": 855245218,
+    "realBalanceThousandYen": 12508625,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  },
+  {
+    "prefecture": "沖縄県",
+    "fiscalYear": 2024,
+    "totalRevenueThousandYen": 854451945,
+    "totalExpenditureThousandYen": 839088656,
+    "realBalanceThousandYen": 4096140,
+    "sourceUrl": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374259&fileKind=1"
+  }
+]
