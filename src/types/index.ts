@@ -112,6 +112,46 @@ export interface ElectionResult {
 }
 
 /**
+ * 過去選挙の政党別獲得議席数（フェーズ4）。
+ *
+ * 候補者個人の得票データ（ElectionResult）とは別軸で、選挙ごとの
+ * 「政党がいくつ議席を獲得したか」という集計済みの事実データのみを扱う。
+ * 候補者名のマッチング問題を回避するため、総務省の集計表またはWikipediaの
+ * 選挙結果記事（出典表記が必要）を情報源とする。詳細な調査経緯・出典URLは
+ * Obsidian Vault（jp-politics-map/データソース調査.md
+ * 「過去選挙の政党別議席数推移（Phase 4）」）を参照。
+ */
+export interface PartySeatResult {
+  /** 当時の政党名（原資料の表記のまま。現在は解散・改名済みの政党も含む） */
+  partyName: string;
+  /**
+   * data/parties.json の id に解決できた場合のみ設定する。
+   * 後継関係が曖昧な政党（分裂・合流等）は無理に統合せず null のままにする。
+   */
+  partyId: string | null;
+  seats: number;
+}
+
+/** 選挙ごとの政党別獲得議席数（フェーズ4） */
+export interface PartySeatHistory {
+  chamber: Chamber;
+  electionYear: number;
+  electionDate: string; // ISO 8601 (YYYY-MM-DD)
+  /** 例:「第50回衆議院議員総選挙」「第27回参議院議員通常選挙」 */
+  electionName: string;
+  /**
+   * その選挙で選出された議席の合計（= resultsのseats合計と一致する想定）。
+   * 参議院は改選議席数、衆議院は総定数。当日に欠員補充（繰上補充等）を含む
+   * 場合はその旨をnoteに記載する。
+   */
+  totalSeats: number;
+  results: PartySeatResult[];
+  /** 出典URL（再現性・出典明記のため） */
+  sourceUrl: string;
+  note?: string;
+}
+
+/**
  * NDL国会会議録検索システムAPIによる議員の発言件数（フェーズ4）。
  *
  * 【重要】この値は「本人の発言回数」を保証するものではなく、あくまで参考値。
