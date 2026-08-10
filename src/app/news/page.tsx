@@ -9,7 +9,7 @@ export default async function NewsPage() {
   return (
     <div className="animate-fade-in">
       <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
-        最新ニュース（政治）
+        最新ニュース
       </h1>
       <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
         {news.length === 0 ? (
@@ -21,7 +21,7 @@ export default async function NewsPage() {
             で取得してください。
           </>
         ) : (
-          `NHK NEWS WEB「政治」カテゴリ・総務省お知らせの見出し ${news.length}件（新しい順）`
+          `総務省「ホームページ新着情報」の見出し ${news.length}件（新しい順、選挙関連の告知等を含む総務省全般のお知らせ）`
         )}
       </p>
 
@@ -46,7 +46,7 @@ export default async function NewsPage() {
       )}
 
       <p className="mt-8 max-w-2xl text-xs text-neutral-400 dark:text-neutral-600">
-        見出し・リンクのみをNHK NEWS WEB「政治」カテゴリRSS・総務省「ホームページ新着情報」RSSより取得して表示しています。本文・画像は転載していません。記事の全文は各リンク先でご覧ください。
+        見出し・リンクのみを総務省「ホームページ新着情報」RSSより取得して表示しています。本文・画像は転載していません。記事の全文は各リンク先でご覧ください。
       </p>
     </div>
   );

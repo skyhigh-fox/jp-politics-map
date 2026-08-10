@@ -61,7 +61,7 @@ export default async function HomePage() {
         日本政治マップ
       </h1>
       <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-        国会議員・法案の審議状況を実データで公開しています。都道府県ドリルダウン地図（ズーム・パン対応）、法案検索、議員検索、最新の政治ニュースも合わせて確認できます。
+        国会議員・法案の審議状況を実データで公開しています。都道府県ドリルダウン地図（ズーム・パン対応）、法案検索、議員検索、最新のお知らせも合わせて確認できます。
       </p>
 
       <h2 className="mt-10 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
