@@ -38,17 +38,17 @@
  */
 import type { Legislator, NdlSpeechCount } from "../src/types";
 import { writeDataJson } from "./lib/writeJson";
+// 空白除去は共通の名寄せモジュール（src/lib/nameMatch.ts）に集約している。
+// ここでは NFKC や異体字の畳み込みは行わない: NDL会議録は当時の表記（旧字体を
+// 含む）をそのまま持っており、常用字体へ寄せるとかえってヒットしなくなるため、
+// 空白除去だけの stripNameWhitespace() を使う。
+import { stripNameWhitespace } from "../src/lib/nameMatch";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 const API_BASE = "https://kokkai.ndl.go.jp/api/speech";
 const MIN_WAIT_MS = 300;
 const MAX_WAIT_MS = 500;
-
-/** 姓名間の全角・半角スペースを除去して、NDL側の発言者名表記に寄せる */
-function stripNameSpaces(name: string): string {
-  return name.replace(/[\s　]/g, "");
-}
 
 function buildSearchUrl(speaker: string): string {
   const params = new URLSearchParams({
@@ -98,7 +98,7 @@ async function main() {
 
   for (let i = 0; i < currentLegislators.length; i++) {
     const legislator = currentLegislators[i]!;
-    const speaker = stripNameSpaces(legislator.name);
+    const speaker = stripNameWhitespace(legislator.name);
 
     try {
       const speechCount = await fetchSpeechCount(speaker);

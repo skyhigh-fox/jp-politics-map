@@ -51,10 +51,18 @@
  *       （棄権を示す別パターンは確認できなかったが、型としては許容しておく）
  *     - 氏名は `<span class="names">` に入るが、姓名間の全角スペースの数が
  *       不揃い（表示上の桁揃え）。legislators.json 側も姓名間に全角スペースが
- *       入っているため、双方から空白文字（\s、全角スペースU+3000を含む）を
- *       除去して正規化キーを作り照合する（fetch-written-questions.tsの
- *       stripNameSpacesと同じ方針）。同姓同名で正規化キーが衝突する場合は
+ *       入っているため、共通の名寄せモジュール（src/lib/nameMatch.ts）で
+ *       正規化キーを作って照合する。同姓同名で正規化キーが衝突する場合は
  *       誤結合を避けるためどちらの議員にも紐付けない。
+ *
+ * 【院をまたぐ照合について】
+ *   対象は参議院の投票だが、投票当時は参議院議員でも、その後の選挙で
+ *   衆議院に鞍替えして現在は衆議院議員として legislators.json に載っている
+ *   議員がいる（実測で12名・約860レコード）。そのため名寄せは
+ *   「参議院で一意 → 院を問わず一意」の順にフォールバックする
+ *   （src/lib/nameMatch.ts の resolveName の allowCrossChamber）。
+ *   それでも解決できない氏名は、現職議員マスタに存在しない元議員
+ *   （引退・落選）と考えられるため、次の作業者が追えるよう末尾に一覧をログ出力する。
  */
 import * as cheerio from "cheerio";
 import type {
@@ -66,6 +74,7 @@ import type {
   RollCallVoteResult,
 } from "../src/types";
 import { writeDataJson } from "./lib/writeJson";
+import { buildNameIndex, resolveName } from "../src/lib/nameMatch";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -86,11 +95,6 @@ const SESSION_BASE_URL = (session: number) =>
 
 const WAIT_MS = 400;
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-/** 氏名の表記ゆれ（全角スペースの数など）を吸収して照合キーを作る */
-function normalizeName(raw: string): string {
-  return raw.replace(/\s+/g, "").replace(/君$/, "").trim();
-}
 
 async function fetchText(url: string): Promise<string> {
   const res = await fetch(url);
@@ -213,34 +217,6 @@ function parseVotePage(html: string): ParsedVotePage | null {
 }
 
 /**
- * legislators.json（参議院）の氏名を正規化キーにして legislatorId を引ける
- * Map を作る。同姓同名で正規化キーが衝突する場合は、誤結合を避けるため
- * どちらの議員にも紐付けない。
- */
-function buildNameLookup(legislators: Legislator[]): Map<string, string> {
-  const idsByKey = new Map<string, string[]>();
-  for (const l of legislators) {
-    if (l.chamber !== "参議院") continue;
-    const key = normalizeName(l.name);
-    const ids = idsByKey.get(key) ?? [];
-    ids.push(l.id);
-    idsByKey.set(key, ids);
-  }
-  const lookup = new Map<string, string>();
-  for (const [key, ids] of idsByKey) {
-    const [onlyId] = ids;
-    if (ids.length === 1 && onlyId) {
-      lookup.set(key, onlyId);
-    } else {
-      console.warn(
-        `同姓同名（正規化後: "${key}"）の議員が複数いるため名寄せをスキップします: ${ids.join(", ")}`
-      );
-    }
-  }
-  return lookup;
-}
-
-/**
  * 投票結果ページの会派名からpartyIdを解決する（完全一致→前方一致の順）。
  *
  * 記名投票は参議院のみが対象のため、照合には parties.json の共通表示名ではなく
@@ -303,7 +279,14 @@ async function main() {
   ) as Bill[];
   const legislatorById = new Map(legislators.map((l) => [l.id, l]));
 
-  const nameLookup = buildNameLookup(legislators);
+  // 名寄せ用インデックス（src/lib/nameMatch.ts）。院は絞らず全議員で作り、
+  // 照合時に「参議院を優先、見つからなければ他院」の順で解決する。
+  const nameIndex = buildNameIndex(legislators);
+  // 解決できなかった氏名（現職議員マスタに存在しない元議員が大半のはず）を
+  // 集計して最後にまとめてログ出力する
+  const unresolvedNames = new Map<string, number>();
+  // 鞍替え等で他院として解決した氏名（誤結合の可能性を後から検証できるように）
+  const crossChamberNames = new Map<string, string>();
 
   const latestSession = await detectLatestSession();
   const sessions: number[] = [];
@@ -346,8 +329,18 @@ async function main() {
       }
 
       const results: RollCallVoteResult[] = parsed.entries.map((entry) => {
-        const key = normalizeName(entry.name);
-        const legislatorId = nameLookup.get(key) ?? null;
+        const resolved = resolveName(nameIndex, entry.name, {
+          chamber: "参議院",
+        });
+        const legislatorId = resolved.id;
+        if (!legislatorId) {
+          unresolvedNames.set(
+            entry.name,
+            (unresolvedNames.get(entry.name) ?? 0) + 1
+          );
+        } else if (resolved.method !== "name") {
+          crossChamberNames.set(entry.name, `${legislatorId}（${resolved.method}）`);
+        }
         const partyId =
           resolvePartyIdFromHeading(entry.partyHeading, parties) ??
           (legislatorId
@@ -388,9 +381,36 @@ async function main() {
     0
   );
   const totalResultCount = votes.reduce((sum, v) => sum + v.results.length, 0);
+  const unresolvedCount = totalResultCount - resolvedCount;
   console.log(
-    `取得件数: 投票${votes.length}件（議員個人の賛否レコード計${totalResultCount}件、うち氏名解決済み${resolvedCount}件）`
+    `取得件数: 投票${votes.length}件（議員個人の賛否レコード計${totalResultCount}件、うち氏名解決済み${resolvedCount}件 / 未解決${unresolvedCount}件 = ${
+      totalResultCount === 0
+        ? "0.0"
+        : ((unresolvedCount / totalResultCount) * 100).toFixed(1)
+    }%）`
   );
+
+  if (crossChamberNames.size > 0) {
+    console.log(
+      `他院・異体字・かなでのフォールバックにより解決した議員 ${crossChamberNames.size}名（投票当時は参議院議員だが現在は衆議院議員、等）:`
+    );
+    for (const [name, info] of crossChamberNames) {
+      console.log(`  - ${name} → ${info}`);
+    }
+  }
+
+  if (unresolvedNames.size > 0) {
+    // 正規化しても現職議員マスタ（legislators.json）に見つからない氏名。
+    // 大半は引退・落選した元参議院議員と考えられる。元議員マスタを持つ
+    // データソースを追加する際は、この一覧が出発点になる。
+    const sorted = Array.from(unresolvedNames).sort((a, b) => b[1] - a[1]);
+    console.log(
+      `議員IDに紐付けできなかった氏名: ${sorted.length}名（レコード計${unresolvedCount}件）。現職議員マスタに存在しない元議員（引退・落選）と推定されます:`
+    );
+    for (const [name, count] of sorted) {
+      console.log(`  - ${name}（${count}件）`);
+    }
+  }
 
   await writeDataJson("roll-call-votes.json", votes);
 }

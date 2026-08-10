@@ -7,6 +7,7 @@ import { SemicircleSeatChart } from "@/components/SemicircleSeatChart";
 import { PartySeatTrendChart } from "@/components/PartySeatTrendChart";
 import { buildChamberSeatTrend } from "@/lib/partySeatTrendStats";
 import { partiesInChamber, partyDisplayName } from "@/lib/party";
+import { matchesNameQuery } from "@/lib/nameMatch";
 import type { Chamber, Legislator, Party } from "@/types";
 
 const CHAMBER_OPTIONS = ["衆議院", "参議院"] as const;
@@ -60,7 +61,11 @@ function matchesFilters(
     !legislatorPrefectures(legislator).includes(filters.prefecture)
   )
     return false;
-  if (filters.q && !legislator.name.includes(filters.q)) return false;
+  // 氏名検索は表記ゆれを吸収して判定する。
+  // legislators.jsonのnameは姓名間に全角スペースが入る（例:「逢沢　　一郎」）ため
+  // 素の includes では「逢沢一郎」がヒットしない。あわせて nameKana による
+  // かな検索（ひらがな・カタカナどちらでも可）にも対応する。
+  if (filters.q && !matchesNameQuery(filters.q, legislator)) return false;
   return true;
 }
 
@@ -140,8 +145,8 @@ export default async function LegislatorsPage({
             },
           ]}
           searchKey="q"
-          searchLabel="氏名で検索"
-          searchPlaceholder="例: 山田"
+          searchLabel="氏名・よみで検索"
+          searchPlaceholder="例: 山田 / やまだ"
         />
       )}
 
