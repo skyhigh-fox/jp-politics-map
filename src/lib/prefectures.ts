@@ -117,6 +117,27 @@ export function countLegislatorsByPrefecture(
 }
 
 /**
+ * 都道府県 × 政党ごとの現職議員数を集計する。
+ * 地図ページで都道府県をクリックした際に表示する「政党別議席構成」の集計に使う
+ * （src/components/PrefecturePartyComposition.tsx）。
+ * PartyCompositionSummary.tsx（トップページ・全国集計）と同様、現職
+ * （termStatus === "現職"）のみを対象とする。
+ */
+export function countLegislatorsByPrefectureAndParty(
+  legislators: Legislator[]
+): Record<string, Record<string, number>> {
+  const result: Record<string, Record<string, number>> = {};
+  for (const l of legislators) {
+    if (l.termStatus !== "現職") continue;
+    for (const pref of legislatorPrefectures(l)) {
+      const byParty = (result[pref] ??= {});
+      byParty[l.currentPartyId] = (byParty[l.currentPartyId] ?? 0) + 1;
+    }
+  }
+  return result;
+}
+
+/**
  * 都道府県の正式名称 → JIS X 0401 の2桁都道府県コード。
  * 市区町村境界データ（smartnews-smri/japan-topography）のファイル名
  * （例:"N03-21_13_210101.json"の"13"）に対応する
