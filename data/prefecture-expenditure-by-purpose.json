@@ -1,0 +1,5548 @@
+[
+  {
+    "prefecture": "北海道",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 3283834
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 181225263
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 425131656
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 85609836
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 5455529
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 263782250
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 348697142
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 344092265
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 139761421
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 439432428
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 5367543
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 387582139
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 299823
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2856897
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 4407358
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 369199
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 143056732
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1068858
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 6554416
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 3214324
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 11776823
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "青森県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1329655
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 51034812
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 113538020
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 29080622
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1972982
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 56536141
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 35406370
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 90704929
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 32566017
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 137517569
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 4851965
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 99306800
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 63486
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 563327
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 688102
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 33702911
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 99065
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 1
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 581788
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2183614
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "岩手県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1406802
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 44671012
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 97175566
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 60270650
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3578159
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 64979708
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 92635447
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 81161322
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 29229062
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 141061318
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 10643095
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 94635983
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 6968
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 45355
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 542549
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 745234
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 32221687
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 191572
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 1
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 514565
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2270925
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "宮城県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1650651
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 74311000
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 153684412
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 53123151
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3417336
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 51856123
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 134357275
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 88529018
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 56839943
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 179555536
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 5676441
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 113479436
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 111387
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1899250
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 2534071
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 210571
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 61445029
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 477054
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 6418194
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1360979
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 6571052
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "秋田県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1155210
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 49533978
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 82480684
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 22872544
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1276809
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 66833669
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 36708583
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 88908065
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 26324265
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 103794256
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 15270125
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 92832865
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 34425
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 420776
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 651819
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 25396246
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 97962
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 448836
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1803855
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "山形県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1128959
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 35738217
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 83824271
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 35823049
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2547765
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 50002681
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 86300492
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 94488665
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 27518853
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 111599333
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 13179433
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 87258256
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 46323
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 613283
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 896775
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 28133310
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 73180
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 487945
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1889500
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "福島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1702546
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 105563252
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 144653810
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 46399879
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 4041378
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 82723184
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 133523501
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 196113180
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 46921280
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 222621328
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 10730116
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 97881335
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 90901
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1444689
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1863433
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 50206186
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 357892
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 857314
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 4810260
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "茨城県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1630077
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 78916358
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 208356620
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 46726125
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3566246
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 46398678
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 109804469
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 137158984
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 64360272
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 282018195
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 1042215
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 154060898
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 168585
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 3405367
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 4740781
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 74599214
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1837332
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1474705
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 8251257
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "栃木県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1364120
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 51899007
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 137768087
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 42715544
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1676162
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 38278114
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 127752504
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 103784956
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 45592233
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 186648945
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 2136370
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 96566048
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 106898
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2153549
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 3060445
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 52232199
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1537142
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1048580
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 5444630
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "群馬県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1455605
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 54120484
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 143150208
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 37703410
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1676840
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 30501241
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 134689735
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 90029456
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 45378417
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 179955428
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 958317
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 96438362
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 113132
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2246482
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 3033864
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 52046283
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 737464
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1235578
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 6013090
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "埼玉県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 3117689
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 168024270
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 451647271
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 76879807
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 4484944
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 24081630
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 27298247
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 173725107
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 157484692
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 500542782
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 878079
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 297687991
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 546122
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 10423416
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 14983737
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 347991
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 177482177
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1564075
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 17
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 6334519
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 4183361
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 14348813
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "千葉県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 2633271
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 120878240
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 388584289
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 80655099
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3520221
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 57769192
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 253220494
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 141941398
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 150554099
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 442094355
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 2965494
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 230873917
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 589911
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 9949812
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 14928429
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 245913
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 156581522
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 3040523
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 5382258
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 3364858
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 13581745
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "東京都",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 4802994
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 934693341
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 1388989447
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 483119142
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 52875641
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 26391580
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 497783576
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 1056896364
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 650271565
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 262356909
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 1268599959
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 1385183
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 441039073
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 29260604
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 8315120
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 42895864
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 62693334
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 389891694
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 442973
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 75643
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 8157153
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 17938667
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 1259932193
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "神奈川県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 3549223
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 209446564
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 543021929
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 74053603
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 5940108
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 26689765
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 27193743
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 139333172
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 209398891
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 409832685
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 205438
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 317861969
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 24297
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 819700
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 18764275
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 26937487
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 1848069
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 224934405
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1135554
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 19107490
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 6731090
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 24367112
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "新潟県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1434367
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 68169131
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 146506507
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 44923401
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2213457
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 86242246
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 109030574
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 154286380
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 53565676
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 175612653
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 12766860
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 163907209
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 103266
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2245320
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 2783569
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 114742
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 58549523
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 316317
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 60
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 5088597
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1264532
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 5638991
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "富山県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1012931
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 36842236
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 74980774
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 16043655
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2062490
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 40608168
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 68649633
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 79552941
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 25506974
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 105882778
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 12212038
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 91643885
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 5254
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 82626
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1449304
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1863954
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 27638117
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 187469
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 548727
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 3072601
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "石川県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1105210
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 179423167
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 230106764
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 20932037
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2112036
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 42910501
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 58776735
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 78839734
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 25874955
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 121847392
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 131799351
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 80517420
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 81361
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1139525
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1732920
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 30591669
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 326457
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 673626
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 3548532
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "福井県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 968657
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 41336616
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 63146295
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 13476375
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1684169
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 35369788
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 43565326
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 73446859
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 25153348
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 101574070
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 5860493
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 78359633
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 49227
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1042673
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1388822
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 21098765
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 150409
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 469397
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 3042961
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "山梨県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1002045
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 35970326
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 65144512
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 16241152
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1756360
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 37088706
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 62776425
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 105810614
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 25462429
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 91194702
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 1477415
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 73613865
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 50811
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 918787
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1274627
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 22078272
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 547608
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 444955
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2215391
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "長野県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1492725
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 45593078
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 141516228
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 29201611
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2746565
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 44506521
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 150917641
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 166173054
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 46191671
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 203513193
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 5860547
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 123564909
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 74464
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 117723
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2119477
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 2825191
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 54552154
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 545785
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 54822
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1121981
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 5309816
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "岐阜県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1199451
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 54400416
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 138352822
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 33467757
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1855086
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 48914261
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 57285810
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 113666725
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 51481007
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 194951144
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 6676771
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 113703832
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 124757
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2656839
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 3410428
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 52045456
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1120639
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 77980
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1324728
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 4779055
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "静岡県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1915454
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 82988701
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 225375836
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 50557780
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2742482
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 64965340
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 30149760
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 140186923
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 83884188
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 258883496
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 15000523
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 198390840
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 283223
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 5211317
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 8984255
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 266439
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 97563321
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1715724
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 4
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 12454332
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 2858109
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 11281419
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "愛知県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 3136273
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 228890115
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 469775422
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 52111359
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 6396006
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 85249223
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 228105367
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 246040028
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 177450521
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 593959877
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 3517355
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 386399401
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 770411
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 15788786
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 20964334
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 742542
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 201106790
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 963931
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 315567
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 13843064
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 6555749
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 37379995
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "三重県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1436601
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 51500603
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 130884321
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 36083984
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1378028
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 38891295
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 13323616
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 105793959
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 45397852
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 171970265
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 5920997
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 111412989
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 123612
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2894066
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 4007489
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 46101877
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 1138330
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1173520
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 5540362
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "滋賀県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1176959
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 32875142
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 103793008
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 25270790
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1959166
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 30047542
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 28071832
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 89514753
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 33079128
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 155396065
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 413273
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 74264894
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 118079
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2053651
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 2540133
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 35481073
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 722477
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 805477
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 4372712
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "京都府",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1900766
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 80132520
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 183356618
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 26167426
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3549520
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 22884313
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 163248740
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 84605065
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 82430779
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 176066403
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 2059777
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 122064852
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 218578
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 4703526
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 5852358
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 338601
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 64539817
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 518971
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 3912656
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1698466
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 7305916
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "大阪府",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 2278774
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 181961149
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 686048697
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 74323812
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 7555640
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 13949610
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 536278206
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 191625578
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 282482742
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 609977206
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 402445
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 366083984
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 1505352
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 16700774
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 21983334
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 746833
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 226756456
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 991387
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 18016698
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 5464336
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 34854098
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "兵庫県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 2400626
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 80966238
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 389150288
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 71863827
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 11972561
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 82768757
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 501164552
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 177247663
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 143172262
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 400670723
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 4982523
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 353092029
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 653320
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 11647290
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 15362365
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 374930
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 134668259
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 2421383
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 6456331
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 3428552
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 12868583
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "奈良県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1130665
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 37771149
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 104801418
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 33884320
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1360253
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 14114309
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 16262677
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 68996277
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 33263930
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 136139210
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 1736746
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 76958243
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 111498
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 3273540
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 4296503
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 30149236
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 574777
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 632610
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1881562
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "和歌山県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1206697
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 50340966
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 84543817
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 23360963
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1040648
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 26844572
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 70712678
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 131574609
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 28992494
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 107193288
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 10985581
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 77662559
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 67161
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1575882
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1852327
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 23795465
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 211224
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 427132
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1659566
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "鳥取県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1141573
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 27736262
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 53768557
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 17310548
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1590709
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 25656292
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 17779234
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 60001326
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 17153173
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 74880219
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 12660781
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 48435706
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 8671
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 40143
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 581895
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 761683
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 14405867
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 64318
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 267581
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1078976
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "島根県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1048842
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 40617178
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 59836167
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 19606934
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1841024
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 43930955
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 46994134
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 85261793
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 22802933
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 94378257
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 4528128
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 68596996
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 3896
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 71817
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 566617
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 708680
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 16812239
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 59838
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 289782
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1682939
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "岡山県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1555503
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 59583207
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 129632521
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 17482176
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1405489
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 67206260
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 14646756
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 77105440
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 49713508
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 146972426
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 2657641
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 97176707
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 143905
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 2004784
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 3264302
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 126534
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 50429360
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 434113
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 6002489
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1121891
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 5140969
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "広島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 2125541
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 75841640
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 196706944
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 35183622
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3241227
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 35192721
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 81441852
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 133696365
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 65659561
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 193537074
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 6424791
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 146162134
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 247383
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 3632988
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 4698855
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 276000
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 74078000
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 477232
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 5184176
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 1795461
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 8661562
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "山口県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1522831
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 66555037
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 104553892
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 27168930
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2425991
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 34059205
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 80943040
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 78776026
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 38551730
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 133233043
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 7491419
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 84009327
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 3839
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 138144
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1512641
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 2082543
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 35348779
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 311755
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 646000
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 3636030
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "徳島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1000690
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 39251724
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 69216220
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 25751641
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 3485106
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 32765352
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 57416043
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 81526548
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 23486496
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 86513262
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 898208
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 66130420
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 5199
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 60772
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1421979
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1873461
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 17833373
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 165328
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 301159
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1732280
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "香川県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1147615
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 33173737
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 73681672
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 16698991
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1043027
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 20671308
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 45042770
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 54568491
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 25411312
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 106570153
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 244102
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 60708816
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 114269
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1513712
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1971669
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 25371122
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 235944
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 433000
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2571923
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "愛媛県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1240338
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 37787569
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 110645481
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 27934862
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2288417
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 40266149
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 124139333
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 98124686
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 31839324
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 138798355
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 3598399
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 86044102
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 2775
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 142573
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 1360140
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 2021360
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 36114878
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 239054
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 565923
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 3718791
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "高知県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1021426
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 22676548
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 70287017
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 21192216
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1283448
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 35363385
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 11609039
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 86705849
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 22694387
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 96685033
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 3704816
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 72498035
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 2830
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 82548
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 648512
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 786202
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 18609105
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 152885
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 240086
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1142169
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "福岡県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 2936899
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 98663976
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 408490088
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 69859680
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 6029848
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 57493596
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 289651133
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 171049447
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 140684823
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 341535869
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 18991543
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 250512926
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 260614
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 5373443
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 7546733
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 525686
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 132780383
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 750123
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 11118810
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 3288234
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 15082160
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "佐賀県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1071296
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 50864414
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 72956274
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 17270714
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1368989
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 32421383
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 66050765
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 68218024
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 22013138
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 99870499
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 5321008
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 65573194
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 37890
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 581429
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 717771
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 21506844
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 208854
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 321981
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 1936921
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "長崎県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1266949
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 39750626
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 113544862
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 27029096
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1909080
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 57713302
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 48204042
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 105028159
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 39076014
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 154952693
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 1640689
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 97150219
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 221012
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 74797
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 845823
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1271668
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 33022351
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 207782
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 424916
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2191296
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "熊本県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1942540
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 62419712
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 150850469
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 30443349
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2788519
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 72047623
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 67204023
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 113465603
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 42326516
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 146490699
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 29289440
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 103575705
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 8396
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 74218
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 885049
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1489798
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 173028
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 46513012
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 430903
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 3218189
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 903472
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 3794211
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "大分県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1241949
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 34313134
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 99226437
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 18813009
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2173199
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 55532328
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 66855779
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 98782961
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 27485284
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 122417848
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 17851057
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 79845396
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 57874
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 874662
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1029692
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 30247143
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 234726
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 492052
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2335834
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "宮崎県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1124671
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 81959011
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 99875562
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 27596704
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1516093
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 56097425
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 42876802
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 87360064
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 28356230
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 119668966
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 16171221
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 71859601
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 31679
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 693496
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 681329
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 28027942
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 273196
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 435865
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2042839
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "鹿児島県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1361696
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 71261895
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 153384567
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 31113136
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 1814780
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 81562882
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 14638009
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 100779709
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 37562199
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 194863398
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 9203726
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 110925684
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 74349
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 850357
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1185908
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 40868342
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 278978
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 604946
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2910657
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  },
+  {
+    "prefecture": "沖縄県",
+    "fiscalYear": 2024,
+    "categories": [
+      {
+        "name": "議会費",
+        "amountThousandYen": 1340559
+      },
+      {
+        "name": "総務費",
+        "amountThousandYen": 87644757
+      },
+      {
+        "name": "民生費",
+        "amountThousandYen": 149527483
+      },
+      {
+        "name": "衛生費",
+        "amountThousandYen": 47506776
+      },
+      {
+        "name": "労働費",
+        "amountThousandYen": 2227505
+      },
+      {
+        "name": "農林水産業費",
+        "amountThousandYen": 50876668
+      },
+      {
+        "name": "商工費",
+        "amountThousandYen": 87663059
+      },
+      {
+        "name": "土木費",
+        "amountThousandYen": 82501515
+      },
+      {
+        "name": "警察費",
+        "amountThousandYen": 38859803
+      },
+      {
+        "name": "消防費",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "教育費",
+        "amountThousandYen": 184560617
+      },
+      {
+        "name": "災害復旧費",
+        "amountThousandYen": 1598208
+      },
+      {
+        "name": "公債費",
+        "amountThousandYen": 62111760
+      },
+      {
+        "name": "諸支出金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "前年度繰上充用金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "利子割交付金",
+        "amountThousandYen": 44981
+      },
+      {
+        "name": "配当割交付金",
+        "amountThousandYen": 454779
+      },
+      {
+        "name": "株式等譲渡所得割交付金",
+        "amountThousandYen": 1011953
+      },
+      {
+        "name": "分離課税所得割交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "地方消費税交付金",
+        "amountThousandYen": 37154285
+      },
+      {
+        "name": "ゴルフ場利用税交付金",
+        "amountThousandYen": 606675
+      },
+      {
+        "name": "自動車取得税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "軽油引取税交付金",
+        "amountThousandYen": 0
+      },
+      {
+        "name": "自動車税環境性能割交付金",
+        "amountThousandYen": 403678
+      },
+      {
+        "name": "法人事業税交付金",
+        "amountThousandYen": 2993595
+      },
+      {
+        "name": "特別区財政調整交付金",
+        "amountThousandYen": 0
+      }
+    ],
+    "sourceUrls": [
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374264&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374265&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374266&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374267&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374288&fileKind=1",
+      "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040374289&fileKind=1"
+    ]
+  }
+]

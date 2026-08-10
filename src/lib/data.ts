@@ -9,7 +9,9 @@ import type {
   NdlSpeechCount,
   Party,
   PartySeatHistory,
+  PrefectureExpenditureByPurpose,
   PrefectureFinance,
+  PrefecturePopulation,
   RollCallVote,
   WrittenQuestionCount,
 } from "@/types";
@@ -94,6 +96,39 @@ export const getPrefectureFinance = async (): Promise<PrefectureFinance[]> => {
 export const getRollCallVotes = async (): Promise<RollCallVote[]> => {
   try {
     const data = await readJson<RollCallVote[]>("roll-call-votes.json");
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・総人口データ（予算の見える化 Phase A-2）を取得する。
+ * data/prefecture-population.json は取得スクリプト（fetch:prefecture-population）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPrefecturePopulation = async (): Promise<PrefecturePopulation[]> => {
+  try {
+    const data = await readJson<PrefecturePopulation[]>("prefecture-population.json");
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・目的別歳出データ（予算の見える化 Phase A-2）を取得する。
+ * data/prefecture-expenditure-by-purpose.json は取得スクリプト
+ * （fetch:prefecture-expenditure-by-purpose）を実行するまで存在しないため、
+ * ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPrefectureExpenditureByPurpose = async (): Promise<
+  PrefectureExpenditureByPurpose[]
+> => {
+  try {
+    const data = await readJson<PrefectureExpenditureByPurpose[]>(
+      "prefecture-expenditure-by-purpose.json"
+    );
     return Array.isArray(data) ? data : [];
   } catch {
     return [];
