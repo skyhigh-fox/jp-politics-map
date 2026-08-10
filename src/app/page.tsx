@@ -3,6 +3,7 @@ import { getBills, getLegislators, getParties } from "@/lib/data";
 import { getNews } from "@/lib/news";
 import { BillStatusSummary } from "@/components/BillStatusSummary";
 import { PartyCompositionSummary } from "@/components/PartyCompositionSummary";
+import { SemicircleSeatChart } from "@/components/SemicircleSeatChart";
 import { NewsPreview } from "@/components/NewsPreview";
 
 const LINKS = [
@@ -47,6 +48,10 @@ export default async function HomePage() {
         サマリー
       </h2>
       <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-2">
+          <SemicircleSeatChart chamber="衆議院" legislators={legislators} parties={parties} />
+          <SemicircleSeatChart chamber="参議院" legislators={legislators} parties={parties} />
+        </div>
         <BillStatusSummary bills={bills} />
         <PartyCompositionSummary legislators={legislators} parties={parties} />
         <div className="lg:col-span-2">
