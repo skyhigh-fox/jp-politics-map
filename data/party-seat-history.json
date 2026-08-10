@@ -1,0 +1,594 @@
+[
+  {
+    "chamber": "衆議院",
+    "electionYear": 2012,
+    "electionDate": "2012-12-16",
+    "electionName": "第46回衆議院議員総選挙",
+    "totalSeats": 480,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 294
+      },
+      {
+        "partyName": "民主党",
+        "partyId": null,
+        "seats": 57
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 54
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 31
+      },
+      {
+        "partyName": "みんなの党",
+        "partyId": null,
+        "seats": 18
+      },
+      {
+        "partyName": "日本未来の党",
+        "partyId": null,
+        "seats": 9
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 8
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 2
+      },
+      {
+        "partyName": "新党大地",
+        "partyId": null,
+        "seats": 1
+      },
+      {
+        "partyName": "国民新党",
+        "partyId": null,
+        "seats": 1
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 5
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第46回衆議院議員総選挙"
+  },
+  {
+    "chamber": "衆議院",
+    "electionYear": 2014,
+    "electionDate": "2014-12-14",
+    "electionName": "第47回衆議院議員総選挙",
+    "totalSeats": 475,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 291
+      },
+      {
+        "partyName": "民主党",
+        "partyId": null,
+        "seats": 73
+      },
+      {
+        "partyName": "維新の党",
+        "partyId": null,
+        "seats": 41
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 35
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 21
+      },
+      {
+        "partyName": "次世代の党",
+        "partyId": null,
+        "seats": 2
+      },
+      {
+        "partyName": "生活の党",
+        "partyId": null,
+        "seats": 2
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 2
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 8
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第47回衆議院議員総選挙"
+  },
+  {
+    "chamber": "衆議院",
+    "electionYear": 2017,
+    "electionDate": "2017-10-22",
+    "electionName": "第48回衆議院議員総選挙",
+    "totalSeats": 465,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 284
+      },
+      {
+        "partyName": "立憲民主党",
+        "partyId": "party-立憲",
+        "seats": 55
+      },
+      {
+        "partyName": "希望の党",
+        "partyId": null,
+        "seats": 50
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 29
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 12
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 11
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 2
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 22
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第48回衆議院議員総選挙"
+  },
+  {
+    "chamber": "衆議院",
+    "electionYear": 2021,
+    "electionDate": "2021-10-31",
+    "electionName": "第49回衆議院議員総選挙",
+    "totalSeats": 465,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 261
+      },
+      {
+        "partyName": "立憲民主党",
+        "partyId": "party-立憲",
+        "seats": 96
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 41
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 32
+      },
+      {
+        "partyName": "国民民主党",
+        "partyId": "party-民主",
+        "seats": 11
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 10
+      },
+      {
+        "partyName": "れいわ新選組",
+        "partyId": "party-れ新",
+        "seats": 3
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 10
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第49回衆議院議員総選挙"
+  },
+  {
+    "chamber": "衆議院",
+    "electionYear": 2024,
+    "electionDate": "2024-10-27",
+    "electionName": "第50回衆議院議員総選挙",
+    "totalSeats": 465,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 191
+      },
+      {
+        "partyName": "立憲民主党",
+        "partyId": "party-立憲",
+        "seats": 148
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 38
+      },
+      {
+        "partyName": "国民民主党",
+        "partyId": "party-民主",
+        "seats": 28
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 24
+      },
+      {
+        "partyName": "れいわ新選組",
+        "partyId": "party-れ新",
+        "seats": 9
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 8
+      },
+      {
+        "partyName": "参政党",
+        "partyId": "party-参政",
+        "seats": 3
+      },
+      {
+        "partyName": "日本保守党",
+        "partyId": "party-保守",
+        "seats": 3
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 12
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第50回衆議院議員総選挙"
+  },
+  {
+    "chamber": "参議院",
+    "electionYear": 2013,
+    "electionDate": "2013-07-21",
+    "electionName": "第23回参議院議員通常選挙",
+    "totalSeats": 121,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 65
+      },
+      {
+        "partyName": "民主党",
+        "partyId": null,
+        "seats": 17
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 11
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 8
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 8
+      },
+      {
+        "partyName": "みんなの党",
+        "partyId": null,
+        "seats": 8
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "沖縄社会大衆党",
+        "partyId": null,
+        "seats": 1
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 2
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第23回参議院議員通常選挙"
+  },
+  {
+    "chamber": "参議院",
+    "electionYear": 2016,
+    "electionDate": "2016-07-10",
+    "electionName": "第24回参議院議員通常選挙",
+    "totalSeats": 121,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 56
+      },
+      {
+        "partyName": "民進党",
+        "partyId": null,
+        "seats": 32
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 14
+      },
+      {
+        "partyName": "おおさか維新の会",
+        "partyId": "party-維新",
+        "seats": 7
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 6
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 4
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "生活の党と山本太郎となかまたち",
+        "partyId": null,
+        "seats": 1
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第24回参議院議員通常選挙"
+  },
+  {
+    "chamber": "参議院",
+    "electionYear": 2019,
+    "electionDate": "2019-07-21",
+    "electionName": "第25回参議院議員通常選挙",
+    "totalSeats": 124,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 57
+      },
+      {
+        "partyName": "立憲民主党",
+        "partyId": "party-立憲",
+        "seats": 17
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 14
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 10
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 7
+      },
+      {
+        "partyName": "国民民主党",
+        "partyId": "party-民主",
+        "seats": 6
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 9
+      },
+      {
+        "partyName": "れいわ新選組",
+        "partyId": "party-れ新",
+        "seats": 2
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "NHKから国民を守る党",
+        "partyId": null,
+        "seats": 1
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第25回参議院議員通常選挙"
+  },
+  {
+    "chamber": "参議院",
+    "electionYear": 2022,
+    "electionDate": "2022-07-10",
+    "electionName": "第26回参議院議員通常選挙",
+    "totalSeats": 125,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 63
+      },
+      {
+        "partyName": "立憲民主党",
+        "partyId": "party-立憲",
+        "seats": 17
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 13
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 12
+      },
+      {
+        "partyName": "国民民主党",
+        "partyId": "party-民主",
+        "seats": 5
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 5
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 4
+      },
+      {
+        "partyName": "れいわ新選組",
+        "partyId": "party-れ新",
+        "seats": 3
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "NHK党",
+        "partyId": null,
+        "seats": 1
+      },
+      {
+        "partyName": "参政党",
+        "partyId": "party-参政",
+        "seats": 1
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第26回参議院議員通常選挙",
+    "note": "改選議席数124に、同日に行われた神奈川県選挙区の欠員補充（繰上補充ではなく補欠選挙相当分）1議席を加えた125議席が対象（Wikipedia記事の表記に準拠）。"
+  },
+  {
+    "chamber": "参議院",
+    "electionYear": 2025,
+    "electionDate": "2025-07-20",
+    "electionName": "第27回参議院議員通常選挙",
+    "totalSeats": 125,
+    "results": [
+      {
+        "partyName": "自由民主党",
+        "partyId": "party-自民",
+        "seats": 39
+      },
+      {
+        "partyName": "立憲民主党",
+        "partyId": "party-立憲",
+        "seats": 22
+      },
+      {
+        "partyName": "国民民主党",
+        "partyId": "party-民主",
+        "seats": 17
+      },
+      {
+        "partyName": "参政党",
+        "partyId": "party-参政",
+        "seats": 14
+      },
+      {
+        "partyName": "公明党",
+        "partyId": "party-公明",
+        "seats": 8
+      },
+      {
+        "partyName": "日本維新の会",
+        "partyId": "party-維新",
+        "seats": 7
+      },
+      {
+        "partyName": "無所属",
+        "partyId": "party-無所属",
+        "seats": 8
+      },
+      {
+        "partyName": "日本共産党",
+        "partyId": "party-共産",
+        "seats": 3
+      },
+      {
+        "partyName": "れいわ新選組",
+        "partyId": "party-れ新",
+        "seats": 3
+      },
+      {
+        "partyName": "日本保守党",
+        "partyId": "party-保守",
+        "seats": 2
+      },
+      {
+        "partyName": "社会民主党",
+        "partyId": "party-社民",
+        "seats": 1
+      },
+      {
+        "partyName": "チームみらい",
+        "partyId": "party-みら",
+        "seats": 1
+      }
+    ],
+    "sourceUrl": "https://ja.wikipedia.org/wiki/第27回参議院議員通常選挙",
+    "note": "改選議席数124に、同日に行われた東京都選挙区の補欠選挙分1議席を加えた125議席が対象（Wikipedia記事の表記に準拠。立憲民主党の内訳「22+1」を含む）。"
+  }
+]

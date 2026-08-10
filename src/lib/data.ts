@@ -8,6 +8,7 @@ import type {
   Legislator,
   NdlSpeechCount,
   Party,
+  PartySeatHistory,
   WrittenQuestionCount,
 } from "@/types";
 
@@ -35,6 +36,20 @@ export const getElectionResults = () =>
 export const getNdlSpeechCounts = async (): Promise<NdlSpeechCount[]> => {
   try {
     const data = await readJson<NdlSpeechCount[]>("ndl-speech-counts.json");
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 過去選挙の政党別獲得議席数の推移（フェーズ4）を取得する。
+ * data/party-seat-history.json は取得スクリプト（fetch:party-seat-history）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPartySeatHistory = async (): Promise<PartySeatHistory[]> => {
+  try {
+    const data = await readJson<PartySeatHistory[]>("party-seat-history.json");
     return Array.isArray(data) ? data : [];
   } catch {
     return [];
