@@ -9,6 +9,7 @@ import type {
   NdlSpeechCount,
   Party,
   PartySeatHistory,
+  PrefectureFinance,
   WrittenQuestionCount,
 } from "@/types";
 
@@ -65,6 +66,20 @@ export const getPartySeatHistory = async (): Promise<PartySeatHistory[]> => {
 export const getWrittenQuestionCounts = async (): Promise<WrittenQuestionCount[]> => {
   try {
     return await readJson<WrittenQuestionCount[]>("written-questions.json");
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・地方財政データ（Phase 4、決算収支の状況）を取得する。
+ * data/prefecture-finance.json は取得スクリプト（fetch:prefecture-finance）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPrefectureFinance = async (): Promise<PrefectureFinance[]> => {
+  try {
+    const data = await readJson<PrefectureFinance[]>("prefecture-finance.json");
+    return Array.isArray(data) ? data : [];
   } catch {
     return [];
   }

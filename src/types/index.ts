@@ -228,3 +228,25 @@ export interface LocalAssemblyMember {
   officialUrl?: string;
   sourceRef: string;
 }
+
+/**
+ * 都道府県別・地方財政データ（Phase 4）。
+ * 総務省「地方財政状況調査」（e-Stat経由、都道府県分・表02「決算収支の状況」）を
+ * 情報源とする決算ベースの数値。単位はすべて千円（e-Statの原表どおり）。
+ * `prefecture`はsrc/lib/prefectures.tsの`PREFECTURE_CODES`のキー（都道府県の正式名称）
+ * と一致する。
+ */
+export interface PrefectureFinance {
+  /** 都道府県の正式名称（例:"東京都"） */
+  prefecture: string;
+  /** 決算年度（西暦、例:2024 は「令和6年度」決算） */
+  fiscalYear: number;
+  /** 歳入総額（千円） */
+  totalRevenueThousandYen: number;
+  /** 歳出総額（千円） */
+  totalExpenditureThousandYen: number;
+  /** 実質収支（千円）。歳入歳出差引から翌年度繰越財源を控除した実質的な収支 */
+  realBalanceThousandYen: number;
+  /** データ取得元CSVのURL（出典明記のため保持） */
+  sourceUrl: string;
+}
