@@ -516,3 +516,79 @@ export const FINANCIAL_HEALTH_STANDARDS = {
     reconstructionThreshold: null as number | null,
   },
 } as const;
+
+/**
+ * 国の税収・歳出データ（機能拡充ロードマップ Tier1 #2「国の税収・歳出ビューア」）。
+ * 財務省の公表Excel（税収の推移／財政統計 第4表・第20表・第24表）を情報源とする。
+ * 取得スクリプトは `scripts/fetch-national-budget.ts`。
+ *
+ * 【政治的中立性についての注記（重要）】
+ * - 区分名は財務省の公式分類（主要科目別・主要経費別・目的別）の表記を
+ *   そのまま保持する。独自の再集約・言い換えはしない。
+ * - 一般会計はノンアフェクタシオンの原則（特定の歳入を特定の歳出に紐づけない）
+ *   で運用されるため、税目と経費を結ぶフロー（サンキー図）は作らない。
+ * - 公債金は歳入の一科目として他の科目と同等に扱う（税収との乖離を強調する
+ *   単独グラフは作らない）。
+ * - 「無駄」「削減余地」等の評価語は用いない。単年度の絶対額だけでなく
+ *   必ず年度推移を併置して表示する。
+ */
+export interface NationalBudgetItem {
+  /** 区分名（財務省の分類表記そのまま。例:"社会保障関係費"） */
+  name: string;
+  /** 金額（千円）。原表で「−」等の該当なし表記だった場合はnull */
+  amountThousandYen: number | null;
+  /** 原表で内訳（細目）が示されている区分のみ、その明細を保持する */
+  subItems?: NationalBudgetItem[];
+}
+
+/** 国の予算・決算データの1年度分 */
+export interface NationalBudgetYear {
+  /** 年度（西暦。例:2024 は「令和6年度」） */
+  fiscalYear: number;
+  /** 元号表記（例:"令和6年度"）。原資料の年度表記に合わせた表示用 */
+  eraLabel: string;
+  /** 原表に記載された合計額（千円）。内訳の単純合計と一致しない年度もある */
+  totalThousandYen: number | null;
+  /** 区分別の内訳（原資料の掲載順） */
+  items: NationalBudgetItem[];
+  /**
+   * 決算額かどうか。falseの場合は決算が確定していない年度の予算額
+   * （税収の推移表は決算確定年度より先の年度を含むため区別が必要）。
+   */
+  isSettlement: boolean;
+}
+
+/** 国の予算・決算データの1系列（＝財務省の1つの統計表） */
+export interface NationalBudgetSeries {
+  /** 系列の表示名（例:"一般会計歳出決算 主要経費別"） */
+  title: string;
+  /** 出典の正式名称（表番号を含む） */
+  sourceTitle: string;
+  /** 出典Excelの直リンク */
+  sourceUrl: string;
+  /** 出典Excelが掲載されている財務省のページ */
+  sourcePageUrl: string;
+  /** 原資料の金額単位（JSON上の金額はすべて千円に統一済み。出典表記用） */
+  sourceUnit: string;
+  /** 金額の性格（"決算額" / "税収"）。冒頭の但し書きに使う */
+  amountKind: string;
+  /** 全年度を通じた区分名の掲載順（原資料の順） */
+  categoryNames: string[];
+  /** 年度昇順 */
+  years: NationalBudgetYear[];
+}
+
+/** data/national-budget.json のルート */
+export interface NationalBudget {
+  generatedAt: string;
+  /** 決算が確定している最新年度（西暦）。歳入決算（第4表）の最新年度 */
+  latestSettlementFiscalYear: number;
+  /** 税収の推移（税目別。所得税・法人税・消費税＋その他の税収） */
+  taxRevenue: NationalBudgetSeries;
+  /** 一般会計歳入 主要科目別決算（租税及印紙収入・公債金・雑収入等） */
+  revenueByMajorItem: NationalBudgetSeries;
+  /** 一般会計歳出決算 主要経費別（社会保障関係費・国債費・地方交付税交付金等） */
+  expenditureByMajorExpense: NationalBudgetSeries;
+  /** 一般会計歳出決算 目的別（国家機関費・地方財政費・社会保障関係費等） */
+  expenditureByPurpose: NationalBudgetSeries;
+}

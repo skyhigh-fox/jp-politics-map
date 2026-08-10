@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getBills, getLegislators } from "@/lib/data";
+import { getBills, getLegislators, getNationalBudget } from "@/lib/data";
+import { formatYenCompact } from "@/lib/formatFinance";
 import { getNews } from "@/lib/news";
 
 /**
@@ -32,13 +33,19 @@ const LINKS_META = {
     title: "都道府県マップ",
     description: "都道府県・市区町村の関連議員数と地方財政データを地図から辿る",
   },
+  budget: {
+    href: "/budget",
+    title: "国の予算・決算",
+    description: "国の税収・歳入・歳出の内訳と年度推移を財務省の公式区分のまま確認",
+  },
 } as const;
 
 export default async function HomePage() {
-  const [bills, legislators, news] = await Promise.all([
+  const [bills, legislators, news, nationalBudget] = await Promise.all([
     getBills(),
     getLegislators(),
     getNews(),
+    getNationalBudget(),
   ]);
 
   const currentLegislatorCount = legislators.filter(
@@ -48,6 +55,17 @@ export default async function HomePage() {
   const latestNews = [...news].sort((a, b) =>
     b.publishedAt.localeCompare(a.publishedAt)
   )[0];
+
+  const latestBudgetYear =
+    nationalBudget?.expenditureByMajorExpense.years.at(-1) ?? null;
+  const budgetYearCount = nationalBudget
+    ? Math.max(
+        nationalBudget.taxRevenue.years.length,
+        nationalBudget.revenueByMajorItem.years.length,
+        nationalBudget.expenditureByMajorExpense.years.length,
+        nationalBudget.expenditureByPurpose.years.length
+      )
+    : 0;
 
   const lastUpdated = bills
     .map((b) => b.lastUpdated)
@@ -72,6 +90,12 @@ export default async function HomePage() {
     },
     LINKS_META.map,
     {
+      ...LINKS_META.budget,
+      description: latestBudgetYear
+        ? `${latestBudgetYear.eraLabel}の歳出決算${formatYenCompact(latestBudgetYear.totalThousandYen ?? 0)}の内訳と、最長${budgetYearCount}年度分の推移を見る`
+        : LINKS_META.budget.description,
+    },
+    {
       href: "/news",
       title: "最新ニュース",
       description: latestNews
@@ -95,7 +119,9 @@ export default async function HomePage() {
         法案の審議状況・議員の活動・都道府県の地方財政データを、気になる切り口から確かめられます。議員や政党の評価・ランキングは行いません。
       </p>
 
-      <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {/* 導線カードは5枚（法案・議員・都道府県マップ・国の予算決算・ニュース）。
+          4列だと最終行が1枚だけ取り残されるため、3列＋2枚の並びにしている */}
+      <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((link) => (
           <li key={link.href}>
             <Link

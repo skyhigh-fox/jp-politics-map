@@ -9,6 +9,7 @@ import type {
   NdlSpeechCount,
   Party,
   PartySeatHistory,
+  NationalBudget,
   PrefectureExpenditureByNature,
   PrefectureExpenditureByPurpose,
   PrefectureFinance,
@@ -172,5 +173,20 @@ export const getPrefectureExpenditureByNature = async (): Promise<
     return Array.isArray(data) ? data : [];
   } catch {
     return [];
+  }
+};
+
+/**
+ * 国の税収・歳出データ（機能拡充ロードマップ Tier1 #2）を取得する。
+ * data/national-budget.json は取得スクリプト（fetch:national-budget）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフにnullを返す
+ * （配列ではなく単一オブジェクトのため、他のgetterと異なりnullで表現する）。
+ */
+export const getNationalBudget = async (): Promise<NationalBudget | null> => {
+  try {
+    const data = await readJson<NationalBudget>("national-budget.json");
+    return data && typeof data === "object" && "taxRevenue" in data ? data : null;
+  } catch {
+    return null;
   }
 };
