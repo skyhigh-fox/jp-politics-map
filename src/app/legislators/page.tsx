@@ -6,10 +6,47 @@ import { InfiniteLegislatorList } from "@/components/InfiniteLegislatorList";
 import { SemicircleSeatChart } from "@/components/SemicircleSeatChart";
 import { PartySeatTrendChart } from "@/components/PartySeatTrendChart";
 import { buildChamberSeatTrend } from "@/lib/partySeatTrendStats";
-import type { Legislator, Party } from "@/types";
+import { partiesInChamber, partyDisplayName } from "@/lib/party";
+import type { Chamber, Legislator, Party } from "@/types";
 
 const CHAMBER_OPTIONS = ["衆議院", "参議院"] as const;
 const PREFECTURE_OPTIONS = Object.keys(PREFECTURE_CODES);
+
+function isChamber(value: string | undefined): value is Chamber {
+  return value === "衆議院" || value === "参議院";
+}
+
+/**
+ * 「政党・会派」フィルタの選択肢を作る。
+ *
+ * 会派は院ごとに別組織なので、院が指定されているときはその院に実在する会派だけを、
+ * その院の正式会派名で並べる（例: 院=衆議院 のときに参議院にしか無い
+ * 「立憲民主・無所属」を選択肢に出さない／「国民民主党・新緑風会」ではなく
+ * 衆議院の「国民民主党・無所属クラブ」と表示する）。
+ * 院が未指定のときは衆参をまたぐ集計になるため、共通表示名（母体政党名）を使う。
+ */
+function buildPartyOptions(
+  parties: Party[],
+  chamber: string | undefined,
+  selectedPartyId: string | undefined
+): { value: string; label: string }[] {
+  const targetChamber = isChamber(chamber) ? chamber : undefined;
+  const candidates = targetChamber
+    ? partiesInChamber(parties, targetChamber)
+    : parties;
+  // 選択中の会派がその院に存在しない場合でも、絞り込み状態が選択肢から消えて
+  // 「すべて」に見えてしまわないよう、選択中のものだけは必ず残す
+  const shown = candidates.some((p) => p.id === selectedPartyId)
+    ? candidates
+    : [
+        ...candidates,
+        ...parties.filter((p) => p.id === selectedPartyId),
+      ];
+
+  return shown
+    .map((p) => ({ value: p.id, label: partyDisplayName(p, targetChamber) }))
+    .sort((a, b) => a.label.localeCompare(b.label, "ja"));
+}
 
 function matchesFilters(
   legislator: Legislator,
@@ -44,8 +81,10 @@ export default async function LegislatorsPage({
     getPartySeatHistory(),
   ]);
   const legislators = allLegislators.filter((l) => matchesFilters(l, filters));
-  const sortedParties = [...parties].sort((a, b) =>
-    a.name.localeCompare(b.name, "ja")
+  const partyOptions = buildPartyOptions(
+    parties,
+    filters.chamber,
+    filters.party
   );
 
   const shugiinSeatTrend = buildChamberSeatTrend(partySeatHistory, parties, "衆議院");
@@ -92,10 +131,7 @@ export default async function LegislatorsPage({
             {
               key: "party",
               label: "政党・会派",
-              options: sortedParties.map((p: Party) => ({
-                value: p.id,
-                label: p.name,
-              })),
+              options: partyOptions,
             },
             {
               key: "prefecture",

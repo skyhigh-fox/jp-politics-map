@@ -1,6 +1,7 @@
 import type { Chamber, Legislator, Party } from "@/types";
 import { PartyColorDot } from "@/components/PartyColorDot";
 import { DataInsight } from "@/components/DataInsight";
+import { partyDisplayAbbreviation, partyDisplayName } from "@/lib/party";
 
 /**
  * トップページ用「半円形議席配置図」（衆院・参院それぞれ）。
@@ -164,15 +165,15 @@ export function SemicircleSeatChart({
   const rest = sorted.slice(TOP_N);
   const otherCount = rest.reduce((sum, [, c]) => sum + c, 0);
 
-  const segments: Segment[] = top.map(([partyId, count]) => {
-    const party = partyById.get(partyId);
-    return {
-      key: partyId,
-      name: party?.abbreviation ?? party?.name ?? partyId,
-      color: party?.color || OTHER_COLOR,
-      count,
-    };
-  });
+  // この図は院ごとに描くため、名称は必ずその院の正式会派名・略称を使う
+  // （会派は院ごとに別組織で名称が異なる。例: 国民民主党は衆院「国民民主党・無所属
+  //  クラブ」/参院「国民民主党・新緑風会」。詳細は src/lib/party.ts 参照）
+  const segments: Segment[] = top.map(([partyId, count]) => ({
+    key: partyId,
+    name: partyDisplayAbbreviation(partyById.get(partyId), chamber, partyId),
+    color: partyById.get(partyId)?.color || OTHER_COLOR,
+    count,
+  }));
   if (otherCount > 0) {
     segments.push({ key: "other", name: "その他", color: OTHER_COLOR, count: otherCount });
   }
@@ -182,8 +183,8 @@ export function SemicircleSeatChart({
     const party = partyById.get(partyId);
     return {
       key: partyId,
-      name: party?.name ?? partyId,
-      abbreviation: party?.abbreviation ?? party?.name ?? partyId,
+      name: partyDisplayName(party, chamber, partyId),
+      abbreviation: partyDisplayAbbreviation(party, chamber, partyId),
       color: party?.color || OTHER_COLOR,
       count,
     };
@@ -197,8 +198,11 @@ export function SemicircleSeatChart({
   const top1 = sorted[0];
   if (total > 0 && top1) {
     const [topPartyId, topCount] = top1;
-    const topParty = partyById.get(topPartyId);
-    const topName = topParty?.name ?? topPartyId;
+    const topName = partyDisplayName(
+      partyById.get(topPartyId),
+      chamber,
+      topPartyId
+    );
     const majority = Math.floor(total / 2) + 1;
     const diff = topCount - majority;
     const pct = ((topCount / total) * 100).toFixed(0);

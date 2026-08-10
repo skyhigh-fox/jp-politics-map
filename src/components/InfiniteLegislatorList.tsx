@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
 import { PartyColorDot } from "@/components/PartyColorDot";
+import { partyDisplayName } from "@/lib/party";
 import type { Legislator, Party } from "@/types";
 
 const PAGE_SIZE = 60;
@@ -43,8 +44,10 @@ export function InfiniteLegislatorList({
                 </div>
                 <div className="mt-1 flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400">
                   <PartyColorDot color={party?.color} />
+                  {/* 会派名は院ごとに異なるため、その議員が属する院の正式会派名を表示する */}
                   <span>
-                    {legislator.chamber} / {party?.name ?? "不明"}
+                    {legislator.chamber} /{" "}
+                    {partyDisplayName(party, legislator.chamber)}
                   </span>
                 </div>
                 <div className="text-neutral-600 dark:text-neutral-400">

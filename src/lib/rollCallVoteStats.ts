@@ -1,4 +1,5 @@
 import type { Party, RollCallVote, RollCallVoteChoice } from "@/types";
+import { partyDisplayName } from "@/lib/party";
 
 /**
  * RollCallVoteHeatmap（参議院・記名投票の会派別賛否ヒートマップ）用の集計。
@@ -7,7 +8,12 @@ import type { Party, RollCallVote, RollCallVoteChoice } from "@/types";
  * partyIdが解決できなかった議員（無所属・会派表記が政党マスタに対応しない等、
  * 実測で全体の約1.8%）は個別の列を作らず「その他・無所属」にまとめる
  * （PartySeatTrendChart の「その他」バケットと同じ方針）。
+ *
+ * 記名投票（押しボタン式投票）は参議院のみが対象なので、会派名は必ず
+ * 参議院の正式会派名（例:「国民民主党・新緑風会」）で表示する
+ * （衆議院の会派名や、院に依存しない母体政党名を出さない）。
  */
+const VOTE_CHAMBER = "参議院" as const;
 
 export const VOTE_CHOICE_ORDER: RollCallVoteChoice[] = ["賛成", "反対", "欠席", "棄権"];
 
@@ -34,7 +40,9 @@ export function buildPartyVoteBreakdown(
   for (const r of vote.results) {
     const party = r.partyId ? partyById.get(r.partyId) : undefined;
     const key = party ? party.id : OTHER_KEY;
-    const label = party ? party.name : OTHER_LABEL;
+    const label = party
+      ? partyDisplayName(party, VOTE_CHAMBER)
+      : OTHER_LABEL;
     const color = party?.color ?? OTHER_COLOR;
 
     let row = rows.get(key);

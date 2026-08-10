@@ -16,6 +16,11 @@ import type { Party } from "@/types";
  *   （PartyColorDot.tsxの方針と同じ）。
  * - 全国集計と違い都道府県あたりの政党数はそもそも少ないため、
  *   「その他」への丸め込みは行わず全件を表示する。
+ * - この集計は衆参両院の議員を合算しているため、名前は院別の会派名
+ *   （Party.chambers[院].name。例: 衆「国民民主党・無所属クラブ」/
+ *   参「国民民主党・新緑風会」）ではなく、院に依存しない共通表示名
+ *   （Party.name / Party.abbreviation）を使う。片方の院の会派名を選ぶと、
+ *   もう片方の院の議員にとって必ず誤った表示になるため。
  */
 export function PrefecturePartyComposition({
   prefecture,

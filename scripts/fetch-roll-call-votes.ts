@@ -240,18 +240,34 @@ function buildNameLookup(legislators: Legislator[]): Map<string, string> {
   return lookup;
 }
 
-/** 投票結果ページの会派名からpartyIdを解決する（完全一致→前方一致の順） */
+/**
+ * 投票結果ページの会派名からpartyIdを解決する（完全一致→前方一致の順）。
+ *
+ * 記名投票は参議院のみが対象のため、照合には parties.json の共通表示名ではなく
+ * 「参議院の正式会派名」（Party.chambers.参議院.name）を優先して使う。
+ * 共通表示名は院に依存しない母体政党名（例:「国民民主党」）であり、投票結果ページの
+ * 会派表記（例:「国民民主党・新緑風会」）とは一致しないため、そのままでは
+ * 前方一致に頼ることになり誤マッチのリスクがある。
+ */
+function partyNameCandidates(party: Party): string[] {
+  const sangiin = party.chambers?.["参議院"];
+  // 参議院会派名 → 共通表示名 の順（先に評価されたものが優先される）
+  return [sangiin?.name, party.name].filter((v): v is string => Boolean(v));
+}
+
 function resolvePartyIdFromHeading(
   heading: string,
   parties: Party[]
 ): string | null {
   if (!heading) return null;
-  const exact = parties.find((p) => p.name === heading);
+  const exact = parties.find((p) => partyNameCandidates(p).includes(heading));
   if (exact) return exact.id;
   // 旧会派名（例:「自由民主党」→現行「自由民主党・無所属の会」）に対応する
   // ため、現在の会派名が投票当時の会派名を前方一致で含む場合のみ採用する
-  const prefixMatch = parties.find(
-    (p) => p.name.startsWith(heading) || heading.startsWith(p.name)
+  const prefixMatch = parties.find((p) =>
+    partyNameCandidates(p).some(
+      (name) => name.startsWith(heading) || heading.startsWith(name)
+    )
   );
   return prefixMatch ? prefixMatch.id : null;
 }

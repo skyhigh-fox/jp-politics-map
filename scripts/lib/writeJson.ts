@@ -22,18 +22,15 @@ export function upsertById<T extends { id: string }>(
   return Array.from(map.values());
 }
 
-/**
- * 既存レコードを優先し、まだ存在しないidだけを追加する。
- * 政党マスタのように「参議院の会派名一覧（正式名称・略称あり）の方が
- * 衆議院側の略称だけの情報より詳しい」といった、情報源によって
- * データの充実度が異なるケースで、詳しい方が別ソースの実行順序に
- * よって薄いデータに上書きされてしまうのを防ぐために使う。
+/*
+ * 【削除済み】insertIfMissingById（2026-08-11）
+ *
+ * 「衆参どちらか一方のソースが持つ会派名を正とし、他方は既存レコードを上書きしない」
+ * という方針で政党マスタのマージに使っていたが、会派名は院ごとに別物であり
+ * （例: 参「国民民主党・新緑風会」/ 衆「国民民主党・無所属クラブ」）、
+ * どちらか一方を勝たせる時点で必ずもう一方の院に誤った会派名が表示される、
+ * という重大なデータ品質バグの原因になっていた。
+ *
+ * 政党マスタのマージは scripts/lib/partyColors.ts の setChamberProfiles() を使い、
+ * 各院が Party.chambers[院] に自分の院のプロフィールだけを書き込むこと。
  */
-export function insertIfMissingById<T extends { id: string }>(
-  existing: T[],
-  incoming: T[]
-): T[] {
-  const existingIds = new Set(existing.map((item) => item.id));
-  const additions = incoming.filter((item) => !existingIds.has(item.id));
-  return [...existing, ...additions];
-}

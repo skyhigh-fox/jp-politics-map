@@ -8,6 +8,7 @@ import {
   getWrittenQuestionCounts,
 } from "@/lib/data";
 import { PartyColorDot } from "@/components/PartyColorDot";
+import { partyDisplayName } from "@/lib/party";
 
 export default async function LegislatorDetailPage({
   params,
@@ -70,7 +71,8 @@ export default async function LegislatorDetailPage({
         <dt className="text-neutral-500 dark:text-neutral-500">政党・会派</dt>
         <dd className="flex items-center gap-1.5 text-neutral-800 dark:text-neutral-200">
           <PartyColorDot color={party?.color} />
-          <span>{party?.name ?? "不明"}</span>
+          {/* 会派は院ごとに別組織のため、この議員が属する院の正式会派名を表示する */}
+          <span>{partyDisplayName(party, legislator.chamber)}</span>
         </dd>
         <dt className="text-neutral-500 dark:text-neutral-500">選挙区</dt>
         <dd className="text-neutral-800 dark:text-neutral-200">
