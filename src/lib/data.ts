@@ -8,6 +8,7 @@ import type {
   Legislator,
   NdlSpeechCount,
   Party,
+  RollCallVote,
   WrittenQuestionCount,
 } from "@/types";
 
@@ -50,6 +51,20 @@ export const getNdlSpeechCounts = async (): Promise<NdlSpeechCount[]> => {
 export const getWrittenQuestionCounts = async (): Promise<WrittenQuestionCount[]> => {
   try {
     return await readJson<WrittenQuestionCount[]>("written-questions.json");
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 参議院の記名投票（押しボタン式投票）結果一覧を取得する（フェーズ4）。
+ * data/roll-call-votes.json は取得スクリプト（fetch:roll-call-votes）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getRollCallVotes = async (): Promise<RollCallVote[]> => {
+  try {
+    const data = await readJson<RollCallVote[]>("roll-call-votes.json");
+    return Array.isArray(data) ? data : [];
   } catch {
     return [];
   }

@@ -15,7 +15,8 @@
     "fetch:news": "tsx scripts/fetch-news.ts",
     "fetch:ndl-speech-counts": "tsx scripts/fetch-ndl-speech-counts.ts",
     "fetch:written-questions": "tsx scripts/fetch-written-questions.ts",
-    "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions"
+    "fetch:roll-call-votes": "tsx scripts/fetch-roll-call-votes.ts",
+    "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions && npm run fetch:roll-call-votes"
   },
   "dependencies": {
     "d3-geo": "^2.0.2",

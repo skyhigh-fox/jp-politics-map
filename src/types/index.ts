@@ -147,6 +147,48 @@ export interface WrittenQuestionCount {
   sessionsCovered: number[];
 }
 
+/** 参議院記名投票（押しボタン式投票）における議員個人の賛否（フェーズ4） */
+export type RollCallVoteChoice = "賛成" | "反対" | "欠席" | "棄権";
+
+/**
+ * 記名投票（押しボタン式投票）1件における議員個人の投票結果。
+ * legislatorIdは氏名の正規化照合（空白除去）で一意に解決できた場合のみ設定し、
+ * 同姓同名の衝突がある場合は無理にマッチさせずnullのまま氏名(name)だけ保持する。
+ * partyIdは投票結果ページに記載された投票当時の会派名を優先してparties.jsonと
+ * 照合し、解決できない場合のみlegislators.jsonの現在の所属会派で代替する
+ * （会派移動があった議員は投票当時と所属が異なりうる点に注意）。
+ */
+export interface RollCallVoteResult {
+  legislatorId: string | null;
+  name: string;
+  partyId: string | null;
+  vote: RollCallVoteChoice;
+}
+
+/**
+ * 参議院本会議における記名投票（押しボタン式投票）1件分の結果（フェーズ4）。
+ * 衆議院は起立採決が中心で議員個人の賛否が原則公開されないため、この型は
+ * 参議院のみを対象にする。
+ *
+ * 政治的中立性配慮のため、賛否の集計・議員個人の投票結果は取得元ページの
+ * 事実をそのまま保持するのみとし、評価的な意味づけ（「良い投票」等の
+ * ランキングや当落線的な演出）は一切加えない。
+ */
+export interface RollCallVote {
+  voteId: string;
+  session: number; // 国会回次
+  date: string; // ISO 8601 (YYYY-MM-DD)
+  /** 議案名（「日程第○」等の通し番号は取り除いた表記） */
+  subject: string;
+  /** bills.json の該当法案。案件名の突合ができなかった場合はnull */
+  billId: string | null;
+  totalFor: number;
+  totalAgainst: number;
+  results: RollCallVoteResult[];
+  /** 取得元の投票結果ページURL（出典明記・再検証のため） */
+  sourceUrl: string;
+}
+
 /** 都道府県マスタ（JIS都道府県コード） */
 export interface Prefecture {
   code: string; // JIS X 0401 (2桁)
