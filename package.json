@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run build:public-datasets",
     "dev": "next dev",
+    "prebuild": "npm run build:public-datasets",
     "build": "next build",
+    "build:public-datasets": "tsx scripts/build-public-datasets.ts",
     "start": "next start",
     "lint": "eslint .",
     "fetch:sangiin-members": "tsx scripts/fetch-sangiin-members.ts",

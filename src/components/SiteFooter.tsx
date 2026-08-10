@@ -11,12 +11,20 @@ export function SiteFooter() {
         <p>
           本サイトは特定の政党・候補者を支持または批判するものではありません。
         </p>
-        <Link
-          href="/disclaimer"
-          className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
-        >
-          免責事項・出典
-        </Link>
+        <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <Link
+            href="/data"
+            className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            データの入手
+          </Link>
+          <Link
+            href="/disclaimer"
+            className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            免責事項・出典
+          </Link>
+        </span>
       </div>
     </footer>
   );

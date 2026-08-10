@@ -3,6 +3,18 @@
 地図描画に使う境界データ（TopoJSON）を置く場所。いずれもコードから
 `fetch` される静的ファイルで、日次の自動更新（`npm run fetch:all`）の対象外。
 
+## datasets/（git管理外・ビルド時に生成）
+
+`/data` ページ（データダウンロード／公開API、機能拡充ロードマップ Tier1 #9）で
+配布するJSONの置き場所。`scripts/build-public-datasets.ts` が `npm run dev` /
+`npm run build` の前（`predev` / `prebuild`）に `data/` からコピーして生成する。
+同じJSONを2箇所にコミットしないため `.gitignore` 済み。
+
+- 何を配布するか（＝原典のライセンス・利用規約で再配布が認められているものだけ）
+  とその判断根拠は `src/lib/datasetDownloads.ts` に一元管理している
+- `datasets/manifest.json` は配布ファイルの機械可読な一覧（公開APIの入口）
+- 手動で生成し直す場合は `npm run build:public-datasets`
+
 ## prefectures-topo.json
 
 都道府県境界のTopoJSON（簡略化レベル s0001 = 0.1%、全国のみ）。

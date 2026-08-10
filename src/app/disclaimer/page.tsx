@@ -218,6 +218,16 @@ export default async function DisclaimerPage() {
           <p>
             すべての情報を網羅できているわけではないため、「収録していない範囲」も同じ場所に記載しています。ある議員・法案について本サイトに記載がないことは、そうした事実がなかったことを意味しません。
           </p>
+          <p>
+            これらのデータのうち、原典のライセンス・利用規約で再配布が認められているものは、機械可読なJSONのまま
+            <Link
+              href="/data"
+              className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+            >
+              「データの入手」
+            </Link>
+            で配布しています。配布していないデータとその理由も同じページに記載しています。
+          </p>
         </div>
 
         <div className="mt-4 space-y-4">

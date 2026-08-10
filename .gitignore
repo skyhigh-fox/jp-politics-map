@@ -31,6 +31,10 @@ next-env.d.ts
 # Claude Code agent worktrees
 .claude/
 
+# 公開ダウンロード用データセット（scripts/build-public-datasets.ts がビルド時に
+# data/ から生成する成果物。同じJSONを二重にコミットしないためgit管理外にする）
+public/data/datasets/
+
 # 削除予定ファイルの退避先（CLAUDE.mdの運用ルールにより削除の代わりにここへ移動する）
 _delete/
 
