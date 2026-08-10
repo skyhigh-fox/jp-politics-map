@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getLegislators } from "@/lib/data";
+import {
+  getLegislators,
+  getPrefectureExpenditureByPurpose,
+  getPrefecturePopulation,
+} from "@/lib/data";
 import {
   PREFECTURE_CODES,
   isValidPrefectureName,
   legislatorPrefectures,
 } from "@/lib/prefectures";
 import { MunicipalityMap } from "@/components/MunicipalityMap";
+import { PrefectureExpenditureBreakdown } from "@/components/PrefectureExpenditureBreakdown";
 import { getLocalAssemblyMemberCountsByMunicipality } from "@/lib/localAssembly";
+import { buildExpenditureBreakdown, buildPopulationMap } from "@/lib/prefectureExpenditureStats";
 
 const MUNICIPALITY_GEO_BASE =
   "https://raw.githubusercontent.com/smartnews-smri/japan-topography/main/data/municipality/topojson/s0010";
@@ -24,7 +30,11 @@ export default async function PrefectureDetailPage({
   const code = PREFECTURE_CODES[prefecture];
   const geoUrl = `${MUNICIPALITY_GEO_BASE}/N03-21_${code}_210101.json`;
 
-  const legislators = await getLegislators();
+  const [legislators, expenditure, population] = await Promise.all([
+    getLegislators(),
+    getPrefectureExpenditureByPurpose(),
+    getPrefecturePopulation(),
+  ]);
   const relatedCount = legislators.filter((l) =>
     legislatorPrefectures(l).includes(prefecture)
   ).length;
@@ -32,6 +42,12 @@ export default async function PrefectureDetailPage({
   const localCounts = await getLocalAssemblyMemberCountsByMunicipality(
     prefecture
   );
+
+  const expenditureRow = expenditure.find((e) => e.prefecture === prefecture);
+  const populationByPrefecture = buildPopulationMap(population);
+  const expenditureBreakdown = expenditureRow
+    ? buildExpenditureBreakdown(expenditureRow, populationByPrefecture)
+    : null;
 
   return (
     <div className="animate-fade-in">
@@ -74,6 +90,12 @@ export default async function PrefectureDetailPage({
         <p className="mt-4 text-xs text-neutral-500 dark:text-neutral-500">
           地方議会議員データは現在フェーズ3のパイロット対象自治体のみ整備中です。
         </p>
+      )}
+
+      {expenditureBreakdown && (
+        <div className="mt-6 max-w-xl">
+          <PrefectureExpenditureBreakdown breakdown={expenditureBreakdown} />
+        </div>
       )}
     </div>
   );

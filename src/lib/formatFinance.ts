@@ -13,3 +13,8 @@ export function formatYenCompact(thousandYen: number): string {
   }
   return `${Math.round(oku).toLocaleString("ja-JP")}億円`;
 }
+
+/** 人口一人当たり金額（円）の表示用フォーマット */
+export function formatYenPerCapita(yen: number): string {
+  return `${Math.round(yen).toLocaleString("ja-JP")}円/人`;
+}

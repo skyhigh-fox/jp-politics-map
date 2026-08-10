@@ -4,10 +4,10 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PrefectureMap } from "@/components/PrefectureMap";
 import { PrefecturePartyComposition } from "@/components/PrefecturePartyComposition";
-import { formatYenCompact } from "@/lib/formatFinance";
+import { formatYenCompact, formatYenPerCapita } from "@/lib/formatFinance";
 import type { Party } from "@/types";
 
-type Layer = "legislators" | "finance";
+type Layer = "legislators" | "finance" | "expenditure";
 
 /**
  * `/map` ページ本体。左に都道府県地図、右にサイドバー
@@ -23,9 +23,10 @@ type Layer = "legislators" | "finance";
  *   まずサイドバーにその都道府県の政党別議席構成を表示する2段階導線
  *   （PrefectureMapのonSelectPrefectureコールバックで受け取る）。
  *   一覧ページへはPrefecturePartyComposition内のリンクから遷移する。
- * - 地図の指標レイヤーは「関連議員数」「歳出総額（都道府県財政、Phase 4）」の
- *   2種類を切り替えられる（financeCountsが取得できている場合のみ表示）。
- *   どちらのレイヤーでも配色ロジック（colorForCount）・サイドバーのランキング表は
+ * - 地図の指標レイヤーは「関連議員数」「歳出総額（都道府県財政、Phase 4）」
+ *   「歳出内訳（分野別・人口一人当たり、予算の見える化Phase A-2）」の
+ *   3種類を切り替えられる（各データが取得できている場合のみそのボタンを表示）。
+ *   どのレイヤーでも配色ロジック（colorForCount）・サイドバーのランキング表は
  *   共通のまま、指標値と表示形式だけが切り替わる。
  */
 export function MapExplorer({
@@ -34,6 +35,9 @@ export function MapExplorer({
   parties,
   financeCounts,
   financeFiscalYear,
+  expenditureLayers,
+  expenditureCategories,
+  expenditureFiscalYear,
 }: {
   counts: Record<string, number>;
   partyCountsByPrefecture: Record<string, Record<string, number>>;
@@ -41,20 +45,49 @@ export function MapExplorer({
   /** 都道府県別 歳出総額（千円単位）。未取得時はundefinedまたは空オブジェクト */
   financeCounts?: Record<string, number>;
   financeFiscalYear?: number;
+  /** 歳出の目的別区分ごとの都道府県別・人口一人当たり金額（円）マップ */
+  expenditureLayers?: Record<string, Record<string, number>>;
+  /** expenditureLayersの表示順（総務省の目的別分類順、中立的な既定順） */
+  expenditureCategories?: string[];
+  expenditureFiscalYear?: number;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [layer, setLayer] = useState<Layer>("legislators");
+  const [expenditureCategory, setExpenditureCategory] = useState(
+    () =>
+      expenditureCategories?.find((c) => c === "教育費") ??
+      expenditureCategories?.[0] ??
+      ""
+  );
 
   const hasFinanceLayer = !!financeCounts && Object.keys(financeCounts).length > 0;
-  const activeLayer: Layer = hasFinanceLayer ? layer : "legislators";
+  const hasExpenditureLayer =
+    !!expenditureLayers && (expenditureCategories?.length ?? 0) > 0;
+  const activeLayer: Layer =
+    (layer === "finance" && hasFinanceLayer) ||
+    (layer === "expenditure" && hasExpenditureLayer)
+      ? layer
+      : "legislators";
 
-  const activeCounts = activeLayer === "finance" ? financeCounts! : counts;
-  const metricLabel = activeLayer === "finance" ? "歳出総額" : "関連議員";
+  const activeCounts =
+    activeLayer === "finance"
+      ? financeCounts!
+      : activeLayer === "expenditure"
+        ? (expenditureLayers![expenditureCategory] ?? {})
+        : counts;
+  const metricLabel =
+    activeLayer === "finance"
+      ? "歳出総額"
+      : activeLayer === "expenditure"
+        ? expenditureCategory
+        : "関連議員";
   const formatValue = useMemo(
     () =>
       activeLayer === "finance"
         ? formatYenCompact
-        : (v: number) => `${v}名`,
+        : activeLayer === "expenditure"
+          ? formatYenPerCapita
+          : (v: number) => `${v}名`,
     [activeLayer]
   );
   const ranking = Object.entries(activeCounts).sort((a, b) => b[1] - a[1]);
@@ -62,41 +95,81 @@ export function MapExplorer({
   return (
     <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
       <div>
-        {hasFinanceLayer && (
-          <div
-            role="group"
-            aria-label="地図に表示する指標の切り替え"
-            className="mb-3 inline-flex rounded-lg border border-neutral-200 bg-white p-0.5 text-xs dark:border-neutral-800 dark:bg-neutral-900"
-          >
-            <button
-              type="button"
-              onClick={() => setLayer("legislators")}
-              aria-pressed={activeLayer === "legislators"}
-              className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
-                activeLayer === "legislators"
-                  ? "bg-accent-600 text-white"
-                  : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
-              }`}
+        {(hasFinanceLayer || hasExpenditureLayer) && (
+          <div className="mb-3 flex flex-wrap items-center gap-2">
+            <div
+              role="group"
+              aria-label="地図に表示する指標の切り替え"
+              className="inline-flex rounded-lg border border-neutral-200 bg-white p-0.5 text-xs dark:border-neutral-800 dark:bg-neutral-900"
             >
-              関連議員数
-            </button>
-            <button
-              type="button"
-              onClick={() => setLayer("finance")}
-              aria-pressed={activeLayer === "finance"}
-              className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
-                activeLayer === "finance"
-                  ? "bg-accent-600 text-white"
-                  : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
-              }`}
-            >
-              歳出総額{financeFiscalYear ? `（${financeFiscalYear}年度）` : ""}
-            </button>
+              <button
+                type="button"
+                onClick={() => setLayer("legislators")}
+                aria-pressed={activeLayer === "legislators"}
+                className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                  activeLayer === "legislators"
+                    ? "bg-accent-600 text-white"
+                    : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                }`}
+              >
+                関連議員数
+              </button>
+              {hasFinanceLayer && (
+                <button
+                  type="button"
+                  onClick={() => setLayer("finance")}
+                  aria-pressed={activeLayer === "finance"}
+                  className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                    activeLayer === "finance"
+                      ? "bg-accent-600 text-white"
+                      : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                  }`}
+                >
+                  歳出総額{financeFiscalYear ? `（${financeFiscalYear}年度）` : ""}
+                </button>
+              )}
+              {hasExpenditureLayer && (
+                <button
+                  type="button"
+                  onClick={() => setLayer("expenditure")}
+                  aria-pressed={activeLayer === "expenditure"}
+                  className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                    activeLayer === "expenditure"
+                      ? "bg-accent-600 text-white"
+                      : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                  }`}
+                >
+                  歳出内訳（人口一人当たり）
+                </button>
+              )}
+            </div>
+            {activeLayer === "expenditure" && (
+              <label className="text-xs text-neutral-600 dark:text-neutral-400">
+                <span className="sr-only">歳出の分野</span>
+                <select
+                  value={expenditureCategory}
+                  onChange={(e) => setExpenditureCategory(e.target.value)}
+                  className="rounded-lg border border-neutral-300 bg-white px-2 py-1.5 text-sm text-neutral-800 transition-colors focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/30 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200"
+                >
+                  {expenditureCategories!.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
           </div>
         )}
         {activeLayer === "finance" && (
           <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-500">
             都道府県普通会計の決算額（総務省「地方財政状況調査」）。人口規模の違いをそのまま反映するため、都市部ほど大きくなる傾向がある点に留意してください。
+          </p>
+        )}
+        {activeLayer === "expenditure" && (
+          <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-500">
+            {expenditureFiscalYear ? `${expenditureFiscalYear}年度、` : ""}
+            都道府県の目的別歳出決算額を人口一人当たりに換算した金額です（総務省「地方財政状況調査」・人口推計）。地理的条件（離島・過疎地等）や高齢化率の違いにより、人口規模だけでは説明できない差が生じる点に留意してください。
           </p>
         )}
         <PrefectureMap

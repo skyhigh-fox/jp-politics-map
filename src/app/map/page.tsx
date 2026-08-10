@@ -1,22 +1,48 @@
-import { getLegislators, getParties, getPrefectureFinance } from "@/lib/data";
+import {
+  getLegislators,
+  getParties,
+  getPrefectureFinance,
+  getPrefectureExpenditureByPurpose,
+  getPrefecturePopulation,
+} from "@/lib/data";
 import {
   countLegislatorsByPrefecture,
   countLegislatorsByPrefectureAndParty,
 } from "@/lib/prefectures";
+import {
+  MAJOR_EXPENDITURE_CATEGORIES,
+  buildPerCapitaLayer,
+  buildPopulationMap,
+} from "@/lib/prefectureExpenditureStats";
 import { MapExplorer } from "@/components/MapExplorer";
 
 export default async function MapPage() {
-  const [legislators, parties, prefectureFinance] = await Promise.all([
-    getLegislators(),
-    getParties(),
-    getPrefectureFinance(),
-  ]);
+  const [legislators, parties, prefectureFinance, expenditure, population] =
+    await Promise.all([
+      getLegislators(),
+      getParties(),
+      getPrefectureFinance(),
+      getPrefectureExpenditureByPurpose(),
+      getPrefecturePopulation(),
+    ]);
   const counts = countLegislatorsByPrefecture(legislators);
   const partyCountsByPrefecture = countLegislatorsByPrefectureAndParty(legislators);
   const financeCounts = Object.fromEntries(
     prefectureFinance.map((f) => [f.prefecture, f.totalExpenditureThousandYen])
   );
   const financeFiscalYear = prefectureFinance[0]?.fiscalYear;
+
+  const populationByPrefecture = buildPopulationMap(population);
+  const expenditureCategories = MAJOR_EXPENDITURE_CATEGORIES.filter((c) =>
+    expenditure.some((row) => row.categories.some((cat) => cat.name === c))
+  );
+  const expenditureLayers = Object.fromEntries(
+    expenditureCategories.map((category) => [
+      category,
+      buildPerCapitaLayer(expenditure, populationByPrefecture, category),
+    ])
+  );
+  const expenditureFiscalYear = expenditure[0]?.fiscalYear;
 
   return (
     <div className="animate-fade-in">
@@ -43,6 +69,9 @@ export default async function MapPage() {
           parties={parties}
           financeCounts={financeCounts}
           financeFiscalYear={financeFiscalYear}
+          expenditureLayers={expenditureLayers}
+          expenditureCategories={expenditureCategories as unknown as string[]}
+          expenditureFiscalYear={expenditureFiscalYear}
         />
       )}
     </div>
