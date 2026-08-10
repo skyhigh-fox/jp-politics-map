@@ -4,6 +4,7 @@ import type {
   ElectionResult,
   Legislator,
   LocalAssemblyMember,
+  LocalAssemblyPartyComposition,
   NdlSpeechCount,
   PartySeatHistory,
   PrefectureFinance,
@@ -40,6 +41,7 @@ export type DatasetId =
   | "election-results"
   | "party-seat-history"
   | "local-assembly-members"
+  | "local-assembly-party-composition"
   | "prefecture-finance"
   | "district-boundaries"
   | "news";
@@ -192,6 +194,18 @@ export const DATASET_META: Record<DatasetId, DatasetMeta> = {
     scope:
       "全国の地方議員は3万人を超えるため、まずパイロットとして1議会分のみを収録しています。他の自治体の議員は収録していません。",
   },
+  "local-assembly-party-composition": {
+    id: "local-assembly-party-composition",
+    label: "地方議会・長の党派別構成",
+    sources: [
+      {
+        name: "総務省「地方公共団体の議会の議員及び長の所属党派別人員調」",
+        url: "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/",
+      },
+    ],
+    scope:
+      "議員個人の名簿ではなく、都道府県ごと・党派ごとの人員数の集計です（原資料がその形式で公表されているため）。個々の議員の氏名・選挙区・所属は含まれません。党派名・党派の並び順・人員数は原資料の表記と掲載順のまま保持し、独自の再分類（与党・野党への括り直し等）や人数順への並べ替えはしていません。原資料には男女別の内訳もありますが、本サイトでは保持していません。市区町村単位の内訳は原資料になく、都道府県単位の合計のみを収録しています。",
+  },
   "prefecture-finance": {
     id: "prefecture-finance",
     label: "都道府県の財政・歳出",
@@ -244,6 +258,7 @@ export const DATASET_ORDER: DatasetId[] = [
   "election-results",
   "party-seat-history",
   "local-assembly-members",
+  "local-assembly-party-composition",
   "prefecture-finance",
   "district-boundaries",
   "news",
@@ -594,6 +609,70 @@ export function buildLocalAssemblyCoverage(
             `${assemblies.join("・")}の${n(members.length)}名を収録しています。`,
             "これ以外の都道府県議会・市区町村議会の議員は収録していません。",
           ],
+  };
+}
+
+/**
+ * 地方議会・長の党派別構成（Tier1 #6）の「収録範囲」だけを示す軽量版の事実。
+ *
+ * 都道府県詳細ページに添える注記用。その都道府県1件分のレコードから算出できる
+ * 事実（区分の数・調査基準日・党派列の数）に限定している。
+ * 中立性のため、党派名や人数の多寡についての意味づけは一切書かない。
+ */
+export function buildLocalPartyCompositionScopeFacts(
+  composition: LocalAssemblyPartyComposition
+): string[] {
+  const bodyTypes = composition.bodies.map((b) => b.bodyType);
+  const partyColumns = new Set(
+    composition.bodies.flatMap((b) => b.parties.map((p) => p.name))
+  );
+  const unresolved = new Set(
+    composition.bodies
+      .flatMap((b) => b.parties)
+      .filter((p) => p.partyId === null)
+      .map((p) => p.name)
+  );
+
+  const facts: string[] = [
+    `${bodyTypes.join("・")}の${n(bodyTypes.length)}区分について、党派別の人員数を収録しています。`,
+    `原資料の党派の区分は${n(partyColumns.size)}種類で、調査基準日は${composition.asOfDate}です。`,
+    "議員個人の氏名・選挙区・所属は原資料に含まれないため収録していません。市区町村ごとの内訳も原資料になく、都道府県単位の合計のみです。",
+  ];
+  if (unresolved.size > 0) {
+    facts.push(
+      `${[...unresolved].join("・")}は、原資料が複数の党派・団体をまとめて集計している区分（原資料で独立した列を持たない地域政党・政治団体を含む）のため、本サイトの政党データとは対応付けていません。`
+    );
+  }
+  return facts;
+}
+
+export function buildLocalPartyCompositionCoverage(
+  compositions: LocalAssemblyPartyComposition[]
+): DatasetCoverage {
+  if (compositions.length === 0) {
+    return { asOf: null, facts: ["現在収録しているデータはありません。"] };
+  }
+  const asOfDates = [...new Set(compositions.map((c) => c.asOfDate))].sort();
+  const bodyTypes = [
+    ...new Set(compositions.flatMap((c) => c.bodies.map((b) => b.bodyType))),
+  ];
+  const partyColumns = new Set(
+    compositions.flatMap((c) =>
+      c.bodies.flatMap((b) => b.parties.map((p) => p.name))
+    )
+  );
+  const totalMembers = compositions.reduce(
+    (sum, c) => sum + c.bodies.reduce((s, b) => s + b.totalMembers, 0),
+    0
+  );
+
+  return {
+    asOf: { label: "調査基準日", value: asOfDates.join("・") },
+    facts: [
+      `${n(compositions.length)}都道府県${compositions.length === 47 ? "すべて" : ""}について、${bodyTypes.join("・")}の${n(bodyTypes.length)}区分・${n(partyColumns.size)}種類の党派区分の人員数を収録しています（延べ${n(totalMembers)}名分の集計）。`,
+      "議員・長の個人名は原資料に含まれないため収録していません。個人の氏名を収録しているのは別データセット「地方議会議員」（パイロット1議会分）のみです。",
+      "調査は毎年12月31日現在で実施され、本サイトは最新の1時点のみを収録しています。過去年との比較データは収録していません。",
+    ],
   };
 }
 
