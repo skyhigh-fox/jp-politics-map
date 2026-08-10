@@ -41,6 +41,7 @@ export type DatasetId =
   | "party-seat-history"
   | "local-assembly-members"
   | "prefecture-finance"
+  | "district-boundaries"
   | "news";
 
 export interface DatasetSource {
@@ -202,6 +203,22 @@ export const DATASET_META: Record<DatasetId, DatasetMeta> = {
     scope:
       "都道府県分の決算値のみを収録しており、市区町村分は収録していません。人口一人当たりの金額に用いる人口は、原表が千人単位で丸められた推計値です。",
   },
+  "district-boundaries": {
+    id: "district-boundaries",
+    label: "選挙区の境界データ",
+    sources: [
+      {
+        name: "衆議院議員選挙・小選挙区の統計データ及び地図データ（東京大学空間情報科学研究センター 西沢明 客員研究員）",
+        url: "https://gtfs-gis.jp/senkyoku/",
+      },
+      {
+        name: "スマートニュース メディア研究所「日本の行政区画境界データ」（都道府県境界）",
+        url: "https://github.com/smartnews-smri/japan-topography",
+      },
+    ],
+    scope:
+      "衆議院小選挙区は2022年（令和4年）改訂、いわゆる「10増10減」後の区割りに対応した境界データを使っています。原典は小選挙区コードを持つ町丁字レベルの細片ポリゴンのため、選挙区単位に統合したうえで全国地図の表示に必要な精度まで簡略化しています（生成手順は scripts/build-shugiin-district-topojson.mjs に記載）。参議院選挙区は都道府県単位のため、都道府県境界データをそのまま用い、合区は2県を1つの選挙区として扱っています。境界線は簡略化されているため、正確な区割りは総務省・各選挙管理委員会の公表資料をご確認ください。",
+  },
   news: {
     id: "news",
     label: "行政ニュース",
@@ -228,6 +245,7 @@ export const DATASET_ORDER: DatasetId[] = [
   "party-seat-history",
   "local-assembly-members",
   "prefecture-finance",
+  "district-boundaries",
   "news",
 ];
 
@@ -600,6 +618,48 @@ export function buildPrefectureFinanceCoverage(
             "過去年度との比較、および市区町村単位の財政データは収録していません。",
           ],
   };
+}
+
+/**
+ * 選挙区の境界データの収録状況。
+ *
+ * 「区割りが最新かどうか」は、境界データ側の選挙区名と現職議員データ側の
+ * 選挙区名が1対1で突合できるかどうかで機械的に判定できる
+ * （区割り改定前の境界データを使うと、東京26〜30区などが欠け、
+ * 廃止済みの宮城6区などが余る）。ここではその突合結果を事実として示す。
+ */
+export function buildDistrictBoundaryCoverage(
+  shugiinDistrictNames: string[],
+  legislators: Legislator[]
+): DatasetCoverage {
+  const boundaryKeys = new Set(
+    shugiinDistrictNames.map((name) => name.replace(/区$/, ""))
+  );
+  const legislatorDistricts = new Set(
+    legislators
+      .filter((l) => l.chamber === "衆議院" && /\d$/.test(l.district))
+      .map((l) => l.district)
+  );
+  const matched = [...legislatorDistricts].filter((d) =>
+    boundaryKeys.has(d)
+  ).length;
+  const unmatched = legislatorDistricts.size - matched;
+
+  const facts: string[] = [
+    `衆議院小選挙区${n(boundaryKeys.size)}区分の境界を収録しています。`,
+  ];
+  if (legislatorDistricts.size > 0) {
+    facts.push(
+      unmatched === 0
+        ? `現職議員データにある${n(legislatorDistricts.size)}区すべてについて、境界データ側の選挙区名と一致することを確認できています。`
+        : `現職議員データにある${n(legislatorDistricts.size)}区のうち${n(matched)}区（${percent(matched, legislatorDistricts.size)}）で境界データ側の選挙区名と一致しています。残る${n(unmatched)}区は地図上に表示されません。`
+    );
+  }
+  facts.push(
+    "参議院選挙区（45区）は専用の境界データを持たず、都道府県境界データから構成しています。合区（鳥取県・島根県、徳島県・高知県）は2県で1区として扱っています。",
+    "境界線は表示用に簡略化しているため、実際の区割りとは細部が異なります。"
+  );
+  return { asOf: null, facts };
 }
 
 export function buildNewsCoverage(news: NewsItem[]): DatasetCoverage {

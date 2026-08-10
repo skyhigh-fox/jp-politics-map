@@ -205,3 +205,44 @@ export const getNationalBudget = async (): Promise<NationalBudget | null> => {
     return null;
   }
 };
+
+/**
+ * 衆議院小選挙区（令和4年改訂・289区）の一覧を、境界データ本体
+ * （public/data/districts-shugiin-topo.json）から読み出す。
+ *
+ * 選挙区の一覧を別ファイルやコード上の配列として二重に持つと、境界データを
+ * 更新したときに片方だけ古くなる。境界データが唯一の出典になるよう、
+ * TopoJSONのプロパティから取り出している（クライアントには一覧だけを渡し、
+ * 700KBの座標データはブラウザが地図描画時に別途取得する）。
+ *
+ * 境界データはリポジトリに同梱しているが、生成スクリプト
+ * （scripts/build-shugiin-district-topojson.mjs）未実行の環境でも画面が
+ * 壊れないよう、読めない場合は空配列を返す。
+ */
+export const getShugiinDistricts = async (): Promise<
+  { kucode: number; kuname: string }[]
+> => {
+  try {
+    const filePath = path.join(
+      process.cwd(),
+      "public/data/districts-shugiin-topo.json"
+    );
+    const raw = await readFile(filePath, "utf-8");
+    const topology = JSON.parse(raw) as {
+      objects?: Record<
+        string,
+        { geometries?: { properties?: { kucode?: number; kuname?: string } }[] }
+      >;
+    };
+    const geometries = topology.objects?.senkyoku289?.geometries ?? [];
+    return geometries
+      .map((g) => g.properties)
+      .filter(
+        (p): p is { kucode: number; kuname: string } =>
+          typeof p?.kucode === "number" && typeof p?.kuname === "string"
+      )
+      .sort((a, b) => a.kucode - b.kucode);
+  } catch {
+    return [];
+  }
+};
