@@ -8,6 +8,11 @@ import {
   BILL_STAGE_DISPLAY_ORDER,
   BILL_STAGE_SLUGS,
 } from "@/lib/billStageColors";
+import { DataCoverageNote } from "@/components/DataCoverageNote";
+import {
+  buildRollCallVoteNoteFacts,
+  buildRollCallVoteScopeFacts,
+} from "@/lib/dataProvenance";
 
 export default async function BillDetailPage({
   params,
@@ -27,6 +32,7 @@ export default async function BillDetailPage({
   if (!bill) notFound();
 
   const rollCallVote = rollCallVotes.find((v) => v.billId === id);
+  const rollCallScopeFacts = buildRollCallVoteScopeFacts(rollCallVotes);
 
   const timeline = history
     .filter((h) => h.billId === id)
@@ -172,7 +178,31 @@ export default async function BillDetailPage({
       )}
 
       {rollCallVote && (
-        <RollCallVoteHeatmap vote={rollCallVote} parties={parties} />
+        <RollCallVoteHeatmap
+          vote={rollCallVote}
+          parties={parties}
+          // 紐付け率・収録範囲はハードコードせず、表示に使っているデータから算出する
+          coverageFacts={buildRollCallVoteNoteFacts(rollCallVote, rollCallVotes)}
+        />
+      )}
+
+      {/* 記名投票が見つからない法案でも、「データが無いこと」自体を明示して
+          収録範囲へ誘導する（該当する投票が存在しなかったのか、収録範囲外
+          なのかを読み手が区別できるようにするため） */}
+      {!rollCallVote && rollCallVotes.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-bold text-neutral-900 dark:text-neutral-50">
+            参議院 会派別の賛否（記名投票）
+          </h2>
+          <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
+            この法案に対応する参議院の記名投票（押しボタン式投票）は、収録している範囲では見つかりませんでした。
+          </p>
+          <DataCoverageNote
+            datasetId="roll-call-votes"
+            facts={rollCallScopeFacts}
+            className="mt-3"
+          />
+        </section>
       )}
     </div>
   );

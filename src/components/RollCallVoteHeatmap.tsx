@@ -7,6 +7,7 @@ import {
 } from "@/lib/rollCallVoteStats";
 import { PartyColorDot } from "@/components/PartyColorDot";
 import { DataInsight } from "@/components/DataInsight";
+import { DataCoverageNote } from "@/components/DataCoverageNote";
 
 /**
  * 【参議院・記名投票の会派別賛否ヒートマップ】
@@ -70,9 +71,16 @@ function cellStyle(ratio: number, choice: RollCallVoteChoice) {
 export function RollCallVoteHeatmap({
   vote,
   parties,
+  coverageFacts = [],
 }: {
   vote: RollCallVote;
   parties: Party[];
+  /**
+   * 「この投票の何名分が議員データと紐付いているか」「記名投票データ全体で
+   * どの範囲を収録しているか」を示す注記用の事実。
+   * 呼び出し側（法案詳細ページ）が buildRollCallVoteNoteFacts で算出する。
+   */
+  coverageFacts?: string[];
 }) {
   const rows = buildPartyVoteBreakdown(vote, parties);
   const totalVoted = vote.totalFor + vote.totalAgainst;
@@ -171,6 +179,12 @@ export function RollCallVoteHeatmap({
           </tbody>
         </table>
       </div>
+
+      <DataCoverageNote
+        datasetId="roll-call-votes"
+        facts={coverageFacts}
+        className="mt-3"
+      />
 
       <p className="mt-2 text-xs text-neutral-400 dark:text-neutral-600">
         セルの色の濃さは、その会派内で当該選択が占める比率を表します（比率が高いほど濃い）。出典:{" "}

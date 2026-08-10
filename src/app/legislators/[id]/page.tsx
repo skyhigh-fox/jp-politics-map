@@ -8,7 +8,13 @@ import {
   getWrittenQuestionCounts,
 } from "@/lib/data";
 import { PartyColorDot } from "@/components/PartyColorDot";
+import { DataCoverageNote } from "@/components/DataCoverageNote";
 import { partyDisplayName } from "@/lib/party";
+import {
+  buildElectionResultCoverage,
+  buildNdlSpeechCoverage,
+  buildWrittenQuestionCoverage,
+} from "@/lib/dataProvenance";
 
 export default async function LegislatorDetailPage({
   params,
@@ -35,6 +41,21 @@ export default async function LegislatorDetailPage({
     .sort((a, b) => b.electionYear - a.electionYear);
   const speechStat = ndlSpeechCounts.find((s) => s.legislatorId === id);
   const questionStat = writtenQuestions.find((q) => q.legislatorId === id);
+
+  // 出典・鮮度・欠損の体系的表示: 件数・カバー率はハードコードせず、
+  // 表示に使っているデータそのものから毎回算出する（src/lib/dataProvenance.ts）。
+  const speechCoverage = buildNdlSpeechCoverage(
+    ndlSpeechCounts,
+    legislators.length
+  );
+  const questionCoverage = buildWrittenQuestionCoverage(
+    writtenQuestions,
+    legislators.length
+  );
+  const electionCoverage = buildElectionResultCoverage(
+    electionResults,
+    legislators.length
+  );
 
   return (
     <div className="max-w-2xl animate-fade-in">
@@ -101,7 +122,7 @@ export default async function LegislatorDetailPage({
         )}
       </dl>
 
-      {(speechStat || questionStat) && (
+      {(ndlSpeechCounts.length > 0 || writtenQuestions.length > 0) && (
         <>
           <h2 className="mt-8 text-lg font-bold text-neutral-900 dark:text-neutral-50">
             国会活動
@@ -110,42 +131,75 @@ export default async function LegislatorDetailPage({
             解釈を要さない客観的な活動量の指標です。多寡による評価・ランキングを意図したものではありません。
           </p>
           <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {speechStat && (
-              <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
+            {ndlSpeechCounts.length > 0 && (
+              <div className="flex flex-col rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
                 <div className="text-xs text-neutral-500 dark:text-neutral-500">
                   国会での発言回数
                 </div>
                 <div className="mt-1 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
-                  {speechStat.speechCount.toLocaleString()}
-                  <span className="ml-1 text-sm font-normal text-neutral-500 dark:text-neutral-500">
-                    回
-                  </span>
+                  {speechStat ? (
+                    <>
+                      {speechStat.speechCount.toLocaleString()}
+                      <span className="ml-1 text-sm font-normal text-neutral-500 dark:text-neutral-500">
+                        回
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-neutral-400 dark:text-neutral-600">―</span>
+                  )}
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
-                  国立国会図書館「国会会議録検索システム」より、氏名の部分一致で集計した参考値です。同姓同名の別人の発言が混ざっている可能性があります。
+                  {speechStat
+                    ? "国立国会図書館「国会会議録検索システム」より、氏名の部分一致で集計した参考値です。同姓同名の別人の発言が混ざっている可能性があります。"
+                    : "この議員については、国立国会図書館「国会会議録検索システム」からの集計結果を取得できていません。"}
                 </p>
+                {/* 注記は本文の数値より目立たせない（DataCoverageNote側で控えめな配色にしている） */}
+                <DataCoverageNote
+                  datasetId="ndl-speech-counts"
+                  facts={speechCoverage.facts}
+                  className="mt-3"
+                />
               </div>
             )}
-            {questionStat && (
-              <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
+            {writtenQuestions.length > 0 && (
+              <div className="flex flex-col rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
                 <div className="text-xs text-neutral-500 dark:text-neutral-500">
                   質問主意書の提出数
                 </div>
                 <div className="mt-1 text-2xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
-                  {questionStat.questionCount.toLocaleString()}
-                  <span className="ml-1 text-sm font-normal text-neutral-500 dark:text-neutral-500">
-                    件
-                  </span>
+                  {questionStat ? (
+                    <>
+                      {questionStat.questionCount.toLocaleString()}
+                      <span className="ml-1 text-sm font-normal text-neutral-500 dark:text-neutral-500">
+                        件
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-neutral-400 dark:text-neutral-600">―</span>
+                  )}
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-500 dark:text-neutral-500">
-                  {questionStat.sessionsCovered.length > 0 && (
+                  {questionStat ? (
                     <>
-                      第{Math.min(...questionStat.sessionsCovered)}回〜第
-                      {Math.max(...questionStat.sessionsCovered)}回国会で提出。
+                      {questionStat.sessionsCovered.length > 0 && (
+                        <>
+                          第{Math.min(...questionStat.sessionsCovered)}回〜第
+                          {Math.max(...questionStat.sessionsCovered)}回国会で提出。
+                        </>
+                      )}
+                      直近の国会回次のみを対象に衆参公式サイトから集計しています（全期間の集計ではありません）。
+                    </>
+                  ) : (
+                    <>
+                      集計対象の回次では、この議員の提出を確認できていません。提出が0件だった場合と、提出者名を現職議員と照合できなかった場合の区別はついていません。
                     </>
                   )}
-                  直近の国会回次のみを対象に衆参公式サイトから集計しています（全期間の集計ではありません）。
                 </p>
+                <DataCoverageNote
+                  datasetId="written-questions"
+                  facts={questionCoverage.facts}
+                  className="mt-3"
+                />
               </div>
             )}
           </div>
@@ -157,7 +211,7 @@ export default async function LegislatorDetailPage({
       </h2>
       {results.length === 0 ? (
         <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-500">
-          選挙結果データは現時点で見つかりませんでした（2025年参議院選挙区のみ収集済み。詳細はデータソース調査を参照）。
+          この議員の得票数は、現在収録している選挙の範囲では見つかりませんでした。
         </p>
       ) : (
         <div className="mt-2 overflow-hidden rounded-xl border border-neutral-200 shadow-card dark:border-neutral-800">
@@ -204,6 +258,12 @@ export default async function LegislatorDetailPage({
           </table>
         </div>
       )}
+
+      <DataCoverageNote
+        datasetId="election-results"
+        facts={electionCoverage.facts}
+        className="mt-3"
+      />
 
       <p className="mt-8 text-xs text-neutral-400 dark:text-neutral-600">
         出典: {legislator.sourceRef}
