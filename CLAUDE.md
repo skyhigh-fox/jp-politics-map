@@ -8,7 +8,7 @@
 ## 記録ルール（Obsidian）
 以下の情報は、コード側のコミットメッセージだけでなく、**Obsidian Vault内の本プロジェクト用フォルダにMarkdownで記録すること**。
 
-- 記録先フォルダ: `C:\Users\skyhi\OneDrive\Documents\Obsidian\Personal\jp-politics-map\`（2026-08-11、他PCと共有しているOneDrive同期Vaultへ統合のため旧`C:\Users\skyhi\Documents\Obsidian\My_Workspace\jp-politics-map\`から移動）
+- 記録先フォルダ: `C:\Users\skyhi\OneDrive\Documents\Obsidian\Personal\ClaudeCode\Projects\jp-politics-map\`（2026-08-11、他PCと共有しているOneDrive同期Vaultへ統合し、既存の`ClaudeCode`フォルダ配下の`Projects`にリポジトリ単位で整理する構成に変更。旧`C:\Users\skyhi\Documents\Obsidian\My_Workspace\jp-politics-map\`→旧`C:\Users\skyhi\OneDrive\Documents\Obsidian\Personal\jp-politics-map\`から2段階で移動）
 - 記録する内容と対象ファイル:
   - 重要な決定事項（技術選定・仕様変更など、後から振り返りたいもの） → `決定事項ログ.md` に追記
   - データソースの調査結果（議員・政策・選挙結果などの情報源、URL、利用条件） → `データソース調査.md` に追記
