@@ -1,10 +1,17 @@
 import Link from "next/link";
-import { getBills, getLegislators, getParties } from "@/lib/data";
+import {
+  getBills,
+  getLegislators,
+  getParties,
+  getPartySeatHistory,
+} from "@/lib/data";
 import { getNews } from "@/lib/news";
 import { BillStatusSummary } from "@/components/BillStatusSummary";
 import { PartyCompositionSummary } from "@/components/PartyCompositionSummary";
 import { SemicircleSeatChart } from "@/components/SemicircleSeatChart";
+import { PartySeatTrendChart } from "@/components/PartySeatTrendChart";
 import { NewsPreview } from "@/components/NewsPreview";
+import { buildChamberSeatTrend } from "@/lib/partySeatTrendStats";
 
 const LINKS = [
   {
@@ -25,12 +32,25 @@ const LINKS = [
 ] as const;
 
 export default async function HomePage() {
-  const [bills, legislators, parties, news] = await Promise.all([
-    getBills(),
-    getLegislators(),
-    getParties(),
-    getNews(),
-  ]);
+  const [bills, legislators, parties, news, partySeatHistory] =
+    await Promise.all([
+      getBills(),
+      getLegislators(),
+      getParties(),
+      getNews(),
+      getPartySeatHistory(),
+    ]);
+
+  const shugiinSeatTrend = buildChamberSeatTrend(
+    partySeatHistory,
+    parties,
+    "衆議院"
+  );
+  const sangiinSeatTrend = buildChamberSeatTrend(
+    partySeatHistory,
+    parties,
+    "参議院"
+  );
 
   return (
     <div className="animate-fade-in">
@@ -58,6 +78,21 @@ export default async function HomePage() {
           <NewsPreview items={news} />
         </div>
       </div>
+
+      {(shugiinSeatTrend || sangiinSeatTrend) && (
+        <>
+          <h2 className="mt-10 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+            政党別議席数の推移
+          </h2>
+          <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+            過去の選挙ごとに各政党が獲得した議席数の推移です（直近5回、原資料の表記に基づく客観的な集計です）。
+          </p>
+          <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
+            {shugiinSeatTrend && <PartySeatTrendChart trend={shugiinSeatTrend} />}
+            {sangiinSeatTrend && <PartySeatTrendChart trend={sangiinSeatTrend} />}
+          </div>
+        </>
+      )}
 
       <h2 className="mt-10 text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
         詳細ページ
