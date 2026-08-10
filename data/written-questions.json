@@ -1,0 +1,883 @@
+[
+  {
+    "legislatorId": "sangiin-1",
+    "name": "青木　愛",
+    "questionCount": 7,
+    "sessionsCovered": [
+      208,
+      218,
+      219
+    ]
+  },
+  {
+    "legislatorId": "sangiin-103",
+    "name": "齊藤　健一郎",
+    "questionCount": 27,
+    "sessionsCovered": [
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      219
+    ]
+  },
+  {
+    "legislatorId": "sangiin-104",
+    "name": "斎藤　嘉隆",
+    "questionCount": 1,
+    "sessionsCovered": [
+      204
+    ]
+  },
+  {
+    "legislatorId": "sangiin-11",
+    "name": "安達　悠司",
+    "questionCount": 2,
+    "sessionsCovered": [
+      218
+    ]
+  },
+  {
+    "legislatorId": "sangiin-113",
+    "name": "塩村　あやか",
+    "questionCount": 69,
+    "sessionsCovered": [
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      216,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-115",
+    "name": "柴田　巧",
+    "questionCount": 4,
+    "sessionsCovered": [
+      204,
+      210,
+      217
+    ]
+  },
+  {
+    "legislatorId": "sangiin-124",
+    "name": "杉尾　秀哉",
+    "questionCount": 1,
+    "sessionsCovered": [
+      210
+    ]
+  },
+  {
+    "legislatorId": "sangiin-127",
+    "name": "鈴木　宗男",
+    "questionCount": 32,
+    "sessionsCovered": [
+      204,
+      205,
+      206,
+      208,
+      210,
+      211,
+      212,
+      213,
+      216,
+      217
+    ]
+  },
+  {
+    "legislatorId": "sangiin-132",
+    "name": "高木　真理",
+    "questionCount": 1,
+    "sessionsCovered": [
+      209
+    ]
+  },
+  {
+    "legislatorId": "sangiin-136",
+    "name": "高良　沙哉",
+    "questionCount": 14,
+    "sessionsCovered": [
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-141",
+    "name": "田島　麻衣子",
+    "questionCount": 20,
+    "sessionsCovered": [
+      204,
+      205,
+      207,
+      208,
+      209,
+      212,
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-146",
+    "name": "辻元　清美",
+    "questionCount": 33,
+    "sessionsCovered": [
+      209,
+      210,
+      211,
+      212,
+      213,
+      216,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-155",
+    "name": "ながえ　孝子",
+    "questionCount": 6,
+    "sessionsCovered": [
+      204,
+      211,
+      213,
+      215,
+      219
+    ]
+  },
+  {
+    "legislatorId": "sangiin-164",
+    "name": "西田　実仁",
+    "questionCount": 1,
+    "sessionsCovered": [
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-165",
+    "name": "仁比　聡平",
+    "questionCount": 3,
+    "sessionsCovered": [
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-174",
+    "name": "羽田　次郎",
+    "questionCount": 11,
+    "sessionsCovered": [
+      208,
+      210,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-181",
+    "name": "百田　尚樹",
+    "questionCount": 6,
+    "sessionsCovered": [
+      218,
+      219
+    ]
+  },
+  {
+    "legislatorId": "sangiin-184",
+    "name": "平山　佐知子",
+    "questionCount": 3,
+    "sessionsCovered": [
+      204,
+      217
+    ]
+  },
+  {
+    "legislatorId": "sangiin-188",
+    "name": "福島　みずほ",
+    "questionCount": 33,
+    "sessionsCovered": [
+      204,
+      205,
+      207,
+      211,
+      212,
+      213,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-195",
+    "name": "舟山　康江",
+    "questionCount": 2,
+    "sessionsCovered": [
+      211,
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-20",
+    "name": "石垣　のりこ",
+    "questionCount": 156,
+    "sessionsCovered": [
+      204,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-202",
+    "name": "牧山　ひろえ",
+    "questionCount": 143,
+    "sessionsCovered": [
+      204,
+      206,
+      207,
+      208,
+      210,
+      211,
+      212,
+      213,
+      214,
+      216,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-204",
+    "name": "松沢　成文",
+    "questionCount": 4,
+    "sessionsCovered": [
+      204,
+      211,
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-206",
+    "name": "松田　学",
+    "questionCount": 2,
+    "sessionsCovered": [
+      218
+    ]
+  },
+  {
+    "legislatorId": "sangiin-220",
+    "name": "村田　享子",
+    "questionCount": 3,
+    "sessionsCovered": [
+      211,
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-228",
+    "name": "山添　拓",
+    "questionCount": 5,
+    "sessionsCovered": [
+      207,
+      208,
+      213,
+      219
+    ]
+  },
+  {
+    "legislatorId": "sangiin-23",
+    "name": "石橋　通宏",
+    "questionCount": 11,
+    "sessionsCovered": [
+      204,
+      208,
+      211,
+      213,
+      217,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-237",
+    "name": "横沢　高徳",
+    "questionCount": 1,
+    "sessionsCovered": [
+      211
+    ]
+  },
+  {
+    "legislatorId": "sangiin-240",
+    "name": "吉川　沙織",
+    "questionCount": 8,
+    "sessionsCovered": [
+      204,
+      207,
+      208,
+      211
+    ]
+  },
+  {
+    "legislatorId": "sangiin-242",
+    "name": "ラサール石井",
+    "questionCount": 16,
+    "sessionsCovered": [
+      218,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-243",
+    "name": "蓮舫",
+    "questionCount": 4,
+    "sessionsCovered": [
+      204,
+      207,
+      218,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-25",
+    "name": "伊勢崎　賢治",
+    "questionCount": 14,
+    "sessionsCovered": [
+      218,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-29",
+    "name": "伊藤　孝恵",
+    "questionCount": 7,
+    "sessionsCovered": [
+      204,
+      205,
+      219
+    ]
+  },
+  {
+    "legislatorId": "sangiin-41",
+    "name": "上田　清司",
+    "questionCount": 1,
+    "sessionsCovered": [
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-46",
+    "name": "打越　さく良",
+    "questionCount": 7,
+    "sessionsCovered": [
+      205,
+      210,
+      213,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-51",
+    "name": "大島　九州男",
+    "questionCount": 3,
+    "sessionsCovered": [
+      213,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-56",
+    "name": "奥田　ふみよ",
+    "questionCount": 10,
+    "sessionsCovered": [
+      218,
+      220,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-66",
+    "name": "嘉田　由紀子",
+    "questionCount": 3,
+    "sessionsCovered": [
+      208,
+      211,
+      213
+    ]
+  },
+  {
+    "legislatorId": "sangiin-73",
+    "name": "神谷　宗幣",
+    "questionCount": 157,
+    "sessionsCovered": [
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218
+    ]
+  },
+  {
+    "legislatorId": "sangiin-77",
+    "name": "岸　真紀子",
+    "questionCount": 1,
+    "sessionsCovered": [
+      212
+    ]
+  },
+  {
+    "legislatorId": "sangiin-79",
+    "name": "北村　晴男",
+    "questionCount": 1,
+    "sessionsCovered": [
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-80",
+    "name": "木戸口　英司",
+    "questionCount": 5,
+    "sessionsCovered": [
+      204,
+      205,
+      207,
+      208
+    ]
+  },
+  {
+    "legislatorId": "sangiin-83",
+    "name": "吉良　よし子",
+    "questionCount": 2,
+    "sessionsCovered": [
+      217,
+      221
+    ]
+  },
+  {
+    "legislatorId": "sangiin-86",
+    "name": "熊谷　裕人",
+    "questionCount": 4,
+    "sessionsCovered": [
+      204,
+      205,
+      212
+    ]
+  },
+  {
+    "legislatorId": "sangiin-88",
+    "name": "小池　晃",
+    "questionCount": 1,
+    "sessionsCovered": [
+      220
+    ]
+  },
+  {
+    "legislatorId": "sangiin-93",
+    "name": "古賀　之士",
+    "questionCount": 6,
+    "sessionsCovered": [
+      204,
+      205
+    ]
+  },
+  {
+    "legislatorId": "sangiin-98",
+    "name": "小西　洋之",
+    "questionCount": 57,
+    "sessionsCovered": [
+      204,
+      205,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      216,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-003",
+    "name": "青柳　　仁士",
+    "questionCount": 1,
+    "sessionsCovered": [
+      208
+    ]
+  },
+  {
+    "legislatorId": "shugiin-011",
+    "name": "浅野　　　哲",
+    "questionCount": 1,
+    "sessionsCovered": [
+      204
+    ]
+  },
+  {
+    "legislatorId": "shugiin-017",
+    "name": "阿部　　　司",
+    "questionCount": 1,
+    "sessionsCovered": [
+      210
+    ]
+  },
+  {
+    "legislatorId": "shugiin-020",
+    "name": "有田　　芳生",
+    "questionCount": 19,
+    "sessionsCovered": [
+      215,
+      216,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-024",
+    "name": "池下　　　卓",
+    "questionCount": 1,
+    "sessionsCovered": [
+      212
+    ]
+  },
+  {
+    "legislatorId": "shugiin-037",
+    "name": "泉　　　健太",
+    "questionCount": 1,
+    "sessionsCovered": [
+      208
+    ]
+  },
+  {
+    "legislatorId": "shugiin-074",
+    "name": "梅村　　　聡",
+    "questionCount": 1,
+    "sessionsCovered": [
+      217
+    ]
+  },
+  {
+    "legislatorId": "shugiin-091",
+    "name": "緒方　林太郎",
+    "questionCount": 60,
+    "sessionsCovered": [
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      215,
+      216,
+      217,
+      218,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-092",
+    "name": "岡野　　純子",
+    "questionCount": 1,
+    "sessionsCovered": [
+      217
+    ]
+  },
+  {
+    "legislatorId": "shugiin-095",
+    "name": "小川　　淳也",
+    "questionCount": 5,
+    "sessionsCovered": [
+      212,
+      213,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-102",
+    "name": "落合　　貴之",
+    "questionCount": 12,
+    "sessionsCovered": [
+      204,
+      207,
+      208,
+      210,
+      211,
+      212,
+      213,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-122",
+    "name": "金子　　恵美",
+    "questionCount": 1,
+    "sessionsCovered": [
+      212
+    ]
+  },
+  {
+    "legislatorId": "shugiin-127",
+    "name": "神谷　　　裕",
+    "questionCount": 1,
+    "sessionsCovered": [
+      208
+    ]
+  },
+  {
+    "legislatorId": "shugiin-135",
+    "name": "河村　たかし",
+    "questionCount": 7,
+    "sessionsCovered": [
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-171",
+    "name": "後藤　　祐一",
+    "questionCount": 1,
+    "sessionsCovered": [
+      211
+    ]
+  },
+  {
+    "legislatorId": "shugiin-179",
+    "name": "近藤　　和也",
+    "questionCount": 1,
+    "sessionsCovered": [
+      208
+    ]
+  },
+  {
+    "legislatorId": "shugiin-185",
+    "name": "斉藤　　鉄夫",
+    "questionCount": 2,
+    "sessionsCovered": [
+      219
+    ]
+  },
+  {
+    "legislatorId": "shugiin-200",
+    "name": "階　　　　猛",
+    "questionCount": 4,
+    "sessionsCovered": [
+      204,
+      208,
+      213,
+      217
+    ]
+  },
+  {
+    "legislatorId": "shugiin-220",
+    "name": "鈴木　　義弘",
+    "questionCount": 1,
+    "sessionsCovered": [
+      213
+    ]
+  },
+  {
+    "legislatorId": "shugiin-223",
+    "name": "関　　健一郎",
+    "questionCount": 1,
+    "sessionsCovered": [
+      204
+    ]
+  },
+  {
+    "legislatorId": "shugiin-244",
+    "name": "田嶋　　　要",
+    "questionCount": 2,
+    "sessionsCovered": [
+      213,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-246",
+    "name": "辰巳　孝太郎",
+    "questionCount": 1,
+    "sessionsCovered": [
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-258",
+    "name": "玉木　雄一郎",
+    "questionCount": 1,
+    "sessionsCovered": [
+      211
+    ]
+  },
+  {
+    "legislatorId": "shugiin-291",
+    "name": "中司　　　宏",
+    "questionCount": 1,
+    "sessionsCovered": [
+      217
+    ]
+  },
+  {
+    "legislatorId": "shugiin-292",
+    "name": "長妻　　　昭",
+    "questionCount": 67,
+    "sessionsCovered": [
+      204,
+      206,
+      207,
+      208,
+      209,
+      211,
+      213,
+      217,
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-309",
+    "name": "西田　　　薫",
+    "questionCount": 2,
+    "sessionsCovered": [
+      217
+    ]
+  },
+  {
+    "legislatorId": "shugiin-313",
+    "name": "西村　智奈美",
+    "questionCount": 2,
+    "sessionsCovered": [
+      204,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-326",
+    "name": "野間　　　健",
+    "questionCount": 1,
+    "sessionsCovered": [
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-331",
+    "name": "橋本　　幹彦",
+    "questionCount": 4,
+    "sessionsCovered": [
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-336",
+    "name": "馬場　　伸幸",
+    "questionCount": 2,
+    "sessionsCovered": [
+      204
+    ]
+  },
+  {
+    "legislatorId": "shugiin-344",
+    "name": "日野　紗里亜",
+    "questionCount": 2,
+    "sessionsCovered": [
+      219,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-382",
+    "name": "前原　　誠司",
+    "questionCount": 7,
+    "sessionsCovered": [
+      204,
+      206,
+      211,
+      212
+    ]
+  },
+  {
+    "legislatorId": "shugiin-394",
+    "name": "三木　　圭恵",
+    "questionCount": 1,
+    "sessionsCovered": [
+      216
+    ]
+  },
+  {
+    "legislatorId": "shugiin-408",
+    "name": "向山　　好一",
+    "questionCount": 3,
+    "sessionsCovered": [
+      216,
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-440",
+    "name": "山本ジョージ",
+    "questionCount": 6,
+    "sessionsCovered": [
+      221
+    ]
+  },
+  {
+    "legislatorId": "shugiin-445",
+    "name": "吉川　　里奈",
+    "questionCount": 15,
+    "sessionsCovered": [
+      215,
+      216,
+      217,
+      218
+    ]
+  },
+  {
+    "legislatorId": "shugiin-457",
+    "name": "早稲田　ゆき",
+    "questionCount": 38,
+    "sessionsCovered": [
+      206,
+      207,
+      208,
+      211,
+      212,
+      213,
+      214,
+      215,
+      217,
+      219,
+      221
+    ]
+  }
+]

@@ -133,6 +133,20 @@ export interface NdlSpeechCount {
   sourceUrl: string;
 }
 
+/**
+ * 質問主意書の提出件数集計（フェーズ4）。
+ * 政治的中立性配慮のため、件数の多寡について「良い/悪い」といった評価的な
+ * 意味づけ（ランキング表示を前提にした並び順等）はデータ構造として持たせない。
+ * あくまで「対象回次の中で何件提出したか」という事実データ。
+ */
+export interface WrittenQuestionCount {
+  legislatorId: string;
+  name: string;
+  questionCount: number;
+  /** 集計対象とした国会回次のうち、実際に1件以上提出があった回次 */
+  sessionsCovered: number[];
+}
+
 /** 都道府県マスタ（JIS都道府県コード） */
 export interface Prefecture {
   code: string; // JIS X 0401 (2桁)
