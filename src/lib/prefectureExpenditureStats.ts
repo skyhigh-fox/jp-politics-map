@@ -1,4 +1,5 @@
 import type {
+  PrefectureExpenditureByNature,
   PrefectureExpenditureByPurpose,
   PrefecturePopulation,
 } from "@/types";
@@ -123,4 +124,34 @@ export function buildPerCapitaLayer(
     result[row.prefecture] = (amount * 1000) / population;
   }
   return result;
+}
+
+/**
+ * 都道府県別・性質別歳出（予算の見える化 Phase B）の表示用集計。
+ * data/prefecture-expenditure-by-nature.json の12区分は相互排他的で、
+ * 「その他」への集約は不要（目的別歳出と異なり全区分がそのまま政策の
+ * 性質を表す）。並び順は原表の掲載順で固定。
+ */
+export function buildExpenditureByNatureBreakdown(
+  row: PrefectureExpenditureByNature,
+  populationByPrefecture: Map<string, number>
+): PrefectureExpenditureBreakdown {
+  const population = populationByPrefecture.get(row.prefecture) ?? null;
+  const items: ExpenditureBreakdownItem[] = row.categories.map((c) => ({
+    name: c.name,
+    amountThousandYen: c.amountThousandYen,
+    perCapitaYen: perCapita(c.amountThousandYen, population),
+  }));
+  const totalThousandYen = row.categories.reduce(
+    (sum, c) => sum + c.amountThousandYen,
+    0
+  );
+
+  return {
+    prefecture: row.prefecture,
+    fiscalYear: row.fiscalYear,
+    totalThousandYen,
+    items,
+    population,
+  };
 }

@@ -13,8 +13,12 @@ import type { PrefectureExpenditureBreakdown as Breakdown } from "@/lib/prefectu
  */
 export function PrefectureExpenditureBreakdown({
   breakdown,
+  title = "歳出の内訳（人口一人当たり）",
+  description,
 }: {
   breakdown: Breakdown;
+  title?: string;
+  description?: string;
 }) {
   const values = breakdown.items
     .map((i) => i.perCapitaYen)
@@ -24,10 +28,11 @@ export function PrefectureExpenditureBreakdown({
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-neutral-900">
       <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-        歳出の内訳（人口一人当たり）
+        {title}
       </h3>
       <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-500">
-        {breakdown.fiscalYear}年度決算。総務省「地方財政状況調査」の目的別歳出を人口一人当たりに換算（並び順は総務省の分類順で固定、金額順ではありません）。
+        {description ??
+          `${breakdown.fiscalYear}年度決算。総務省「地方財政状況調査」の目的別歳出を人口一人当たりに換算（並び順は総務省の分類順で固定、金額順ではありません）。`}
       </p>
 
       {breakdown.population === null ? (

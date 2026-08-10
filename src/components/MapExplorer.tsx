@@ -5,9 +5,14 @@ import Link from "next/link";
 import { PrefectureMap } from "@/components/PrefectureMap";
 import { PrefecturePartyComposition } from "@/components/PrefecturePartyComposition";
 import { formatYenCompact, formatYenPerCapita } from "@/lib/formatFinance";
+import {
+  FINANCIAL_HEALTH_INDICATORS,
+  formatFinancialHealthValue,
+  type FinancialHealthIndicatorMeta,
+} from "@/lib/financialHealthStats";
 import type { Party } from "@/types";
 
-type Layer = "legislators" | "finance" | "expenditure";
+type Layer = "legislators" | "finance" | "expenditure" | "financialHealth";
 
 /**
  * `/map` ページ本体。左に都道府県地図、右にサイドバー
@@ -38,6 +43,8 @@ export function MapExplorer({
   expenditureLayers,
   expenditureCategories,
   expenditureFiscalYear,
+  financialHealthLayers,
+  financialHealthFiscalYear,
 }: {
   counts: Record<string, number>;
   partyCountsByPrefecture: Record<string, Record<string, number>>;
@@ -50,6 +57,9 @@ export function MapExplorer({
   /** expenditureLayersの表示順（総務省の目的別分類順、中立的な既定順） */
   expenditureCategories?: string[];
   expenditureFiscalYear?: number;
+  /** 財政健全化指標キーごとの都道府県別マップ */
+  financialHealthLayers?: Record<string, Record<string, number>>;
+  financialHealthFiscalYear?: number;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [layer, setLayer] = useState<Layer>("legislators");
@@ -59,43 +69,61 @@ export function MapExplorer({
       expenditureCategories?.[0] ??
       ""
   );
+  const [financialHealthIndicator, setFinancialHealthIndicator] =
+    useState<FinancialHealthIndicatorMeta["key"]>(
+      FINANCIAL_HEALTH_INDICATORS[0]!.key
+    );
 
   const hasFinanceLayer = !!financeCounts && Object.keys(financeCounts).length > 0;
   const hasExpenditureLayer =
     !!expenditureLayers && (expenditureCategories?.length ?? 0) > 0;
+  const hasFinancialHealthLayer =
+    !!financialHealthLayers &&
+    Object.keys(financialHealthLayers).length > 0;
   const activeLayer: Layer =
     (layer === "finance" && hasFinanceLayer) ||
-    (layer === "expenditure" && hasExpenditureLayer)
+    (layer === "expenditure" && hasExpenditureLayer) ||
+    (layer === "financialHealth" && hasFinancialHealthLayer)
       ? layer
       : "legislators";
+
+  const activeIndicatorMeta = FINANCIAL_HEALTH_INDICATORS.find(
+    (i) => i.key === financialHealthIndicator
+  )!;
 
   const activeCounts =
     activeLayer === "finance"
       ? financeCounts!
       : activeLayer === "expenditure"
         ? (expenditureLayers![expenditureCategory] ?? {})
-        : counts;
+        : activeLayer === "financialHealth"
+          ? (financialHealthLayers![financialHealthIndicator] ?? {})
+          : counts;
   const metricLabel =
     activeLayer === "finance"
       ? "歳出総額"
       : activeLayer === "expenditure"
         ? expenditureCategory
-        : "関連議員";
+        : activeLayer === "financialHealth"
+          ? activeIndicatorMeta.label
+          : "関連議員";
   const formatValue = useMemo(
     () =>
       activeLayer === "finance"
         ? formatYenCompact
         : activeLayer === "expenditure"
           ? formatYenPerCapita
-          : (v: number) => `${v}名`,
-    [activeLayer]
+          : activeLayer === "financialHealth"
+            ? (v: number) => formatFinancialHealthValue(v, activeIndicatorMeta)
+            : (v: number) => `${v}名`,
+    [activeLayer, activeIndicatorMeta]
   );
   const ranking = Object.entries(activeCounts).sort((a, b) => b[1] - a[1]);
 
   return (
     <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_360px]">
       <div>
-        {(hasFinanceLayer || hasExpenditureLayer) && (
+        {(hasFinanceLayer || hasExpenditureLayer || hasFinancialHealthLayer) && (
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <div
               role="group"
@@ -142,6 +170,20 @@ export function MapExplorer({
                   歳出内訳（人口一人当たり）
                 </button>
               )}
+              {hasFinancialHealthLayer && (
+                <button
+                  type="button"
+                  onClick={() => setLayer("financialHealth")}
+                  aria-pressed={activeLayer === "financialHealth"}
+                  className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                    activeLayer === "financialHealth"
+                      ? "bg-accent-600 text-white"
+                      : "text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                  }`}
+                >
+                  財政健全化指標
+                </button>
+              )}
             </div>
             {activeLayer === "expenditure" && (
               <label className="text-xs text-neutral-600 dark:text-neutral-400">
@@ -159,6 +201,26 @@ export function MapExplorer({
                 </select>
               </label>
             )}
+            {activeLayer === "financialHealth" && (
+              <label className="text-xs text-neutral-600 dark:text-neutral-400">
+                <span className="sr-only">財政健全化指標の種類</span>
+                <select
+                  value={financialHealthIndicator}
+                  onChange={(e) =>
+                    setFinancialHealthIndicator(
+                      e.target.value as FinancialHealthIndicatorMeta["key"]
+                    )
+                  }
+                  className="rounded-lg border border-neutral-300 bg-white px-2 py-1.5 text-sm text-neutral-800 transition-colors focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/30 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200"
+                >
+                  {FINANCIAL_HEALTH_INDICATORS.map((i) => (
+                    <option key={i.key} value={i.key}>
+                      {i.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
           </div>
         )}
         {activeLayer === "finance" && (
@@ -170,6 +232,14 @@ export function MapExplorer({
           <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-500">
             {expenditureFiscalYear ? `${expenditureFiscalYear}年度、` : ""}
             都道府県の目的別歳出決算額を人口一人当たりに換算した金額です（総務省「地方財政状況調査」・人口推計）。地理的条件（離島・過疎地等）や高齢化率の違いにより、人口規模だけでは説明できない差が生じる点に留意してください。
+          </p>
+        )}
+        {activeLayer === "financialHealth" && (
+          <p className="mb-2 text-xs text-neutral-500 dark:text-neutral-500">
+            {financialHealthFiscalYear ? `${financialHealthFiscalYear}年度、` : ""}
+            総務省「主要財政指標一覧」に基づく実測値です。数値の高低を「良い/悪い」と単純に評価するものではありません。
+            {activeIndicatorMeta.standardNote &&
+              `法定の基準値: ${activeIndicatorMeta.standardNote}（地方公共団体の財政の健全化に関する法律）。`}
           </p>
         )}
         <PrefectureMap

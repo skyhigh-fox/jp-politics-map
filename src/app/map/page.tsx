@@ -4,6 +4,7 @@ import {
   getPrefectureFinance,
   getPrefectureExpenditureByPurpose,
   getPrefecturePopulation,
+  getPrefectureFinancialHealth,
 } from "@/lib/data";
 import {
   countLegislatorsByPrefecture,
@@ -14,17 +15,28 @@ import {
   buildPerCapitaLayer,
   buildPopulationMap,
 } from "@/lib/prefectureExpenditureStats";
+import {
+  FINANCIAL_HEALTH_INDICATORS,
+  buildFinancialHealthLayer,
+} from "@/lib/financialHealthStats";
 import { MapExplorer } from "@/components/MapExplorer";
 
 export default async function MapPage() {
-  const [legislators, parties, prefectureFinance, expenditure, population] =
-    await Promise.all([
-      getLegislators(),
-      getParties(),
-      getPrefectureFinance(),
-      getPrefectureExpenditureByPurpose(),
-      getPrefecturePopulation(),
-    ]);
+  const [
+    legislators,
+    parties,
+    prefectureFinance,
+    expenditure,
+    population,
+    financialHealth,
+  ] = await Promise.all([
+    getLegislators(),
+    getParties(),
+    getPrefectureFinance(),
+    getPrefectureExpenditureByPurpose(),
+    getPrefecturePopulation(),
+    getPrefectureFinancialHealth(),
+  ]);
   const counts = countLegislatorsByPrefecture(legislators);
   const partyCountsByPrefecture = countLegislatorsByPrefectureAndParty(legislators);
   const financeCounts = Object.fromEntries(
@@ -43,6 +55,14 @@ export default async function MapPage() {
     ])
   );
   const expenditureFiscalYear = expenditure[0]?.fiscalYear;
+
+  const financialHealthLayers = Object.fromEntries(
+    FINANCIAL_HEALTH_INDICATORS.map((indicator) => [
+      indicator.key,
+      buildFinancialHealthLayer(financialHealth, indicator.key),
+    ])
+  );
+  const financialHealthFiscalYear = financialHealth[0]?.fiscalYear;
 
   return (
     <div className="animate-fade-in">
@@ -72,6 +92,8 @@ export default async function MapPage() {
           expenditureLayers={expenditureLayers}
           expenditureCategories={expenditureCategories as unknown as string[]}
           expenditureFiscalYear={expenditureFiscalYear}
+          financialHealthLayers={financialHealthLayers}
+          financialHealthFiscalYear={financialHealthFiscalYear}
         />
       )}
     </div>
