@@ -214,6 +214,21 @@
     }
   },
   {
+    "id": "party-保守",
+    "name": "日本保守党",
+    "abbreviation": "保守",
+    "color": "#0A82DC",
+    "chambers": {
+      "参議院": {
+        "name": "日本保守党",
+        "abbreviation": "保守",
+        "memberCount": 2,
+        "asOf": "2026-02-18",
+        "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
+      }
+    }
+  },
+  {
     "id": "party-沖縄",
     "name": "沖縄の風",
     "abbreviation": "沖縄",
@@ -237,21 +252,6 @@
       "参議院": {
         "name": "社会民主党",
         "abbreviation": "社民",
-        "memberCount": 2,
-        "asOf": "2026-02-18",
-        "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
-      }
-    }
-  },
-  {
-    "id": "party-保守",
-    "name": "日本保守党",
-    "abbreviation": "保守",
-    "color": "#0A82DC",
-    "chambers": {
-      "参議院": {
-        "name": "日本保守党",
-        "abbreviation": "保守",
         "memberCount": 2,
         "asOf": "2026-02-18",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
