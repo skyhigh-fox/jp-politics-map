@@ -23,7 +23,48 @@ import {
   buildWrittenQuestionCoverage,
 } from "@/lib/dataProvenance";
 import { buildLegislatorVoteRecords } from "@/lib/rollCallVoteStats";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import type { Bill } from "@/types";
+
+/**
+ * 議員ごとのtitle/description/OGP。
+ * descriptionは議員マスタの事実（院・会派・選挙区・在職区分）の転記に留め、
+ * 実績評価・活動量の多寡といった評価的な記述は書かない。
+ * 会派名は院ごとに別組織なので、必ずその議員の院の正式会派名を使う
+ * （partyDisplayName に chamber を渡す）。
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  // Next.jsの動的ルートのparamsはパーセントエンコードのままのことがあるため必ずデコードする
+  const { id: rawId } = await params;
+  const id = decodeURIComponent(rawId);
+  const [legislators, parties] = await Promise.all([
+    getLegislators(),
+    getParties(),
+  ]);
+  const legislator = legislators.find((l) => l.id === id);
+
+  if (!legislator) {
+    return buildPageMetadata({
+      title: "国会議員",
+      description:
+        "衆議院・参議院の国会議員のプロフィール・選挙結果・国会での記録を、各院の公式サイトの表記のまま表示しています。",
+      path: `/legislators/${encodeURIComponent(id)}`,
+    });
+  }
+
+  const party = parties.find((p) => p.id === legislator.currentPartyId);
+  const partyName = partyDisplayName(party, legislator.chamber);
+
+  return buildPageMetadata({
+    title: legislator.name,
+    description: `${legislator.chamber}議員（${partyName}／${legislator.electionType}・${legislator.district}／${legislator.termStatus}）。選挙結果、提出者として名を連ねた議案、記名投票での賛否を、公的機関の公表情報のまま表示しています。`,
+    path: `/legislators/${encodeURIComponent(legislator.id)}`,
+  });
+}
 
 export default async function LegislatorDetailPage({
   params,

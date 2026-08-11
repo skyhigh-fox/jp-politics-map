@@ -45,6 +45,27 @@ npm run fetch:bills            # 法案・審議進捗履歴
 > 必ず確認し、外部サイトのHTML構造・JSONスキーマとズレがあればスクリプトを実データに合わせて
 > 修正すること（各スクリプト冒頭のコメントに注意点を記載している）。
 
+## 公開URL・SEO関連の設定
+
+ページごとのtitle/description/OGP、`sitemap.xml`、`robots.txt` は、いずれも
+サイトの絶対URLを必要とする（canonical URL・`og:url`・sitemapの`<loc>`）。
+本番ドメインが未確定のため、`src/lib/siteMetadata.ts` が次の優先順で解決する。
+
+| 優先 | 環境変数 | 用途 |
+| --- | --- | --- |
+| 1 | `NEXT_PUBLIC_SITE_URL` | 独自ドメイン取得後に手動で設定する（例: `https://example.jp`）。設定されていれば常にこれが使われる |
+| 2 | `VERCEL_PROJECT_PRODUCTION_URL` | Vercelがビルド時に自動注入する。プレビューデプロイでも「本番ドメイン」を指すため、canonical/OGP/sitemapに使ってよい |
+| 3 | （フォールバック）`https://jp-politics-map.vercel.app` | ローカル開発・CI用 |
+
+デプロイごとに変わる `VERCEL_URL` は**使わない**（プレビュー用の一意URLが
+canonical URLとして外部に出てしまうため）。`NEXT_PUBLIC_` 接頭辞の環境変数は
+ビルド時にバンドルへ埋め込まれるので、ドメイン確定後は再デプロイが必要。
+
+`sitemap.xml` / `robots.txt` は `src/app/sitemap.ts` / `src/app/robots.ts`
+（Next.jsのMetadata Files規約）からビルド時に生成される。sitemapには静的ページに
+加えて法案・議員・記名投票・都道府県・市区町村の全詳細ページ（約8,100URL）を
+収録している。収録方針の判断根拠は `src/app/sitemap.ts` 冒頭のコメントを参照。
+
 ## ディレクトリ構成
 
 ```

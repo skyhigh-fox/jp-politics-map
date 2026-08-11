@@ -39,9 +39,39 @@ import {
   buildExpenditureByNatureBreakdown,
   buildPopulationMap,
 } from "@/lib/prefectureExpenditureStats";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 
 const MUNICIPALITY_GEO_BASE =
   "https://raw.githubusercontent.com/smartnews-smri/japan-topography/main/data/municipality/topojson/s0010";
+
+/**
+ * 都道府県ごとのtitle/description/OGP。
+ * 都道府県名は`params`から取るためデコードが必須（未デコードだと
+ * 「%E6%9D%B1%E4%BA%AC%E9%83%BD」がそのままタイトルに出る）。
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ prefecture: string }>;
+}) {
+  const { prefecture: rawPrefecture } = await params;
+  const prefecture = decodeURIComponent(rawPrefecture);
+
+  if (!isValidPrefectureName(prefecture)) {
+    return buildPageMetadata({
+      title: "都道府県",
+      description:
+        "都道府県ごとの関連国会議員・地方議会の党派別構成・歳出内訳・財政健全化指標を表示しています。",
+      path: "/map",
+    });
+  }
+
+  return buildPageMetadata({
+    title: prefecture,
+    description: `${prefecture}に関係する国会議員、地方議会及び長の党派別構成、知事・指定都市市長、人口一人当たりの歳出内訳、財政健全化指標を、公的機関の公表資料のまま表示しています。市区町村の地図から地方議会議員も辿れます。`,
+    path: `/map/${encodeURIComponent(prefecture)}`,
+  });
+}
 
 export default async function PrefectureDetailPage({
   params,

@@ -11,6 +11,7 @@ import {
   sangiinDistrictKeys,
 } from "@/lib/districts";
 import { buildDistrictBoundaryCoverage } from "@/lib/dataProvenance";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import { DataCoverageNote } from "@/components/DataCoverageNote";
 import {
   DistrictExplorer,
@@ -19,11 +20,12 @@ import {
 } from "@/components/DistrictExplorer";
 import type { Chamber, Legislator, Party } from "@/types";
 
-export const metadata = {
-  title: "選挙区マップ | 日本政治マップ",
+export const metadata = buildPageMetadata({
+  title: "選挙区マップ",
   description:
     "衆議院289小選挙区・参議院45選挙区を地図から選び、その選挙区選出の国会議員を確認できます。",
-};
+  path: "/map/districts",
+});
 
 /**
  * 選挙区マップ（機能拡充ロードマップ Tier1 #4）。

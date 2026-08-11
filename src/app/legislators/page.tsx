@@ -8,7 +8,15 @@ import { PartySeatTrendChart } from "@/components/PartySeatTrendChart";
 import { buildChamberSeatTrend } from "@/lib/partySeatTrendStats";
 import { partiesInChamber, partyDisplayName } from "@/lib/party";
 import { matchesNameQuery } from "@/lib/nameMatch";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import type { Chamber, Legislator, Party } from "@/types";
+
+export const metadata = buildPageMetadata({
+  title: "議員一覧",
+  description:
+    "衆議院・参議院の国会議員を、院・都道府県・会派・氏名で絞り込んで検索できます。各院の公式サイトが公表している会派名・選挙区の表記のまま掲載しています。",
+  path: "/legislators",
+});
 
 const CHAMBER_OPTIONS = ["衆議院", "参議院"] as const;
 const PREFECTURE_OPTIONS = Object.keys(PREFECTURE_CODES);

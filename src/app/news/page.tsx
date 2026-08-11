@@ -1,4 +1,12 @@
 import { getNews } from "@/lib/news";
+import { buildPageMetadata } from "@/lib/siteMetadata";
+
+export const metadata = buildPageMetadata({
+  title: "最新ニュース",
+  description:
+    "総務省「ホームページ新着情報」の見出しを新しい順に掲載しています（選挙関連の告知等を含む総務省全般のお知らせ）。見出し・リンク先は原典のままで、要約や論評は加えていません。",
+  path: "/news",
+});
 
 export default async function NewsPage() {
   const news = await getNews();

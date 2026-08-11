@@ -3,6 +3,7 @@ import { getRollCallVotes } from "@/lib/data";
 import { FilterBar } from "@/components/FilterBar";
 import { DataCoverageNote } from "@/components/DataCoverageNote";
 import { buildRollCallVoteCoverage } from "@/lib/dataProvenance";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import {
   type RollCallVoteSummary,
   compareVotesByDateDesc,
@@ -25,11 +26,12 @@ import {
  *   「僅差」「圧倒的」といった評価的な言い換えは加えない。
  */
 
-export const metadata = {
-  title: "記名投票一覧 | 日本政治マップ",
+export const metadata = buildPageMetadata({
+  title: "記名投票一覧",
   description:
     "参議院本会議の記名投票（押しボタン式投票）の一覧。回次・年で絞り込み、投票ごとの会派別・議員別の賛否を確認できます。",
-};
+  path: "/votes",
+});
 
 interface VoteFilters {
   session?: string;

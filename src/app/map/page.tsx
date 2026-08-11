@@ -23,6 +23,14 @@ import {
 } from "@/lib/financialHealthStats";
 import { buildPrefectureTurnoutCoverage } from "@/lib/dataProvenance";
 import { MapExplorer } from "@/components/MapExplorer";
+import { buildPageMetadata } from "@/lib/siteMetadata";
+
+export const metadata = buildPageMetadata({
+  title: "都道府県マップ",
+  description:
+    "47都道府県を地図から選び、その都道府県に関係する国会議員・地方議会の党派別構成・人口一人当たりの歳出内訳・財政健全化指標・国政選挙の投票率を確認できます。",
+  path: "/map",
+});
 
 export default async function MapPage() {
   const [

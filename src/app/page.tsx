@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getBills, getLegislators, getNationalBudget } from "@/lib/data";
 import { formatYenCompact } from "@/lib/formatFinance";
 import { getNews } from "@/lib/news";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/siteMetadata";
 
 /**
  * トップページ。2026-08-11、ユーザーフィードバック（「TOPページが何を出したいのか
@@ -39,6 +41,17 @@ const LINKS_META = {
     description: "国の税収・歳入・歳出の内訳と年度推移を財務省の公式区分のまま確認",
   },
 } as const;
+
+/**
+ * トップページだけは`title`にサイト名をそのまま使う（`%s | 日本政治マップ`の
+ * templateを通すと「トップ | 日本政治マップ」のような冗長な表記になるため、
+ * template適用外の`absolute`で指定する）。
+ */
+export const metadata: Metadata = {
+  title: { absolute: SITE_NAME },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+};
 
 export default async function HomePage() {
   const [bills, legislators, news, nationalBudget] = await Promise.all([

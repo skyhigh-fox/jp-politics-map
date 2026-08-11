@@ -6,6 +6,7 @@ import { VoteChoiceBadge } from "@/components/VoteChoiceBadge";
 import { PartyColorDot } from "@/components/PartyColorDot";
 import { buildRollCallVoteNoteFacts } from "@/lib/dataProvenance";
 import { buildPartyVoteMemberGroups } from "@/lib/rollCallVoteStats";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 
 /**
  * 個別の記名投票ページ（機能拡充ロードマップ Tier1 #5）。
@@ -31,11 +32,21 @@ export async function generateMetadata({
   const voteId = decodeURIComponent(rawVoteId);
   const votes = await getRollCallVotes();
   const vote = votes.find((v) => v.voteId === voteId);
-  return {
-    title: vote
-      ? `${vote.subject}（第${vote.session}回国会・${vote.date}）| 記名投票 | 日本政治マップ`
-      : "記名投票 | 日本政治マップ",
-  };
+
+  if (!vote) {
+    return buildPageMetadata({
+      title: "記名投票",
+      description:
+        "参議院本会議の記名投票（押しボタン式投票）の会派別・議員別の賛否を、参議院公式サイトの投票結果のまま表示しています。",
+      path: `/votes/${encodeURIComponent(voteId)}`,
+    });
+  }
+
+  return buildPageMetadata({
+    title: `${vote.subject}（第${vote.session}回国会・${vote.date}）`,
+    description: `参議院本会議の記名投票。賛成${vote.totalFor.toLocaleString("ja-JP")}・反対${vote.totalAgainst.toLocaleString("ja-JP")}。会派別・議員別の賛否を、参議院公式サイトの投票結果のまま表示しています。賛否への評価や議員個人の指標化は行っていません。`,
+    path: `/votes/${encodeURIComponent(vote.voteId)}`,
+  });
 }
 
 export default async function VoteDetailPage({

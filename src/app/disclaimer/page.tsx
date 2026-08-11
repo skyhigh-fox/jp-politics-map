@@ -38,10 +38,14 @@ import {
   buildWrittenQuestionCoverage,
   datasetAnchor,
 } from "@/lib/dataProvenance";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 
-export const metadata = {
-  title: "免責事項・出典 | 日本政治マップ",
-};
+export const metadata = buildPageMetadata({
+  title: "免責事項・出典",
+  description:
+    "本サイトが表示しているデータの出典・収録範囲・更新頻度と、利用にあたっての免責事項をまとめています。",
+  path: "/disclaimer",
+});
 
 interface CreditItem {
   name: string;

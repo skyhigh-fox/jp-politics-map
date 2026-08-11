@@ -5,12 +5,46 @@ import { NewsMenu } from "@/components/NewsMenu";
 import { MobileNav } from "@/components/MobileNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getNews } from "@/lib/news";
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/siteMetadata";
 import "./globals.css";
 
+/**
+ * サイト全体のメタデータ既定値。
+ *
+ * - `metadataBase`: 各ページが相対パスでcanonical・og:urlを書けるようにするための基準URL。
+ *   本番ドメインが未確定のため、環境変数から解決している（詳細は src/lib/siteMetadata.ts）。
+ * - `title.template`: 各ページは`title`にページ名だけを書けばよく、サイト名は自動で付く。
+ *   個別ページで`| 日本政治マップ`を手書きしないこと（二重に付く）。
+ * - OGP画像は現時点では用意していない。日本語を描画できるフォントを同梱する必要があり、
+ *   リポジトリサイズとのトレードオフになるため、画像なし（テキストのみのカード）で公開する。
+ *   用意する場合は public/ に1枚置いて `openGraph.images` に追加すれば全ページに効く。
+ */
 export const metadata: Metadata = {
-  title: "日本政治マップ",
-  description:
-    "日本地図をベースに、都道府県・市区町村ごとの政治情報（法案審議進捗、議員リスト、選挙結果）を閲覧できるサイト",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "ja_JP",
+    url: "/",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 const NAV_LINKS = [

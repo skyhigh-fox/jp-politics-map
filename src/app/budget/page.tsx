@@ -4,6 +4,7 @@ import { BudgetStackedTrendChart } from "@/components/BudgetStackedTrendChart";
 import { NationalBudgetBreakdown } from "@/components/NationalBudgetBreakdown";
 import { getNationalBudget } from "@/lib/data";
 import { formatYenCompact } from "@/lib/formatFinance";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import {
   STATUTORY_EARMARK_NOTES,
   buildBreakdownFacts,
@@ -33,11 +34,12 @@ import {
  * 6. 単年度の絶対額だけを見せず、必ず年度推移を併置する。
  */
 
-export const metadata: Metadata = {
-  title: "国の予算・決算 | 日本政治マップ",
+export const metadata: Metadata = buildPageMetadata({
+  title: "国の予算・決算",
   description:
     "財務省の公表データをもとに、国（一般会計）の税収・歳入・歳出の内訳と年度推移を、財務省の公式区分のまま表示します。",
-};
+  path: "/budget",
+});
 
 export default async function BudgetPage() {
   const budget = await getNationalBudget();

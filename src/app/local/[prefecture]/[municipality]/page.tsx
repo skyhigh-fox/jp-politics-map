@@ -2,6 +2,28 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isValidPrefectureName } from "@/lib/prefectures";
 import { getLocalAssemblyMembersByMunicipality } from "@/lib/localAssembly";
+import { buildPageMetadata } from "@/lib/siteMetadata";
+
+/**
+ * 市区町村ごとのtitle/description/OGP。
+ * 都道府県名・市区町村名はともに`params`から取るためデコードが必須。
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ prefecture: string; municipality: string }>;
+}) {
+  const { prefecture: rawPrefecture, municipality: rawMunicipality } =
+    await params;
+  const prefecture = decodeURIComponent(rawPrefecture);
+  const municipality = decodeURIComponent(rawMunicipality);
+
+  return buildPageMetadata({
+    title: `${municipality}の地方議会議員（${prefecture}）`,
+    description: `${prefecture}${municipality}を選挙区に含む地方議会議員の一覧です。氏名・会派・選挙区は議会の公式サイトの表記のまま掲載しています。`,
+    path: `/local/${encodeURIComponent(prefecture)}/${encodeURIComponent(municipality)}`,
+  });
+}
 
 export default async function LocalAssemblyMembersPage({
   params,

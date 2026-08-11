@@ -21,6 +21,39 @@ import {
   buildRollCallVoteNoteFacts,
   buildRollCallVoteScopeFacts,
 } from "@/lib/dataProvenance";
+import { buildPageMetadata } from "@/lib/siteMetadata";
+
+/**
+ * 法案ごとのtitle/description/OGP。
+ * descriptionは原データ（回次・院・提出区分・審議状況・日付）の転記に留め、
+ * 「注目の」「重要な」といった評価的な語や、法案内容の要約・解釈は書かない。
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  // Next.jsの動的ルートのparamsはパーセントエンコードのままのことがあるため必ずデコードする
+  const { id: rawId } = await params;
+  const id = decodeURIComponent(rawId);
+  const bills = await getBills();
+  const bill = bills.find((b) => b.id === id);
+
+  if (!bill) {
+    return buildPageMetadata({
+      title: "法案",
+      description:
+        "第139回国会以降に国会へ提出された議案の審議状況・審議経過を、各院の公表情報のまま表示しています。",
+      path: `/bills/${encodeURIComponent(id)}`,
+    });
+  }
+
+  return buildPageMetadata({
+    title: bill.title,
+    description: `第${bill.dietSession}回国会・${bill.house}・${bill.submitterType}（${bill.category ?? "議案"}第${bill.billNumber}号）。審議状況は「${bill.status}」（${bill.submittedDate}提出、${bill.lastUpdated}時点）。審議経過と会派別の賛否を、各院の公表情報のまま表示しています。`,
+    path: `/bills/${encodeURIComponent(bill.id)}`,
+  });
+}
 
 export default async function BillDetailPage({
   params,

@@ -3,6 +3,7 @@ import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { datasetHref } from "@/lib/dataProvenance";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import {
   DOWNLOADABLE_DATASETS,
   MANIFEST_PATH,
@@ -29,11 +30,12 @@ import {
  * public/data/datasets/manifest.json から読む。
  */
 
-export const metadata: Metadata = {
-  title: "データの入手 | 日本政治マップ",
+export const metadata: Metadata = buildPageMetadata({
+  title: "データの入手",
   description:
     "本サイトが集計に使っているデータのうち、原典のライセンス・利用規約で再配布が認められているものを、機械可読なJSONのまま配布しています。",
-};
+  path: "/data",
+});
 
 const numberFormat = new Intl.NumberFormat("ja-JP");
 

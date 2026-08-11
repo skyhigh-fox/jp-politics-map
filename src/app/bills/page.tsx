@@ -6,7 +6,15 @@ import { BillStageFunnelChart } from "@/components/BillStageFunnelChart";
 import { aggregateBillsBySession } from "@/lib/billSessionStats";
 import { aggregateBillFunnel } from "@/lib/billFunnelStats";
 import { BILL_TOPIC_ORDER, classifyBillTopics } from "@/lib/billTopics";
+import { buildPageMetadata } from "@/lib/siteMetadata";
 import type { Bill } from "@/types";
+
+export const metadata = buildPageMetadata({
+  title: "法案一覧",
+  description:
+    "第139回国会以降に国会へ提出された議案を、回次・院・提出区分・審議状況で絞り込んで一覧できます。件数・審議状況は各院の公表情報のまま表示しています。",
+  path: "/bills",
+});
 
 const HOUSE_OPTIONS = ["衆議院", "参議院", "両院"] as const;
 const STATUS_OPTIONS = [
