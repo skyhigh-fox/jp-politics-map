@@ -146,6 +146,32 @@ export function MobileNav({
               </div>
             )}
           </div>
+
+          <div className="mt-1 border-t border-neutral-200 pt-1 dark:border-neutral-800">
+            <a
+              href="https://jp-multicultural-map.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+              className="flex items-center gap-1.5 rounded-md px-2 py-2 text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-accent-600 dark:text-neutral-500 dark:hover:bg-neutral-800 dark:hover:text-accent-400"
+            >
+              多文化共生マップ
+              <svg
+                className="h-3.5 w-3.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <path d="M15 3h6v6" />
+                <path d="M10 14L21 3" />
+              </svg>
+            </a>
+          </div>
         </div>
       )}
     </div>
