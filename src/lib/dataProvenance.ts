@@ -8,6 +8,7 @@ import type {
   NdlSpeechCount,
   PartySeatHistory,
   PrefectureFinance,
+  PrefectureTurnoutElection,
   RollCallVote,
   WrittenQuestionCount,
 } from "@/types";
@@ -39,6 +40,7 @@ export type DatasetId =
   | "ndl-speech-counts"
   | "written-questions"
   | "election-results"
+  | "prefecture-turnout"
   | "party-seat-history"
   | "local-assembly-members"
   | "local-assembly-party-composition"
@@ -173,6 +175,22 @@ export const DATASET_META: Record<DatasetId, DatasetMeta> = {
     scope:
       "候補者別の得票数が機械可読な形式（Excel）で配布されている選挙のみを収録しています。それ以外の選挙はPDFでの配布であり、現時点では取り込んでいません。比例代表の名簿登載者別得票も現時点では対象外です。",
   },
+  "prefecture-turnout": {
+    id: "prefecture-turnout",
+    label: "都道府県別の投票率（国政選挙）",
+    sources: [
+      {
+        name: "総務省「選挙関連資料」衆議院議員総選挙結果調",
+        url: "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin/ichiran.html",
+      },
+      {
+        name: "総務省「選挙関連資料」参議院議員通常選挙結果調",
+        url: "https://www.soumu.go.jp/senkyo/senkyo_s/data/sangiin/ichiran.html",
+      },
+    ],
+    scope:
+      "各回の選挙結果調に含まれる都道府県別投票率の表（衆議院は小選挙区、参議院は選挙区）を、原資料の値のまま転記しています。男・女・計の3区分は原資料（選挙人名簿上の性別）の区分であり、本サイトが独自に分類したものではありません。比例代表の投票率、年齢別・年代別の投票率、市区町村別の投票率は収録していません（年代別投票率は原資料がPDFのみのため）。回ごとにExcelの様式が異なるため、様式が安定している2012年（第46回衆議院議員総選挙）以降に絞って収録しています。投票率の高低は評価を含まない実測値であり、本サイトでは順位付けを行わず、全国計との比較と推移の形で表示しています。",
+  },
   "party-seat-history": {
     id: "party-seat-history",
     label: "政党別議席数の推移",
@@ -256,6 +274,7 @@ export const DATASET_ORDER: DatasetId[] = [
   "ndl-speech-counts",
   "written-questions",
   "election-results",
+  "prefecture-turnout",
   "party-seat-history",
   "local-assembly-members",
   "local-assembly-party-composition",
@@ -568,6 +587,53 @@ export function buildElectionResultCoverage(
   return {
     asOf: yearLabel ? { label: "収録している選挙", value: yearLabel } : null,
     facts,
+  };
+}
+
+/**
+ * 都道府県別投票率の収録状況（機能拡充ロードマップ Tier1 #7）。
+ *
+ * 中立性のため、投票率の値そのものについての言及（どこが高い/低い等）は
+ * 一切書かず、「何回分・何都道府県分・どの区分を収録しているか」という
+ * 収録範囲の事実だけを算出する。
+ */
+export function buildPrefectureTurnoutCoverage(
+  elections: PrefectureTurnoutElection[]
+): DatasetCoverage {
+  if (elections.length === 0) {
+    return { asOf: null, facts: ["現在収録しているデータはありません。"] };
+  }
+  const dates = elections.map((e) => e.electionDate).sort();
+  const byChamber = new Map<string, { count: number; category: string }>();
+  for (const e of elections) {
+    const cur = byChamber.get(e.chamber);
+    byChamber.set(e.chamber, {
+      count: (cur?.count ?? 0) + 1,
+      category: e.votingCategory,
+    });
+  }
+  const breakdown = [...byChamber.entries()]
+    .map(([chamber, v]) => `${chamber}（${v.category}）${n(v.count)}回`)
+    .join("・");
+
+  const prefectureCounts = new Set(elections.map((e) => e.prefectures.length));
+  const allComplete = prefectureCounts.size === 1 && prefectureCounts.has(47);
+  const withGender = elections.filter((e) =>
+    e.prefectures.every((p) => p.male !== null && p.female !== null)
+  ).length;
+
+  return {
+    asOf: {
+      label: "収録している選挙",
+      value: `${dates[0]!.slice(0, 4)}年〜${dates.at(-1)!.slice(0, 4)}年`,
+    },
+    facts: [
+      `${breakdown}の計${n(elections.length)}回について、都道府県別の投票率を収録しています。`,
+      allComplete
+        ? `いずれの回も47都道府県すべてと全国計の値が揃っています。${withGender === elections.length ? "男・女・計の3区分もすべての回で揃っています。" : `男女別の内訳が揃っているのは${n(withGender)}回です。`}`
+        : `回によって収録できている都道府県数が異なります（${[...prefectureCounts].sort((a, b) => a - b).join("・")}件）。`,
+      "比例代表の投票率、年齢別・年代別の投票率、市区町村別の投票率は収録していません。これより前の回は原資料のExcelの様式が異なるため収録していません。",
+    ],
   };
 }
 

@@ -37,6 +37,8 @@ export function PrefectureMap({
   onSelectPrefecture,
   metricLabel = "関連議員",
   formatValue = (v: number) => `${v}名`,
+  legendLowLabel = "少ない",
+  legendHighLabel = "多い",
 }: {
   counts: Record<string, number>;
   /** 現在選択中の都道府県名（サイドバー連動でハイライト表示する） */
@@ -52,6 +54,13 @@ export function PrefectureMap({
   metricLabel?: string;
   /** 数値の表示形式（既定は「◯名」。財政データ等、単位が異なるレイヤー用） */
   formatValue?: (value: number) => string;
+  /**
+   * 凡例の左右のラベル。既定は件数向けの「少ない/多い」だが、
+   * 投票率のような「率」のレイヤーでは「低い/高い」に差し替える
+   * （日本語として「投票率が多い」とは言わないため）。
+   */
+  legendLowLabel?: string;
+  legendHighLabel?: string;
 }) {
   const router = useRouter();
   const mode = useColorScheme();
@@ -208,7 +217,7 @@ export function PrefectureMap({
       )}
 
       <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400">
-        <span>少ない</span>
+        <span>{legendLowLabel}</span>
         {sequentialSteps.map((c) => (
           <span
             key={c}
@@ -216,7 +225,7 @@ export function PrefectureMap({
             style={{ backgroundColor: c }}
           />
         ))}
-        <span>多い</span>
+        <span>{legendHighLabel}</span>
         <span className="ml-2 text-neutral-400 dark:text-neutral-500">
           （{formatValue(min)}〜{formatValue(max)}。クリックでその都道府県の政党別内訳を表示／ホイールでズーム・ドラッグでパン）
         </span>

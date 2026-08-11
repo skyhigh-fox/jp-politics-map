@@ -17,6 +17,7 @@ import type {
   PrefectureFinance,
   PrefectureFinancialHealth,
   PrefecturePopulation,
+  PrefectureTurnoutElection,
   RollCallVote,
   WrittenQuestionCount,
 } from "@/types";
@@ -185,6 +186,25 @@ export const getPrefectureExpenditureByNature = async (): Promise<
   try {
     const data = await readJson<PrefectureExpenditureByNature[]>(
       "prefecture-expenditure-by-nature.json"
+    );
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・国政選挙の投票率（機能拡充ロードマップ Tier1 #7）を取得する。
+ * data/prefecture-turnout.json は取得スクリプト（fetch:prefecture-turnout）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ * 配列は投票日の昇順（取得スクリプト側でソート済み）。
+ */
+export const getPrefectureTurnout = async (): Promise<
+  PrefectureTurnoutElection[]
+> => {
+  try {
+    const data = await readJson<PrefectureTurnoutElection[]>(
+      "prefecture-turnout.json"
     );
     return Array.isArray(data) ? data : [];
   } catch {

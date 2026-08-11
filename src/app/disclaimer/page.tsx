@@ -8,6 +8,7 @@ import {
   getNdlSpeechCounts,
   getPartySeatHistory,
   getPrefectureFinance,
+  getPrefectureTurnout,
   getRollCallVotes,
   getShugiinDistricts,
   getWrittenQuestionCounts,
@@ -30,6 +31,7 @@ import {
   buildNewsCoverage,
   buildPartySeatHistoryCoverage,
   buildPrefectureFinanceCoverage,
+  buildPrefectureTurnoutCoverage,
   buildRollCallVoteCoverage,
   buildWrittenQuestionCoverage,
   datasetAnchor,
@@ -99,6 +101,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
     localAssemblyMembers,
     localPartyComposition,
     prefectureFinance,
+    prefectureTurnout,
     shugiinDistricts,
     news,
   ] = await Promise.all([
@@ -113,6 +116,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
     getLocalAssemblyMembers(),
     getLocalAssemblyPartyComposition(),
     getPrefectureFinance(),
+    getPrefectureTurnout(),
     getShugiinDistricts(),
     getNews(),
   ]);
@@ -131,6 +135,7 @@ async function loadDataProvenance(): Promise<DatasetProvenance[]> {
       electionResults,
       legislators.length
     ),
+    "prefecture-turnout": buildPrefectureTurnoutCoverage(prefectureTurnout),
     "party-seat-history": buildPartySeatHistoryCoverage(partySeatHistory),
     "local-assembly-members": buildLocalAssemblyCoverage(localAssemblyMembers),
     "local-assembly-party-composition":

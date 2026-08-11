@@ -1,0 +1,3291 @@
+[
+  {
+    "id": "shugiin-46",
+    "chamber": "衆議院",
+    "round": 46,
+    "electionName": "第46回衆議院議員総選挙",
+    "electionDate": "2012-12-16",
+    "votingCategory": "小選挙区",
+    "national": {
+      "male": 60.14,
+      "female": 58.55,
+      "total": 59.32
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 60.17,
+        "female": 57.48,
+        "total": 58.73
+      },
+      {
+        "prefecture": "青森県",
+        "male": 55.87,
+        "female": 52.73,
+        "total": 54.2
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 63.15,
+        "female": 60.36,
+        "total": 61.68
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 56.69,
+        "female": 53.9,
+        "total": 55.24
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 65.23,
+        "female": 61.47,
+        "total": 63.22
+      },
+      {
+        "prefecture": "山形県",
+        "male": 66.99,
+        "female": 62.94,
+        "total": 64.86
+      },
+      {
+        "prefecture": "福島県",
+        "male": 59.82,
+        "female": 57.96,
+        "total": 58.86
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 59.9,
+        "female": 57.81,
+        "total": 58.85
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 56.21,
+        "female": 53.25,
+        "total": 54.71
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 58.58,
+        "female": 56.14,
+        "total": 57.33
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 58.33,
+        "female": 56.48,
+        "total": 57.4
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 59.06,
+        "female": 57.92,
+        "total": 58.49
+      },
+      {
+        "prefecture": "東京都",
+        "male": 62.24,
+        "female": 62.17,
+        "total": 62.2
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 60.42,
+        "female": 59.32,
+        "total": 59.87
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 62.34,
+        "female": 57.2,
+        "total": 59.66
+      },
+      {
+        "prefecture": "富山県",
+        "male": 59,
+        "female": 54.97,
+        "total": 56.89
+      },
+      {
+        "prefecture": "石川県",
+        "male": 63.2,
+        "female": 60.76,
+        "total": 61.92
+      },
+      {
+        "prefecture": "福井県",
+        "male": 63.4,
+        "female": 60.23,
+        "total": 61.75
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 64.19,
+        "female": 63.18,
+        "total": 63.67
+      },
+      {
+        "prefecture": "長野県",
+        "male": 64.97,
+        "female": 61.86,
+        "total": 63.36
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 63,
+        "female": 61.15,
+        "total": 62.04
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 62.34,
+        "female": 61.19,
+        "total": 61.75
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 60.23,
+        "female": 57.92,
+        "total": 59.07
+      },
+      {
+        "prefecture": "三重県",
+        "male": 61.89,
+        "female": 60.73,
+        "total": 61.29
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 62.74,
+        "female": 60.82,
+        "total": 61.76
+      },
+      {
+        "prefecture": "京都府",
+        "male": 59.8,
+        "female": 56.88,
+        "total": 58.27
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 58.43,
+        "female": 58.32,
+        "total": 58.37
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 59.5,
+        "female": 57.78,
+        "total": 58.59
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 64.37,
+        "female": 62.04,
+        "total": 63.14
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 62.2,
+        "female": 60.65,
+        "total": 61.37
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 63.33,
+        "female": 62.56,
+        "total": 62.92
+      },
+      {
+        "prefecture": "島根県",
+        "male": 66.92,
+        "female": 64.69,
+        "total": 65.74
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 56.08,
+        "female": 54.54,
+        "total": 55.27
+      },
+      {
+        "prefecture": "広島県",
+        "male": 57.48,
+        "female": 56.1,
+        "total": 56.76
+      },
+      {
+        "prefecture": "山口県",
+        "male": 60.11,
+        "female": 59.97,
+        "total": 60.04
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 58.67,
+        "female": 57.09,
+        "total": 57.83
+      },
+      {
+        "prefecture": "香川県",
+        "male": 59.67,
+        "female": 58.47,
+        "total": 59.04
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 60.16,
+        "female": 59.03,
+        "total": 59.56
+      },
+      {
+        "prefecture": "高知県",
+        "male": 53.57,
+        "female": 54.17,
+        "total": 53.89
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 57.56,
+        "female": 57.14,
+        "total": 57.34
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 62.46,
+        "female": 61.35,
+        "total": 61.86
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 60.84,
+        "female": 59.49,
+        "total": 60.11
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 59.58,
+        "female": 57.62,
+        "total": 58.53
+      },
+      {
+        "prefecture": "大分県",
+        "male": 62.63,
+        "female": 61.77,
+        "total": 62.17
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 56.53,
+        "female": 54.97,
+        "total": 55.69
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 58.07,
+        "female": 55.7,
+        "total": 56.79
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 56.29,
+        "female": 55.76,
+        "total": 56.02
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000194178.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin46/index.html"
+  },
+  {
+    "id": "sangiin-23",
+    "chamber": "参議院",
+    "round": 23,
+    "electionName": "第23回参議院議員通常選挙",
+    "electionDate": "2013-07-21",
+    "votingCategory": "選挙区",
+    "national": {
+      "male": 53.5,
+      "female": 51.79,
+      "total": 52.61
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 55.39,
+        "female": 53.56,
+        "total": 54.41
+      },
+      {
+        "prefecture": "青森県",
+        "male": 47.74,
+        "female": 44.94,
+        "total": 46.25
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 58.61,
+        "female": 56.54,
+        "total": 57.53
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 51.79,
+        "female": 49.78,
+        "total": 50.75
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 57.62,
+        "female": 54.95,
+        "total": 56.19
+      },
+      {
+        "prefecture": "山形県",
+        "male": 62.91,
+        "female": 58.82,
+        "total": 60.76
+      },
+      {
+        "prefecture": "福島県",
+        "male": 55.19,
+        "female": 53.9,
+        "total": 54.52
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 50.85,
+        "female": 48.48,
+        "total": 49.66
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 51.31,
+        "female": 48.12,
+        "total": 49.69
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 52.7,
+        "female": 50.84,
+        "total": 51.75
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 52.16,
+        "female": 50.26,
+        "total": 51.21
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 50.11,
+        "female": 48.34,
+        "total": 49.22
+      },
+      {
+        "prefecture": "東京都",
+        "male": 54.08,
+        "female": 52.96,
+        "total": 53.51
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 55.19,
+        "female": 53.76,
+        "total": 54.47
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 58.18,
+        "female": 53.65,
+        "total": 55.82
+      },
+      {
+        "prefecture": "富山県",
+        "male": 51.93,
+        "female": 48.69,
+        "total": 50.23
+      },
+      {
+        "prefecture": "石川県",
+        "male": 56.23,
+        "female": 53.84,
+        "total": 54.98
+      },
+      {
+        "prefecture": "福井県",
+        "male": 55.12,
+        "female": 52.55,
+        "total": 53.78
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 57.05,
+        "female": 56.28,
+        "total": 56.65
+      },
+      {
+        "prefecture": "長野県",
+        "male": 59.07,
+        "female": 56.46,
+        "total": 57.72
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 54.02,
+        "female": 52,
+        "total": 52.97
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 52.23,
+        "female": 50,
+        "total": 51.09
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 53.97,
+        "female": 51.35,
+        "total": 52.65
+      },
+      {
+        "prefecture": "三重県",
+        "male": 58.41,
+        "female": 57.26,
+        "total": 57.82
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 54.32,
+        "female": 51.66,
+        "total": 52.96
+      },
+      {
+        "prefecture": "京都府",
+        "male": 53.74,
+        "female": 50.54,
+        "total": 52.05
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 52.93,
+        "female": 52.53,
+        "total": 52.72
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 53.9,
+        "female": 52.24,
+        "total": 53.02
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 56.91,
+        "female": 54.33,
+        "total": 55.54
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 55.65,
+        "female": 54.32,
+        "total": 54.94
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 59.44,
+        "female": 58.37,
+        "total": 58.88
+      },
+      {
+        "prefecture": "島根県",
+        "male": 62.09,
+        "female": 59.82,
+        "total": 60.89
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 49.44,
+        "female": 48.38,
+        "total": 48.88
+      },
+      {
+        "prefecture": "広島県",
+        "male": 51.18,
+        "female": 48.9,
+        "total": 49.99
+      },
+      {
+        "prefecture": "山口県",
+        "male": 50.68,
+        "female": 50.06,
+        "total": 50.35
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 50.23,
+        "female": 48.46,
+        "total": 49.29
+      },
+      {
+        "prefecture": "香川県",
+        "male": 52.89,
+        "female": 51.36,
+        "total": 52.08
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 49.92,
+        "female": 48.95,
+        "total": 49.4
+      },
+      {
+        "prefecture": "高知県",
+        "male": 49.65,
+        "female": 50.1,
+        "total": 49.89
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 49.76,
+        "female": 49.01,
+        "total": 49.36
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 53.27,
+        "female": 51.85,
+        "total": 52.51
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 54.5,
+        "female": 53.66,
+        "total": 54.04
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 53.18,
+        "female": 51.54,
+        "total": 52.3
+      },
+      {
+        "prefecture": "大分県",
+        "male": 53.56,
+        "female": 52.79,
+        "total": 53.15
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 50.37,
+        "female": 49.34,
+        "total": 49.82
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 51.44,
+        "female": 49.54,
+        "total": 50.42
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 52.97,
+        "female": 53.86,
+        "total": 53.43
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000244364.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/sangiin23/index.html"
+  },
+  {
+    "id": "shugiin-47",
+    "chamber": "衆議院",
+    "round": 47,
+    "electionName": "第47回衆議院議員総選挙",
+    "electionDate": "2014-12-14",
+    "votingCategory": "小選挙区",
+    "national": {
+      "male": 53.66,
+      "female": 51.72,
+      "total": 52.66
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 57.9,
+        "female": 55,
+        "total": 56.35
+      },
+      {
+        "prefecture": "青森県",
+        "male": 48.73,
+        "female": 45.16,
+        "total": 46.83
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 57.89,
+        "female": 54.74,
+        "total": 56.23
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 50.6,
+        "female": 47.96,
+        "total": 49.23
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 57.81,
+        "female": 54.02,
+        "total": 55.78
+      },
+      {
+        "prefecture": "山形県",
+        "male": 61.55,
+        "female": 56.97,
+        "total": 59.15
+      },
+      {
+        "prefecture": "福島県",
+        "male": 53.47,
+        "female": 51.61,
+        "total": 52.51
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 56.1,
+        "female": 54.39,
+        "total": 55.24
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 51.6,
+        "female": 48.63,
+        "total": 50.1
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 52.87,
+        "female": 50.61,
+        "total": 51.72
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 52.97,
+        "female": 50.98,
+        "total": 51.97
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 51.99,
+        "female": 50.5,
+        "total": 51.24
+      },
+      {
+        "prefecture": "東京都",
+        "male": 54.89,
+        "female": 53.85,
+        "total": 54.36
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 54.59,
+        "female": 53.18,
+        "total": 53.88
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 55.43,
+        "female": 50.2,
+        "total": 52.71
+      },
+      {
+        "prefecture": "富山県",
+        "male": 49.72,
+        "female": 45.4,
+        "total": 47.46
+      },
+      {
+        "prefecture": "石川県",
+        "male": 51.05,
+        "female": 47.45,
+        "total": 49.16
+      },
+      {
+        "prefecture": "福井県",
+        "male": 51.8,
+        "female": 48.33,
+        "total": 50
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 59.57,
+        "female": 58.81,
+        "total": 59.18
+      },
+      {
+        "prefecture": "長野県",
+        "male": 57.24,
+        "female": 53.83,
+        "total": 55.48
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 54.25,
+        "female": 51.68,
+        "total": 52.92
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 56.47,
+        "female": 54.78,
+        "total": 55.61
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 55.4,
+        "female": 52.99,
+        "total": 54.19
+      },
+      {
+        "prefecture": "三重県",
+        "male": 56.89,
+        "female": 55.56,
+        "total": 56.2
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 55.18,
+        "female": 52.47,
+        "total": 53.79
+      },
+      {
+        "prefecture": "京都府",
+        "male": 52.75,
+        "female": 49.4,
+        "total": 50.99
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 51.06,
+        "female": 50.32,
+        "total": 50.67
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 51.96,
+        "female": 49.87,
+        "total": 50.86
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 57.2,
+        "female": 54.19,
+        "total": 55.6
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 51.99,
+        "female": 50.23,
+        "total": 51.05
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 55.2,
+        "female": 53.64,
+        "total": 54.38
+      },
+      {
+        "prefecture": "島根県",
+        "male": 60.56,
+        "female": 58.07,
+        "total": 59.24
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 51.38,
+        "female": 49.9,
+        "total": 50.6
+      },
+      {
+        "prefecture": "広島県",
+        "male": 50.8,
+        "female": 49.3,
+        "total": 50.02
+      },
+      {
+        "prefecture": "山口県",
+        "male": 53.29,
+        "female": 52.88,
+        "total": 53.07
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 48.2,
+        "female": 46.35,
+        "total": 47.22
+      },
+      {
+        "prefecture": "香川県",
+        "male": 51.49,
+        "female": 49.72,
+        "total": 50.56
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 50.59,
+        "female": 49.11,
+        "total": 49.8
+      },
+      {
+        "prefecture": "高知県",
+        "male": 50.71,
+        "female": 51.21,
+        "total": 50.98
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 49.23,
+        "female": 48.44,
+        "total": 48.81
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 58.29,
+        "female": 57.32,
+        "total": 57.77
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 52.21,
+        "female": 50.2,
+        "total": 51.13
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 51.12,
+        "female": 49.14,
+        "total": 50.06
+      },
+      {
+        "prefecture": "大分県",
+        "male": 56.68,
+        "female": 55.61,
+        "total": 56.11
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 50.34,
+        "female": 49.44,
+        "total": 49.86
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 51.68,
+        "female": 49.44,
+        "total": 50.47
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 52.89,
+        "female": 51.86,
+        "total": 52.36
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000328941.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin47/index.html"
+  },
+  {
+    "id": "sangiin-24",
+    "chamber": "参議院",
+    "round": 24,
+    "electionName": "第24回参議院議員通常選挙",
+    "electionDate": "2016-07-10",
+    "votingCategory": "選挙区",
+    "national": {
+      "male": 55.13,
+      "female": 54.3,
+      "total": 54.7
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 57.43,
+        "female": 56.22,
+        "total": 56.78
+      },
+      {
+        "prefecture": "青森県",
+        "male": 55.99,
+        "female": 54.71,
+        "total": 55.31
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 58.77,
+        "female": 56.88,
+        "total": 57.78
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 52.99,
+        "female": 51.83,
+        "total": 52.39
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 62.01,
+        "female": 59.87,
+        "total": 60.87
+      },
+      {
+        "prefecture": "山形県",
+        "male": 63.83,
+        "female": 60.74,
+        "total": 62.22
+      },
+      {
+        "prefecture": "福島県",
+        "male": 57.39,
+        "female": 56.87,
+        "total": 57.12
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 51.57,
+        "female": 49.99,
+        "total": 50.77
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 52.64,
+        "female": 50.14,
+        "total": 51.38
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 51.3,
+        "female": 49.75,
+        "total": 50.51
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 52.52,
+        "female": 51.36,
+        "total": 51.94
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 52.36,
+        "female": 51.68,
+        "total": 52.02
+      },
+      {
+        "prefecture": "東京都",
+        "male": 57.41,
+        "female": 57.58,
+        "total": 57.5
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 55.78,
+        "female": 55.15,
+        "total": 55.46
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 61.58,
+        "female": 58.1,
+        "total": 59.77
+      },
+      {
+        "prefecture": "富山県",
+        "male": 56.64,
+        "female": 54.66,
+        "total": 55.61
+      },
+      {
+        "prefecture": "石川県",
+        "male": 57.49,
+        "female": 56.32,
+        "total": 56.88
+      },
+      {
+        "prefecture": "福井県",
+        "male": 57.2,
+        "female": 55.85,
+        "total": 56.5
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 58.96,
+        "female": 58.71,
+        "total": 58.83
+      },
+      {
+        "prefecture": "長野県",
+        "male": 63.55,
+        "female": 62.21,
+        "total": 62.86
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 58.31,
+        "female": 57.22,
+        "total": 57.74
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 56.37,
+        "female": 55.17,
+        "total": 55.76
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 56.15,
+        "female": 54.68,
+        "total": 55.41
+      },
+      {
+        "prefecture": "三重県",
+        "male": 59.91,
+        "female": 59.59,
+        "total": 59.75
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 57.2,
+        "female": 55.86,
+        "total": 56.52
+      },
+      {
+        "prefecture": "京都府",
+        "male": 52.42,
+        "female": 50.02,
+        "total": 51.16
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 52.29,
+        "female": 52.18,
+        "total": 52.23
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 54.15,
+        "female": 53.36,
+        "total": 53.74
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 58.03,
+        "female": 55.89,
+        "total": 56.89
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 55.74,
+        "female": 54.89,
+        "total": 55.29
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 56.5,
+        "female": 56.09,
+        "total": 56.28
+      },
+      {
+        "prefecture": "島根県",
+        "male": 62.8,
+        "female": 61.66,
+        "total": 62.2
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 51.34,
+        "female": 50.42,
+        "total": 50.86
+      },
+      {
+        "prefecture": "広島県",
+        "male": 50.21,
+        "female": 49.01,
+        "total": 49.58
+      },
+      {
+        "prefecture": "山口県",
+        "male": 53.22,
+        "female": 53.47,
+        "total": 53.35
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 47.51,
+        "female": 46.51,
+        "total": 46.98
+      },
+      {
+        "prefecture": "香川県",
+        "male": 50.38,
+        "female": 49.73,
+        "total": 50.04
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 56.32,
+        "female": 56.39,
+        "total": 56.36
+      },
+      {
+        "prefecture": "高知県",
+        "male": 44.69,
+        "female": 46.23,
+        "total": 45.52
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 52.57,
+        "female": 53.1,
+        "total": 52.85
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 56.77,
+        "female": 56.63,
+        "total": 56.69
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 55.92,
+        "female": 55.86,
+        "total": 55.89
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 51.91,
+        "female": 51.06,
+        "total": 51.46
+      },
+      {
+        "prefecture": "大分県",
+        "male": 58.36,
+        "female": 58.4,
+        "total": 58.38
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 50.09,
+        "female": 49.47,
+        "total": 49.76
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 56.37,
+        "female": 55.41,
+        "total": 55.86
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 54.2,
+        "female": 54.71,
+        "total": 54.46
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000430605.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/sangiin24/index.html"
+  },
+  {
+    "id": "shugiin-48",
+    "chamber": "衆議院",
+    "round": 48,
+    "electionName": "第48回衆議院議員総選挙",
+    "electionDate": "2017-10-22",
+    "votingCategory": "小選挙区",
+    "national": {
+      "male": 54.08,
+      "female": 53.31,
+      "total": 53.68
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 60.85,
+        "female": 59.82,
+        "total": 60.3
+      },
+      {
+        "prefecture": "青森県",
+        "male": 54.6,
+        "female": 53.79,
+        "total": 54.17
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 59.83,
+        "female": 58.52,
+        "total": 59.15
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 52.94,
+        "female": 52.73,
+        "total": 52.83
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 61.53,
+        "female": 59.73,
+        "total": 60.57
+      },
+      {
+        "prefecture": "山形県",
+        "male": 65.36,
+        "female": 62.89,
+        "total": 64.07
+      },
+      {
+        "prefecture": "福島県",
+        "male": 56.93,
+        "female": 56.47,
+        "total": 56.69
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 52.26,
+        "female": 50.81,
+        "total": 51.53
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 52.63,
+        "female": 50.69,
+        "total": 51.65
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 52.76,
+        "female": 51.21,
+        "total": 51.97
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 51.96,
+        "female": 50.92,
+        "total": 51.44
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 50.28,
+        "female": 49.51,
+        "total": 49.89
+      },
+      {
+        "prefecture": "東京都",
+        "male": 53.73,
+        "female": 53.55,
+        "total": 53.64
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 52.31,
+        "female": 51.64,
+        "total": 51.97
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 63.92,
+        "female": 61.3,
+        "total": 62.56
+      },
+      {
+        "prefecture": "富山県",
+        "male": 55.14,
+        "female": 52.96,
+        "total": 54
+      },
+      {
+        "prefecture": "石川県",
+        "male": 58.86,
+        "female": 57.52,
+        "total": 58.16
+      },
+      {
+        "prefecture": "福井県",
+        "male": 56.5,
+        "female": 55.38,
+        "total": 55.92
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 60.9,
+        "female": 60.52,
+        "total": 60.71
+      },
+      {
+        "prefecture": "長野県",
+        "male": 61.34,
+        "female": 59.51,
+        "total": 60.4
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 57.12,
+        "female": 56.02,
+        "total": 56.55
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 56.57,
+        "female": 56.08,
+        "total": 56.32
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 55.39,
+        "female": 53.92,
+        "total": 54.65
+      },
+      {
+        "prefecture": "三重県",
+        "male": 57.22,
+        "female": 56.96,
+        "total": 57.09
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 56.85,
+        "female": 55.81,
+        "total": 56.32
+      },
+      {
+        "prefecture": "京都府",
+        "male": 52.07,
+        "female": 49.85,
+        "total": 50.9
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 48.54,
+        "female": 48.27,
+        "total": 48.39
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 49.23,
+        "female": 48.07,
+        "total": 48.62
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 56.59,
+        "female": 54.84,
+        "total": 55.66
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 53.69,
+        "female": 52.32,
+        "total": 52.96
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 56.57,
+        "female": 56.3,
+        "total": 56.43
+      },
+      {
+        "prefecture": "島根県",
+        "male": 61.39,
+        "female": 59.96,
+        "total": 60.64
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 50.41,
+        "female": 49.81,
+        "total": 50.09
+      },
+      {
+        "prefecture": "広島県",
+        "male": 50.61,
+        "female": 49.76,
+        "total": 50.17
+      },
+      {
+        "prefecture": "山口県",
+        "male": 54.96,
+        "female": 55.46,
+        "total": 55.23
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 47.08,
+        "female": 45.93,
+        "total": 46.47
+      },
+      {
+        "prefecture": "香川県",
+        "male": 53.34,
+        "female": 52.85,
+        "total": 53.08
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 51.12,
+        "female": 50.4,
+        "total": 50.74
+      },
+      {
+        "prefecture": "高知県",
+        "male": 51.28,
+        "female": 52.38,
+        "total": 51.87
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 53.05,
+        "female": 53.54,
+        "total": 53.31
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 59.62,
+        "female": 59.32,
+        "total": 59.46
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 57.61,
+        "female": 57.01,
+        "total": 57.29
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 57.19,
+        "female": 56.87,
+        "total": 57.02
+      },
+      {
+        "prefecture": "大分県",
+        "male": 57.05,
+        "female": 56.93,
+        "total": 56.98
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 50.94,
+        "female": 50.08,
+        "total": 50.48
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 56.74,
+        "female": 55.52,
+        "total": 56.09
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 55.81,
+        "female": 56.92,
+        "total": 56.38
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000516716.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin48/index.html"
+  },
+  {
+    "id": "sangiin-25",
+    "chamber": "参議院",
+    "round": 25,
+    "electionName": "第25回参議院議員通常選挙",
+    "electionDate": "2019-07-21",
+    "votingCategory": "選挙区",
+    "national": {
+      "male": 49.42,
+      "female": 48.22,
+      "total": 48.8
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 54.23,
+        "female": 53.34,
+        "total": 53.76
+      },
+      {
+        "prefecture": "青森県",
+        "male": 44.18,
+        "female": 41.85,
+        "total": 42.94
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 57.15,
+        "female": 56.01,
+        "total": 56.55
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 51.87,
+        "female": 50.52,
+        "total": 51.17
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 57.45,
+        "female": 55.27,
+        "total": 56.29
+      },
+      {
+        "prefecture": "山形県",
+        "male": 62.31,
+        "female": 59.31,
+        "total": 60.74
+      },
+      {
+        "prefecture": "福島県",
+        "male": 52.84,
+        "female": 52.01,
+        "total": 52.41
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 45.77,
+        "female": 44.26,
+        "total": 45.02
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 45.69,
+        "female": 42.61,
+        "total": 44.14
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 48.81,
+        "female": 47.56,
+        "total": 48.18
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 47.17,
+        "female": 45.79,
+        "total": 46.48
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 45.72,
+        "female": 44.85,
+        "total": 45.28
+      },
+      {
+        "prefecture": "東京都",
+        "male": 52.04,
+        "female": 51.52,
+        "total": 51.77
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 49.3,
+        "female": 48.16,
+        "total": 48.73
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 57.11,
+        "female": 53.63,
+        "total": 55.31
+      },
+      {
+        "prefecture": "富山県",
+        "male": 48.36,
+        "female": 45.5,
+        "total": 46.88
+      },
+      {
+        "prefecture": "石川県",
+        "male": 48.02,
+        "female": 46.06,
+        "total": 47
+      },
+      {
+        "prefecture": "福井県",
+        "male": 48.72,
+        "female": 46.63,
+        "total": 47.64
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 51.95,
+        "female": 51.2,
+        "total": 51.56
+      },
+      {
+        "prefecture": "長野県",
+        "male": 55.28,
+        "female": 53.36,
+        "total": 54.29
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 51.78,
+        "female": 50.27,
+        "total": 51
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 51.13,
+        "female": 49.81,
+        "total": 50.46
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 49.32,
+        "female": 47.06,
+        "total": 48.18
+      },
+      {
+        "prefecture": "三重県",
+        "male": 52.2,
+        "female": 51.2,
+        "total": 51.69
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 52.6,
+        "female": 51.36,
+        "total": 51.96
+      },
+      {
+        "prefecture": "京都府",
+        "male": 47.79,
+        "female": 45.2,
+        "total": 46.42
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 48.62,
+        "female": 48.63,
+        "total": 48.63
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 49.12,
+        "female": 48.13,
+        "total": 48.6
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 50.7,
+        "female": 48.49,
+        "total": 49.53
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 50.84,
+        "female": 50.05,
+        "total": 50.42
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 50.27,
+        "female": 49.72,
+        "total": 49.98
+      },
+      {
+        "prefecture": "島根県",
+        "male": 54.95,
+        "female": 53.22,
+        "total": 54.04
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 45.54,
+        "female": 44.67,
+        "total": 45.08
+      },
+      {
+        "prefecture": "広島県",
+        "male": 45.56,
+        "female": 43.85,
+        "total": 44.67
+      },
+      {
+        "prefecture": "山口県",
+        "male": 47.48,
+        "female": 47.18,
+        "total": 47.32
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 39.37,
+        "female": 37.9,
+        "total": 38.59
+      },
+      {
+        "prefecture": "香川県",
+        "male": 46.01,
+        "female": 44.67,
+        "total": 45.31
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 52.26,
+        "female": 52.52,
+        "total": 52.39
+      },
+      {
+        "prefecture": "高知県",
+        "male": 45.62,
+        "female": 46.97,
+        "total": 46.34
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 43.2,
+        "female": 42.54,
+        "total": 42.85
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 46.27,
+        "female": 44.35,
+        "total": 45.25
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 46.29,
+        "female": 44.75,
+        "total": 45.46
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 47.94,
+        "female": 46.6,
+        "total": 47.23
+      },
+      {
+        "prefecture": "大分県",
+        "male": 50.83,
+        "female": 50.28,
+        "total": 50.54
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 42.32,
+        "female": 41.32,
+        "total": 41.79
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 46.71,
+        "female": 44.92,
+        "total": 45.75
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 48.66,
+        "female": 49.33,
+        "total": 49
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000636670.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/sangiin25/index.html"
+  },
+  {
+    "id": "shugiin-49",
+    "chamber": "衆議院",
+    "round": 49,
+    "electionName": "第49回衆議院議員総選挙",
+    "electionDate": "2021-10-31",
+    "votingCategory": "小選挙区",
+    "national": {
+      "male": 56.06,
+      "female": 55.8,
+      "total": 55.93
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 59.42,
+        "female": 58.24,
+        "total": 58.79
+      },
+      {
+        "prefecture": "青森県",
+        "male": 53.67,
+        "female": 52.27,
+        "total": 52.93
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 60.91,
+        "female": 59.9,
+        "total": 60.38
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 56.05,
+        "female": 55.7,
+        "total": 55.87
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 59.32,
+        "female": 57.3,
+        "total": 58.24
+      },
+      {
+        "prefecture": "山形県",
+        "male": 65.37,
+        "female": 63.39,
+        "total": 64.34
+      },
+      {
+        "prefecture": "福島県",
+        "male": 58.14,
+        "female": 57.88,
+        "total": 58.01
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 53.09,
+        "female": 52.01,
+        "total": 52.54
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 53.78,
+        "female": 52.36,
+        "total": 53.06
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 54.28,
+        "female": 53.51,
+        "total": 53.89
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 54.18,
+        "female": 53.75,
+        "total": 53.97
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 53.55,
+        "female": 53.73,
+        "total": 53.64
+      },
+      {
+        "prefecture": "東京都",
+        "male": 56.93,
+        "female": 57.48,
+        "total": 57.21
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 56.17,
+        "female": 56.4,
+        "total": 56.29
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 64.27,
+        "female": 62.12,
+        "total": 63.16
+      },
+      {
+        "prefecture": "富山県",
+        "male": 56.59,
+        "female": 54.84,
+        "total": 55.68
+      },
+      {
+        "prefecture": "石川県",
+        "male": 57.46,
+        "female": 56.83,
+        "total": 57.13
+      },
+      {
+        "prefecture": "福井県",
+        "male": 58.34,
+        "female": 57.24,
+        "total": 57.77
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 60.64,
+        "female": 60.51,
+        "total": 60.57
+      },
+      {
+        "prefecture": "長野県",
+        "male": 60.64,
+        "female": 58.94,
+        "total": 59.77
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 58.62,
+        "female": 57.62,
+        "total": 58.1
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 55.18,
+        "female": 54.45,
+        "total": 54.81
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 56.54,
+        "female": 55.4,
+        "total": 55.97
+      },
+      {
+        "prefecture": "三重県",
+        "male": 56.2,
+        "female": 56.15,
+        "total": 56.17
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 57.72,
+        "female": 56.95,
+        "total": 57.33
+      },
+      {
+        "prefecture": "京都府",
+        "male": 56.81,
+        "female": 55.88,
+        "total": 56.32
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 55.44,
+        "female": 56.89,
+        "total": 56.2
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 54.29,
+        "female": 54.29,
+        "total": 54.29
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 59.62,
+        "female": 58.7,
+        "total": 59.13
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 58.46,
+        "female": 58.05,
+        "total": 58.24
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 58.19,
+        "female": 58.14,
+        "total": 58.16
+      },
+      {
+        "prefecture": "島根県",
+        "male": 62.27,
+        "female": 60.9,
+        "total": 61.55
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 51.1,
+        "female": 50.8,
+        "total": 50.94
+      },
+      {
+        "prefecture": "広島県",
+        "male": 52.24,
+        "female": 52.03,
+        "total": 52.13
+      },
+      {
+        "prefecture": "山口県",
+        "male": 49.66,
+        "female": 49.68,
+        "total": 49.67
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 54.19,
+        "female": 53.56,
+        "total": 53.86
+      },
+      {
+        "prefecture": "香川県",
+        "male": 56.18,
+        "female": 56.01,
+        "total": 56.09
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 55.11,
+        "female": 54.86,
+        "total": 54.98
+      },
+      {
+        "prefecture": "高知県",
+        "male": 55.96,
+        "female": 58.55,
+        "total": 57.34
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 52.01,
+        "female": 52.22,
+        "total": 52.12
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 58.77,
+        "female": 58.25,
+        "total": 58.49
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 57.06,
+        "female": 56.73,
+        "total": 56.89
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 56.67,
+        "female": 56.16,
+        "total": 56.4
+      },
+      {
+        "prefecture": "大分県",
+        "male": 57.38,
+        "female": 57.16,
+        "total": 57.26
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 53.82,
+        "female": 53.52,
+        "total": 53.66
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 58.36,
+        "female": 57.14,
+        "total": 57.71
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 54.64,
+        "female": 55.15,
+        "total": 54.9
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000776964.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin49/index.html"
+  },
+  {
+    "id": "sangiin-26",
+    "chamber": "参議院",
+    "round": 26,
+    "electionName": "第26回参議院議員通常選挙",
+    "electionDate": "2022-07-10",
+    "votingCategory": "選挙区",
+    "national": {
+      "male": 52.27,
+      "female": 51.84,
+      "total": 52.05
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 54.43,
+        "female": 53.58,
+        "total": 53.98
+      },
+      {
+        "prefecture": "青森県",
+        "male": 50.43,
+        "female": 48.67,
+        "total": 49.49
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 56.14,
+        "female": 54.69,
+        "total": 55.38
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 49.41,
+        "female": 48.23,
+        "total": 48.8
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 56.73,
+        "female": 54.54,
+        "total": 55.56
+      },
+      {
+        "prefecture": "山形県",
+        "male": 62.95,
+        "female": 60.88,
+        "total": 61.87
+      },
+      {
+        "prefecture": "福島県",
+        "male": 53.59,
+        "female": 53.22,
+        "total": 53.4
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 47.73,
+        "female": 46.71,
+        "total": 47.22
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 47.85,
+        "female": 46.11,
+        "total": 46.98
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 49,
+        "female": 48,
+        "total": 48.49
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 50.57,
+        "female": 49.94,
+        "total": 50.25
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 50.02,
+        "female": 50,
+        "total": 50.01
+      },
+      {
+        "prefecture": "東京都",
+        "male": 56.15,
+        "female": 56.93,
+        "total": 56.55
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 54.44,
+        "female": 54.57,
+        "total": 54.51
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 56.79,
+        "female": 53.94,
+        "total": 55.32
+      },
+      {
+        "prefecture": "富山県",
+        "male": 52.28,
+        "female": 50.53,
+        "total": 51.37
+      },
+      {
+        "prefecture": "石川県",
+        "male": 47.18,
+        "female": 45.69,
+        "total": 46.41
+      },
+      {
+        "prefecture": "福井県",
+        "male": 55.72,
+        "female": 54.94,
+        "total": 55.32
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 56.23,
+        "female": 56.23,
+        "total": 56.23
+      },
+      {
+        "prefecture": "長野県",
+        "male": 58.39,
+        "female": 57.06,
+        "total": 57.7
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 54.22,
+        "female": 53,
+        "total": 53.59
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 53.26,
+        "female": 52.69,
+        "total": 52.97
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 52.82,
+        "female": 51.53,
+        "total": 52.18
+      },
+      {
+        "prefecture": "三重県",
+        "male": 53.06,
+        "female": 52.52,
+        "total": 52.78
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 54.78,
+        "female": 54.4,
+        "total": 54.59
+      },
+      {
+        "prefecture": "京都府",
+        "male": 51.64,
+        "female": 50.25,
+        "total": 50.91
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 51.98,
+        "female": 52.87,
+        "total": 52.45
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 51.73,
+        "female": 51.51,
+        "total": 51.62
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 56.44,
+        "female": 55.43,
+        "total": 55.9
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 52.68,
+        "female": 52.2,
+        "total": 52.42
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 49.27,
+        "female": 48.61,
+        "total": 48.93
+      },
+      {
+        "prefecture": "島根県",
+        "male": 56.97,
+        "female": 55.82,
+        "total": 56.37
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 47.59,
+        "female": 46.9,
+        "total": 47.23
+      },
+      {
+        "prefecture": "広島県",
+        "male": 47.2,
+        "female": 46.42,
+        "total": 46.79
+      },
+      {
+        "prefecture": "山口県",
+        "male": 47.4,
+        "female": 47.76,
+        "total": 47.59
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 46.03,
+        "female": 45.45,
+        "total": 45.72
+      },
+      {
+        "prefecture": "香川県",
+        "male": 49.33,
+        "female": 49.12,
+        "total": 49.22
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 48.99,
+        "female": 48.66,
+        "total": 48.81
+      },
+      {
+        "prefecture": "高知県",
+        "male": 46.25,
+        "female": 48.34,
+        "total": 47.36
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 48.6,
+        "female": 48.9,
+        "total": 48.76
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 51.47,
+        "female": 50.8,
+        "total": 51.12
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 48.94,
+        "female": 48.53,
+        "total": 48.72
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 49.57,
+        "female": 48.73,
+        "total": 49.12
+      },
+      {
+        "prefecture": "大分県",
+        "male": 53.03,
+        "female": 52.95,
+        "total": 52.98
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 47.85,
+        "female": 47.23,
+        "total": 47.52
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 49.21,
+        "female": 48.12,
+        "total": 48.63
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 50.02,
+        "female": 51.08,
+        "total": 50.56
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000825824.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/sangiin26/index.html"
+  },
+  {
+    "id": "shugiin-50",
+    "chamber": "衆議院",
+    "round": 50,
+    "electionName": "第50回衆議院議員総選挙",
+    "electionDate": "2024-10-27",
+    "votingCategory": "小選挙区",
+    "national": {
+      "male": 54.3,
+      "female": 53.42,
+      "total": 53.85
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 56.98,
+        "female": 55.43,
+        "total": 56.15
+      },
+      {
+        "prefecture": "青森県",
+        "male": 52.67,
+        "female": 50.68,
+        "total": 51.61
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 56.5,
+        "female": 54.68,
+        "total": 55.55
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 52.84,
+        "female": 51.53,
+        "total": 52.16
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 60.62,
+        "female": 58.4,
+        "total": 59.44
+      },
+      {
+        "prefecture": "山形県",
+        "male": 62.06,
+        "female": 59.68,
+        "total": 60.82
+      },
+      {
+        "prefecture": "福島県",
+        "male": 54.39,
+        "female": 53.49,
+        "total": 53.93
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 52.92,
+        "female": 51.98,
+        "total": 52.45
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 51.14,
+        "female": 49.35,
+        "total": 50.24
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 50.65,
+        "female": 49.22,
+        "total": 49.92
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 51.83,
+        "female": 50.47,
+        "total": 51.14
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 52.43,
+        "female": 51.85,
+        "total": 52.14
+      },
+      {
+        "prefecture": "東京都",
+        "male": 56.28,
+        "female": 55.85,
+        "total": 56.06
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 54.75,
+        "female": 54.32,
+        "total": 54.53
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 60.08,
+        "female": 57.14,
+        "total": 58.56
+      },
+      {
+        "prefecture": "富山県",
+        "male": 55.66,
+        "female": 53.78,
+        "total": 54.69
+      },
+      {
+        "prefecture": "石川県",
+        "male": 55.81,
+        "female": 54.44,
+        "total": 55.09
+      },
+      {
+        "prefecture": "福井県",
+        "male": 58.32,
+        "female": 56.52,
+        "total": 57.39
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 56.93,
+        "female": 56.61,
+        "total": 56.76
+      },
+      {
+        "prefecture": "長野県",
+        "male": 58.33,
+        "female": 56.15,
+        "total": 57.21
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 56.25,
+        "female": 54.58,
+        "total": 55.39
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 55.9,
+        "female": 55.29,
+        "total": 55.59
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 55.39,
+        "female": 53.61,
+        "total": 54.5
+      },
+      {
+        "prefecture": "三重県",
+        "male": 56.5,
+        "female": 55.94,
+        "total": 56.21
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 55.67,
+        "female": 54.23,
+        "total": 54.93
+      },
+      {
+        "prefecture": "京都府",
+        "male": 54.07,
+        "female": 52.28,
+        "total": 53.12
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 52.4,
+        "female": 52.8,
+        "total": 52.61
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 54.01,
+        "female": 53.36,
+        "total": 53.67
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 59.17,
+        "female": 57.89,
+        "total": 58.49
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 57.65,
+        "female": 56.18,
+        "total": 56.87
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 57.88,
+        "female": 58.3,
+        "total": 58.1
+      },
+      {
+        "prefecture": "島根県",
+        "male": 59.11,
+        "female": 57.25,
+        "total": 58.14
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 50.26,
+        "female": 50.22,
+        "total": 50.24
+      },
+      {
+        "prefecture": "広島県",
+        "male": 49.01,
+        "female": 47.84,
+        "total": 48.4
+      },
+      {
+        "prefecture": "山口県",
+        "male": 52.01,
+        "female": 52.12,
+        "total": 52.07
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 51.38,
+        "female": 50.3,
+        "total": 50.81
+      },
+      {
+        "prefecture": "香川県",
+        "male": 53.37,
+        "female": 52.54,
+        "total": 52.94
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 52.38,
+        "female": 51.56,
+        "total": 51.95
+      },
+      {
+        "prefecture": "高知県",
+        "male": 50.81,
+        "female": 53,
+        "total": 51.97
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 51.55,
+        "female": 51.63,
+        "total": 51.59
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 56.44,
+        "female": 55.59,
+        "total": 55.99
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 52.82,
+        "female": 52.18,
+        "total": 52.48
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 52.63,
+        "female": 51.56,
+        "total": 52.06
+      },
+      {
+        "prefecture": "大分県",
+        "male": 55.56,
+        "female": 55.3,
+        "total": 55.42
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 50.91,
+        "female": 50.35,
+        "total": 50.61
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 54.22,
+        "female": 52.85,
+        "total": 53.49
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 49.95,
+        "female": 49.97,
+        "total": 49.96
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/000979119.xls",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin50/index.html"
+  },
+  {
+    "id": "sangiin-27",
+    "chamber": "参議院",
+    "round": 27,
+    "electionName": "第27回参議院議員通常選挙",
+    "electionDate": "2025-07-20",
+    "votingCategory": "選挙区",
+    "national": {
+      "male": 59.27,
+      "female": 57.8,
+      "total": 58.51
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 60.58,
+        "female": 58.91,
+        "total": 59.69
+      },
+      {
+        "prefecture": "青森県",
+        "male": 55.68,
+        "female": 52.93,
+        "total": 54.22
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 60.42,
+        "female": 57.89,
+        "total": 59.1
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 56.61,
+        "female": 54.21,
+        "total": 55.37
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 60.17,
+        "female": 57.15,
+        "total": 58.57
+      },
+      {
+        "prefecture": "山形県",
+        "male": 64.12,
+        "female": 61.09,
+        "total": 62.55
+      },
+      {
+        "prefecture": "福島県",
+        "male": 59.31,
+        "female": 57.51,
+        "total": 58.39
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 55.67,
+        "female": 53.68,
+        "total": 54.67
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 55.1,
+        "female": 52.04,
+        "total": 53.56
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 56.44,
+        "female": 53.84,
+        "total": 55.12
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 57.72,
+        "female": 56.06,
+        "total": 56.88
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 56.41,
+        "female": 55.07,
+        "total": 55.74
+      },
+      {
+        "prefecture": "東京都",
+        "male": 62.03,
+        "female": 61.05,
+        "total": 61.53
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 60.88,
+        "female": 59.73,
+        "total": 60.3
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 63.53,
+        "female": 59.93,
+        "total": 61.67
+      },
+      {
+        "prefecture": "富山県",
+        "male": 59.99,
+        "female": 56.37,
+        "total": 58.12
+      },
+      {
+        "prefecture": "石川県",
+        "male": 59.82,
+        "female": 57.64,
+        "total": 58.69
+      },
+      {
+        "prefecture": "福井県",
+        "male": 61.72,
+        "female": 59.94,
+        "total": 60.8
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 62,
+        "female": 60.95,
+        "total": 61.47
+      },
+      {
+        "prefecture": "長野県",
+        "male": 62.47,
+        "female": 59.81,
+        "total": 61.11
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 60.16,
+        "female": 57.93,
+        "total": 59.01
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 60.32,
+        "female": 58.73,
+        "total": 59.51
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 61.1,
+        "female": 59.22,
+        "total": 60.15
+      },
+      {
+        "prefecture": "三重県",
+        "male": 61.16,
+        "female": 59.79,
+        "total": 60.45
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 60.62,
+        "female": 58.8,
+        "total": 59.69
+      },
+      {
+        "prefecture": "京都府",
+        "male": 59.77,
+        "female": 57.8,
+        "total": 58.73
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 59.14,
+        "female": 59.14,
+        "total": 59.14
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 60.91,
+        "female": 60.08,
+        "total": 60.47
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 62.58,
+        "female": 60.6,
+        "total": 61.52
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 60.24,
+        "female": 58.29,
+        "total": 59.2
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 55.96,
+        "female": 54.21,
+        "total": 55.04
+      },
+      {
+        "prefecture": "島根県",
+        "male": 60.89,
+        "female": 58.35,
+        "total": 59.57
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 55.11,
+        "female": 53.34,
+        "total": 54.18
+      },
+      {
+        "prefecture": "広島県",
+        "male": 54.78,
+        "female": 53.09,
+        "total": 53.9
+      },
+      {
+        "prefecture": "山口県",
+        "male": 56.11,
+        "female": 54.82,
+        "total": 55.43
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 51.55,
+        "female": 49.51,
+        "total": 50.48
+      },
+      {
+        "prefecture": "香川県",
+        "male": 57.39,
+        "female": 55.61,
+        "total": 56.46
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 57.35,
+        "female": 56.21,
+        "total": 56.74
+      },
+      {
+        "prefecture": "高知県",
+        "male": 56.35,
+        "female": 57.37,
+        "total": 56.89
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 56.07,
+        "female": 55.29,
+        "total": 55.66
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 61.07,
+        "female": 59.32,
+        "total": 60.14
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 56.21,
+        "female": 55.4,
+        "total": 55.78
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 59.69,
+        "female": 58.45,
+        "total": 59.03
+      },
+      {
+        "prefecture": "大分県",
+        "male": 59.62,
+        "female": 58.4,
+        "total": 58.98
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 57.57,
+        "female": 56.85,
+        "total": 57.19
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 57.45,
+        "female": 55.59,
+        "total": 56.46
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 56.08,
+        "female": 57.38,
+        "total": 56.75
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001027812.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/sangiin27/index.html"
+  },
+  {
+    "id": "shugiin-51",
+    "chamber": "衆議院",
+    "round": 51,
+    "electionName": "第51回衆議院議員総選挙",
+    "electionDate": "2026-02-08",
+    "votingCategory": "小選挙区",
+    "national": {
+      "male": 57.13,
+      "female": 55.44,
+      "total": 56.26
+    },
+    "prefectures": [
+      {
+        "prefecture": "北海道",
+        "male": 59.16,
+        "female": 56.84,
+        "total": 57.93
+      },
+      {
+        "prefecture": "青森県",
+        "male": 51.31,
+        "female": 47.59,
+        "total": 49.34
+      },
+      {
+        "prefecture": "岩手県",
+        "male": 60.34,
+        "female": 57.88,
+        "total": 59.06
+      },
+      {
+        "prefecture": "宮城県",
+        "male": 57.15,
+        "female": 55.08,
+        "total": 56.08
+      },
+      {
+        "prefecture": "秋田県",
+        "male": 59.23,
+        "female": 55.74,
+        "total": 57.38
+      },
+      {
+        "prefecture": "山形県",
+        "male": 62.36,
+        "female": 59.31,
+        "total": 60.78
+      },
+      {
+        "prefecture": "福島県",
+        "male": 59.16,
+        "female": 57.9,
+        "total": 58.51
+      },
+      {
+        "prefecture": "茨城県",
+        "male": 53.71,
+        "female": 51.57,
+        "total": 52.64
+      },
+      {
+        "prefecture": "栃木県",
+        "male": 54.21,
+        "female": 51.8,
+        "total": 53
+      },
+      {
+        "prefecture": "群馬県",
+        "male": 54.48,
+        "female": 52.31,
+        "total": 53.38
+      },
+      {
+        "prefecture": "埼玉県",
+        "male": 54.53,
+        "female": 52.34,
+        "total": 53.42
+      },
+      {
+        "prefecture": "千葉県",
+        "male": 54.66,
+        "female": 52.97,
+        "total": 53.8
+      },
+      {
+        "prefecture": "東京都",
+        "male": 59.79,
+        "female": 58.56,
+        "total": 59.16
+      },
+      {
+        "prefecture": "神奈川県",
+        "male": 56.63,
+        "female": 54.69,
+        "total": 55.65
+      },
+      {
+        "prefecture": "新潟県",
+        "male": 60.94,
+        "female": 56.96,
+        "total": 58.88
+      },
+      {
+        "prefecture": "富山県",
+        "male": 55.31,
+        "female": 51.32,
+        "total": 53.25
+      },
+      {
+        "prefecture": "石川県",
+        "male": 57.34,
+        "female": 55.27,
+        "total": 56.26
+      },
+      {
+        "prefecture": "福井県",
+        "male": 55.39,
+        "female": 53.25,
+        "total": 54.29
+      },
+      {
+        "prefecture": "山梨県",
+        "male": 59.22,
+        "female": 57.85,
+        "total": 58.52
+      },
+      {
+        "prefecture": "長野県",
+        "male": 61.72,
+        "female": 58.99,
+        "total": 60.32
+      },
+      {
+        "prefecture": "岐阜県",
+        "male": 59.47,
+        "female": 56.91,
+        "total": 58.15
+      },
+      {
+        "prefecture": "静岡県",
+        "male": 59.59,
+        "female": 58.24,
+        "total": 58.91
+      },
+      {
+        "prefecture": "愛知県",
+        "male": 60.09,
+        "female": 57.85,
+        "total": 58.96
+      },
+      {
+        "prefecture": "三重県",
+        "male": 58.65,
+        "female": 57.05,
+        "total": 57.82
+      },
+      {
+        "prefecture": "滋賀県",
+        "male": 58.24,
+        "female": 56.36,
+        "total": 57.28
+      },
+      {
+        "prefecture": "京都府",
+        "male": 56.66,
+        "female": 54.13,
+        "total": 55.32
+      },
+      {
+        "prefecture": "大阪府",
+        "male": 56.16,
+        "female": 56.26,
+        "total": 56.21
+      },
+      {
+        "prefecture": "兵庫県",
+        "male": 56.77,
+        "female": 55.03,
+        "total": 55.85
+      },
+      {
+        "prefecture": "奈良県",
+        "male": 62.92,
+        "female": 61.51,
+        "total": 62.17
+      },
+      {
+        "prefecture": "和歌山県",
+        "male": 56.65,
+        "female": 54.76,
+        "total": 55.65
+      },
+      {
+        "prefecture": "鳥取県",
+        "male": 48.43,
+        "female": 47.01,
+        "total": 47.69
+      },
+      {
+        "prefecture": "島根県",
+        "male": 56.92,
+        "female": 54.12,
+        "total": 55.46
+      },
+      {
+        "prefecture": "岡山県",
+        "male": 54.48,
+        "female": 53.22,
+        "total": 53.82
+      },
+      {
+        "prefecture": "広島県",
+        "male": 51.08,
+        "female": 49.04,
+        "total": 50.02
+      },
+      {
+        "prefecture": "山口県",
+        "male": 56.19,
+        "female": 56.14,
+        "total": 56.16
+      },
+      {
+        "prefecture": "徳島県",
+        "male": 55.69,
+        "female": 54.02,
+        "total": 54.82
+      },
+      {
+        "prefecture": "香川県",
+        "male": 57.36,
+        "female": 55.85,
+        "total": 56.57
+      },
+      {
+        "prefecture": "愛媛県",
+        "male": 56.33,
+        "female": 55.02,
+        "total": 55.63
+      },
+      {
+        "prefecture": "高知県",
+        "male": 54.2,
+        "female": 55.59,
+        "total": 54.94
+      },
+      {
+        "prefecture": "福岡県",
+        "male": 54.71,
+        "female": 54.15,
+        "total": 54.41
+      },
+      {
+        "prefecture": "佐賀県",
+        "male": 59.81,
+        "female": 58.17,
+        "total": 58.94
+      },
+      {
+        "prefecture": "長崎県",
+        "male": 57.23,
+        "female": 56.74,
+        "total": 56.97
+      },
+      {
+        "prefecture": "熊本県",
+        "male": 57.3,
+        "female": 56.16,
+        "total": 56.7
+      },
+      {
+        "prefecture": "大分県",
+        "male": 59.02,
+        "female": 57.71,
+        "total": 58.33
+      },
+      {
+        "prefecture": "宮崎県",
+        "male": 54.02,
+        "female": 52.79,
+        "total": 53.37
+      },
+      {
+        "prefecture": "鹿児島県",
+        "male": 56.12,
+        "female": 53.83,
+        "total": 54.9
+      },
+      {
+        "prefecture": "沖縄県",
+        "male": 54.47,
+        "female": 54.42,
+        "total": 54.44
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001061472.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/shugiin51/index.html"
+  }
+]
