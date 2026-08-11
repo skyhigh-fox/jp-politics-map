@@ -301,6 +301,33 @@ export default async function DisclaimerPage() {
       </section>
 
       <section className="mt-8">
+        <h2 className="text-lg font-bold text-neutral-900 dark:text-neutral-50">
+          関連プロジェクト
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+          日本の在留外国人（人口動態・生活実態・多文化共生施策・犯罪統計）を地図やグラフで可視化する姉妹プロジェクト「多文化共生マップ」を、同じ開発者が
+          <a
+            href="https://jp-multicultural-map.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-1 text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            https://jp-multicultural-map.vercel.app
+          </a>
+          で公開しています。テーマは政治情報と近接していますが、本サイトとはコードを共有していない独立したプロジェクトです。ソースコードは
+          <a
+            href="https://github.com/skyhigh-fox/jp-multicultural-map"
+            target="_blank"
+            rel="noreferrer"
+            className="mx-1 text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            GitHub
+          </a>
+          で公開しています。
+        </p>
+      </section>
+
+      <section className="mt-8">
         <h2
           id="not-built"
           className="scroll-mt-24 text-lg font-bold text-neutral-900 dark:text-neutral-50"

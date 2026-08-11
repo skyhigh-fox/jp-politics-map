@@ -12,6 +12,14 @@ export function SiteFooter() {
           本サイトは特定の政党・候補者を支持または批判するものではありません。
         </p>
         <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <a
+            href="https://jp-multicultural-map.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            関連サイト: 多文化共生マップ
+          </a>
           <Link
             href="/data"
             className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
