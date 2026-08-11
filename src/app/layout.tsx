@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   robots: { index: true, follow: true },
+  // Google Search Console の所有権確認（HTMLタグ方式）
+  verification: {
+    google: "EDKlbfBCV9mHGboZSh0SDeEhWkhqwEM_nCznTaJfft0",
+  },
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
