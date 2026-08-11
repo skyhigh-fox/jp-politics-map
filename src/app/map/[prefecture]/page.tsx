@@ -4,6 +4,7 @@ import {
   getLegislators,
   getLocalAssemblyPartyComposition,
   getParties,
+  getPrefectureExecutives,
   getPrefectureExpenditureByPurpose,
   getPrefectureExpenditureByNature,
   getPrefecturePopulation,
@@ -17,9 +18,17 @@ import {
 import { DataCoverageNote } from "@/components/DataCoverageNote";
 import { LocalAssemblyPartyComposition } from "@/components/LocalAssemblyPartyComposition";
 import { MunicipalityMap } from "@/components/MunicipalityMap";
+import { PrefectureExecutivesSection } from "@/components/PrefectureExecutivesSection";
 import { PrefectureExpenditureBreakdown } from "@/components/PrefectureExpenditureBreakdown";
 import { PrefectureFinancialHealthCards } from "@/components/PrefectureFinancialHealthCards";
-import { buildLocalPartyCompositionScopeFacts } from "@/lib/dataProvenance";
+import {
+  buildLocalPartyCompositionScopeFacts,
+  buildPrefectureExecutiveScopeFacts,
+} from "@/lib/dataProvenance";
+import {
+  buildPrefectureElectionCalendar,
+  toIsoDateInJst,
+} from "@/lib/electionCalendar";
 import { getLocalAssemblyMemberCountsByMunicipality } from "@/lib/localAssembly";
 import {
   buildLocalPartyCompositionViews,
@@ -54,6 +63,7 @@ export default async function PrefectureDetailPage({
     financialHealth,
     parties,
     localPartyComposition,
+    prefectureExecutives,
   ] = await Promise.all([
     getLegislators(),
     getPrefectureExpenditureByPurpose(),
@@ -62,6 +72,7 @@ export default async function PrefectureDetailPage({
     getPrefectureFinancialHealth(),
     getParties(),
     getLocalAssemblyPartyComposition(),
+    getPrefectureExecutives(),
   ]);
   const relatedCount = legislators.filter((l) =>
     legislatorPrefectures(l).includes(prefecture)
@@ -94,6 +105,18 @@ export default async function PrefectureDetailPage({
   const compositionViews = compositionRow
     ? buildLocalPartyCompositionViews(compositionRow, parties)
     : null;
+
+  // 知事・首長と選挙カレンダー（Tier1 #8）。
+  // 「任期満了日を既に経過しているか」の判定に使う基準日は、このページを
+  // 生成した時点（日本時間の暦日）。日次のデータ更新で再ビルドされるため、
+  // 画面上でも基準日を明示して、確定情報との区別が付くようにしている。
+  const executivesRow = prefectureExecutives.find(
+    (e) => e.prefecture === prefecture
+  );
+  const referenceDate = toIsoDateInJst(new Date());
+  const electionCalendar = executivesRow
+    ? buildPrefectureElectionCalendar(executivesRow, referenceDate)
+    : [];
 
   return (
     <div className="animate-fade-in">
@@ -162,6 +185,20 @@ export default async function PrefectureDetailPage({
           {compositionRow &&
             "党派ごとの人員数（個人名を含まない集計）は、下の「地方議会・長の党派別構成」で全都道府県分をご覧いただけます。"}
         </p>
+      )}
+
+      {executivesRow && (
+        <div className="mt-6 max-w-xl space-y-3">
+          <PrefectureExecutivesSection
+            data={executivesRow}
+            calendar={electionCalendar}
+            referenceDate={referenceDate}
+          />
+          <DataCoverageNote
+            datasetId="prefecture-executives"
+            facts={buildPrefectureExecutiveScopeFacts(executivesRow)}
+          />
+        </div>
       )}
 
       {compositionRow && compositionViews && (

@@ -235,6 +235,18 @@ export const DOWNLOADABLE_DATASETS: DownloadableDataset[] = [
       "総務省ウェブサイトは政府標準利用規約に準拠し、出典表記を条件に複製・加工・再配布ができると明記されています。",
   },
   {
+    path: "/data/datasets/prefecture-executives.json",
+    sourceFileName: "prefecture-executives.json",
+    label: "知事・指定都市市長と任期満了日",
+    description:
+      "都道府県ごとに、知事および県内の指定都市市長の氏名・任期満了年月日・連続就任回数を収録しています（調査基準日時点）。",
+    datasetId: "prefecture-executives",
+    sources: sourcesOf("prefecture-executives"),
+    license: LICENSE_SOUMU,
+    rationale:
+      "総務省ウェブサイトは政府標準利用規約に準拠し、出典表記を条件に複製・加工・再配布ができると明記されています。",
+  },
+  {
     path: "/data/datasets/national-budget.json",
     sourceFileName: "national-budget.json",
     label: "国の税収・歳入・歳出（一般会計）",

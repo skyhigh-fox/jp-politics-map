@@ -15,6 +15,7 @@ import type {
   PrefectureExpenditureByNature,
   PrefectureExpenditureByPurpose,
   PrefectureFinance,
+  PrefectureExecutives,
   PrefectureFinancialHealth,
   PrefecturePopulation,
   PrefectureTurnoutElection,
@@ -224,6 +225,24 @@ export const getLocalAssemblyPartyComposition = async (): Promise<
   try {
     const data = await readJson<LocalAssemblyPartyComposition[]>(
       "local-assembly-party-composition.json"
+    );
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * 都道府県別・知事および指定都市市長（機能拡充ロードマップ Tier1 #8）を取得する。
+ * data/prefecture-executives.json は取得スクリプト（fetch:prefecture-executives）を
+ * 実行するまで存在しないため、ファイル未生成時もフェイルセーフに空配列を返す。
+ */
+export const getPrefectureExecutives = async (): Promise<
+  PrefectureExecutives[]
+> => {
+  try {
+    const data = await readJson<PrefectureExecutives[]>(
+      "prefecture-executives.json"
     );
     return Array.isArray(data) ? data : [];
   } catch {
