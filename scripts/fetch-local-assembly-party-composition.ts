@@ -34,16 +34,10 @@
  *   - 利用規約: 総務省ウェブサイトは政府標準利用規約（第2.0版）準拠。
  *     出典表記をすれば商用・非商用問わず自由利用可。
  *
- * 【年次更新への対応】
- *   Excelの実URL（/main_content/00xxxxxx.xlsx）は年度ごとに新規発行されるため、
- *   固定URLをハードコードすると翌年以降も古い年のデータを返し続ける。
- *   そこで本スクリプトは一覧ページ（ichiran.html）から
- *   「令和N年12月31日現在」のリンクを全部拾い、元号年が最大のものを最新年として
- *   自動選択し、その年次ページからxlsxリンクを解決する。年1回の手動URL更新は不要。
- *
- * 【文字コード】
- *   総務省サイトのHTMLはShift_JIS。fetch().then(r => r.text()) だと文字化けするため
- *   arrayBuffer() → TextDecoder("shift_jis") でデコードする（CLAUDE.md記載の既知の罠）。
+ * 【年次更新への対応・文字コード】
+ *   年次ページ／Excel URLの動的解決（毎年URLが変わる）とShift_JISのデコードは、
+ *   同じ年次ページを辿る fetch-prefecture-executives.ts と共通のため
+ *   scripts/lib/soumuSurvey.ts に集約している。
  *
  * 【政治的中立性についての注記】
  *   党派名・党派の並び順・人員数はすべて原表のとおりに保持する。独自の再分類
@@ -62,10 +56,12 @@ import type {
   LocalPartyCount,
 } from "../src/types";
 import { PARTY_CANONICAL_NAMES } from "./lib/partyColors";
+import {
+  fetchExcelBuffer,
+  resolveExcelUrlByLinkText,
+  resolveLatestSurveyPage,
+} from "./lib/soumuSurvey";
 import { writeDataJson } from "./lib/writeJson";
-
-const ORIGIN = "https://www.soumu.go.jp";
-const INDEX_URL = `${ORIGIN}/senkyo/senkyo_s/data/syozoku/ichiran.html`;
 
 /** 取り込む対象シート（総括表は全国計のため対象外）。原表のシート名と一致させる */
 const TARGET_SHEETS: LocalGovernmentBodyType[] = [
@@ -93,102 +89,6 @@ const PARTY_ID_BY_NAME: Record<string, string> = Object.fromEntries(
  * （「無所属」は政党マスタ側にも party-無所属 として存在するためここには含めない）
  */
 const NON_PARTY_CATEGORIES = new Set(["諸派"]);
-
-const ERA_REIWA_BASE = 2018; // 令和元年 = 2019年 → 2018 + 1
-
-async function fetchShiftJisHtml(url: string): Promise<string> {
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`HTML取得に失敗しました: ${res.status} ${res.statusText} (${url})`);
-  }
-  const buf = await res.arrayBuffer();
-  return new TextDecoder("shift_jis").decode(buf);
-}
-
-/** ページ内の <a href> を [href, リンクテキスト] の配列で返す（タグは除去） */
-function extractLinks(html: string): { href: string; text: string }[] {
-  const links: { href: string; text: string }[] = [];
-  const re = /<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(html)) !== null) {
-    const href = m[1];
-    const text = (m[2] ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-    if (href) links.push({ href, text });
-  }
-  return links;
-}
-
-const toAbsolute = (href: string): string =>
-  href.startsWith("http") ? href : `${ORIGIN}${href}`;
-
-/**
- * 一覧ページから最新調査年のページURLと調査基準日を解決する。
- * リンクテキスト「令和7年12月31日現在」の元号年が最大のものを最新とする
- * （掲載順が変わっても壊れないよう、順序ではなく年の大小で判定する）。
- */
-async function resolveLatestSurveyPage(): Promise<{
-  pageUrl: string;
-  asOfDate: string;
-  eraLabel: string;
-}> {
-  const html = await fetchShiftJisHtml(INDEX_URL);
-  const candidates = extractLinks(html)
-    .map((link) => {
-      const m = link.text.match(/令和(\d+|元)年(\d+)月(\d+)日現在/);
-      if (!m) return null;
-      // PDFのみの年（平成21年以前）や別調査は対象外。HTMLページのみを候補にする
-      if (!/\.html?$/i.test(link.href)) return null;
-      const reiwaYear = m[1] === "元" ? 1 : Number(m[1]);
-      const year = ERA_REIWA_BASE + reiwaYear;
-      const month = String(Number(m[2])).padStart(2, "0");
-      const day = String(Number(m[3])).padStart(2, "0");
-      return {
-        pageUrl: toAbsolute(link.href),
-        asOfDate: `${year}-${month}-${day}`,
-        eraLabel: link.text,
-        reiwaYear,
-      };
-    })
-    .filter((c): c is NonNullable<typeof c> => c !== null);
-
-  if (candidates.length === 0) {
-    throw new Error(
-      `一覧ページから調査年のリンクを検出できませんでした（${INDEX_URL}）。` +
-        `総務省側のページ構成が変わった可能性があります。`
-    );
-  }
-  candidates.sort((a, b) => b.reiwaYear - a.reiwaYear);
-  const latest = candidates[0]!;
-  console.log(`最新の調査: ${latest.eraLabel} → ${latest.pageUrl}`);
-  return latest;
-}
-
-/** 年次ページから「所属党派別人員調」本体のxlsxのURLを解決する */
-async function resolveExcelUrl(pageUrl: string): Promise<string> {
-  const html = await fetchShiftJisHtml(pageUrl);
-  const xlsxLinks = extractLinks(html).filter((l) => /\.xlsx?$/i.test(l.href));
-  // 同じページには「地方公共団体の長の連続就任回数」のxlsxも並ぶため、
-  // リンクテキストで本体（所属党派別人員調）を選ぶ
-  const main =
-    xlsxLinks.find((l) => l.text.includes("所属党派別人員調")) ?? xlsxLinks[0];
-  if (!main) {
-    throw new Error(
-      `年次ページからExcelのリンクを検出できませんでした（${pageUrl}）。` +
-        `総務省側のページ構成が変わった可能性があります。`
-    );
-  }
-  const url = toAbsolute(main.href);
-  console.log(`Excel: ${url}（リンク表記: ${main.text}）`);
-  return url;
-}
-
-async function fetchExcelBuffer(url: string): Promise<ArrayBuffer> {
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`Excel取得に失敗しました: ${res.status} ${res.statusText} (${url})`);
-  }
-  return res.arrayBuffer();
-}
 
 const cellText = (raw: unknown): string =>
   raw === undefined || raw === null ? "" : String(raw).replace(/\s/g, "").trim();
@@ -274,7 +174,9 @@ function resolvePartyId(name: string, unknownNames: Set<string>): string | null 
 
 async function main() {
   const { pageUrl, asOfDate, eraLabel } = await resolveLatestSurveyPage();
-  const excelUrl = await resolveExcelUrl(pageUrl);
+  // 同じ年次ページには「地方公共団体の長の連続就任回数」のxlsxも並ぶため、
+  // リンクテキストで本体（所属党派別人員調）を選ぶ
+  const excelUrl = await resolveExcelUrlByLinkText(pageUrl, "所属党派別人員調");
 
   const buf = await fetchExcelBuffer(excelUrl);
   const wb = XLSX.read(buf, { type: "array" });

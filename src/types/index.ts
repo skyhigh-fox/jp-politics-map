@@ -827,3 +827,69 @@ export interface PrefectureTurnoutElection {
   sourcePageUrl: string;
 }
 
+/**
+ * 首長（地方公共団体の長）の区分。
+ * 総務省「地方公共団体の長の連続就任回数調」の
+ * 「(1)知事及び政令指定都市長の連続就任回数調」の表が持つ2区分に対応する。
+ */
+export type LocalExecutiveType = "都道府県知事" | "指定都市市長";
+
+/**
+ * 首長1名分（機能拡充ロードマップ Tier1 #8）。
+ *
+ * 【政治的中立性についての注記】
+ * `consecutiveTerms`（連続就任回数）は原表の項目をそのまま保持した事実の数値。
+ * 多選・長期在任の是非についての含意は持たせず、都道府県間の順位付けもしない。
+ */
+export interface LocalExecutive {
+  /** 都道府県の正式名称（例:"神奈川県"）。PREFECTURE_CODESのキーと一致する */
+  prefecture: string;
+  type: LocalExecutiveType;
+  /** 団体名（都道府県知事なら都道府県名、指定都市市長なら市名） */
+  bodyName: string;
+  /** 氏名（原表の表記のまま。姓名の間に全角スペースが複数入ることがある） */
+  name: string | null;
+  /** 表示用の氏名（連続する空白を全角スペース1つに畳んだもの） */
+  displayName: string | null;
+  /** 照合用の正規化キー（src/lib/nameMatch.ts の normalizeNameKey） */
+  nameKey: string | null;
+  /**
+   * 任期満了年月日（YYYY-MM-DD）。原表に記載がない場合はnull。
+   * 【重要】解散・辞職・失職等があれば変動する予定日であり、確定した選挙期日
+   * ではない。UI側では必ず推定であることを明示する。
+   */
+  termEndDate: string | null;
+  /** 連続就任回数（原表の「就任回数」欄）。記載がない場合はnull */
+  consecutiveTerms: number | null;
+}
+
+/**
+ * 都道府県1件分の首長データ（機能拡充ロードマップ Tier1 #8）。
+ *
+ * 情報源: 総務省「地方公共団体の長の連続就任回数調」
+ * （毎年12月31日現在。知事及び政令指定都市長の氏名・任期満了年月日・就任回数）
+ *
+ * 【収録範囲】
+ * 原表が氏名・任期満了日を個人単位で持つのは知事と指定都市市長のみで、
+ * その他の市区長・町村長は「連続就任回数ごとの人数分布」としてしか
+ * 公表されていないため、本データセットには含まれない。
+ *
+ * 【政治的中立性についての注記】
+ * 都道府県ごとに独立したレコードとして持ち、全国横断で並べ替えられる
+ * 集計値（連続就任回数が最も多い知事など）は持たせない。
+ */
+export interface PrefectureExecutives {
+  /** 都道府県の正式名称（例:"東京都"） */
+  prefecture: string;
+  /** 調査基準日（YYYY-MM-DD。原資料は毎年12月31日現在） */
+  asOfDate: string;
+  /** 知事。原表の欄が空欄だった場合はnull */
+  governor: LocalExecutive | null;
+  /** 当該都道府県内の指定都市の市長（指定都市がない県では空配列） */
+  designatedCityMayors: LocalExecutive[];
+  /** データ取得元Excelファイルの URL（出典明記のため保持） */
+  sourceUrl: string;
+  /** 上記Excelが掲載されている総務省のページ */
+  sourcePageUrl: string;
+}
+

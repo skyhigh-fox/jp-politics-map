@@ -1,0 +1,1007 @@
+[
+  {
+    "prefecture": "北海道",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "北海道",
+      "type": "都道府県知事",
+      "bodyName": "北海道",
+      "name": "鈴木　直道",
+      "displayName": "鈴木　直道",
+      "nameKey": "鈴木直道",
+      "termEndDate": "2027-04-22",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "北海道",
+        "type": "指定都市市長",
+        "bodyName": "札幌市",
+        "name": "秋元　克広",
+        "displayName": "秋元　克広",
+        "nameKey": "秋元克広",
+        "termEndDate": "2027-05-01",
+        "consecutiveTerms": 3
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "青森県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "青森県",
+      "type": "都道府県知事",
+      "bodyName": "青森県",
+      "name": "宮下　宗一郎",
+      "displayName": "宮下　宗一郎",
+      "nameKey": "宮下宗一郎",
+      "termEndDate": "2027-06-28",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "岩手県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "岩手県",
+      "type": "都道府県知事",
+      "bodyName": "岩手県",
+      "name": "達増　拓也",
+      "displayName": "達増　拓也",
+      "nameKey": "達増拓也",
+      "termEndDate": "2027-09-10",
+      "consecutiveTerms": 5
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "宮城県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "宮城県",
+      "type": "都道府県知事",
+      "bodyName": "宮城県",
+      "name": "村井　嘉浩",
+      "displayName": "村井　嘉浩",
+      "nameKey": "村井嘉浩",
+      "termEndDate": "2029-11-20",
+      "consecutiveTerms": 6
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "宮城県",
+        "type": "指定都市市長",
+        "bodyName": "仙台市",
+        "name": "郡　和子",
+        "displayName": "郡　和子",
+        "nameKey": "郡和子",
+        "termEndDate": "2029-08-21",
+        "consecutiveTerms": 3
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "秋田県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "秋田県",
+      "type": "都道府県知事",
+      "bodyName": "秋田県",
+      "name": "鈴木　健太",
+      "displayName": "鈴木　健太",
+      "nameKey": "鈴木健太",
+      "termEndDate": "2029-04-19",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "山形県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "山形県",
+      "type": "都道府県知事",
+      "bodyName": "山形県",
+      "name": "吉村　美栄子",
+      "displayName": "吉村　美栄子",
+      "nameKey": "吉村美栄子",
+      "termEndDate": "2029-02-13",
+      "consecutiveTerms": 5
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "福島県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "福島県",
+      "type": "都道府県知事",
+      "bodyName": "福島県",
+      "name": "内堀　雅雄",
+      "displayName": "内堀　雅雄",
+      "nameKey": "内堀雅雄",
+      "termEndDate": "2026-11-11",
+      "consecutiveTerms": 3
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "茨城県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "茨城県",
+      "type": "都道府県知事",
+      "bodyName": "茨城県",
+      "name": "大井川　和彦",
+      "displayName": "大井川　和彦",
+      "nameKey": "大井川和彦",
+      "termEndDate": "2029-09-25",
+      "consecutiveTerms": 3
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "栃木県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "栃木県",
+      "type": "都道府県知事",
+      "bodyName": "栃木県",
+      "name": "福田　富一",
+      "displayName": "福田　富一",
+      "nameKey": "福田富一",
+      "termEndDate": "2028-12-08",
+      "consecutiveTerms": 6
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "群馬県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "群馬県",
+      "type": "都道府県知事",
+      "bodyName": "群馬県",
+      "name": "山本 一太",
+      "displayName": "山本　一太",
+      "nameKey": "山本一太",
+      "termEndDate": "2027-07-27",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "埼玉県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "埼玉県",
+      "type": "都道府県知事",
+      "bodyName": "埼玉県",
+      "name": "大野　元裕",
+      "displayName": "大野　元裕",
+      "nameKey": "大野元裕",
+      "termEndDate": "2027-08-30",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "埼玉県",
+        "type": "指定都市市長",
+        "bodyName": "さいたま市",
+        "name": "清水　勇人",
+        "displayName": "清水　勇人",
+        "nameKey": "清水勇人",
+        "termEndDate": "2029-05-26",
+        "consecutiveTerms": 5
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "千葉県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "千葉県",
+      "type": "都道府県知事",
+      "bodyName": "千葉県",
+      "name": "熊谷　俊人",
+      "displayName": "熊谷　俊人",
+      "nameKey": "熊谷俊人",
+      "termEndDate": "2029-04-04",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "千葉県",
+        "type": "指定都市市長",
+        "bodyName": "千葉市",
+        "name": "神谷　俊一",
+        "displayName": "神谷　俊一",
+        "nameKey": "神谷俊一",
+        "termEndDate": "2029-03-20",
+        "consecutiveTerms": 2
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "東京都",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "東京都",
+      "type": "都道府県知事",
+      "bodyName": "東京都",
+      "name": "小池百合子",
+      "displayName": "小池百合子",
+      "nameKey": "小池百合子",
+      "termEndDate": "2028-07-30",
+      "consecutiveTerms": 3
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "神奈川県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "神奈川県",
+      "type": "都道府県知事",
+      "bodyName": "神奈川県",
+      "name": "黒岩　祐治",
+      "displayName": "黒岩　祐治",
+      "nameKey": "黒岩祐治",
+      "termEndDate": "2027-04-22",
+      "consecutiveTerms": 4
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "神奈川県",
+        "type": "指定都市市長",
+        "bodyName": "横浜市",
+        "name": "山中　竹春",
+        "displayName": "山中　竹春",
+        "nameKey": "山中竹春",
+        "termEndDate": "2029-08-29",
+        "consecutiveTerms": 2
+      },
+      {
+        "prefecture": "神奈川県",
+        "type": "指定都市市長",
+        "bodyName": "川崎市",
+        "name": "福田　紀彦",
+        "displayName": "福田　紀彦",
+        "nameKey": "福田紀彦",
+        "termEndDate": "2029-11-18",
+        "consecutiveTerms": 4
+      },
+      {
+        "prefecture": "神奈川県",
+        "type": "指定都市市長",
+        "bodyName": "相模原市",
+        "name": "本村　賢太郎",
+        "displayName": "本村　賢太郎",
+        "nameKey": "本村賢太郎",
+        "termEndDate": "2027-04-21",
+        "consecutiveTerms": 2
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "新潟県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "新潟県",
+      "type": "都道府県知事",
+      "bodyName": "新潟県",
+      "name": "花角　英世",
+      "displayName": "花角　英世",
+      "nameKey": "花角英世",
+      "termEndDate": "2026-06-09",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "新潟県",
+        "type": "指定都市市長",
+        "bodyName": "新潟市",
+        "name": "中原　八一",
+        "displayName": "中原　八一",
+        "nameKey": "中原八一",
+        "termEndDate": "2026-11-17",
+        "consecutiveTerms": 2
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "富山県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "富山県",
+      "type": "都道府県知事",
+      "bodyName": "富山県",
+      "name": "新田　八朗",
+      "displayName": "新田　八朗",
+      "nameKey": "新田八朗",
+      "termEndDate": "2028-11-08",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "石川県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "石川県",
+      "type": "都道府県知事",
+      "bodyName": "石川県",
+      "name": "馳　浩",
+      "displayName": "馳　浩",
+      "nameKey": "馳浩",
+      "termEndDate": "2026-03-26",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "福井県",
+    "asOfDate": "2025-12-31",
+    "governor": null,
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "山梨県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "山梨県",
+      "type": "都道府県知事",
+      "bodyName": "山梨県",
+      "name": "長崎幸太郎",
+      "displayName": "長崎幸太郎",
+      "nameKey": "長崎幸太郎",
+      "termEndDate": "2027-02-16",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "長野県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "長野県",
+      "type": "都道府県知事",
+      "bodyName": "長野県",
+      "name": "阿部　守一",
+      "displayName": "阿部　守一",
+      "nameKey": "阿部守一",
+      "termEndDate": "2026-08-31",
+      "consecutiveTerms": 4
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "岐阜県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "岐阜県",
+      "type": "都道府県知事",
+      "bodyName": "岐阜県",
+      "name": "江崎　禎英",
+      "displayName": "江崎　禎英",
+      "nameKey": "江崎禎英",
+      "termEndDate": "2029-02-05",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "静岡県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "静岡県",
+      "type": "都道府県知事",
+      "bodyName": "静岡県",
+      "name": "鈴木　康友",
+      "displayName": "鈴木　康友",
+      "nameKey": "鈴木康友",
+      "termEndDate": "2028-05-25",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "静岡県",
+        "type": "指定都市市長",
+        "bodyName": "静岡市",
+        "name": "難波　喬司",
+        "displayName": "難波　喬司",
+        "nameKey": "難波喬司",
+        "termEndDate": "2027-04-12",
+        "consecutiveTerms": 1
+      },
+      {
+        "prefecture": "静岡県",
+        "type": "指定都市市長",
+        "bodyName": "浜松市",
+        "name": "中野　祐介",
+        "displayName": "中野　祐介",
+        "nameKey": "中野祐介",
+        "termEndDate": "2027-04-30",
+        "consecutiveTerms": 1
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "愛知県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "愛知県",
+      "type": "都道府県知事",
+      "bodyName": "愛知県",
+      "name": "大村秀章",
+      "displayName": "大村秀章",
+      "nameKey": "大村秀章",
+      "termEndDate": "2027-02-14",
+      "consecutiveTerms": 4
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "愛知県",
+        "type": "指定都市市長",
+        "bodyName": "名古屋市",
+        "name": "廣澤一郎",
+        "displayName": "廣澤一郎",
+        "nameKey": "廣澤一郎",
+        "termEndDate": "2028-11-23",
+        "consecutiveTerms": 1
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "三重県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "三重県",
+      "type": "都道府県知事",
+      "bodyName": "三重県",
+      "name": "一見　勝之",
+      "displayName": "一見　勝之",
+      "nameKey": "一見勝之",
+      "termEndDate": "2029-09-12",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "滋賀県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "滋賀県",
+      "type": "都道府県知事",
+      "bodyName": "滋賀県",
+      "name": "三日月　大造",
+      "displayName": "三日月　大造",
+      "nameKey": "三日月大造",
+      "termEndDate": "2026-07-19",
+      "consecutiveTerms": 3
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "京都府",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "京都府",
+      "type": "都道府県知事",
+      "bodyName": "京都府",
+      "name": "西脇　隆俊",
+      "displayName": "西脇　隆俊",
+      "nameKey": "西脇隆俊",
+      "termEndDate": "2026-04-15",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "京都府",
+        "type": "指定都市市長",
+        "bodyName": "京都市",
+        "name": "松井　孝治",
+        "displayName": "松井　孝治",
+        "nameKey": "松井孝治",
+        "termEndDate": "2028-02-24",
+        "consecutiveTerms": 1
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "大阪府",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "大阪府",
+      "type": "都道府県知事",
+      "bodyName": "大阪府",
+      "name": "吉村　洋文",
+      "displayName": "吉村　洋文",
+      "nameKey": "吉村洋文",
+      "termEndDate": "2027-04-08",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "大阪府",
+        "type": "指定都市市長",
+        "bodyName": "大阪市",
+        "name": "横山　英幸",
+        "displayName": "横山　英幸",
+        "nameKey": "横山英幸",
+        "termEndDate": "2027-04-08",
+        "consecutiveTerms": 1
+      },
+      {
+        "prefecture": "大阪府",
+        "type": "指定都市市長",
+        "bodyName": "堺市",
+        "name": "永藤　英機",
+        "displayName": "永藤　英機",
+        "nameKey": "永藤英機",
+        "termEndDate": "2027-06-08",
+        "consecutiveTerms": 2
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "兵庫県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "兵庫県",
+      "type": "都道府県知事",
+      "bodyName": "兵庫県",
+      "name": "齊藤　元彦",
+      "displayName": "齊藤　元彦",
+      "nameKey": "齊藤元彦",
+      "termEndDate": "2028-11-16",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "兵庫県",
+        "type": "指定都市市長",
+        "bodyName": "神戸市",
+        "name": "久元　喜造",
+        "displayName": "久元　喜造",
+        "nameKey": "久元喜造",
+        "termEndDate": "2029-11-19",
+        "consecutiveTerms": 4
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "奈良県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "奈良県",
+      "type": "都道府県知事",
+      "bodyName": "奈良県",
+      "name": "山下　真",
+      "displayName": "山下　真",
+      "nameKey": "山下真",
+      "termEndDate": "2027-05-02",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "和歌山県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "和歌山県",
+      "type": "都道府県知事",
+      "bodyName": "和歌山県",
+      "name": "宮﨑　泉",
+      "displayName": "宮﨑　泉",
+      "nameKey": "宮﨑泉",
+      "termEndDate": "2029-05-31",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "鳥取県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "鳥取県",
+      "type": "都道府県知事",
+      "bodyName": "鳥取県",
+      "name": "平井　伸治",
+      "displayName": "平井　伸治",
+      "nameKey": "平井伸治",
+      "termEndDate": "2027-04-12",
+      "consecutiveTerms": 5
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "島根県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "島根県",
+      "type": "都道府県知事",
+      "bodyName": "島根県",
+      "name": "丸山　達也",
+      "displayName": "丸山　達也",
+      "nameKey": "丸山達也",
+      "termEndDate": "2027-04-29",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "岡山県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "岡山県",
+      "type": "都道府県知事",
+      "bodyName": "岡山県",
+      "name": "伊原木　隆太",
+      "displayName": "伊原木　隆太",
+      "nameKey": "伊原木隆太",
+      "termEndDate": "2028-11-11",
+      "consecutiveTerms": 4
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "岡山県",
+        "type": "指定都市市長",
+        "bodyName": "岡山市",
+        "name": "大森　雅夫",
+        "displayName": "大森　雅夫",
+        "nameKey": "大森雅夫",
+        "termEndDate": "2029-10-08",
+        "consecutiveTerms": 4
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "広島県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "広島県",
+      "type": "都道府県知事",
+      "bodyName": "広島県",
+      "name": "横田　美香",
+      "displayName": "横田　美香",
+      "nameKey": "横田美香",
+      "termEndDate": "2029-11-28",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "広島県",
+        "type": "指定都市市長",
+        "bodyName": "広島市",
+        "name": "松井　一實",
+        "displayName": "松井　一實",
+        "nameKey": "松井一實",
+        "termEndDate": "2027-04-11",
+        "consecutiveTerms": 4
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "山口県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "山口県",
+      "type": "都道府県知事",
+      "bodyName": "山口県",
+      "name": "村岡　嗣政",
+      "displayName": "村岡　嗣政",
+      "nameKey": "村岡嗣政",
+      "termEndDate": "2026-02-22",
+      "consecutiveTerms": 3
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "徳島県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "徳島県",
+      "type": "都道府県知事",
+      "bodyName": "徳島県",
+      "name": "後藤田　正純",
+      "displayName": "後藤田　正純",
+      "nameKey": "後藤田正純",
+      "termEndDate": "2027-05-17",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "香川県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "香川県",
+      "type": "都道府県知事",
+      "bodyName": "香川県",
+      "name": "池田　豊人",
+      "displayName": "池田　豊人",
+      "nameKey": "池田豊人",
+      "termEndDate": "2026-09-04",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "愛媛県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "愛媛県",
+      "type": "都道府県知事",
+      "bodyName": "愛媛県",
+      "name": "中村　時広",
+      "displayName": "中村　時広",
+      "nameKey": "中村時広",
+      "termEndDate": "2026-11-30",
+      "consecutiveTerms": 4
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "高知県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "高知県",
+      "type": "都道府県知事",
+      "bodyName": "高知県",
+      "name": "濵田　省司",
+      "displayName": "濵田　省司",
+      "nameKey": "濵田省司",
+      "termEndDate": "2027-12-06",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "福岡県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "福岡県",
+      "type": "都道府県知事",
+      "bodyName": "福岡県",
+      "name": "服部　誠太郎",
+      "displayName": "服部　誠太郎",
+      "nameKey": "服部誠太郎",
+      "termEndDate": "2029-04-10",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "福岡県",
+        "type": "指定都市市長",
+        "bodyName": "北九州市",
+        "name": "武内　和久",
+        "displayName": "武内　和久",
+        "nameKey": "武内和久",
+        "termEndDate": "2027-02-19",
+        "consecutiveTerms": 1
+      },
+      {
+        "prefecture": "福岡県",
+        "type": "指定都市市長",
+        "bodyName": "福岡市",
+        "name": "高島　宗一郎",
+        "displayName": "高島　宗一郎",
+        "nameKey": "高島宗一郎",
+        "termEndDate": "2026-12-06",
+        "consecutiveTerms": 4
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "佐賀県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "佐賀県",
+      "type": "都道府県知事",
+      "bodyName": "佐賀県",
+      "name": "山口　祥義",
+      "displayName": "山口　祥義",
+      "nameKey": "山口祥義",
+      "termEndDate": "2027-01-10",
+      "consecutiveTerms": 3
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "長崎県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "長崎県",
+      "type": "都道府県知事",
+      "bodyName": "長崎県",
+      "name": "大石　賢吾",
+      "displayName": "大石　賢吾",
+      "nameKey": "大石賢吾",
+      "termEndDate": "2026-03-01",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "熊本県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "熊本県",
+      "type": "都道府県知事",
+      "bodyName": "熊本県",
+      "name": "木村　敬",
+      "displayName": "木村　敬",
+      "nameKey": "木村敬",
+      "termEndDate": "2028-04-15",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [
+      {
+        "prefecture": "熊本県",
+        "type": "指定都市市長",
+        "bodyName": "熊本市",
+        "name": "大西　一史",
+        "displayName": "大西　一史",
+        "nameKey": "大西一史",
+        "termEndDate": "2026-12-02",
+        "consecutiveTerms": 3
+      }
+    ],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "大分県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "大分県",
+      "type": "都道府県知事",
+      "bodyName": "大分県",
+      "name": "佐藤　樹一郎",
+      "displayName": "佐藤　樹一郎",
+      "nameKey": "佐藤樹一郎",
+      "termEndDate": "2027-04-27",
+      "consecutiveTerms": 1
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "宮崎県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "宮崎県",
+      "type": "都道府県知事",
+      "bodyName": "宮崎県",
+      "name": "河野　俊嗣",
+      "displayName": "河野　俊嗣",
+      "nameKey": "河野俊嗣",
+      "termEndDate": "2027-01-20",
+      "consecutiveTerms": 4
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "鹿児島県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "鹿児島県",
+      "type": "都道府県知事",
+      "bodyName": "鹿児島県",
+      "name": "塩田　康一",
+      "displayName": "塩田　康一",
+      "nameKey": "塩田康一",
+      "termEndDate": "2028-07-27",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  },
+  {
+    "prefecture": "沖縄県",
+    "asOfDate": "2025-12-31",
+    "governor": {
+      "prefecture": "沖縄県",
+      "type": "都道府県知事",
+      "bodyName": "沖縄県",
+      "name": "玉城　康裕",
+      "displayName": "玉城　康裕",
+      "nameKey": "玉城康裕",
+      "termEndDate": "2026-09-29",
+      "consecutiveTerms": 2
+    },
+    "designatedCityMayors": [],
+    "sourceUrl": "https://www.soumu.go.jp/main_content/001065955.xlsx",
+    "sourcePageUrl": "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/r06_00001.html"
+  }
+]

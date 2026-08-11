@@ -7,6 +7,7 @@ import type {
   LocalAssemblyPartyComposition,
   NdlSpeechCount,
   PartySeatHistory,
+  PrefectureExecutives,
   PrefectureFinance,
   PrefectureTurnoutElection,
   RollCallVote,
@@ -44,6 +45,7 @@ export type DatasetId =
   | "party-seat-history"
   | "local-assembly-members"
   | "local-assembly-party-composition"
+  | "prefecture-executives"
   | "prefecture-finance"
   | "district-boundaries"
   | "news";
@@ -224,6 +226,18 @@ export const DATASET_META: Record<DatasetId, DatasetMeta> = {
     scope:
       "議員個人の名簿ではなく、都道府県ごと・党派ごとの人員数の集計です（原資料がその形式で公表されているため）。個々の議員の氏名・選挙区・所属は含まれません。党派名・党派の並び順・人員数は原資料の表記と掲載順のまま保持し、独自の再分類（与党・野党への括り直し等）や人数順への並べ替えはしていません。原資料には男女別の内訳もありますが、本サイトでは保持していません。市区町村単位の内訳は原資料になく、都道府県単位の合計のみを収録しています。",
   },
+  "prefecture-executives": {
+    id: "prefecture-executives",
+    label: "知事・指定都市市長と任期満了日",
+    sources: [
+      {
+        name: "総務省「地方公共団体の長の連続就任回数調」",
+        url: "https://www.soumu.go.jp/senkyo/senkyo_s/data/syozoku/",
+      },
+    ],
+    scope:
+      "原資料が氏名・任期満了年月日・連続就任回数を個人単位で公表しているのは、都道府県知事と指定都市市長のみです。その他の市区長・町村長は「連続就任回数ごとの人数の分布」としてのみ公表されているため、個人単位では収録していません。都道府県議会・市区町村議会の議員の任期満了日は原資料に含まれません。氏名・任期満了年月日・連続就任回数は原資料の表記と数値をそのまま保持し、独自の言い換えや推測による補完はしていません。連続就任回数は原資料の項目をそのまま示した事実の数値で、本サイトは多選・長期在任についての評価や都道府県間の順位付けを行いません。任期満了日は調査基準日時点のもので、その後の辞職・失職等による退職や選挙の結果は反映されていません。",
+  },
   "prefecture-finance": {
     id: "prefecture-finance",
     label: "都道府県の財政・歳出",
@@ -278,6 +292,7 @@ export const DATASET_ORDER: DatasetId[] = [
   "party-seat-history",
   "local-assembly-members",
   "local-assembly-party-composition",
+  "prefecture-executives",
   "prefecture-finance",
   "district-boundaries",
   "news",
@@ -739,6 +754,84 @@ export function buildLocalPartyCompositionCoverage(
       "議員・長の個人名は原資料に含まれないため収録していません。個人の氏名を収録しているのは別データセット「地方議会議員」（パイロット1議会分）のみです。",
       "調査は毎年12月31日現在で実施され、本サイトは最新の1時点のみを収録しています。過去年との比較データは収録していません。",
     ],
+  };
+}
+
+/**
+ * 知事・指定都市市長データ（Tier1 #8）の「収録範囲」だけを示す軽量版の事実。
+ *
+ * 都道府県詳細ページに添える注記用。その都道府県1件分のレコードから算出できる
+ * 事実（何名分の氏名・任期満了日が原資料にあるか、調査基準日）に限定している。
+ * 中立性のため、連続就任回数の多寡についての意味づけは一切書かない。
+ */
+export function buildPrefectureExecutiveScopeFacts(
+  record: PrefectureExecutives
+): string[] {
+  const executives = [
+    ...(record.governor ? [record.governor] : []),
+    ...record.designatedCityMayors,
+  ];
+  const withTermEnd = executives.filter((e) => e.termEndDate !== null).length;
+  const mayors = record.designatedCityMayors.length;
+
+  const facts: string[] = [];
+  if (record.governor) {
+    facts.push(
+      mayors > 0
+        ? `知事1名と指定都市市長${n(mayors)}名の計${n(executives.length)}名について、氏名・任期満了年月日・連続就任回数を収録しています（調査基準日: ${record.asOfDate}）。`
+        : `知事1名について、氏名・任期満了年月日・連続就任回数を収録しています（調査基準日: ${record.asOfDate}）。原資料にこの都道府県の指定都市市長の記載はありません。`
+    );
+  } else {
+    facts.push(
+      mayors > 0
+        ? `調査基準日（${record.asOfDate}）時点の原資料に、この都道府県の知事の記載がありません。指定都市市長${n(mayors)}名分を収録しています。`
+        : `調査基準日（${record.asOfDate}）時点の原資料に、この都道府県の知事・指定都市市長の記載がありません。`
+    );
+  }
+  if (executives.length > 0 && withTermEnd < executives.length) {
+    facts.push(
+      `このうち任期満了年月日が原資料に記載されているのは${n(withTermEnd)}名分です。`
+    );
+  }
+  facts.push(
+    "選挙の見込み時期は、任期満了日と公職選挙法第33条第2項（任期満了による選挙は任期満了の日前30日以内に行う）から機械的に算出した範囲であり、確定した選挙期日ではありません。辞職・失職等による退職があった場合は任期満了日そのものが変わります。",
+    "市区長・町村長の氏名と任期満了日、都道府県議会・市区町村議会の議員の任期満了日は原資料に含まれないため収録していません。"
+  );
+  return facts;
+}
+
+export function buildPrefectureExecutiveCoverage(
+  records: PrefectureExecutives[]
+): DatasetCoverage {
+  if (records.length === 0) {
+    return { asOf: null, facts: ["現在収録しているデータはありません。"] };
+  }
+  const asOfDates = [...new Set(records.map((r) => r.asOfDate))].sort();
+  const governors = records.filter((r) => r.governor).length;
+  const mayors = records.reduce(
+    (sum, r) => sum + r.designatedCityMayors.length,
+    0
+  );
+  const missingGovernor = records
+    .filter((r) => !r.governor)
+    .map((r) => r.prefecture);
+
+  const facts: string[] = [
+    `${n(records.length)}都道府県${records.length === 47 ? "すべて" : ""}について、知事${n(governors)}名・指定都市市長${n(mayors)}名の氏名・任期満了年月日・連続就任回数を収録しています。`,
+  ];
+  if (missingGovernor.length > 0) {
+    facts.push(
+      `${missingGovernor.join("・")}は、調査基準日時点の原資料に知事の記載がないため収録していません（推測による補完はしていません）。`
+    );
+  }
+  facts.push(
+    "市区長・町村長は、原資料が連続就任回数ごとの人数の分布のみを公表しており個人単位の氏名・任期満了日を含まないため、収録していません。",
+    "調査は毎年12月31日現在で実施され、本サイトは最新の1時点のみを収録しています。調査基準日以降に行われた選挙の結果、辞職・失職等による異動は反映されていません。"
+  );
+
+  return {
+    asOf: { label: "調査基準日", value: asOfDates.join("・") },
+    facts,
   };
 }
 
