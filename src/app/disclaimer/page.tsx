@@ -388,7 +388,17 @@ export default async function DisclaimerPage() {
           訂正のご連絡について
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
-          内容の誤りにお気づきの場合にご連絡いただく窓口は、現在準備中です。
+          内容の誤りにお気づきの場合は、GitHub Issuesにてご連絡ください。既存の同種の報告がないかご確認のうえ、対象のページ・議員名や法案名・誤りの内容を具体的にお書きいただけると対応しやすくなります。
+        </p>
+        <p className="mt-2 text-sm">
+          <a
+            href="https://github.com/skyhigh-fox/jp-politics-map/issues"
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            GitHub Issuesで報告する →
+          </a>
         </p>
       </section>
 
