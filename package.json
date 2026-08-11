@@ -34,6 +34,7 @@
     "fetch:all": "npm run fetch:sangiin-members && npm run fetch:shugiin-members && npm run fetch:bills && npm run fetch:bill-sponsorships && npm run fetch:election-results && npm run fetch:tokyo-assembly-members && npm run fetch:news && npm run fetch:ndl-speech-counts && npm run fetch:written-questions && npm run fetch:party-seat-history && npm run fetch:prefecture-finance && npm run fetch:roll-call-votes && npm run fetch:prefecture-population && npm run fetch:prefecture-expenditure-by-purpose && npm run fetch:prefecture-financial-health && npm run fetch:prefecture-expenditure-by-nature && npm run fetch:national-budget && npm run fetch:local-assembly-party-composition && npm run fetch:prefecture-executives && npm run fetch:prefecture-turnout"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "d3-geo": "^2.0.2",
     "next": "^15.0.0",
     "react": "^18.3.0",

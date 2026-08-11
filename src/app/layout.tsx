@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { NewsMenu } from "@/components/NewsMenu";
 import { MobileNav } from "@/components/MobileNav";
@@ -92,6 +93,7 @@ export default async function RootLayout({
         <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-8">{children}</main>
         <SiteFooter />
         <ScrollToTopButton />
+        <Analytics />
       </body>
     </html>
   );

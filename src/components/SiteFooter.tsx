@@ -24,6 +24,12 @@ export function SiteFooter() {
           >
             免責事項・出典
           </Link>
+          <Link
+            href="/privacy"
+            className="text-accent-600 transition-colors hover:text-accent-700 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            プライバシーポリシー
+          </Link>
         </span>
       </div>
     </footer>
