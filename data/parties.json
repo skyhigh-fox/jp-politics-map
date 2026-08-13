@@ -9,7 +9,7 @@
         "name": "自由民主党・無所属の会",
         "abbreviation": "自民",
         "memberCount": 101,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -31,7 +31,7 @@
         "name": "日本維新の会",
         "abbreviation": "維新",
         "memberCount": 19,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -53,7 +53,7 @@
         "name": "国民民主党・新緑風会",
         "abbreviation": "民主",
         "memberCount": 25,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -90,7 +90,7 @@
         "name": "立憲民主・無所属",
         "abbreviation": "立憲",
         "memberCount": 40,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
@@ -105,7 +105,7 @@
         "name": "参政党",
         "abbreviation": "参政",
         "memberCount": 15,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -127,7 +127,7 @@
         "name": "公明党",
         "abbreviation": "公明",
         "memberCount": 21,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
@@ -142,7 +142,7 @@
         "name": "チームみらい・無所属の会",
         "abbreviation": "みら",
         "memberCount": 2,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -164,7 +164,7 @@
         "name": "各派に属しない議員",
         "abbreviation": "無所属",
         "memberCount": 6,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -186,7 +186,7 @@
         "name": "日本共産党",
         "abbreviation": "共産",
         "memberCount": 7,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       },
       "衆議院": {
@@ -199,16 +199,27 @@
     }
   },
   {
+    "id": "party-い党",
+    "name": "い党",
+    "chambers": {
+      "参議院": {
+        "name": "いのちの党",
+        "abbreviation": "い党",
+        "memberCount": 5,
+        "asOf": "2026-08-12",
+        "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
+      }
+    }
+  },
+  {
     "id": "party-れ新",
     "name": "れいわ新選組",
     "abbreviation": "れ新",
     "color": "#E4027E",
     "chambers": {
       "参議院": {
-        "name": "れいわ新選組",
-        "abbreviation": "れ新",
+        "name": "れ新",
         "memberCount": 5,
-        "asOf": "2026-02-18",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
@@ -223,7 +234,7 @@
         "name": "日本保守党",
         "abbreviation": "保守",
         "memberCount": 2,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
@@ -238,7 +249,7 @@
         "name": "沖縄の風",
         "abbreviation": "沖縄",
         "memberCount": 2,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
@@ -253,7 +264,7 @@
         "name": "社会民主党",
         "abbreviation": "社民",
         "memberCount": 2,
-        "asOf": "2026-02-18",
+        "asOf": "2026-08-12",
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
