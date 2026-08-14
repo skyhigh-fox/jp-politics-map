@@ -212,19 +212,6 @@
     }
   },
   {
-    "id": "party-れ新",
-    "name": "れいわ新選組",
-    "abbreviation": "れ新",
-    "color": "#E4027E",
-    "chambers": {
-      "参議院": {
-        "name": "れ新",
-        "memberCount": 5,
-        "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
-      }
-    }
-  },
-  {
     "id": "party-保守",
     "name": "日本保守党",
     "abbreviation": "保守",
@@ -268,5 +255,12 @@
         "sourceUrl": "https://raw.githubusercontent.com/smartnews-smri/house-of-councillors/main/data/kaiha.json"
       }
     }
+  },
+  {
+    "id": "party-れ新",
+    "name": "れいわ新選組",
+    "abbreviation": "れ新",
+    "color": "#E4027E",
+    "chambers": {}
   }
 ]
