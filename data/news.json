@@ -1,5 +1,68 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/s2syu.html",
+    "title": "一般職事務系（高卒者）（統計行政）",
+    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/s2syu.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001088.html",
+    "title": "第768回　入札監理小委員会（会議資料）",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001088.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/broadcast_contents/02ryutsu04_04000296.html",
+    "title": "放送コンテンツの製作取引及び製作環境の適正化に関する検証・検討会議(第33回)・放送コンテンツ適正製作取引推進ワーキンググループ（第30回）",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/broadcast_contents/02ryutsu04_04000296.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/02ryutsu07_04000580.html",
+    "title": "情報通信審議会 情報通信政策部会 放送政策委員会 主査ヒアリング 開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/02ryutsu07_04000580.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/hunso/info/02shingi02_04000285.html",
+    "title": "電気通信紛争処理委員会（第263回）の開催について",
+    "link": "https://www.soumu.go.jp/main_sosiki/hunso/info/02shingi02_04000285.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000732.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第47報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000732.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000731.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第46報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000731.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000730.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第45報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000730.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001174.html",
+    "title": "令和8年8月17日付　総務省人事",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001174.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-16T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/watch_sports/02ryutsu07_04000583.html",
     "title": "スポーツを観る機会の確保及びスポーツ放映に関する検討会（第3回）開催案内",
     "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/watch_sports/02ryutsu07_04000583.html",
@@ -75,68 +138,5 @@
     "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000725.html",
     "sourceName": "総務省",
     "publishedAt": "2026-08-11T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000724.html",
-    "title": "令和8年熊本地震に関する被害状況等について（第41報）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000724.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-11T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban07_02000123.html",
-    "title": "第一号基礎的電気通信役務の提供に係る第一種交付金及び第一種負担金算定等規則第五条第一項第五号イに規定する総務大臣が告示する額を定める件案に対する意見募集の結果",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban07_02000123.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei04_01000303.html",
-    "title": "労働力調査（詳細集計）2026年（令和8年）4～6月期平均",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei04_01000303.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000668.html",
-    "title": "令和8年熊本地震により被災した地域の中小企業・小規模事業者に対する官公需契約における配慮について（通知）（令和8年8月7日）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000668.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000723.html",
-    "title": "令和8年熊本地震に関する被害状況等について（第40報）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000723.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00956.html",
-    "title": "令和8年度地方財政審議会（8月4日）議事要旨",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00956.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02kanbo01_03001178.html",
-    "title": "大臣官房秘書課障害者雇用推進室（障害者雇用） 非常勤職員採用情報",
-    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02kanbo01_03001178.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000722.html",
-    "title": "令和8年熊本地震に関する被害状況等について（第39報）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000722.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00955.html",
-    "title": "令和8年度地方財政審議会（7月31日）議事要旨",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00955.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-09T20:00:00.000Z"
   }
 ]
