@@ -1,10 +1,17 @@
 [
   {
-    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/s2syu.html",
-    "title": "一般職事務系（高卒者）（統計行政）",
-    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/s2syu.html",
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin04_02000184.html",
+    "title": "革新的情報通信技術（Beyond 5G（6G））基金事業　要素技術・シーズ創出型プログラムにおける　「日独国際共同研究プロジェクト」に係る公募の開始",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin04_02000184.html",
     "sourceName": "総務省",
-    "publishedAt": "2026-08-16T20:00:00.000Z"
+    "publishedAt": "2026-08-17T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000733.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第48報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000733.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-17T20:00:00.000Z"
   },
   {
     "id": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001088.html",
@@ -129,13 +136,6 @@
     "id": "https://www.soumu.go.jp/main_sosiki/hyouka/hyokashingikai_n/gijiroku/hyouka_260716000191141.html",
     "title": "第47回政策評価審議会（第46回政策評価制度部会と合同）（令和8年7月16日開催）資料・議事要旨",
     "link": "https://www.soumu.go.jp/main_sosiki/hyouka/hyokashingikai_n/gijiroku/hyouka_260716000191141.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-11T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000725.html",
-    "title": "令和8年熊本地震に関する被害状況等について（第42報）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000725.html",
     "sourceName": "総務省",
     "publishedAt": "2026-08-11T20:00:00.000Z"
   }
