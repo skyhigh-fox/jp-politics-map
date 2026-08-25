@@ -1,5 +1,82 @@
 [
   {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/ai_network/02tsushin06_04000125_00003.html",
+    "title": "AIネットワーク社会推進会議(第33回)AIガバナンス検討会(第31回)",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/ai_network/02tsushin06_04000125_00003.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02tsushin10_04000732.html",
+    "title": "情報通信審議会　情報通信技術分科会（第198回）の開催について",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02tsushin10_04000732.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/01koho01_02001565.html",
+    "title": "林総務大臣閣議後記者会見の概要",
+    "link": "https://www.soumu.go.jp/menu_news/01koho01_02001565.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000271.html",
+    "title": "政治資金規正法施行令等の一部を改正する政令（案）等に対する意見募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000271.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei14_02000126.html",
+    "title": "日本国憲法の改正手続に関する法律施行令の一部を改正する政令（案）等に対する意見募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei14_02000126.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/hougakuken/R08_AI_01_kaisai.html",
+    "title": "情報通信法学研究会　AI分科会（令和8年度第1回）開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/hougakuken/R08_AI_01_kaisai.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001251.html",
+    "title": "令和8年7月の熱中症による救急搬送状況",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001251.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban16_02000388.html",
+    "title": "特性試験の試験方法を定める件の一部を改正する告示案に係る意見募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban16_02000388.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei09_01000106.html",
+    "title": "データサイエンス・オンライン講座「社会人のためのデータサイエンス演習」の受講者募集開始",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei09_01000106.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000738.html",
+    "title": "令和8年熊本地震に関する被害状況等について（第53報）",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000738.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02zaisei02_04001423.html",
+    "title": "自治財政局地方債課 非常勤職員採用情報",
+    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02zaisei02_04001423.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-24T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/denpa_kankyou/cispr_a/02kiban16_04000962.html",
     "title": "情報通信審議会　情報通信技術分科会　電波利用環境委員会　CISPR A作業班（第26回）配付資料",
     "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/denpa_kankyou/cispr_a/02kiban16_04000962.html",
@@ -61,82 +138,5 @@
     "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban08_03000456.html",
     "sourceName": "総務省",
     "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban03_04001185.html",
-    "title": "情報通信審議会　電気通信事業政策部会　接続政策委員会（第84回）の開催について",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban03_04001185.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001360.html",
-    "title": "情報通信審議会　情報通信技術分科会　新世代モバイル通信システム委員会　ローカル5G検討作業班（第24回）開催案内",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001360.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/02ryutsu07_04000584.html",
-    "title": "情報通信審議会 情報通信政策部会 放送政策委員会 主査ヒアリング（日本放送協会）",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/02ryutsu07_04000584.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/info-accessibility-portal/02ryutsu06_04000261.html",
-    "title": "みんなの公共サイト運用ガイドライン改定に関する研究会（第1回）配布資料",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/info-accessibility-portal/02ryutsu06_04000261.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/toukei/sna/kaigi/02shingi05_02000825.html",
-    "title": "第45回国民経済計算体系的整備部会",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/toukei/sna/kaigi/02shingi05_02000825.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei05_01000345.html",
-    "title": "「サービス産業動態統計調査」2026年（令和8年）6月分（速報）",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei05_01000345.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-23T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001177.html",
-    "title": "令和8年8月23日付　総務省人事",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001177.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-22T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/setsuzoku_seisaku/02kiban03_04001186.html",
-    "title": "情報通信審議会 電気通信事業政策部会 接続政策委員会　接続料の算定等に関するワーキンググループ（第8回）配布資料",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/setsuzoku_seisaku/02kiban03_04001186.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-20T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00021.html",
-    "title": "令和8年8月千葉豪雨に係る普通交付税（9月定例交付分）の繰上げ交付",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00021.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-20T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo05_02000202.html",
-    "title": "第10回「インフラメンテナンス大賞」の募集の開始",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo05_02000202.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-20T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban05_02000408.html",
-    "title": "IPネットワーク設備委員会　報告（案）に対する意見募集",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban05_02000408.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-20T20:00:00.000Z"
   }
 ]
