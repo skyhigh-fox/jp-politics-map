@@ -1,5 +1,75 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001567.html",
+    "title": "林総務大臣閣議後記者会見の概要",
+    "link": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001567.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000294.html",
+    "title": "特殊詐欺等の被害防止に向けた対策強化等に関する事業者との意見交換会の結果",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000294.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000801.html",
+    "title": "76GHz 帯小電力ミリ波レーダーの高度化のための告示改正案に係る 意見募集の結果",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000801.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei08_02000331.html",
+    "title": "令和8年度特定地域づくり事業推進交付金の交付決定",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei08_02000331.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001256.html",
+    "title": "令和8年度「救急の日」及び「救急医療週間」",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001256.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02shingi03_02000017.html",
+    "title": "情報公開・個人情報保護審査会事務局総務課総務係 非常勤職員採用情報",
+    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/detail/02shingi03_02000017.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/r09_youbou00_index.html",
+    "title": "令和9年度税制改正要望について",
+    "link": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/r09_youbou00_index.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/senkyoku/02gyosei14_04000269.html",
+    "title": "第12回衆議院議員選挙区画定審議会",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/senkyoku/02gyosei14_04000269.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/ippan_senkou.html",
+    "title": "総務省選考採用（事務系/技術系・課長補佐級/係長級・一般職相当）情報を更新しました。",
+    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/ippan_senkou.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/shohishahogo/02kiban08_04000527.html",
+    "title": "情報通信審議会 電気通信事業政策部会 消費者保護政策委員会（第10回）",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/shohishahogo/02kiban08_04000527.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-08-31T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000597.html",
     "title": "デジタル空間における情報流通の諸課題への対処に関する検討会　発信者情報開示ワーキンググループ（第6回）開催案内",
     "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000597.html",
@@ -66,76 +136,6 @@
     "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei05_02000255.html",
     "title": "令和9年度地方債計画（案）の策定",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei05_02000255.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00023.html",
-    "title": "令和8年7月17日から18日にかけての大雨に伴う災害に係る普通交付税（11月定例交付分）の繰上げ交付",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00023.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00022.html",
-    "title": "令和8年熊本地震に係る普通交付税（11月定例交付分）の繰上げ交付",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00022.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban15_02000335.html",
-    "title": "電波法施行規則等の一部を改正する省令案等に係る意見募集の結果及び電波監理審議会からの答申",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban15_02000335.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01zeimu02_02000470.html",
-    "title": "地方公共団体情報システムの標準化に関する法律第二条第一項に規定する標準化対象事務を定める政令に規定するデジタル庁令・総務省令で定める事務を定める命令第六条各号に規定する事務の処理に係るシステムに必要とされる機能等に関する標準化基準を定める省令の一部を改正する省令（案）等に対する意見募集の結果",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01zeimu02_02000470.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001255.html",
-    "title": "消防団の組織概要等に関する調査（令和8年度）の結果",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001255.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei04_02000189.html",
-    "title": "令和8年度普通交付税及び地方特例交付金の9月交付",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei04_02000189.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei01_02000144.html",
-    "title": "「データ利活用シンポジウム AI時代のデータ利活用～現場で活かす仕組みと人の役割～」の開催",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei01_02000144.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban13_02000136.html",
-    "title": "令和8年度総合防災訓練における非常通信訓練等の実施",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban13_02000136.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban04_02000281.html",
-    "title": "我が国のインターネットにおけるトラヒックの集計・試算",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban04_02000281.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-08-30T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu07_02000336.html",
-    "title": "放送法施行規則及び基幹放送の業務に係る特定役員及び支配関係の定義並びに表現の自由享有基準の特例に関する省令の一部を改正する省令案等についての意見募集の結果及び電波監理審議会からの答申",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu07_02000336.html",
     "sourceName": "総務省",
     "publishedAt": "2026-08-30T20:00:00.000Z"
   }
