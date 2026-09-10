@@ -1,5 +1,26 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000352.html",
+    "title": "「安全性・信頼性を確保したデジタルインフラの海外展開支援事業」令和8年度「ローカル・スタートアップ枠」二次公募の採択結果",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000352.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-09T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001367.html",
+    "title": "情報通信審議会　情報通信技術分科会　新世代モバイル通信システム委員会　ローカル5G検討作業班（第25回）開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001367.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-09T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/zeimu_hyojunka/02zeimu02_04000508.html",
+    "title": "税務システム等標準化検討会（第17回）",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/zeimu_hyojunka/02zeimu02_04000508.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-09T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban07_04000111.html",
     "title": "情報通信審議会　電気通信事業政策部会　ユニバーサルサービス政策委員会（第55回）・ユニバーサルサービス制度における交付金・負担金の算定等に関するワーキンググループ（第12回） 合同会合",
     "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban07_04000111.html",
@@ -115,27 +136,6 @@
     "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu09_02000395.html",
     "title": "令和8年に申請を受け付けるBS放送に係る基幹放送局の免許申請受付結果",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu09_02000395.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu06_02000488.html",
-    "title": "地域DX/AXに向けた計画の策定等の伴走支援を受ける　地方公共団体等の二次公募の実施",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu06_02000488.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00965.html",
-    "title": "令和8年度地方財政審議会（9月1日）議事要旨",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00965.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00964.html",
-    "title": "令和8年度地方財政審議会（8月21日）議事要旨",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00964.html",
     "sourceName": "総務省",
     "publishedAt": "2026-09-06T20:00:00.000Z"
   }
