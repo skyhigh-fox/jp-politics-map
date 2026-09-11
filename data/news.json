@@ -1,5 +1,61 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000673.html",
+    "title": "総務省を装ったなりすましメールへの対策強化について",
+    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000673.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001570.html",
+    "title": "林総務大臣閣議後記者会見の概要",
+    "link": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001570.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001259.html",
+    "title": "令和8年防災功労者内閣総理大臣表彰（消防関係）",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001259.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000164.html",
+    "title": "ふるさと納税のポータルサイト手数料の引下げに係る要請に対するポータルサイト運営事業者からの回答の公表",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000164.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000802.html",
+    "title": "電波法施行規則の一部を改正する省令案に係る意見募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000802.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban09_04000734.html",
+    "title": "情報通信審議会　情報通信技術分科会　電波有効利用委員会（第15回）開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban09_04000734.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001092.html",
+    "title": "第769回　入札監理小委員会（会議資料）",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001092.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/yusei_gyousei/02ryutsu01_04000517.html",
+    "title": "情報通信行政・郵政行政審議会　郵政行政分科会（第105回）配布資料・議事概要・議事録",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/yusei_gyousei/02ryutsu01_04000517.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000352.html",
     "title": "「安全性・信頼性を確保したデジタルインフラの海外展開支援事業」令和8年度「ローカル・スタートアップ枠」二次公募の採択結果",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000352.html",
@@ -82,61 +138,5 @@
     "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001366.html",
     "sourceName": "総務省",
     "publishedAt": "2026-09-07T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/chiho_jichitaini_AItorans/02gyosei04_04000200.html",
-    "title": "地方自治体におけるAIトランスフォーメーションに関する研究会（第2回）",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/chiho_jichitaini_AItorans/02gyosei04_04000200.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-07T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/toukei/jinkou/kaigi/02shingi05_02000829.html",
-    "title": "統計委員会　第153回人口・社会統計部会",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/toukei/jinkou/kaigi/02shingi05_02000829.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-07T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/isougou_setumeikai.html",
-    "title": "総合職技術系（情報通信行政）の説明会情報を更新しました。",
-    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/isougou_setumeikai.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000599.html",
-    "title": "デジタル空間における情報流通の諸課題への対処に関する検討会　発信者情報開示ワーキンググループ（第7回）開催案内",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000599.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000598.html",
-    "title": "デジタル空間における情報流通の諸課題への対処に関する検討会 発信者情報開示ワーキンググループ（第6回）配付資料",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000598.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_syokai/saiyou/j3syu.html",
-    "title": "一般職事務系（高卒者）（統計行政）－業務説明会・官庁訪問の情報を更新しました。",
-    "link": "https://www.soumu.go.jp/menu_syokai/saiyou/j3syu.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin03_02000470.html",
-    "title": "令和8年度「地域社会DX推進パッケージ事業」のうち　 「地域共有型エッジAI実証タイプ」における実証事業の選定結果",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin03_02000470.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu09_02000395.html",
-    "title": "令和8年に申請を受け付けるBS放送に係る基幹放送局の免許申請受付結果",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu09_02000395.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-06T20:00:00.000Z"
   }
 ]
