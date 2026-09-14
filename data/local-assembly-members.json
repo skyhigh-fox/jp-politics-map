@@ -1,13 +1,13 @@
 [
   {
-    "id": "tokyo-gikai-001",
+    "id": "tokyo-gikai-002",
     "assembly": "東京都議会",
     "prefecture": "東京都",
     "district": "千代田区",
-    "name": "さとうさおり",
-    "partyName": "無（や）",
+    "name": "高橋まきこ",
+    "partyName": "都",
     "termStatus": "現職",
-    "officialUrl": "https://www.gikai.metro.tokyo.lg.jp/membership/num001.html",
+    "officialUrl": "https://www.gikai.metro.tokyo.lg.jp/membership/num002.html",
     "sourceRef": "gikai.metro.tokyo.lg.jp scraping (選挙区別議員名簿, https://www.gikai.metro.tokyo.lg.jp/membership/electoral-zone.html)"
   },
   {

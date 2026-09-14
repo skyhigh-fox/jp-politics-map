@@ -1,5 +1,96 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001179.html",
+    "title": "令和8年9月14日付　総務省人事",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001179.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00966.html",
+    "title": "令和8年度地方財政審議会（9月4日）議事要旨",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00966.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000351.html",
+    "title": "株式会社海外通信・放送・郵便事業支援機構の対象事業支援決定の認可",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000351.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin08_02000208.html",
+    "title": "日独ICT政策対話（第9回）の結果",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin08_02000208.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/hougakuken/R08_AI_01_shiryou.html",
+    "title": "情報通信法学研究会AI分科会(令和8年度第1回)",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/hougakuken/R08_AI_01_shiryou.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu15_02000057.html",
+    "title": "国際郵便約款の変更の認可",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu15_02000057.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000178.html",
+    "title": "内国郵便約款の変更認可",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000178.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000177.html",
+    "title": "内国郵便約款の変更認可",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000177.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02ryutsu18_04000001_00009.html",
+    "title": "情報通信審議会　郵政政策部会　郵便局活性化委員会（第20回）開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02ryutsu18_04000001_00009.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000176.html",
+    "title": "特殊切手「第20回アジア競技大会・第5回アジアパラ競技大会（2026/愛知・名古屋）（寄付金付）」に付加された寄附金の配分団体等の認可",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu14_02000176.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu06_02000487.html",
+    "title": "「情報アクセシビリティ好事例2026」候補機器・サービスの募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu06_02000487.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/tsuushin_jiko_kenshou/02kiban05_04000796.html",
+    "title": "第3回　電気通信事故検証会議",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/tsuushin_jiko_kenshou/02kiban05_04000796.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000601.html",
+    "title": "デジタル空間における情報流通の諸課題への対処に関する検討会 発信者情報開示ワーキンググループ（第7回）配付資料",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000601.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001178.html",
     "title": "令和8年9月12日付　総務省人事",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001178.html",
@@ -47,96 +138,5 @@
     "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban09_04000734.html",
     "sourceName": "総務省",
     "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001092.html",
-    "title": "第769回　入札監理小委員会（会議資料）",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001092.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/yusei_gyousei/02ryutsu01_04000517.html",
-    "title": "情報通信行政・郵政行政審議会　郵政行政分科会（第105回）配布資料・議事概要・議事録",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/yusei_gyousei/02ryutsu01_04000517.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000352.html",
-    "title": "「安全性・信頼性を確保したデジタルインフラの海外展開支援事業」令和8年度「ローカル・スタートアップ枠」二次公募の採択結果",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01tsushin06_02000352.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001367.html",
-    "title": "情報通信審議会　情報通信技術分科会　新世代モバイル通信システム委員会　ローカル5G検討作業班（第25回）開催案内",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001367.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/zeimu_hyojunka/02zeimu02_04000508.html",
-    "title": "税務システム等標準化検討会（第17回）",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/zeimu_hyojunka/02zeimu02_04000508.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-09T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban07_04000111.html",
-    "title": "情報通信審議会　電気通信事業政策部会　ユニバーサルサービス政策委員会（第55回）・ユニバーサルサービス制度における交付金・負担金の算定等に関するワーキンググループ（第12回） 合同会合",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban07_04000111.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/rikujou/02kiban14_04001365.html",
-    "title": "情報通信審議会　情報通信技術分科会　陸上無線通信委員会（第103回）",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/rikujou/02kiban14_04001365.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu04_02000268.html",
-    "title": "令和7年度「放送コンテンツの製作取引適正化に関するガイドライン」の　遵守状況の調査に伴う措置",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu04_02000268.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban15_04000609.html",
-    "title": "情報通信審議会　情報通信技術分科会 ITU部会 衛星・科学業務委員会（第50回）の開催について",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban15_04000609.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000745.html",
-    "title": "令和8年8月千葉豪雨に関する被害状況等について（第15報）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000745.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000744.html",
-    "title": "令和8年熊本地震に関する被害状況等について（第56報）",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000744.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/dokuritugyousei/02gyokan01_04000544.html",
-    "title": "第58回独立行政法人評価制度委員会　議事録",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/dokuritugyousei/02gyokan01_04000544.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-08T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001569.html",
-    "title": "林総務大臣閣議後記者会見の概要",
-    "link": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001569.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-07T20:00:00.000Z"
   }
 ]
