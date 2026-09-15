@@ -1,5 +1,68 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001571.html",
+    "title": "林総務大臣閣議後記者会見の概要",
+    "link": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001571.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/usf_seisaku/02kiban07_04000112.html",
+    "title": "情報通信審議会　電気通信事業政策部会　ユニバーサルサービス政策委員会（第55回）・ユニバーサルサービス制度における交付金・負担金の算定等に関するワーキンググループ（第12回） 合同会合",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/usf_seisaku/02kiban07_04000112.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01zeimu02_02000472.html",
+    "title": "固定資産評価基準の一部を改正する告示案に係る地方財政審議会第44回固定資産評価分科会会議資料及び意見募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01zeimu02_02000472.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/koteishisan_bunkakai/02zeimu02_04000510.html",
+    "title": "第44回固定資産評価分科会議事要旨及び会議資料等(2026年9月15日開催)",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/chizai/koteishisan_bunkakai/02zeimu02_04000510.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei10_02000125.html",
+    "title": "令和8年度過疎地域持続的発展優良事例表彰における総務大臣賞及び全国過疎地域連盟会長賞の選定",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei10_02000125.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001091.html",
+    "title": "第770回　入札監理小委員会（開催案内）",
+    "link": "https://www.soumu.go.jp/main_sosiki/singi/kanmin/02shingi06_02001091.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei07_02000456.html",
+    "title": "夕張市財政再生計画の変更の同意",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei07_02000456.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00026.html",
+    "title": "令和8年台風第24号及び前線による大雨に伴う災害に係る普通交付税（11月定例交付分）の繰上げ交付",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000378_00026.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001180.html",
+    "title": "令和8年9月15日付　総務省人事",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001180.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001179.html",
     "title": "令和8年9月14日付　総務省人事",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001179.html",
@@ -75,68 +138,5 @@
     "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu06_02000487.html",
     "sourceName": "総務省",
     "publishedAt": "2026-09-13T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/tsuushin_jiko_kenshou/02kiban05_04000796.html",
-    "title": "第3回　電気通信事故検証会議",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/tsuushin_jiko_kenshou/02kiban05_04000796.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-13T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000601.html",
-    "title": "デジタル空間における情報流通の諸課題への対処に関する検討会 発信者情報開示ワーキンググループ（第7回）配付資料",
-    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000601.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-13T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001178.html",
-    "title": "令和8年9月12日付　総務省人事",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001178.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-11T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000673.html",
-    "title": "総務省を装ったなりすましメールへの対策強化について",
-    "link": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000673.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001570.html",
-    "title": "林総務大臣閣議後記者会見の概要",
-    "link": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001570.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001259.html",
-    "title": "令和8年防災功労者内閣総理大臣表彰（消防関係）",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001259.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000164.html",
-    "title": "ふるさと納税のポータルサイト手数料の引下げに係る要請に対するポータルサイト運営事業者からの回答の公表",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01zeimu04_02000164.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000802.html",
-    "title": "電波法施行規則の一部を改正する省令案に係る意見募集",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000802.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban09_04000734.html",
-    "title": "情報通信審議会　情報通信技術分科会　電波有効利用委員会（第15回）開催案内",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban09_04000734.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-10T20:00:00.000Z"
   }
 ]
