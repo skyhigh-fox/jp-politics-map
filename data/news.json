@@ -7,6 +7,13 @@
     "publishedAt": "2026-09-27T20:00:00.000Z"
   },
   {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei02_01000021.html",
+    "title": "統計トピックスNo.149 統計からみた我が国の高齢者",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei02_01000021.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-19T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban09_02000601.html",
     "title": "周波数再編アクションプラン（令和8年度版）（案）に対する意見募集",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban09_02000601.html",
@@ -129,13 +136,6 @@
     "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000273.html",
     "title": "政治資金規正法に基づく政治団体の届出",
     "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000273.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-16T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000272.html",
-    "title": "政治資金規正法に基づく政治団体の届出事項の異動の届出",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01gyosei17_02000272.html",
     "sourceName": "総務省",
     "publishedAt": "2026-09-16T20:00:00.000Z"
   }
