@@ -634422,7 +634422,7 @@
   },
   {
     "billId": "gian-221-衆法-12",
-    "submitterLabel": "長谷川　淳二君外十名",
+    "submitterLabel": "長谷川　淳二君外九名",
     "sponsors": [
       {
         "name": "長谷川淳二君",
@@ -634443,10 +634443,6 @@
       {
         "name": "国定勇人君",
         "legislatorId": "shugiin-153"
-      },
-      {
-        "name": "塩崎彰久君",
-        "legislatorId": "shugiin-197"
       },
       {
         "name": "奥下剛光君",
@@ -634599,10 +634595,6 @@
         "legislatorId": "shugiin-074"
       },
       {
-        "name": "浦野靖人君",
-        "legislatorId": "shugiin-075"
-      },
-      {
         "name": "うるま譲司君",
         "legislatorId": "shugiin-076"
       },
@@ -634615,10 +634607,6 @@
         "legislatorId": "shugiin-143"
       },
       {
-        "name": "斎藤アレックス君",
-        "legislatorId": "shugiin-183"
-      },
-      {
         "name": "住吉寛紀君",
         "legislatorId": "shugiin-222"
       },
@@ -634629,10 +634617,6 @@
       {
         "name": "高見亮君",
         "legislatorId": "shugiin-238"
-      },
-      {
-        "name": "中司宏君",
-        "legislatorId": "shugiin-291"
       },
       {
         "name": "西田薫君",
@@ -637229,7 +637213,7 @@
   },
   {
     "billId": "gian-221-衆法-28",
-    "submitterLabel": "加藤　勝信君外十一名",
+    "submitterLabel": "加藤　勝信君外十名",
     "sponsors": [
       {
         "name": "加藤勝信君",
@@ -637250,10 +637234,6 @@
       {
         "name": "勝目康君",
         "legislatorId": "shugiin-113"
-      },
-      {
-        "name": "塩崎彰久君",
-        "legislatorId": "shugiin-197"
       },
       {
         "name": "国定勇人君",
@@ -637342,10 +637322,6 @@
         "legislatorId": "shugiin-118"
       },
       {
-        "name": "鈴木英敬君",
-        "legislatorId": "shugiin-211"
-      },
-      {
         "name": "橘慶一郎君",
         "legislatorId": "shugiin-245"
       },
@@ -637422,10 +637398,6 @@
         "legislatorId": "shugiin-074"
       },
       {
-        "name": "浦野靖人君",
-        "legislatorId": "shugiin-075"
-      },
-      {
         "name": "うるま譲司君",
         "legislatorId": "shugiin-076"
       },
@@ -637442,10 +637414,6 @@
         "legislatorId": "shugiin-159"
       },
       {
-        "name": "斎藤アレックス君",
-        "legislatorId": "shugiin-183"
-      },
-      {
         "name": "住吉寛紀君",
         "legislatorId": "shugiin-222"
       },
@@ -637456,10 +637424,6 @@
       {
         "name": "高見亮君",
         "legislatorId": "shugiin-238"
-      },
-      {
-        "name": "中司宏君",
-        "legislatorId": "shugiin-291"
       },
       {
         "name": "西田薫君",

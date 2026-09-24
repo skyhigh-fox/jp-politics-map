@@ -1,10 +1,52 @@
 [
   {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/02gyosei04_04000203.html",
+    "title": "地方税共同機構による地方公金の収納事務に係る安全性及び信頼性の確保に必要な基準(案)等に対する意見募集の結果",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/02gyosei04_04000203.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-23T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02ryutsu07_04000591.html",
+    "title": "情報通信審議会 情報通信政策部会 放送政策委員会 主査ヒアリング 開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02ryutsu07_04000591.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-23T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01kiban06_02000141.html",
+    "title": "電気通信番号計画の一部を変更する告示案に対する意見募集",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01kiban06_02000141.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-23T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01zeimu02_02000474.html",
+    "title": "地方税法施行規則第三条の三の二第三項、第五条の二第三項、第十条第五項、第十条の二の 八第三項及び第二十四条の三十九第一項に規定する情報通信の技術の利用における安全性及 び信頼性を確保するために必要な基準の一部を改正する告示（案）等に対する意見募集の結果",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01zeimu02_02000474.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-23T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000602.html",
+    "title": "デジタル空間における情報流通の諸課題への対処に関する検討会　発信者情報開示ワーキンググループ（第8回）開催案内",
+    "link": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000602.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-23T20:00:00.000Z"
+  },
+  {
     "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban03_04001188.html",
     "title": "情報通信審議会　電気通信事業政策部会　接続政策委員会（第85回）の開催について",
     "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban03_04001188.html",
     "sourceName": "総務省",
-    "publishedAt": "2026-09-27T20:00:00.000Z"
+    "publishedAt": "2026-09-23T20:00:00.000Z"
+  },
+  {
+    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei05_01000346.html",
+    "title": "「サービス産業動態統計調査」2026年（令和8年）7月分（速報）",
+    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei05_01000346.html",
+    "sourceName": "総務省",
+    "publishedAt": "2026-09-23T20:00:00.000Z"
   },
   {
     "id": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00968.html",
@@ -96,47 +138,5 @@
     "link": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001261.html",
     "sourceName": "総務省",
     "publishedAt": "2026-09-17T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei08_01000352.html",
-    "title": "消費者物価地域差指数－小売物価統計調査（構造編）2025年（令和7年）結果－",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei08_01000352.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-17T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu17_02000135.html",
-    "title": "特定信書便事業の現況",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu17_02000135.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-17T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/denpa_yukoriyo/02kiban09_04000736.html",
-    "title": "情報通信審議会　情報通信技術分科会　電波有効利用委員会（第15回）",
-    "link": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/denpa_yukoriyo/02kiban09_04000736.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-17T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/main_sosiki/singi/toukei/jinkou/kaigi/02shingi05_02000830.html",
-    "title": "統計委員会　第154回人口・社会統計部会",
-    "link": "https://www.soumu.go.jp/main_sosiki/singi/toukei/jinkou/kaigi/02shingi05_02000830.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-17T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/s-news/01toukei08_01000351.html",
-    "title": "2025年基準 消費者物価指数 全国 2026年(令和8年)8月分",
-    "link": "https://www.soumu.go.jp/menu_news/s-news/01toukei08_01000351.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-17T20:00:00.000Z"
-  },
-  {
-    "id": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001573.html",
-    "title": "林総務大臣臨時閣議後記者会見の概要",
-    "link": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001573.html",
-    "sourceName": "総務省",
-    "publishedAt": "2026-09-16T20:00:00.000Z"
   }
 ]
